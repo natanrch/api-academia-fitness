@@ -15,6 +15,8 @@ class CreateProgramaDeTreinamentosTable extends Migration
     {
         Schema::create('programa_de_treinamentos', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('titulo');
+            $table->unsignedInteger('user_id');
             $table->timestamps();
         });
     }

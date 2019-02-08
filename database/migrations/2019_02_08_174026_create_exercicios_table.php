@@ -15,6 +15,7 @@ class CreateExerciciosTable extends Migration
     {
         Schema::create('exercicios', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('titulo');
             $table->timestamps();
         });
     }

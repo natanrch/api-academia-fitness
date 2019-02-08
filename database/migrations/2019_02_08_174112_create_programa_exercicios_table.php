@@ -15,6 +15,9 @@ class CreateProgramaExerciciosTable extends Migration
     {
         Schema::create('programa_exercicios', function (Blueprint $table) {
             $table->increments('id');
+            $table->unsignedInteger('programa_de_treinamento_id');
+            $table->unsignedInteger('exercicio_id');
+            $table->integer('repeticoes');
             $table->timestamps();
         });
     }
