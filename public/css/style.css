@@ -1,0 +1,20 @@
+.modalidades {
+  padding: 60px 0 30px 0;
+}
+
+.section-modalidades {
+  margin-bottom: 60px;
+  position: relative;
+  padding-bottom: 20px;
+}
+
+.section-modalidades h2 {
+  font-size: 36px;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+.fakeimg {
+    height: 200px;
+    background: #aaa;
+  }
