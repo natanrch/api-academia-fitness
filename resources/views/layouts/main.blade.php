@@ -19,7 +19,7 @@
 <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto justify-content-end">
       <li class="nav-item">
-        <a class="nav-link" href="site/perfilaluno.blade.php">Sobre nós</a>
+        <a class="nav-link" href="/perfil-aluno">Sobre nós</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#">login</a>
