@@ -1,28 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <title>Bootstrap 4 Website Example</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
-  <style>
-  .fakeimg {
-    height: 200px;
-    background: #aaa;
-  }
-  .fotoaluno{
-    width: 170px;
-    height: 200px;
-  }
-  body{
-    overflow-x:hidden;
-  }
-  </style>
-</head>
-<body>
+@extends('layouts.main')
+
+@section('content')
 
  <nav id="navbar-example2" class="navbar navbar-light bg-light">
   <a class="navbar-brand" href="#">Navbar</a>
@@ -66,7 +44,7 @@
         <input class="form-control" type="search" placeholder="Digite um nome" aria-label="Search">
       </div>
       <div class="form-group col-2 col-sm-2">
-      <button class="btn" style=" border: 1px solid; height: 40px" type="submit">PESQUISAR</button>
+      <button class="btn btn-primary" style=" height: 40px" type="submit">PESQUISAR</button>
     </div>
     </form>
     <br>
@@ -107,5 +85,4 @@
 
 <br>
 
-</body>
-</html>
+@endsection

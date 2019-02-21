@@ -2,45 +2,85 @@
 
 @section('content')
 
-<div class="container" style="margin-top:30px">
+ <nav id="navbar-example2" class="navbar navbar-light bg-light">
+  <a class="navbar-brand" href="#">Navbar</a>
+  <ul class="nav nav-pills">
+    <li class="nav-item">
+      <a class="nav-link" href="#mdo">iCON</a>
+    </li>
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">MENU</a>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" href="#one">MEUS DADOS</a>
+        <a class="dropdown-item" href="#two">MINHS FICHA</a>
+    </li>
+  </ul>
+</nav>
+
+<div class="container " style="margin-top:30px">
   <div class="row">
-    <div class="col-sm-4">
-      <h2>About Me</h2>
-      <h5>Photo of me:</h5>
-      <div class="fakeimg">Fake Image</div>
-      <p>Some text about me in culpa qui officia deserunt mollit anim..</p>
-      <h3>Some Links</h3>
-      <p>Lorem ipsum dolor sit ame.</p>
-      <ul class="nav nav-pills flex-column">
-        <li class="nav-item">
-          <a class="nav-link active" href="#">Active</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link disabled" href="#">Disabled</a>
-        </li>
-      </ul>
-      <hr class="d-sm-none">
-    </div>
-    <div class="col-sm-8">
-      <h2>TITLE HEADING</h2>
-      <h5>Title description, Dec 7, 2017</h5>
-      <div class="fakeimg">Fake Image</div>
-      <p>Some text..</p>
-      <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+    <div class="col-sm-3 text-center" >
+      
+      <img src="../img/usuario.png" alt="..." class="img-thumbnail fotoaluno" >
+      
+      <h5>Nome aluno</h5>
+      <small> Data de nascimento: <br> 00/00/000</small>
       <br>
-      <h2>TITLE HEADING</h2>
-      <h5>Title description, Sep 2, 2017</h5>
-      <div class="fakeimg">Fake Image</div>
-      <p>Some text..</p>
-      <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+      <button type="button" class="btn btn-info">ALTERAR PERFIL</button>
+      <hr class="d-sm-none">
+    
+    </div>
+
+
+
+    
+    <div class="col-sm-9">
+      <h2>EVOLUÇÃO FÍSICA</h2>
+      
+<p class="text-center">Peso</p>
+<div class="progress">
+  <div class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+</div>
+<br>
+<p class="text-center">Peso</p>
+<div class="progress">
+  <div class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+</div>
+<br>
+<p class="text-center">Peso</p>
+<div class="progress">
+  <div class="progress-bar" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+</div>
+<br>
+
     </div>
   </div>
 </div>
+<br>
+
+<div class="container">
+<div class="row">
+  <div class="col-sm-12">
+    <div class="row">
+      <div class="col-12 col-sm-6">
+         <div class="fakeimg"></div>
+      </div>
+      <div class="col-12 col-sm-6">
+        <div class="fakeimg"></div>
+      </div>
+    </div>
+    <br>
+    <div class="row">
+      <div class="col-12 col-sm-6">
+        <div class="fakeimg"></div>
+      </div>
+      <div class="col-12 col-sm-6">
+         <div class="fakeimg"></div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+<br>
 
 @endsection
