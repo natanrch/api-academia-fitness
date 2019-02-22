@@ -15,4 +15,8 @@ class TelaUsuarioController extends Controller
     {
     	return view('site.perfilinstrutor');
     }
+    public function escolhaPerfil()
+    {
+    	return view('site.primeiraetapalogin');
+    }
 }

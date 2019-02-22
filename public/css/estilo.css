@@ -1,0 +1,96 @@
+
+
+.modalidades {
+  padding: 60px 0 30px 0;
+}
+
+.section-modalidades {
+  margin-bottom: 60px;
+  position: relative;
+  padding-bottom: 20px;
+}
+
+.section-modalidades h2 {
+  font-size: 36px;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+.fakeimg {
+    height: 200px;
+    background: #aaa;
+  }
+  .fotoaluno{
+    width: 170px;
+    height: 200px;
+  }
+
+  
+
+  .semanas{
+      border:1px solid;
+      padding: 15px;
+      margin: 0px 5px 0px 5px;
+    }
+    .dias{
+      word-spacing: 10px;
+
+    }
+/* Efeito barra de etapas */
+
+.line{
+    border-bottom: 1px solid black;
+    padding-bottom: 20px;
+    width: 100%;
+    left: 15px;
+    position: relative;
+}
+.stepText1{
+  text-align: left;
+  left: -15px;
+}
+.stepText2{ text-align: center; }
+.stepText3{
+  text-align: right;
+  right: -15px;
+}
+.step{
+  width: 20px;
+  height: 20px;
+  border: 1px solid black;
+  background: white;
+  border-radius: 100px;
+  margin-top: 30px;
+  transition: 0.4s;
+}
+.step1{
+  margin-top: -10px;
+  float: left;
+}
+.step2{
+  margin: 0 auto;
+  margin-top: -10px;
+}
+.step3{
+  float: right;
+  margin-top: -10px;
+}
+.active{
+  background: black;
+}
+
+
+#prev, #next{
+  background: #333;
+  color: white;
+  padding: 10px 0;
+  display: inline-block;
+  width: 150px;
+  text-align: center;
+  margin: 10px;
+cursor: pointer;
+  transition: 0.3s;
+}
+#prev:hover, #next:hover{
+  background: #1d1d1d;
+}

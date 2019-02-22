@@ -2,7 +2,7 @@
 <head>
     <link href="/css/app.css" rel="stylesheet">
     <link href="/css/custom.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <link rel="stylesheet" type="text/css" href="/css/estilo.css">
     <title>Academia Fitness</title>
 </head>
 <body>
@@ -22,7 +22,7 @@
         <a class="nav-link" href="/perfil-aluno">Sobre nós</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">login</a>
+        <a class="nav-link" href="/escolha-perfil">login</a>
       </li>
     </ul>
   </div>
@@ -56,6 +56,7 @@
 </div>
 
   <script type="text/javascript" src="/js/app.js"></script>
+  <script type="text/javascript" src="../js/efeito.js"></script>
   @stack('scripts')
 </body>
 
