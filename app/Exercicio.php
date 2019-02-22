@@ -10,4 +10,9 @@ class Exercicio extends Model
     {
     	return $this->hasMany('App\ProgramaExercicios');
     }
+
+    public function tipo_exercicio()
+    {
+    	return $this->belongsTo('App\TipoExercicio');
+    }
 }

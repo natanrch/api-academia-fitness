@@ -7,7 +7,7 @@
 </head>
 <body>
  	<header>
- 		<div class="continer">
+ 		<div class="container">
  			<nav class="navbar navbar-expand-lg navbar-light bg-light" >
   <!--logo -->
   <a class="navbar-brand" href="#"><img src="">Logo</a>
@@ -28,11 +28,11 @@
   </div>
 </nav>
     
- 		</div>
  
 
     @yield('content')
 
+ 		</div>
 
 <div class="container">
 <div class="row">

@@ -3,10 +3,25 @@
 namespace App\Http\Controllers;
 
 use App\ProgramaDeTreinamento;
+use App\Exercicio;
+use App\ProgramaExercicio;
+use App\TipoExercicio;
 use Illuminate\Http\Request;
 
 class ProgramaDeTreinamentoController extends Controller
 {
+    protected $programaDeTreinamento;
+    protected $exercicio;
+    protected $programaExercicio;
+    protected $tipoExercicio;
+
+    public function __construct(ProgramaDeTreinamento $programaDeTreinamento, Exercicio $exercicio, ProgramaExercicio $programaExercicio, TipoExercicio $tipoExercicio)
+    {
+        $this->programaDeTreinamento = $programaDeTreinamento;
+        $this->exercicio = $exercicio;
+        $this->programaExercicio = $programaExercicio;
+        $this->tipoExercicio = $tipoExercicio;
+    }
     /**
      * Display a listing of the resource.
      *
@@ -24,7 +39,12 @@ class ProgramaDeTreinamentoController extends Controller
      */
     public function create()
     {
-        //
+        $exercicios = $this->exercicio->all()->sortBy('tipo_exercicio_id');
+        $tipos = $this->tipoExercicio->all()->sortBy('titulo');
+        return view('ficha.create-programa', [
+            'exercicios' => $exercicios,
+            'tipos' => $tipos,
+        ]);
     }
 
     /**
