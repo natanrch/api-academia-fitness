@@ -6,6 +6,7 @@
 <h2></h2>
 
 <form method="POST">
+	{{csrf_field()}}
 	@foreach($tipos as $tipo)
 		<div class="row mb-3">
 			
@@ -13,6 +14,7 @@
 			<div class="col-md-3">
 				<label>Exercicio</label>
 				<select name="exercicio[]" class="form-control">
+					<option value="0">Selecione o exercício</option>
 					@foreach($tipo->exercicios as $exercicio)
 						<option value="{{$exercicio->id}}">{{$exercicio->titulo}}</option>
 					@endforeach
