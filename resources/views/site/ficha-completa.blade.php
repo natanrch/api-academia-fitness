@@ -28,7 +28,7 @@
 
   <div class="container">
     <div class="table-responsive">
-    <table class="table table-sm"> 
+    <table class="table"> 
   
   <tbody>
     <tr>
@@ -113,7 +113,7 @@
     </div>
 
     <!--tipos de musculos-->
-<br>
+{{-- <br>
 <div class="container">
   <div class="card-deck "  >
   <div class="row">
@@ -136,6 +136,42 @@
   </div>
 </div>
 </div>
+ --}}
 
+{{-- <div class="row">
+  
+  <div class="col-md-2">
+    
+     <table class="table table-striped">
+       <thead>
+        <tr>
+           <th>Exercicio</th>
+           <th>Série</th>
+
+           <th>Peso</th>
+        </tr>
+       </thead>
+       <tbody>
+         <tr>
+           <td>Leg Press 180</td>
+           <td>5 x 12</td>
+
+           <td>10 Kg</td>
+         </tr>
+         <tr>
+           <td>Leg Press 45</td>
+           <td>5 x 12</td>
+           <td>10 Kg</td>
+         </tr>
+         <tr>
+           <td>Agachamento</td>
+           <td>5 x 12</td>
+
+           <td>10 Kg</td>
+         </tr>
+       </tbody>
+     </table>
+  </div>
+</div> --}}
 
 @endsection

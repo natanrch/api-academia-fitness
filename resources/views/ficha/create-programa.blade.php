@@ -1,3 +1,7 @@
+@php
+	use App\Helpers\RemoveAcentosHelper;
+@endphp
+
 @extends('layouts.main')
 
 @section('content')
@@ -8,9 +12,9 @@
 <form method="POST">
 	{{csrf_field()}}
 	@foreach($tipos as $tipo)
-		<div class="row mb-3">
-			
 			<div class="col-md-12 text-secondary"><h3>{{ucfirst($tipo->titulo)}}</h3></div>
+		<div class="row mb-3 exercicio-{{RemoveAcentosHelper::removeAcentos($tipo->titulo)}}">
+			
 			<div class="col-md-3">
 				<label>Exercicio</label>
 				<select name="exercicio[]" class="form-control">
@@ -28,8 +32,13 @@
 				<label>Séries</label>
 				<input type="number" name="series[]" class="form-control">
 			</div>
+		</div>
+		<div id="novo-exercicio-{{RemoveAcentosHelper::removeAcentos($tipo->titulo)}}">
+			
+		</div>
+		<div class="row mb-3">
 			<div class="col-md-3 mt-3">
-				<input type="button" class="btn btn-info" value="Adicionar outro exercício de {{$tipo->titulo}}">
+				<input type="button" class="btn btn-info" id="novo-{{RemoveAcentosHelper::removeAcentos($tipo->titulo)}}" value="Adicionar outro exercício de {{$tipo->titulo}}">
 			</div>
 		</div>
 	@endforeach
@@ -37,3 +46,17 @@
 </form>
 
 @endsection
+
+@push('scripts')
+<script type="text/javascript">
+
+	@foreach($tipos as $tipo)
+	    $('#novo-{{RemoveAcentosHelper::removeAcentos($tipo->titulo)}}').click(function () {
+	        let clone = $('.exercicio-{{RemoveAcentosHelper::removeAcentos($tipo->titulo)}}').last().clone();
+	        $('#novo-exercicio-{{RemoveAcentosHelper::removeAcentos($tipo->titulo)}}').append(clone);
+	        return false;
+	    });
+    @endforeach
+
+</script>
+@endpush

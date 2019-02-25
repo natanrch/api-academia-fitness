@@ -19,4 +19,9 @@ class TelaUsuarioController extends Controller
     {
     	return view('site.primeiraetapalogin');
     }
+
+    public function fichaCompleta()
+    {
+        return view('site.ficha-completa');
+    }
 }

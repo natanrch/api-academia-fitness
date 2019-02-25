@@ -28,8 +28,6 @@
   </div>
 </nav>
     
- 
-
     @yield('content')
 
  		</div>
@@ -55,9 +53,9 @@
 </div>
 </div>
 
-  <script type="text/javascript" src="/js/app.js"></script>
-  <script type="text/javascript" src="../js/efeito.js"></script>
-  @stack('scripts')
 </body>
 
 </html>
+<script type="text/javascript" src="/js/app.js"></script>
+<script type="text/javascript" src="../js/efeito.js"></script>
+@stack('scripts')
