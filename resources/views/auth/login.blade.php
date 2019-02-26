@@ -29,40 +29,40 @@
 
 <div class="container d-flex justify-content-center ">
         
-                    <form method="POST" action="{{ route('login') }}">
+  <form method="POST" action="{{ route('login') }}">
 
-                        @csrf
-                    
-                            
-                          
-                        <div class="form-group row d-flex justify-content-center  ">
-                                  
-                            <div class="col-12 col-sm-9">
-                                <label for="email"  >{{ __('CPF:') }}</label>
-                                <input id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" required autofocus>
+      @csrf
+  
+          
+        
+      <div class="form-group row d-flex justify-content-center  ">
+                
+          <div class="col-12 col-sm-9">
+              <label for="cpf"  >{{ __('CPF:') }}</label>
+              <input id="email" type="text" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="cpf" value="{{ old('cpf') }}" required autofocus>
 
-                                @if ($errors->has('email'))
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $errors->first('email') }}</strong>
-                                    </span>
-                                @endif
-                            </div>
-                        </div>
-                       
-                        
-                        <div class="form-group row  d-flex justify-content-center">   
+              @if ($errors->has('cpf'))
+                  <span class="invalid-feedback" role="alert">
+                      <strong>{{ $errors->first('email') }}</strong>
+                  </span>
+              @endif
+          </div>
+      </div>
+     
+      
+      <div class="form-group row  d-flex justify-content-center">   
 
-                            <div class="col-12 col-sm-9">
-                                <label for="password" ">{{ __('Senha:') }}</label>
-                                <input id="password" type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" required>
+          <div class="col-12 col-sm-9">
+              <label for="password" ">{{ __('Senha:') }}</label>
+              <input id="password" type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" required>
 
-                                @if ($errors->has('password'))
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $errors->first('password') }}</strong>
-                                    </span>
-                                @endif
-                            </div>
-                        </div>
+              @if ($errors->has('password'))
+                  <span class="invalid-feedback" role="alert">
+                      <strong>{{ $errors->first('password') }}</strong>
+                  </span>
+              @endif
+          </div>
+      </div>
 
 
                          <!--<div class="form-group row">
