@@ -27,13 +27,13 @@
     <span class="navbar-toggler-icon"></span>
   </button>
   <!--links -->
-<div class="collapse navbar-collapse linkmenu" id="navbarSupportedContent">
+<div class="collapse navbar-collapse linkmenu justify-content-end" id="navbarSupportedContent">
     <ul class="navbar-nav ">
       <li class="nav-item">
         <a class="nav-link " href="layout/grupomuscular.blade.php" style="color: #F1F1F1">SOBRE NÓS</a>
       </li>
       <li class="nav-item ">
-        <div style="background-color: #B95922;  " >
+        <div style="background-color: #B95922;  "  class="">
         <a class="nav-link logincolor "  href="layout/primeiraetapalogin.blade.php" style="color: #F1F1F1;" ><i class="fa fa-user-o" aria-hidden="true"></i>
          LOGIN</a>
         </div>
@@ -46,13 +46,15 @@
     @yield('content')
 </header>
  		
-<footer class="footer">
+<footer class="footer ">
 <div class="container">
 <div class="row ">
   <div class="col-sm-12">
     <div class="row">
       <div class="col-12 col-sm-4">
         <p class="pfooter">REDES SOCIAS</p>
+        <i class="fa fa-facebook-square" aria-hidden="true"></i>
+        <i class="fa fa-instagram" aria-hidden="true"></i>
       </div>
       <div class="col-12 col-sm-4">
         <P class="pfooter">ONDE NOS ENCONTRAR?</P>
@@ -67,6 +69,7 @@
   </div>
 </div>
 </div>
+<br>
 </footer>
 </body>
 

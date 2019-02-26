@@ -88,9 +88,7 @@
   </thead>
   <tbody>
     <tr>
-      <td> <input type="checkbox" aria-label="Checkbox for following text input"> Agachamento livre <i class="material-icons md-36 orange600"> 
-play_circle_outline
-</i></td>
+      <td> <input type="checkbox" aria-label="Checkbox for following text input"> Agachamento livre<i class="fa fa-play-circle-o" aria-hidden="true"></i></td>
       <td>4x12</td>
       <td>40kg</td>
     </tr>

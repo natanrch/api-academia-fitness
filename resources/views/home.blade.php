@@ -7,17 +7,14 @@
 
 <!--Decricacao da academia-->
 
- <div class="jumbotron jumbotron-fluid text-center ">
-  <div class="container">
-    <img src="..." class="img-fluid mw-100" alt="Responsive image">
-    <h1 class=" textacademia">ACADEMIA FITNESS</h1>
+ <div class="jumbotron jumbotron-fluid text-center " style="background-image: url(img/img1.jpg);">
+    <h1 class=" textacademia  z-index">ACADEMIA FITNESS</h1>
     <hr style="width: 222px; height: 3px; background-color: #131852">
     <center>
-    <div style="max-width: 500px">
+    <div style="max-width: 500px; z-index: -2" class=" z-index">
       <p class="lead" style="font-family: IBM Plex Sans, Regular; font-size: 20px">A Academia Fitness está a mais de 20 anos atuando no Estado do Amapá, sendo referência no seu ramo, oferecendo um serviço de alta qualidade.</p>
     </div>
     </center>
-  </div>
 </div>
      
 
@@ -34,30 +31,31 @@
 <div class="container ">
   <div class="row" >
     <div class="col-sm-4 card  " style="border:none;"  >
-      <img class="card-img-top imgmodalidades" src="img/musculacao.png" alt="Imagem de capa do card">
-      <p class="text-center fontmodalidades font-weight-normal">Musculação</p> 
+      <img class="card-img-top imgmodalidades" src="img/musculacao.jpg" alt="Imagem de capa do card">
+      <p class="text-center fontmodalidades font-weight-normal">Musculação</p>
+      
     </div>
     <div class="col-sm-4 card"  style="border:none;">
-      <img class="card-img-top  imgmodalidades" src="img/musculacao.png" alt="Imagem de capa do card">
+      <img class="card-img-top  imgmodalidades" src="img/ritmos.jpg" alt="Imagem de capa do card">
       <p class="text-center fontmodalidades font-weight-normal">Ritmos</p> 
     </div>
     <div class="col-sm-4 card" style="border:none;" >
-      <img class="card-img-top imgmodalidades" src="img/musculacao.png" alt="Imagem de capa do card">
+      <img class="card-img-top imgmodalidades" src="img/funcional.jpg" alt="Imagem de capa do card">
       <p class="text-center fontmodalidades font-weight-normal">Treinamento Funcional</p>
     </div>
   </div>
 
   <div class="row">
     <div class="col-sm-4 card"  style="border:none;">
-      <img class="card-img-top imgmodalidades" src="img/musculacao.png" alt="Imagem de capa do card">
+      <img class="card-img-top imgmodalidades" src="img/karate.jpg" alt="Imagem de capa do card">
       <p class="text-center fontmodalidades font-weight-normal">Karatê</p> 
     </div>
     <div class="col-sm-4 card"  style="border:none;">
-      <img class="card-img-top imgmodalidades" src="img/musculacao.png" alt="Imagem de capa do card">
+      <img class="card-img-top imgmodalidades" src="img/ginastica.jpg" alt="Imagem de capa do card">
       <p class="text-center fontmodalidades font-weight-normal">Ginástica</p> 
     </div>
     <div class="col-sm-4 card"  style="border:none;">
-      <img class="card-img-top imgmodalidades" src="img/musculacao.png" alt="Imagem de capa do card">
+      <img class="card-img-top imgmodalidades" src="img/muay-thai.jpg" alt="Imagem de capa do card">
       <p class="text-center fontmodalidades font-weight-normal">Muay-thai</p> 
     </div>
   </div>
@@ -80,7 +78,7 @@
       
       </div>
       <div class="col-12 col-sm-6 text-center" >
-        <img src="img/musculacao.png" class="img-fluid " alt="Imagem responsiva" style="max-height: 400px">
+        <img src="svg/img-planos.svg" class="img-fluid " alt="Imagem responsiva" style="max-height: 400px">
       </div>
     </div>
   </div>
@@ -98,6 +96,7 @@
     <div class="card-body text-center">
       <h5 class="card-title" style="color: #FFFFFF; font-family: 'Roboto', sans-serif; font-size: 20px">MUSCULAÇÃO</h5>
       <p class="card-text" style="color: #F1F1F1; font-family: IBM Plex Sans, Regular; font-size: 16px;" >Primeira mensalidade:</p>
+       <i class="fa fa-credit-card" aria-hidden="true"></i>
     </div>
   </div>
   <div class="card" style="border:none; background-color: #B95922">

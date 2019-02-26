@@ -1,20 +1,44 @@
 @extends('layouts.main')
 
 @section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Login') }}</div>
 
-                <div class="card-body">
+<br><br>
+<div class="container d-flex justify-content-center">
+  <div class="col-sm-5 ">
+  <div class="row line">
+
+      <div class="col-4 stepText1 ">1ª Etapa</div>
+      <div class="col-4 stepText2">2ª Etapa</div>
+      <div class="col-4 stepText3">3ª Etapa</div>
+  </div>
+  <div class="row">
+      <div class="col-4"><div class="step step1 active"></div></div>
+      <div class="col-4"><div class="step step2"></div></div>
+      <div class="col-4"><div class="step step3"></div></div>  
+  </div> 
+</div>
+</div>
+<br><br>
+
+<div class="container text-center">
+    <br><br>
+        <div class="section-header">
+          <h2 class="text-center ">Insira seus dados de login abaixo</h2>
+      </div>
+</div>
+
+<div class="container d-flex justify-content-center ">
+        
                     <form method="POST" action="{{ route('login') }}">
+
                         @csrf
-
-                        <div class="form-group row">
-                            <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
-
-                            <div class="col-md-6">
+                    
+                            
+                          
+                        <div class="form-group row d-flex justify-content-center  ">
+                                  
+                            <div class="col-12 col-sm-9">
+                                <label for="email"  >{{ __('CPF:') }}</label>
                                 <input id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" required autofocus>
 
                                 @if ($errors->has('email'))
@@ -24,11 +48,12 @@
                                 @endif
                             </div>
                         </div>
+                       
+                        
+                        <div class="form-group row  d-flex justify-content-center">   
 
-                        <div class="form-group row">
-                            <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
-
-                            <div class="col-md-6">
+                            <div class="col-12 col-sm-9">
+                                <label for="password" ">{{ __('Senha:') }}</label>
                                 <input id="password" type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" required>
 
                                 @if ($errors->has('password'))
@@ -39,8 +64,9 @@
                             </div>
                         </div>
 
-                        <div class="form-group row">
-                            <div class="col-md-6 offset-md-4">
+
+                         <!--<div class="form-group row">
+                            <div class="col-md- offset-md-">
                                 <div class="form-check">
                                     <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
 
@@ -49,12 +75,14 @@
                                     </label>
                                 </div>
                             </div>
-                        </div>
+                        
+                        
+                            </div>-->
 
-                        <div class="form-group row mb-0">
-                            <div class="col-md-8 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
-                                    {{ __('Login') }}
+                        
+                            <div class="col-md-6 offset-md-4">
+                                <button type="submit" class="btn btnlogin">
+                                    {{ __('Proxíma Etapa') }}<i class="fa fa-chevron-right" aria-hidden="true"></i>
                                 </button>
 
                                 @if (Route::has('password.request'))
@@ -63,11 +91,10 @@
                                     </a>
                                 @endif
                             </div>
-                        </div>
+                        
                     </form>
-                </div>
-            </div>
-        </div>
     </div>
 </div>
+
+
 @endsection
