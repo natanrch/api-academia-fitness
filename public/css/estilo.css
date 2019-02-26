@@ -1,9 +1,44 @@
 
+/* MENU */
+
+.colormenu{
+  background-color: #242B8C;
+}
+.linkmenu ul li a{
+  font-family:IBM Plex Sans, Medium;
+  font-size: 16px;
+}
+.logincolor{
+  color: #B95922;
+}
+
+
+
+/* DESCRIÇÃO ACADEMIA */
+
+.textacademia{
+  color: #B95922;
+  font-family: Cooper, Black;
+  letter-spacing: 8px;
+
+}
+
+/* SECTION MODALIDADES */
 
 .modalidades {
   padding: 60px 0 30px 0;
 }
 
+.imgmodalidades{
+  max-width: 250px;
+  height: 250px;
+
+}
+.fontmodalidades{
+  font-family: IBM Plex Sans, Regular;
+  color: #363636;
+  font-size: 20px;
+}
 .section-modalidades {
   margin-bottom: 60px;
   position: relative;
@@ -15,7 +50,13 @@
   text-transform: uppercase;
   font-weight: 700;
   margin-bottom: 10px;
+  font-family: 'Roboto', sans-serif;
+  color: #343434;
 }
+
+
+/* NADA */
+
 .fakeimg {
     height: 200px;
     background: #aaa;
@@ -25,17 +66,7 @@
     height: 200px;
   }
 
-  
 
-  .semanas{
-      border:1px solid;
-      padding: 15px;
-      margin: 0px 5px 0px 5px;
-    }
-    .dias{
-      word-spacing: 10px;
-
-    }
 /* Efeito barra de etapas */
 
 .line{
@@ -93,4 +124,56 @@ cursor: pointer;
 }
 #prev:hover, #next:hover{
   background: #1d1d1d;
+}
+
+
+
+
+/* PLANO */
+
+.planosh2{
+  font-family: 'Roboto', sans-serif;
+  color: #343434;
+  font-size: 30px;
+  letter-spacing: 3px
+}
+.descplanos{
+  font-family: IBM Plex Sans, Regular;
+  font-size: 16px;
+  color: #363636;
+}
+
+.colorplanos{
+  background-color: #242B8C;
+}
+
+
+/* FOOTER */
+
+.footer{
+  background-color: #242B8C;
+
+}
+.pfooter{
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+  color: #FFFFFF; 
+}
+.p1footer{
+  font-family: IBM Plex Sans, Regular;
+  color: #F1F1F1;
+  font-size: 15px
+}
+
+/* ICONES */
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://example.com/MaterialIcons-Regular.eot); /* For IE6-8 */
+  src: local('Material Icons'),
+    local('MaterialIcons-Regular'),
+    url(https://example.com/MaterialIcons-Regular.woff2) format('woff2'),
+    url(https://example.com/MaterialIcons-Regular.woff) format('woff'),
+    url(https://example.com/MaterialIcons-Regular.ttf) format('truetype');
 }
