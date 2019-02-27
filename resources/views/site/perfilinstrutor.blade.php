@@ -21,30 +21,26 @@
   <div class="row">
     <div class="col-12 col-sm-3 text-center" >
       
-      <img src="../img/usuario.png" alt="..." class="img-thumbnail fotoaluno text-center" >
+      <img src="../img/usuario.png" alt="..." class="img-thumbnail fotoaluno text-center" style="border: 1px solid #131852">
       
-      <p class="font-weight-bold">Nome Instrutor</p>
-      <p class="font-weight-normal"> Data de nascimento: <br> 00/00/000</P>
+      <p class="Nomeperfil">Nome Instrutor</p>
+      <p class="descriperfil"> Data de nascimento: <br> 00/00/000</P>
  
-      <p class="font-weight-bold">Descrição</p>
-      <p class="font-weight-normal"> Sou formado na area (?), <br>a (?) anos, atuano desde</P>
-
-      <p class="font-weight-bold">Horáriosr</p>
-      <p class="font-weight-normal"> Segunda à Sexta:</P>
-      <button type="button" class="btn btn-info" style="width: 170px">ALTERAR PERFIL</button>
+      <p class="descriperfil"> Meu Horário: <br> Segunda à Sexta:  </p>
+      <button type="button" class="btn  btnlaranja" style="width: 170px">ADICIONAR FOTO</button>
       <hr class="d-sm-none">
     
     </div>
     <div class="col-12 col-sm-9" style="padding-right: 2em; padding-left: 2em">
-      <h1>MEUS ALUNOS</h1>
+      <h2>MEUS ALUNOS</h2>
 
 
      <form class="form-row" >
       <div class="form-group col-8 col-sm-10">
-        <input class="form-control" type="search" placeholder="Digite um nome" aria-label="Search">
+        <input class="form-control inputb" type="search" placeholder="Digite um nome" aria-label="Search">
       </div>
       <div class="form-group col-2 col-sm-2">
-      <button class="btn btn-primary" style=" height: 40px" type="submit">PESQUISAR</button>
+      <button class="btn btnlaranja" style=" height: 40px" type="submit">PESQUISAR</button>
     </div>
     </form>
     <br>
@@ -58,9 +54,9 @@
   
  </div>
   <div class="col-4 col-sm-4">
-    <p class="font-weight-bold " style=" margin-top: 5px;">Nome Aluno</p>
+    <p class="nomealuno " style=" margin-top: 5px;">Nome Aluno</p>
     <div class="form-group">
-      <button type="button" class="btn btn-primary btn-sm">Ver Pefril</button>
+      <button type="button" class="btn btnazul btn-sm">Ver Perfil <i class="fa fa-chevron-right" aria-hidden="true"></i></button>
     </div>
   </div>
 
@@ -70,16 +66,20 @@
     <img src="../img/usuario.png" alt="..." class="rounded-circle" style="width: 80px; height: 80px"></div>
     </div>
   <div class="col-4 col-sm-4">
-    <p class="font-weight-bold">Nome Aluno</p>
+    <p class="nomealuno">Nome Aluno</p>
     <div class="form-group">
-      <button type="button" class="btn btn-primary btn-sm">Ver Pefril</button>
+      <button type="button" class="btn btnazul btn-sm">Ver Perfil <i class="fa fa-chevron-right" aria-hidden="true"></i></button>
     </div>
-  </div>
+   
 </div>
 
     </div>
   </div>
+  
+  
 </div>
+
+
 <br>
 
 

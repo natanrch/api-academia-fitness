@@ -6,11 +6,62 @@ h2{
   color: #343434;
   font-size: 30px;
 }
+.inputb{
+  background-color: #DDDDDD;
+}
 .btnlogin{
    font-family:IBM Plex Sans, Medium;
   font-size: 18px;
   background-color: #B95922;
   color: #FFFFFF;
+}
+
+.btnlaranja{
+  background-color: #B95922;
+  color: #F1F1F1;
+  font-family: IBM Plex Sans, Regular; 
+}
+.btnazul{
+  background-color: #242B8C;
+  color: #FFFFFF;
+  font-family:IBM Plex Sans, Medium;
+  font-size: 15px
+}
+.nomealuno{
+  font-family: 'Roboto', Black;
+  color: #343434;
+  font-size: 16px
+}
+.adcionar{
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  background-color: #242B8C;
+
+}
+.ficha{
+  color: #363636;
+  font-family: IBM Plex Sans, Regular; 
+  font-size: 18px;
+}
+.fontth{
+  color: #363636;
+  font-family: IBM Plex Sans, Bold;
+  font-size: 18px;
+}
+.fonttd{
+  color: #363636;
+  font-family: IBM Plex Sans, Regular;
+  font-size: 16px;
+}
+.playicon{
+  color: #B95922;
+}
+
+.valorplanos{
+  color: #FFFFFF;
+  font-family: IBM Plex Sans, Bold;
+  font-size: 15px;
 }
 /* MENU */
 
@@ -25,6 +76,17 @@ h2{
   color: #B95922;
 }
 
+.Nomeperfil{
+  font-family: BM Plex Sans, SemiBold;
+  color: #363636;
+  font-size: 20px;
+}
+.descriperfil{
+  font-family: IBM Plex Sans, Regular;
+  color: #363636;
+  font-size: 15px;
+}
+
 
 
 /* DESCRIÇÃO ACADEMIA */
@@ -33,6 +95,11 @@ h2{
   color: #B95922;
   font-family: Cooper, Black;
   letter-spacing: 8px;
+
+}
+.headerimg{
+  background-image: url(img/img.jpg);
+  background-size: auto;
 
 }
 
@@ -155,7 +222,7 @@ cursor: pointer;
 /* PLANO */
 
 .planosh2{
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Roboto', Black;
   color: #343434;
   font-size: 30px;
   letter-spacing: 3px
@@ -178,7 +245,7 @@ cursor: pointer;
 
 }
 .pfooter{
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Roboto', Black;
   font-size: 20px;
   color: #FFFFFF; 
 }

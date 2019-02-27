@@ -7,6 +7,7 @@
           <h2 class="text-center">MINHA FICHA</h2>
           <hr style="width: 13%">
         </div>
+        <h2>Treino de Hoje: A </h2>
     </div>
    
 
@@ -15,25 +16,27 @@
   <div class="col-sm-12">
     <div class="row">
       <div class="col-12 col-sm-6">
-<table class="table table-borderless">
+<table class="table table-sm table-borderless">
   <thead>
     <tr>
-      <th scope="col">Aquecimento:</th>
-      <th scope="col">Intervalo:</th>
+      <th scope="col" class="ficha">Aquecimento:</th>
+      <th scope="col" class="ficha">Intervalo:</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td scope="row">10 Minutos</td>
-      <td>30 Seguntos </td>
+      <td scope="row" class="ficha" >10 Minutos</td>
+      <td class="ficha">30 Seguntos </td>
     </tr>
     
   </tbody>
-  <p class="h2">Treino de Hoje: <b style="color: blue">A</b> </p>
 </table>
-      </div>
+
+  
+</table>
+</div>      
       <div class="col-12 col-sm-6">
-       <table class="table table-sm">
+       <table class="table table-sm text-center table-bordered " style="max-width: 500px;">
   <thead>
     <tr>
       <th scope="col">S</th>
@@ -53,47 +56,51 @@
       <td><a href="">B</a></td>
       <td><a href="">C</a></td>
     </tr>
-   <!-- <tr>
-       <td scope="row">A</td>
-      <td>B</td>
-      <td>C</td>
-      <td>A</td>
-      <td>B</td>
-      <td>C</td>
+    <tr>
+      <td scope="row"><a href="">A</a></td>
+      <td><a href="">B</a></td>
+      <td><a href="">C</a></td>
+      <td><a href="">A</a></td>
+      <td><a href="">B</a></td>
+      <td><a href="">C</a></td>
     </tr>
     <tr>
-       <td scope="row">A</td>
-      <td>B</td>
-      <td>C</td>
-      <td>A</td>
-      <td>B</td>
-      <td>C</td>
-    </tr> -->
+      <td scope="row"><a href="">A</a></td>
+      <td><a href="">B</a></td>
+      <td><a href="">C</a></td>
+      <td><a href="">A</a></td>
+      <td><a href="">B</a></td>
+      <td><a href="">C</a></td>
+    </tr> 
   </tbody>
 </table>
       </div>
     </div>
-  </div>
-</div>
-</div>
+    </div>
+    </div>
 
-<div class="container">
-  <table class="table">
-  <thead class="thead-dark">
+
+
+
+<div class="container justify-content-center">
+  <div class="row ">
+
+  <table class="table table-sm table-bordered  col-12 col-sm-12">
+  <thead class="text-center fontth">
     <tr>
-      <th scope="col">Exercicio</th>
-      <th scope="col">Serie</th>
-      <th scope="col">Peso</th>
+      <th scope="col">EXERCÍCIO</th>
+      <th scope="col">SÉRIE</th>
+      <th scope="col">PESO</th>
     </tr>
   </thead>
-  <tbody>
+  <tbody class="fonttd">
     <tr>
-      <td> <input type="checkbox" aria-label="Checkbox for following text input"> Agachamento livre<i class="fa fa-play-circle-o" aria-hidden="true"></i></td>
-      <td>4x12</td>
-      <td>40kg</td>
+      <td> <input type="checkbox" aria-label="Checkbox for following text input" style="border: 1px solid #D9E0E6"> Agachamento livre <a href=""><i class="fa fa-play-circle-o playicon" aria-hidden="true" style="font-size: 25px"></i></a></td>
+      <td class="text-center">4x12</td>
+      <td class="text-center">40kg</td>
     </tr>
   </tbody>
-  <tfoot class="">
+  <tfoot class="fonttd">
     <tr>
       <th scope="col" colspan="3">
         Instrutor: <img src="../img/usuario.png" alt="..." class="rounded-circle" style="width: 30px; height: 30px"> Jorge Costa   
@@ -109,6 +116,7 @@
     </tr>
   </tfoot>
 </table>
+</div>
 </div>
 
 @endsection

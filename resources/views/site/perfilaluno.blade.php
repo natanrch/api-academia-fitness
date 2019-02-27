@@ -21,43 +21,53 @@
   <div class="row">
     <div class="col-sm-3 text-center" >
       
-      <img src="../img/usuario.png" alt="..." class="img-thumbnail fotoaluno" >
+     <img src="../img/usuario.png" alt="..." class="img-thumbnail fotoaluno text-center" style="border: 1px solid #131852">
       
-      <h5>Nome aluno</h5>
-      <small> Data de nascimento: <br> 00/00/000</small>
-      <br>
-      <button type="button" class="btn btn-info">ALTERAR PERFIL</button>
-      <hr class="d-sm-none">
+      <p class="Nomeperfil">Nome Aluno</p>
+      <p class="descriperfil"> Data de nascimento: <br> 00/00/000</P>
+      <p class="descriperfil"> Dias que treino: <br> Seg, Ter, Sex  </p>
+      <button type="button" class="btn  btnlaranja" style="width: 170px">ADICIONAR FOTO</button>
+
+      <!-- BOTÃO PARA QUANDO O INSTRUTOR FOR VER O PERFIL DO ALUNO 
+
+        <button type="button" class="btn  btnlaranja" style="width: 170px">CRIAR FICHA</button> -->
+      <br><br>
+    
     
     </div>
 
 
-
-    
     <div class="col-sm-9">
-      <h2>EVOLUÇÃO FÍSICA</h2>
+      <h2>AVALIAÇÃO FÍSICA</h2>
+      <br>
+<table class="table ">
+  <thead>
+    <tr>
+      <td scope="col">Peso:</td>
+      <td scope="col">Altura:</td>
       
-<p class="text-center">Peso</p>
-<div class="progress">
-  <div class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-</div>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td scope="row">IMC:</td>
+      <td>Gordura:</td>
+      
+    </tr>
+    <tr>
+      <td scope="row">...</td>
+      <td>...</td>
+      
+    </tr>
+    <tr>
+      <td scope="row">...</td>
+      <td>...</td>
+      
+    </tr>
+  </tbody>
+</table>
 <br>
-<p class="text-center">Peso</p>
-<div class="progress">
-  <div class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-</div>
-<br>
-<p class="text-center">Peso</p>
-<div class="progress">
-  <div class="progress-bar" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-</div>
-<br>
-
-    </div>
-  </div>
-</div>
-<br>
-
+<!--
 <div class="container">
 <div class="row">
   <div class="col-sm-12">
@@ -80,7 +90,7 @@
     </div>
   </div>
 </div>
-</div>
+</div> -->
 <br>
 
 @endsection

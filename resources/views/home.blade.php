@@ -7,14 +7,16 @@
 
 <!--Decricacao da academia-->
 
- <div class="jumbotron jumbotron-fluid text-center " style="background-image: url(img/img1.jpg);">
-    <h1 class=" textacademia  z-index">ACADEMIA FITNESS</h1>
+ <div class="jumbotron jumbotron-fluid text-center " style="background-image: url(img/img.jpg); background-size: cover;" >
+  <div class="container">
+    <h1 class=" textacademia ">ACADEMIA FITNESS</h1>
     <hr style="width: 222px; height: 3px; background-color: #131852">
     <center>
     <div style="max-width: 500px; z-index: -2" class=" z-index">
       <p class="lead" style="font-family: IBM Plex Sans, Regular; font-size: 20px">A Academia Fitness está a mais de 20 anos atuando no Estado do Amapá, sendo referência no seu ramo, oferecendo um serviço de alta qualidade.</p>
     </div>
     </center>
+  </div>
 </div>
      
 
@@ -92,32 +94,55 @@
 <!--tipos de planos-->
 <div class="container"> 
 <div class="card-deck">
-  <div class="card" style="border:none; background-color: #242B8C; max-width: 300px; height: 200px">
+  <div class="card" style="border:none; background-color: #242B8C; ">
     <div class="card-body text-center">
-      <h5 class="card-title" style="color: #FFFFFF; font-family: 'Roboto', sans-serif; font-size: 20px">MUSCULAÇÃO</h5>
-      <p class="card-text" style="color: #F1F1F1; font-family: IBM Plex Sans, Regular; font-size: 16px;" >Primeira mensalidade:</p>
-       <i class="fa fa-credit-card" aria-hidden="true"></i>
+      <h5 class="card-title" style="color: #FFFFFF; font-family: 'Roboto', sans-serif; font-size: 18px">MUSCULAÇÃO</h5>
+      <p class="card-text" style="color: #F1F1F1; font-family: IBM Plex Sans, Regular; font-size: 15px;" >A primeira mensalidade tem o valor de R$ 75,00. <br> A partir da segunda:</p>
+       
+
+        <div class="d-flex  mb-2 ">
+          <div class="mr-auto  "><img src="svg/001-money-color.svg" class="iconpgd"><small class="valorplanos">R$ 65,00</small></div>
+          
+          <div class="bd-highlight"><img src="svg/002-debit-card-color.svg" class="iconpgc"><small class="valorplanos">R$ 70,00</small></div>
+        </div>
     </div>
   </div>
   <div class="card" style="border:none; background-color: #B95922">
     <div class="card-body text-center">
       <h5 class="card-title" style="color: #FFFFFF; font-family: 'Roboto', sans-serif; font-size: 20px">RITMOS E KARATÊ</h5>
       <p class="card-text" style="color: #F1F1F1; font-family: IBM Plex Sans, Regular; font-size: 16px;">Valor promocional até a data de vencimento da mensalidade</p>
+
+      <div class="d-flex  mb-2 ">
+          <div class="mr-auto  "><img src="svg/001-money-color.svg" class="iconpgd"><small class="valorplanos">R$ 65,00</small></div>
+          
+          <div class="bd-highlight"><img src="svg/002-debit-card-color.svg" class="iconpgc"><small class="valorplanos">R$ 70,00</small></div>
+        </div>
     </div>
   </div>
   <div class="card" style="border:none; background-color: #242B8C;">
    <div class="card-body text-center">
       <h5 class="card-title" style="color: #FFFFFF; font-family: 'Roboto', sans-serif; font-size: 20px">PLANO FAMÍLIA</h5>
       <p class="card-text" style="color: #F1F1F1; font-family: IBM Plex Sans, Regular; font-size: 16px;">Valor promocional até a data de vencimento da mensalidade</p>
+      <div class="d-flex  mb-2 ">
+          <div class="mr-auto  "><img src="svg/001-money-color.svg" class="iconpgd"><small class="valorplanos">R$ 65,00</small></div>
+          
+          <div class="bd-highlight"><img src="svg/002-debit-card-color.svg" class="iconpgc"><small class="valorplanos">R$ 70,00</small></div>
+        </div>
     </div>
   </div>
 </div>
 <br>
 <div class="card-deck">
-  <div class="card" style="border:none; background-color: #B95922; max-width: 300px; height: 200px">
+  <div class="card" style="border:none; background-color: #B95922;  ">
     <div class="card-body text-center">
       <h5 class="card-title" style="color: #FFFFFF; font-family: 'Roboto', sans-serif; font-size: 20px">AVALIAÇÃO FÍSICA</h5>
       <p class="card-text" style="color: #F1F1F1; font-family: IBM Plex Sans, Regular; font-size: 16px;">Faça sua avaliação física completa com a gente.</p>
+
+      <div class="d-flex  mb-2 ">
+          <div class="mr-auto  "><img src="svg/001-money-color.svg" class="iconpgd"><small class="valorplanos">R$ 65,00</small></div>
+          
+          <div class="bd-highlight"><img src="svg/002-debit-card-color.svg" class="iconpgc"><small class="valorplanos">R$ 70,00</small></div>
+        </div>
       
     </div>
   </div>
@@ -125,12 +150,23 @@
     <div class="card-body text-center">
       <h5 class="card-title" style="color: #FFFFFF; font-family: 'Roboto', sans-serif; font-size: 20px">FUNCIONAL, GINÁSTICA E MUAY-THAI</h5>
       <p class="card-text" style="color: #F1F1F1; font-family: IBM Plex Sans, Regular; font-size: 16px;">Valor promocional até a data de vencimento da mensalidade</p>
+      <div class="d-flex  mb-2 ">
+          <div class="mr-auto  "><img src="svg/001-money-color.svg" class="iconpgd"><small class="valorplanos">R$ 65,00</small></div>
+          
+          <div class="bd-highlight"><img src="svg/002-debit-card-color.svg" class="iconpgc"><small class="valorplanos">R$ 70,00</small></div>
+        </div>
     </div>
   </div>
   <div class="card" style="border:none; background-color: #B95922">
    <div class="card-body text-center">
+
       <h5 class="card-title" style="color: #FFFFFF; font-family: 'Roboto', sans-serif; font-size: 20px">DUAS MODALIDADES</h5>
       <p class="card-text" style="color: #F1F1F1; font-family: IBM Plex Sans, Regular; font-size: 16px;">Valor promocional até a data de vencimento da mensalidade</p>
+      <div class="d-flex  mb-2 ">
+          <div class="mr-auto  "><img src="svg/001-money-color.svg" class="iconpgd"><small class="valorplanos">R$ 65,00</small></div>
+          
+          <div class="bd-highlight"><img src="svg/002-debit-card-color.svg" class="iconpgc"><small class="valorplanos">R$ 70,00</small></div>
+        </div>
     </div>
   </div>
 </div>
