@@ -22,6 +22,7 @@ Route::get('/perfil-aluno', 'TelaUsuarioController@perfilUsuario');
 Route::get('/perfil-instrutor', 'TelaUsuarioController@perfilInstrutor');
 Route::get('/escolha-perfil', 'TelaUsuarioController@escolhaperfil');
 Route::get('/ficha', 'TelaUsuarioController@ficha');
+Route::get('/adm', 'TelaUsuarioController@adm');
 
 Route::get('/programa/create', 'ProgramaDeTreinamentoController@create');
 Route::post('/programa/create', 'ProgramaDeTreinamentoController@store');

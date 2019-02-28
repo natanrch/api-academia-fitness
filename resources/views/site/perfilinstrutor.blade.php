@@ -69,7 +69,14 @@
     <p class="nomealuno">Nome Aluno</p>
     <div class="form-group">
       <button type="button" class="btn btnazul btn-sm">Ver Perfil <i class="fa fa-chevron-right" aria-hidden="true"></i></button>
+
+       <div class="text-left">
+        <br>
+  
+    <a href=""><i class="fa fa-plus-circle text-left" aria-hidden="true" style="font-size: 50px; color: #242B8C"></i></a>
     </div>
+    </div>
+   
    
 </div>
 

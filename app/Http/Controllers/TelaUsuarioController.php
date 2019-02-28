@@ -23,5 +23,9 @@ class TelaUsuarioController extends Controller
     {
         return view('ficha.ficha');
     }
+     public function adm()
+    {
+        return view('site.perfil-adm');
+    }
 }
 

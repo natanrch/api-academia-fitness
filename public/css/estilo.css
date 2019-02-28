@@ -6,6 +6,12 @@ h2{
   color: #343434;
   font-size: 30px;
 }
+h3{
+
+  font-family: 'Roboto', sans-serif;
+  color: #343434;
+  font-size: 25px;
+}
 .inputb{
   background-color: #DDDDDD;
 }
@@ -266,4 +272,20 @@ cursor: pointer;
     url(https://example.com/MaterialIcons-Regular.woff2) format('woff2'),
     url(https://example.com/MaterialIcons-Regular.woff) format('woff'),
     url(https://example.com/MaterialIcons-Regular.ttf) format('truetype');
+}
+
+
+
+.glyph{
+    position: relative;
+    right: -92px;
+    top:2px;
+    pointer-events: none; 
+    font-family: IBM Plex Sans, Regular;
+    color: #F1F1F1;
+    font-size: 20px;
+}
+
+.button{
+    padding-right: 20px;
 }
