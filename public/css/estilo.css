@@ -64,6 +64,8 @@ h3{
   color: #B95922;
 }
 
+
+
 .valorplanos{
   color: #FFFFFF;
   font-family: IBM Plex Sans, Bold;
@@ -92,6 +94,10 @@ h3{
   color: #363636;
   font-size: 15px;
 }
+.fotomenu{
+  max-width: 40px;
+  max-height:40px;
+}
 
 
 
@@ -100,7 +106,8 @@ h3{
 .textacademia{
   color: #B95922;
   font-family: Cooper, Black;
-  letter-spacing: 8px;
+  font-size: 2rem;
+  text-align: center;
 
 }
 .headerimg{
@@ -118,6 +125,7 @@ h3{
 .imgmodalidades{
   max-width: 250px;
   height: 250px;
+  border-radius: 5px
 
 }
 .fontmodalidades{
@@ -259,6 +267,11 @@ cursor: pointer;
   font-family: IBM Plex Sans, Regular;
   color: #F1F1F1;
   font-size: 15px
+}
+
+.iconredes{
+  color: #B95922;
+
 }
 
 /* ICONES */

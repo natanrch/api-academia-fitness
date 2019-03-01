@@ -8,11 +8,14 @@
 <!--Decricacao da academia-->
 
  <div class="jumbotron jumbotron-fluid text-center " style="background-image: url(img/img.jpg); background-size: cover;" >
-  <div class="container">
-    <h1 class=" textacademia ">ACADEMIA FITNESS</h1>
-    <hr style="width: 222px; height: 3px; background-color: #131852">
+  <div class="container text-center" >
     <center>
-    <div style="max-width: 500px; z-index: -2" class=" z-index">
+    <div style="max-width: 600px">
+    <p class=" textacademia h1  " >ACADEMIA FITNESS</p>
+    <hr style="max-width: 222px; height: 3px; background-color: #131852">
+    </div>
+    
+    <div style="max-width: 500px;  " >
       <p class="lead" style="font-family: IBM Plex Sans, Regular; font-size: 20px">A Academia Fitness está a mais de 20 anos atuando no Estado do Amapá, sendo referência no seu ramo, oferecendo um serviço de alta qualidade.</p>
     </div>
     </center>
@@ -22,41 +25,41 @@
 
 
 <!--texto modalidades-->
-<div class="container">
+<div class="container text-center">
         <div class="section-header">
-          <p class="text-center planosh2 ">MODALIDADES</p>
+          <h2 class="text-center ">MODALIDADES</h2>
     </div>
 </div>
 
 <!--tipos de modalidades-->
 
-<div class="container ">
+<div class="container text-center ">
   <div class="row" >
-    <div class="col-sm-4 card  " style="border:none;"  >
+    <div class="col-12 col-sm-4  " style="border:none;"  >
       <img class="card-img-top imgmodalidades" src="img/musculacao.jpg" alt="Imagem de capa do card">
       <p class="text-center fontmodalidades font-weight-normal">Musculação</p>
       
     </div>
-    <div class="col-sm-4 card"  style="border:none;">
+    <div class=" col-12 col-sm-4"  style="border:none;">
       <img class="card-img-top  imgmodalidades" src="img/ritmos.jpg" alt="Imagem de capa do card">
       <p class="text-center fontmodalidades font-weight-normal">Ritmos</p> 
     </div>
-    <div class="col-sm-4 card" style="border:none;" >
+    <div class="col-12 col-sm-4 " style="border:none;" >
       <img class="card-img-top imgmodalidades" src="img/funcional.jpg" alt="Imagem de capa do card">
       <p class="text-center fontmodalidades font-weight-normal">Treinamento Funcional</p>
     </div>
   </div>
 
   <div class="row">
-    <div class="col-sm-4 card"  style="border:none;">
+    <div class="col-12 col-sm-4"  style="border:none;">
       <img class="card-img-top imgmodalidades" src="img/karate.jpg" alt="Imagem de capa do card">
       <p class="text-center fontmodalidades font-weight-normal">Karatê</p> 
     </div>
-    <div class="col-sm-4 card"  style="border:none;">
+    <div class="col-12 col-sm-4"  style="border:none;">
       <img class="card-img-top imgmodalidades" src="img/ginastica.jpg" alt="Imagem de capa do card">
       <p class="text-center fontmodalidades font-weight-normal">Ginástica</p> 
     </div>
-    <div class="col-sm-4 card"  style="border:none;">
+    <div class="col-12 col-sm-4"  style="border:none;">
       <img class="card-img-top imgmodalidades" src="img/muay-thai.jpg" alt="Imagem de capa do card">
       <p class="text-center fontmodalidades font-weight-normal">Muay-thai</p> 
     </div>
@@ -111,6 +114,7 @@
     <div class="card-body text-center">
       <h5 class="card-title" style="color: #FFFFFF; font-family: 'Roboto', sans-serif; font-size: 20px">RITMOS E KARATÊ</h5>
       <p class="card-text" style="color: #F1F1F1; font-family: IBM Plex Sans, Regular; font-size: 16px;">Valor promocional até a data de vencimento da mensalidade</p>
+      <br>
 
       <div class="d-flex  mb-2 ">
           <div class="mr-auto  "><img src="svg/001-money-color.svg" class="iconpgd"><small class="valorplanos">R$ 65,00</small></div>
@@ -122,7 +126,7 @@
   <div class="card" style="border:none; background-color: #242B8C;">
    <div class="card-body text-center">
       <h5 class="card-title" style="color: #FFFFFF; font-family: 'Roboto', sans-serif; font-size: 20px">PLANO FAMÍLIA</h5>
-      <p class="card-text" style="color: #F1F1F1; font-family: IBM Plex Sans, Regular; font-size: 16px;">Valor promocional até a data de vencimento da mensalidade</p>
+      <p class="card-text" style="color: #F1F1F1; font-family: IBM Plex Sans, Regular; font-size: 16px;">Valor promocional até a data de vencimento da mensalidade</p><br>
       <div class="d-flex  mb-2 ">
           <div class="mr-auto  "><img src="svg/001-money-color.svg" class="iconpgd"><small class="valorplanos">R$ 65,00</small></div>
           
@@ -136,9 +140,9 @@
   <div class="card" style="border:none; background-color: #B95922;  ">
     <div class="card-body text-center">
       <h5 class="card-title" style="color: #FFFFFF; font-family: 'Roboto', sans-serif; font-size: 20px">AVALIAÇÃO FÍSICA</h5>
-      <p class="card-text" style="color: #F1F1F1; font-family: IBM Plex Sans, Regular; font-size: 16px;">Faça sua avaliação física completa com a gente.</p>
+      <p class="card-text" style="color: #F1F1F1; font-family: IBM Plex Sans, Regular; font-size: 16px;">Faça sua avaliação física completa com a gente.</p><br>
 
-      <div class="d-flex  mb-2 ">
+      <div class="d-flex  mb-4">
           <div class="mr-auto  "><img src="svg/001-money-color.svg" class="iconpgd"><small class="valorplanos">R$ 65,00</small></div>
           
           <div class="bd-highlight"><img src="svg/002-debit-card-color.svg" class="iconpgc"><small class="valorplanos">R$ 70,00</small></div>
@@ -161,7 +165,7 @@
    <div class="card-body text-center">
 
       <h5 class="card-title" style="color: #FFFFFF; font-family: 'Roboto', sans-serif; font-size: 20px">DUAS MODALIDADES</h5>
-      <p class="card-text" style="color: #F1F1F1; font-family: IBM Plex Sans, Regular; font-size: 16px;">Valor promocional até a data de vencimento da mensalidade</p>
+      <p class="card-text" style="color: #F1F1F1; font-family: IBM Plex Sans, Regular; font-size: 16px;">Valor promocional até a data de vencimento da mensalidade</p><br>
       <div class="d-flex  mb-2 ">
           <div class="mr-auto  "><img src="svg/001-money-color.svg" class="iconpgd"><small class="valorplanos">R$ 65,00</small></div>
           

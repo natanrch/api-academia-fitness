@@ -1,7 +1,6 @@
 <html>
 <head>
     <link href="/css/app.css" rel="stylesheet">
-    <link href="/css/custom.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="/css/estilo.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet ">
     <link href="https://fonts.googleapis.com/css?family=Roboto:900" rel="stylesheet">
@@ -18,7 +17,7 @@
 <body>
  	<header>
  		
- 			<nav class="navbar navbar-expand-lg  navbar-light colormenu " >
+ 	<nav class="navbar navbar-expand-lg  navbar-light colormenu " style="padding: .1rem">
 
   <!--logo -->
   <a class="navbar-brand" href="#"><img src="img/logo.png" style="width: 111px; height: 50px"></a>
@@ -33,10 +32,10 @@
         <a class="nav-link " href="layout/grupomuscular.blade.php" style="color: #F1F1F1">SOBRE NÓS</a>
       </li>
       <li class="nav-item ">
-        <div style="background-color: #B95922;  "  class="">
-        <a class="nav-link logincolor "  href="layout/primeiraetapalogin.blade.php" style="color: #F1F1F1;" ><i class="fa fa-user-o" aria-hidden="true"></i>
+        
+        <a class="nav-link btn btnlaranja"  href="layout/primeiraetapalogin.blade.php" style="color: #F1F1F1 " ><i class="fa fa-user-o " aria-hidden="true"></i>
          LOGIN</a>
-        </div>
+       
       </li>
     </ul>
   </div>
@@ -53,8 +52,8 @@
     <div class="row">
       <div class="col-12 col-sm-4">
         <p class="pfooter">REDES SOCIAS</p>
-        <i class="fa fa-facebook-square" aria-hidden="true"></i>
-        <i class="fa fa-instagram" aria-hidden="true"></i>
+        <a href=""><i class="fa fa-facebook-square playicon" aria-hidden="true" style=" font-size:  30px; margin-right: 5px" ></i></a>
+        <a href=""><i class="fa fa-instagram playicon" aria-hidden="true" style=" font-size:  30px;"></i></a>
       </div>
       <div class="col-12 col-sm-4">
         <P class="pfooter">ONDE NOS ENCONTRAR?</P>

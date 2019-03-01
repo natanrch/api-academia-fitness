@@ -36,11 +36,11 @@
 
 
      <form class="form-row" >
-      <div class="form-group col-8 col-sm-10">
-        <input class="form-control inputb" type="search" placeholder="Digite um nome" aria-label="Search">
+      <div class="form-group col-6 col-sm-8">
+        <input class="form-control inputb" type="search" placeholder="Pesquisar" aria-label="Search">
       </div>
       <div class="form-group col-2 col-sm-2">
-      <button class="btn btnlaranja" style=" height: 40px" type="submit">PESQUISAR</button>
+      <button class="btn btnlaranja"  type="submit">PESQUISAR</button>
     </div>
     </form>
     <br>

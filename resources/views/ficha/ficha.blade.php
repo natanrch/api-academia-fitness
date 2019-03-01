@@ -1,7 +1,7 @@
 @extends('layouts.main')
 
 @section('content')
-
+<br>
 <div class="container">
         <div class="section-header">
           <h2 class="text-center">MINHA FICHA</h2>
