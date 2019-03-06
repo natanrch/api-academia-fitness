@@ -15,6 +15,6 @@ class ProgramaDeTreinamento extends Model
 
     public function programa_exercicios()
     {
-    	return $this->hasMany('App\ProgramaExercicios');
+    	return $this->hasMany('App\ProgramaExercicio', 'programa_de_treinamento_id');
     }
 }
