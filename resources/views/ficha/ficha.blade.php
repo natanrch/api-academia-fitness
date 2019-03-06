@@ -7,7 +7,7 @@
           <h2 class="text-center">MINHA FICHA</h2>
           <hr style="width: 13%">
         </div>
-        <h2>Treino de Hoje: A </h2>
+        <h2>Treino de Hoje: {{$treino->titulo}} </h2>
     </div>
    
 
