@@ -38,6 +38,10 @@
 				<label class="fontth">Séries</label>
 				<input type="number" name="series[]" class="form-control" style="border: 1px solid #1827f580">
 			</div>
+			<div class="col-md-4">
+				<label class="fontth">Peso</label>
+				<input type="number" name="peso[]" class="form-control" style="border: 1px solid #1827f580">
+			</div>
 		</div>
 
 		<div id="novo-exercicio-{{RemoveAcentosHelper::removeAcentos($tipo->titulo)}}">
