@@ -17,6 +17,10 @@
 <div class="container">
 <form method="POST">
 	{{csrf_field()}}
+	<label>
+		Treino
+	</label>
+	<input type="text" name="titulo" placeholder="Nome do treino" class="form-control">
 	@foreach($tipos as $tipo)
 			<div class="col-md-12 "><h3>{{ucfirst($tipo->titulo)}}</h3></div>
 		<div class="row mb-3 exercicio-{{RemoveAcentosHelper::removeAcentos($tipo->titulo)}}">

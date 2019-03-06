@@ -29,7 +29,7 @@
 
 <div class="container d-flex justify-content-center ">
         
-  <form method="POST" action="{{ route('login') }}">
+  <form method="POST" action="/login">
 
       @csrf
   

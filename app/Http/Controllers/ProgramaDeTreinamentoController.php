@@ -56,8 +56,8 @@ class ProgramaDeTreinamentoController extends Controller
     public function store(Request $request)
     {
         $programaDeTreinamento = $this->programaDeTreinamento->create([
-            'titulo' => 'teste',
-            'user_id' => 1
+            'titulo' => $request->titulo,
+            'user_id' => 1,
         ]);
         foreach($request->exercicio as $i => $exercicio) {
             if($exercicio > 0) {

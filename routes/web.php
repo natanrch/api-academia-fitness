@@ -16,6 +16,7 @@ Route::get('/', function () {
 });
 
 Auth::routes();
+Route::post('/login', 'Auth\LoginController@loginInstrutor');
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/perfil-aluno', 'TelaUsuarioController@perfilUsuario');
