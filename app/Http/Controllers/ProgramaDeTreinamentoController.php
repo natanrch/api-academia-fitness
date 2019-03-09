@@ -41,7 +41,7 @@ class ProgramaDeTreinamentoController extends Controller
     {
         $exercicios = $this->exercicio->all()->sortBy('tipo_exercicio_id');
         $tipos = $this->tipoExercicio->all()->sortBy('titulo');
-        return view('ficha.create-programa', [
+        return view('treino.create', [
             'exercicios' => $exercicios,
             'tipos' => $tipos,
         ]);

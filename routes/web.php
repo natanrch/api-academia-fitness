@@ -25,5 +25,11 @@ Route::get('/escolha-perfil', 'TelaUsuarioController@escolhaperfil');
 Route::get('/ficha', 'TelaUsuarioController@ficha');
 Route::get('/adm', 'TelaUsuarioController@adm');
 
-Route::get('/programa/create', 'ProgramaDeTreinamentoController@create');
-Route::post('/programa/create', 'ProgramaDeTreinamentoController@store');
+Route::group(['prefix' => 'treino'], function() {
+	Route::get('create', 'ProgramaDeTreinamentoController@create');
+	Route::post('create', 'ProgramaDeTreinamentoController@store');
+});
+Route::group(['prefix' => 'ficha'], function() {
+	Route::get('create', 'FichaController@create');
+	Route::post('create', 'FichaController@store');
+});

@@ -10,8 +10,8 @@
 <!--texto criar ficha-->
 <div class="container">
         <div class="section-header">
-          <h2 class="text-center">CRIAR FICHA</h2>
-          <P class="text-center">Preencha os dados para criar ficha.</P>
+          <h2 class="text-center">CRIAR TREINO</h2>
+          <P class="text-center">Preencha os dados para criar o treino.</P>
         </div>
         <br>
 <div class="container">
@@ -25,7 +25,7 @@
 			<div class="col-md-12 "><h3>{{ucfirst($tipo->titulo)}}</h3></div>
 		<div class="row mb-3 exercicio-{{RemoveAcentosHelper::removeAcentos($tipo->titulo)}}">
 			
-			<div class="col-md-4">
+			<div class="col-md-3">
 				<label class="fontth" >Exercicio</label>
 				<select name="exercicio[]" class="form-control" style="border: 1px solid #1827f580">
 					<option value="0">Selecione o exercício</option>
@@ -34,15 +34,15 @@
 					@endforeach
 				</select>
 			</div>
-			<div class="col-md-4">
+			<div class="col-md-3">
 				<label class="fontth">Repetições</label>
 				<input class="form-control" type="number" name="repeticoes[]" style="border: 1px solid #1827f580" >
 			</div>
-			<div class="col-md-4">
+			<div class="col-md-3">
 				<label class="fontth">Séries</label>
 				<input type="number" name="series[]" class="form-control" style="border: 1px solid #1827f580">
 			</div>
-			<div class="col-md-4">
+			<div class="col-md-3">
 				<label class="fontth">Peso</label>
 				<input type="number" name="peso[]" class="form-control" style="border: 1px solid #1827f580">
 			</div>

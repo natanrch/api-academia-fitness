@@ -7,6 +7,14 @@ use Illuminate\Http\Request;
 
 class FichaController extends Controller
 {
+
+    protected $ficha;
+
+    public function __construct(Ficha $ficha)
+    {
+        $this->ficha = $ficha;
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -24,7 +32,7 @@ class FichaController extends Controller
      */
     public function create()
     {
-        //
+        return view('ficha.create');
     }
 
     /**
@@ -35,7 +43,16 @@ class FichaController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->ficha->create([
+            'user_id' => 1,
+            'dias_de_treinamento' => $request->dias,
+            'objetivo' => $request->objetivo,
+            'metodo' => $request->metodo,
+            'aquecimento' => $request->aquecimento,
+            'treino_aerobico' => $request->aerobico,
+            'observacoes' => $request->observacoes,
+        ]);
+        return redirect('/treino/create');
     }
 
     /**
