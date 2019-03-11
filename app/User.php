@@ -16,7 +16,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'name', 'email', 'password', 'cpf', 'tipo'
     ];
 
     /**
@@ -28,8 +28,20 @@ class User extends Authenticatable
         'password', 'remember_token',
     ];
 
-    public function programa_de_treinamentos()
+    const ADMIN_TIPO = 'admin';
+    const INSTRUTOR_TIPO = 'instrutor';
+
+
+    public function isAdmin()    {        
+        return $this->tipo === self::ADMIN_TIPO;    
+    }
+
+    public function isInstrutor()    {        
+        return $this->tipo === self::INSTRUTOR_TIPO;    
+    }
+
+    public function ficha()
     {
-        return $this->hasMany('App\ProgramaDeTreinamento');
+        return $this->hasOne('App\Ficha');
     }
 }
