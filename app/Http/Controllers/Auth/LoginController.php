@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Auth;
 use Request;
+use Session;
 
 class LoginController extends Controller
 {
@@ -27,7 +28,7 @@ class LoginController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/';
+    protected $redirectTo = '/perfil';
 
     /**
      * Create a new controller instance.
@@ -46,7 +47,7 @@ class LoginController extends Controller
 
     public function formInstrutor()
     {
-        
+        return view('auth.instrutor.login');
     }
 
     public function loginInstrutor()
@@ -55,6 +56,13 @@ class LoginController extends Controller
         if(Auth::attempt($credenciais)) {
             return redirect('/perfil-instrutor');
         }   
+    }
+
+    public function logout()
+    {
+        Auth::logout();
+        Session::flush();
+        return redirect('/');
     }
 
 }

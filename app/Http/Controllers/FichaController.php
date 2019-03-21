@@ -3,16 +3,20 @@
 namespace App\Http\Controllers;
 
 use App\Ficha;
+use App\ProgramaDeTreinamento;
 use Illuminate\Http\Request;
+use Session;
 
 class FichaController extends Controller
 {
 
     protected $ficha;
+    protected $programaDeTreinamento;
 
-    public function __construct(Ficha $ficha)
+    public function __construct(Ficha $ficha, ProgramaDeTreinamento $programaDeTreinamento)
     {
         $this->ficha = $ficha;
+        $this->programaDeTreinamento = $programaDeTreinamento;
     }
 
     /**
@@ -30,8 +34,12 @@ class FichaController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(Request $request)
     {
+        Session::put([
+            'user_id' => $request->user,
+        ]);
+
         return view('ficha.create');
     }
 
@@ -43,8 +51,8 @@ class FichaController extends Controller
      */
     public function store(Request $request)
     {
-        $this->ficha->create([
-            'user_id' => 1,
+        $ficha = $this->ficha->create([
+            'user_id' => session('user_id'),
             'dias_de_treinamento' => $request->dias,
             'objetivo' => $request->objetivo,
             'metodo' => $request->metodo,
@@ -63,7 +71,11 @@ class FichaController extends Controller
      */
     public function show(Ficha $ficha)
     {
-        //
+        $programaDeTreinamento = $this->programaDeTreinamento->find(2);
+        return view('ficha.ficha', [
+            'treino' => $programaDeTreinamento,
+        ]);
+
     }
 
     /**

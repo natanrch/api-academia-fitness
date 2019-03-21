@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\ProgramaDeTreinamento;
+use App\User;
 
 
 class TelaUsuarioController extends Controller
@@ -22,7 +23,10 @@ class TelaUsuarioController extends Controller
 
     public function perfilInstrutor()
     {
-    	return view('site.perfilinstrutor');
+        $users = User::where('tipo', 'default')->get();
+    	return view('site.perfilinstrutor', [
+            'users' => $users,
+        ]);
     }
     public function escolhaPerfil()
     {
@@ -30,7 +34,7 @@ class TelaUsuarioController extends Controller
     }
     public function ficha()
     {
-        $programaDeTreinamento = $this->programaDeTreinamento->find(1);
+        $programaDeTreinamento = $this->programaDeTreinamento->find(2);
         return view('ficha.ficha', [
             'treino' => $programaDeTreinamento,
         ]);

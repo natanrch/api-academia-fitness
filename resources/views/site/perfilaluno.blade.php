@@ -12,7 +12,7 @@
       <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">MENU<i class="fa fa-chevron-down" aria-hidden="true"></i></a>
       <div class="dropdown-menu">
         <a class="dropdown-item" href="#one">MEUS DADOS</a>
-        <a class="dropdown-item" href="#two">MINHS FICHA</a>
+        <a class="dropdown-item" href="/ficha-aluno">MINHA FICHA</a>
     </li>
   </ul>
 </nav>

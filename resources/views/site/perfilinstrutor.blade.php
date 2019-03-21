@@ -44,7 +44,7 @@
     </div>
     </form>
     <br>
-
+@foreach($users as $user)
 <div class="row" >
   <div class="col-6 col-sm-2">
    
@@ -54,31 +54,16 @@
   
  </div>
   <div class="col-4 col-sm-4">
-    <p class="nomealuno " style=" margin-top: 5px;">Nome Aluno</p>
+    <p class="nomealuno " style=" margin-top: 5px;">{{$user->name}}</p>
     <div class="form-group">
-      <button type="button" class="btn btnazul btn-sm">Ver Perfil <i class="fa fa-chevron-right" aria-hidden="true"></i></button>
+      <a href="user/{{$user->id}}" class="btn btnazul btn-sm">Ver Perfil <i class="fa fa-chevron-right" aria-hidden="true"></i></a>
+      <a href="ficha/create?user={{$user->id}}" class="btn btn-info">Criar ficha </a>
     </div>
   </div>
-
-
-  <div class="col-6 col-sm-2">
-    <div class="text-center"> 
-    <img src="../img/usuario.png" alt="..." class="rounded-circle" style="width: 80px; height: 80px"></div>
-    </div>
-  <div class="col-4 col-sm-4">
-    <p class="nomealuno">Nome Aluno</p>
-    <div class="form-group">
-      <button type="button" class="btn btnazul btn-sm">Ver Perfil <i class="fa fa-chevron-right" aria-hidden="true"></i></button>
-
-       <div class="text-left">
-        <br>
-  
-    <a href=""><i class="fa fa-plus-circle text-left" aria-hidden="true" style="font-size: 50px; color: #242B8C"></i></a>
-    </div>
-    </div>
-   
-   
 </div>
+@endforeach
+  <br>
+    <a href=""><i class="fa fa-plus-circle text-left" aria-hidden="true" style="font-size: 50px; color: #242B8C"></i></a>
 
     </div>
   </div>
