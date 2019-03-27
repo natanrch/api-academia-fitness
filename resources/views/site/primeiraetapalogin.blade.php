@@ -23,8 +23,8 @@
         <div class="section-header">
           <h2 class="text-center ">Escolha como você deseja realizar seu login</h2>
           <br><br>
-           <button type="button" id="next" class="btn .logincolor btn-lg first next" style="margin: 10px; width: 215px">Entra como Instrutor</button>
-    <button type="button" id="next" class="btn .logincolor btn-lg " style="width: 215px">Entra como aluno</button>
+           <a href="/instrutor/login" type="button" id="next" class="btn .logincolor btn-lg first next" style="margin: 10px; width: 215px">Entra como Instrutor</a>
+    <a href="/login" type="button" id="next" class="btn .logincolor btn-lg " style="width: 215px">Entra como aluno</a>
     <br><br>
      <p class="font-weight-normal fontmodalidades" style="font-size: 16px">Não possui um usuário? Procure a academia e matricule-se!</p>
         </div>

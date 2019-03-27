@@ -40,6 +40,10 @@ class FichaController extends Controller
             'user_id' => $request->user,
         ]);
 
+        $ficha = $this->ficha->where('user_id', $request->user)->first();
+        if(!is_null($ficha)) {
+            return redirect('/ficha/'.$request->user);
+        }
         return view('ficha.create');
     }
 
@@ -51,15 +55,15 @@ class FichaController extends Controller
      */
     public function store(Request $request)
     {
-        $ficha = $this->ficha->create([
-            'user_id' => session('user_id'),
-            'dias_de_treinamento' => $request->dias,
-            'objetivo' => $request->objetivo,
-            'metodo' => $request->metodo,
-            'aquecimento' => $request->aquecimento,
-            'treino_aerobico' => $request->aerobico,
-            'observacoes' => $request->observacoes,
-        ]);
+        // $ficha = $this->ficha->create([
+        //     'user_id' => session('user_id'),
+        //     'dias_de_treinamento' => $request->dias,
+        //     'objetivo' => $request->objetivo,
+        //     'metodo' => $request->metodo,
+        //     'aquecimento' => $request->aquecimento,
+        //     'treino_aerobico' => $request->aerobico,
+        //     'observacoes' => $request->observacoes,
+        // ]);
         return redirect('/treino/create');
     }
 
@@ -71,7 +75,7 @@ class FichaController extends Controller
      */
     public function show(Ficha $ficha)
     {
-        $programaDeTreinamento = $this->programaDeTreinamento->find(2);
+        $programaDeTreinamento = $this->programaDeTreinamento->where('user_id', $ficha->user->id)->first();
         return view('ficha.ficha', [
             'treino' => $programaDeTreinamento,
         ]);

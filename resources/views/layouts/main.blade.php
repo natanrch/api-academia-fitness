@@ -31,12 +31,21 @@
       <li class="nav-item">
         <a class="nav-link " href="layout/grupomuscular.blade.php" style="color: #F1F1F1">SOBRE NÓS</a>
       </li>
-      <li class="nav-item ">
-        
-        <a class="nav-link btn btnlaranja"  href="layout/primeiraetapalogin.blade.php" style="color: #F1F1F1 " ><i class="fa fa-user-o " aria-hidden="true"></i>
-         LOGIN</a>
-       
-      </li>
+      @if(!Auth::check())
+        <li class="nav-item ">
+          
+          <a class="nav-link btn btnlaranja"  href="/escolha-perfil" style="color: #F1F1F1 " ><i class="fa fa-user-o " aria-hidden="true"></i>
+           LOGIN</a>
+         
+        </li>
+      @else
+        <li class="nav-item ">
+          
+          <a class="nav-link btn btnlaranja"  href="/logout" style="color: #F1F1F1 " ><i class="fa fa-user-o " aria-hidden="true"></i>
+           LOGOUT</a>
+         
+        </li>
+      @endif
     </ul>
   </div>
 </nav>

@@ -19,6 +19,13 @@ class UsersSeeder extends Seeder
             'tipo' => 'default',
         ]);
         DB::table('users')->insert([
+            'name' => 'teste',
+            'email' => 'teste_outro_aluno@gmail.com',
+            'password' => bcrypt('123456'),
+            'cpf' => '44444444444',
+            'tipo' => 'default',
+        ]);
+        DB::table('users')->insert([
             'name' => 'teste instrutor',
             'email' => 'teste_instrutor@gmail.com',
             'password' => bcrypt('123456'),
