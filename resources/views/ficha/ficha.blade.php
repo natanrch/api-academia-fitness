@@ -127,44 +127,4 @@
 </div>
 </div>
 
-
-<!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-lg" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <div class="container">
-          <div class="row col-12">
-
-            <iframe src="http://www.youtube.com/embed/dP15zlyra3c?html5=1"></iframe>
-          </div>
-
-          <div class="row col-12">
-            <h2>DESCRIÇÃO</h2>
-            
-          </div>
-          
-        </div>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!--Script stops video from playing when modal is closed-->
-<script>
-    $("#myModal").on('hidden.bs.modal', function (e) {
-        $("#myModal iframe").attr("src", $("#myModal iframe").attr("src"));
-    });
-</script>
-
 @endsection

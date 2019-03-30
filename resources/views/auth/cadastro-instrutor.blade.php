@@ -1,8 +1,14 @@
 @extends('layouts.main')
 
 @section('content')
-<br><br>
-<div class="container">
+
+
+<button type="button" class="btn btnlaranja" data-toggle="modal" data-target=".bd-example-modal-lg">ADICIONAR INSTRUTOR</button>
+
+<div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+        <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-10">
             <div class="card" style="border:none;">
@@ -16,7 +22,7 @@
                         @csrf
 
                         <div class="form-group row">
-                            <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Name') }}</label>
+                            <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('NOME') }}</label>
 
                             <div class="col-md-6">
                                 <input id="name" type="text" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" name="name" value="{{ old('name') }}" required autofocus>
@@ -84,5 +90,8 @@
         </div>
     </div>
 </div>
-<br><br>
+    </div>
+  </div>
+</div>
+
 @endsection

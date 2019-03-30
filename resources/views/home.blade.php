@@ -7,12 +7,27 @@
 
 <!--Decricacao da academia-->
 
- <div class="jumbotron jumbotron-fluid text-center " style="background-image: url(img/img.jpg); background-size: cover;" >
-  <div class="container text-center" >
+ <div class="jumbotron" style="background-color: #fff">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-6 col-12">
+          <p>Já pensou em ter seu treino em mão onde e quando quiser, com demostrativos dos execicios de forma correta. Aqui na Academia Fitness você pode baixar nosso Aplicativo e seguir seu treino elaborado pelos instrutores e com base na sua avaliação fisica. </p>
+          <p>Venha conhecer a <strong>Academia Fitness!</strong></p>
+        </div>
+         <div class="col-sm-6 col-12 text-right">
+          <img src="img/aplicativo.png" class="img-fluid" alt="Responsive image">
+        </div>
+      </div>
+    </div>
+</div>
+
+
+
+<div class="container text-center"  >
     <center>
     <div style="max-width: 600px">
     <p class=" textacademia h1  " >ACADEMIA FITNESS</p>
-    <hr style="max-width: 222px; height: 3px; background-color: #131852">
+    <hr style="max-width: 222px; height: 3px; background-color: #131852;">
     </div>
     
     <div style="max-width: 500px;  " >
@@ -20,8 +35,7 @@
     </div>
     </center>
   </div>
-</div>
-     
+     <br>
 
 
 <!--texto modalidades-->
@@ -83,7 +97,7 @@
       
       </div>
       <div class="col-12 col-sm-6 text-center" >
-        <img src="svg/img-planos.svg" class="img-fluid " alt="Imagem responsiva" style="max-height: 400px">
+        <img src="svg/img-planos.svg" class="img-fluid " alt="Imagem responsiva" style="max-height: 330px">
       </div>
     </div>
   </div>

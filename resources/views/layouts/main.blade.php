@@ -64,17 +64,19 @@
     <div class="row">
       <div class="col-12 col-sm-4">
         <p class="pfooter">REDES SOCIAS</p>
-        <a href=""><i class="fa fa-facebook-square playicon" aria-hidden="true" style=" font-size:  30px; margin-right: 5px" ></i></a>
-        <a href=""><i class="fa fa-instagram playicon" aria-hidden="true" style=" font-size:  30px;"></i></a>
+        <a href=""><i class="fa fa-facebook-square playicon" aria-hidden="true" style=" font-size:  25px; margin-right: 5px" ></i></a>
+        <a href=""><i class="fa fa-instagram playicon" aria-hidden="true" style=" font-size:  25px;"></i></a>
       </div>
       <div class="col-12 col-sm-4">
         <P class="pfooter">ONDE NOS ENCONTRAR?</P>
+        <small class="small p1footer" ><a href="https://goo.gl/maps/ZhcBZ68Cu5K2" style="color: #fff"><i class="fa fa-map-marker playicon " style="font-size: 25px;" aria-hidden="true"></i> Google Maps</a></small><br>
         <small class="small p1footer">Rua São José, 1143</small><br>
-        <small class="small p1footer">Proximo a escola Pudium</small>
+        <small class="small p1footer">Proximo a escola Pudium</small><br>
+        
       </div>
       <div class="col-12 col-sm-4">
         <P class="pfooter">CONTATO</P>
-        <small class="p1footer">(96) 9 9144-5397 <br> (96)  9 8118-1047</small>
+        <small class="p1footer"> <i class="fa fa-whatsapp playicon" aria-hidden="true" style="font-size: 16px;"></i> (96) 9 9144-5397  <br><i class="fa fa-phone playicon" aria-hidden="true" style="font-size: 16px;"></i> (96)  9 8118-1047 </small>
       </div>
     </div>
   </div>
