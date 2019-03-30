@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Ficha;
 use App\FichaExercicio;
+use App\Exercicio;
+use App\TipoExercicio;
 use Illuminate\Http\Request;
 use Session;
 
@@ -12,11 +14,16 @@ class FichaController extends Controller
 
     protected $ficha;
     protected $fichaExercicio;
+    protected $exercicio;
+    protected $tipoExercicio;
 
-    public function __construct(Ficha $ficha, FichaExercicio $fichaExercicio)
+    public function __construct(Ficha $ficha, FichaExercicio $fichaExercicio, Exercicio $exercicio, TipoExercicio $tipoExercicio)
     {
+
+        $this->exercicio = $exercicio;
         $this->ficha = $ficha;
         $this->fichaExercicio = $fichaExercicio;
+        $this->tipoExercicio = $tipoExercicio;
     }
 
     /**
@@ -44,7 +51,14 @@ class FichaController extends Controller
         if(!is_null($ficha)) {
             return redirect('/ficha/'.$request->user);
         }
-        return view('ficha.create');
+
+        $exercicios = $this->exercicio->all()->sortBy('tipo_exercicio_id');
+        $tipos = $this->tipoExercicio->all()->sortBy('titulo');
+
+        return view('ficha.create', [
+            'exercicios' => $exercicios,
+            'tipos' => $tipos,
+        ]);
     }
 
     /**

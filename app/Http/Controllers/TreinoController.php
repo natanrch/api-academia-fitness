@@ -16,7 +16,6 @@ class TreinoController extends Controller
 
     public function __construct(Exercicio $exercicio, FichaExercicio $fichaExercicio, TipoExercicio $tipoExercicio)
     {
-        $this->programaDeTreinamento = $programaDeTreinamento;
         $this->exercicio = $exercicio;
         $this->fichaExercicio = $fichaExercicio;
         $this->tipoExercicio = $tipoExercicio;
@@ -69,46 +68,23 @@ class TreinoController extends Controller
         return redirect()->back();
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\ProgramaDeTreinamento  $programaDeTreinamento
-     * @return \Illuminate\Http\Response
-     */
     public function show()
     {
         //
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\ProgramaDeTreinamento  $programaDeTreinamento
-     * @return \Illuminate\Http\Response
-     */
+
     public function edit()
     {
         //
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\ProgramaDeTreinamento  $programaDeTreinamento
-     * @return \Illuminate\Http\Response
-     */
+
     public function update(Request $request, )
     {
         //
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\ProgramaDeTreinamento  $programaDeTreinamento
-     * @return \Illuminate\Http\Response
-     */
     public function destroy()
     {
         //
