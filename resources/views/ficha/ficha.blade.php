@@ -96,7 +96,13 @@
   <tbody class="fonttd">
     @foreach($treino->programa_exercicios as $exercicio)
       <tr>
-        <td> <input type="checkbox" aria-label="Checkbox for following text input" style="border: 1px solid #D9E0E6"> {{$exercicio->exercicio->titulo}} <a href=""><i class="fa fa-play-circle-o playicon" aria-hidden="true" style="font-size: 25px"></i></a></td>
+        <td> <input type="checkbox" aria-label="Checkbox for following text input" style="border: 1px solid #D9E0E6"> {{$exercicio->exercicio->titulo}} 
+            <!-- Button trigger modal -->
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+              <i class="fa fa-play-circle-o playicon" aria-hidden="true" style="font-size: 25px"></i>
+            </button>
+
+          </td>
         <td class="text-center">{{$exercicio->series}} x {{$exercicio->repeticoes}}</td>
         <td class="text-center">{{$exercicio->peso}} Kg</td>
       </tr>
@@ -120,5 +126,45 @@
 </table>
 </div>
 </div>
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="container">
+          <div class="row col-12">
+
+            <iframe src="http://www.youtube.com/embed/dP15zlyra3c?html5=1"></iframe>
+          </div>
+
+          <div class="row col-12">
+            <h2>DESCRIÇÃO</h2>
+            
+          </div>
+          
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--Script stops video from playing when modal is closed-->
+<script>
+    $("#myModal").on('hidden.bs.modal', function (e) {
+        $("#myModal iframe").attr("src", $("#myModal iframe").attr("src"));
+    });
+</script>
 
 @endsection
