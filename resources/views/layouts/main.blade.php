@@ -29,6 +29,9 @@
 <div class="collapse navbar-collapse linkmenu justify-content-end" id="navbarSupportedContent">
     <ul class="navbar-nav ">
       <li class="nav-item">
+        <a class="nav-link " href="/" style="color: #F1F1F1">HOME</a>
+      </li>
+      <li class="nav-item">
         <a class="nav-link " href="layout/grupomuscular.blade.php" style="color: #F1F1F1">SOBRE NÓS</a>
       </li>
       @if(!Auth::check())

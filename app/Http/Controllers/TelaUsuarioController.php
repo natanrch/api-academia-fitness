@@ -39,7 +39,9 @@ class TelaUsuarioController extends Controller
             'treino' => $programaDeTreinamento,
         ]);
     }
-     public function adm()
+    
+
+    public function adm()
     {
         return view('site.perfil-adm');
     }
