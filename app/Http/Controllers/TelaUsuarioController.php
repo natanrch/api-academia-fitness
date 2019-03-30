@@ -3,17 +3,17 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\ProgramaDeTreinamento;
+use App\FichaExercicio;
 use App\User;
 
 
 class TelaUsuarioController extends Controller
 {
-    protected $programaDeTreinamento;
+    protected $fichaExercicio;
 
-    public function __construct(ProgramaDeTreinamento $programaDeTreinamento)
+    public function __construct(FichaExercicio $fichaExercicio)
     {
-        $this->programaDeTreinamento = $programaDeTreinamento;
+        $this->fichaExercicio = $fichaExercicio;
     }
 
     public function perfilUsuario()
@@ -34,9 +34,9 @@ class TelaUsuarioController extends Controller
     }
     public function ficha()
     {
-        $programaDeTreinamento = $this->programaDeTreinamento->find(2);
+        $fichaExercicio = $this->fichaExercicio->find(2);
         return view('ficha.ficha', [
-            'treino' => $programaDeTreinamento,
+            'treino' => $fichaExercicio,
         ]);
     }
     

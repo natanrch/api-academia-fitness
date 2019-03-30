@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Ficha;
-use App\ProgramaDeTreinamento;
+use App\FichaExercicio;
 use Illuminate\Http\Request;
 use Session;
 
@@ -11,12 +11,12 @@ class FichaController extends Controller
 {
 
     protected $ficha;
-    protected $programaDeTreinamento;
+    protected $fichaExercicio;
 
-    public function __construct(Ficha $ficha, ProgramaDeTreinamento $programaDeTreinamento)
+    public function __construct(Ficha $ficha, FichaExercicio $fichaExercicio)
     {
         $this->ficha = $ficha;
-        $this->programaDeTreinamento = $programaDeTreinamento;
+        $this->fichaExercicio = $fichaExercicio;
     }
 
     /**
@@ -61,10 +61,10 @@ class FichaController extends Controller
         //     'objetivo' => $request->objetivo,
         //     'metodo' => $request->metodo,
         //     'aquecimento' => $request->aquecimento,
-        //     'treino_aerobico' => $request->aerobico,
+        //     'fichaExercicio_aerobico' => $request->aerobico,
         //     'observacoes' => $request->observacoes,
         // ]);
-        return redirect('/treino/create');
+        return redirect('/fichaExercicio/create');
     }
 
     /**

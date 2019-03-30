@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use App\ProgramaDeTreinamento;
 use App\Exercicio;
 use App\FichaExercicio;
 use App\TipoExercicio;
@@ -10,16 +9,16 @@ use Illuminate\Http\Request;
 
 class TreinoController extends Controller
 {
-    protected $programaDeTreinamento;
+
     protected $exercicio;
-    protected $programaExercicio;
+    protected $fichaExercicio;
     protected $tipoExercicio;
 
-    public function __construct(ProgramaDeTreinamento $programaDeTreinamento, Exercicio $exercicio, ProgramaExercicio $programaExercicio, TipoExercicio $tipoExercicio)
+    public function __construct(Exercicio $exercicio, FichaExercicio $fichaExercicio, TipoExercicio $tipoExercicio)
     {
         $this->programaDeTreinamento = $programaDeTreinamento;
         $this->exercicio = $exercicio;
-        $this->programaExercicio = $programaExercicio;
+        $this->fichaExercicio = $fichaExercicio;
         $this->tipoExercicio = $tipoExercicio;
     }
     /**
@@ -55,15 +54,11 @@ class TreinoController extends Controller
      */
     public function store(Request $request)
     {
-        $programaDeTreinamento = $this->programaDeTreinamento->create([
-            'titulo' => $request->titulo,
-            'user_id' => 1,
-        ]);
+
         foreach($request->exercicio as $i => $exercicio) {
             if($exercicio > 0) {
 
-                $this->programaExercicio->create([
-                    'programa_de_treinamento_id' => $programaDeTreinamento->id,
+                $this->fichaExercicio->create([
                     'exercicio_id' => $exercicio,
                     'repeticoes' => $request->repeticoes[$i],
                     'series' => $request->series[$i],
@@ -80,7 +75,7 @@ class TreinoController extends Controller
      * @param  \App\ProgramaDeTreinamento  $programaDeTreinamento
      * @return \Illuminate\Http\Response
      */
-    public function show(ProgramaDeTreinamento $programaDeTreinamento)
+    public function show()
     {
         //
     }
@@ -91,7 +86,7 @@ class TreinoController extends Controller
      * @param  \App\ProgramaDeTreinamento  $programaDeTreinamento
      * @return \Illuminate\Http\Response
      */
-    public function edit(ProgramaDeTreinamento $programaDeTreinamento)
+    public function edit()
     {
         //
     }
@@ -103,7 +98,7 @@ class TreinoController extends Controller
      * @param  \App\ProgramaDeTreinamento  $programaDeTreinamento
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, ProgramaDeTreinamento $programaDeTreinamento)
+    public function update(Request $request, )
     {
         //
     }
@@ -114,7 +109,7 @@ class TreinoController extends Controller
      * @param  \App\ProgramaDeTreinamento  $programaDeTreinamento
      * @return \Illuminate\Http\Response
      */
-    public function destroy(ProgramaDeTreinamento $programaDeTreinamento)
+    public function destroy()
     {
         //
     }
