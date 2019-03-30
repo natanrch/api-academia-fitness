@@ -4,11 +4,11 @@ namespace App\Http\Controllers;
 
 use App\ProgramaDeTreinamento;
 use App\Exercicio;
-use App\ProgramaExercicio;
+use App\FichaExercicio;
 use App\TipoExercicio;
 use Illuminate\Http\Request;
 
-class ProgramaDeTreinamentoController extends Controller
+class TreinoController extends Controller
 {
     protected $programaDeTreinamento;
     protected $exercicio;

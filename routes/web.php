@@ -31,8 +31,8 @@ Route::get('/adm', 'TelaUsuarioController@adm');
 
 
 Route::group(['prefix' => 'treino'], function() {
-	Route::get('create', 'ProgramaDeTreinamentoController@create');
-	Route::post('create', 'ProgramaDeTreinamentoController@store');
+	Route::get('create', 'TreinoController@create');
+	Route::post('create', 'TreinoController@store');
 });
 Route::group([
 		'prefix' => 'ficha',

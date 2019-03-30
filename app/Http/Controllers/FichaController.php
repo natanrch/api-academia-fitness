@@ -75,9 +75,8 @@ class FichaController extends Controller
      */
     public function show(Ficha $ficha)
     {
-        $programaDeTreinamento = $this->programaDeTreinamento->where('user_id', $ficha->user->id)->first();
         return view('ficha.ficha', [
-            'treino' => $programaDeTreinamento,
+            'ficha' => $ficha,
         ]);
 
     }
