@@ -20,6 +20,8 @@ Route::get('/instrutor/login', 'Auth\LoginController@formInstrutor');
 Route::post('/instrutor/login', 'Auth\LoginController@loginInstrutor');
 Route::get('/logout', 'Auth\LoginController@logout');
 
+Route::get('/cadastro', 'Auth\RegisterController@cadastroInstrutor');
+
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/escolha-perfil', 'TelaUsuarioController@escolhaperfil');
 Route::get('/perfil', 'TelaUsuarioController@perfilUsuario');

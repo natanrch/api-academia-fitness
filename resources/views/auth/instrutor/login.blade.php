@@ -3,22 +3,6 @@
 @section('content')
 
 <br><br>
-<div class="container d-flex justify-content-center">
-  <div class="col-sm-5 ">
-  <div class="row line">
-
-      <div class="col-4 stepText1 ">1ª Etapa</div>
-      <div class="col-4 stepText2">2ª Etapa</div>
-      <div class="col-4 stepText3">3ª Etapa</div>
-  </div>
-  <div class="row">
-      <div class="col-4"><div class="step step1 active"></div></div>
-      <div class="col-4"><div class="step step2"></div></div>
-      <div class="col-4"><div class="step step3"></div></div>  
-  </div> 
-</div>
-</div>
-<br><br>
 
 <div class="container text-center">
     <br><br>

@@ -96,7 +96,13 @@
   <tbody class="fonttd">
     @foreach($treino->programa_exercicios as $exercicio)
       <tr>
-        <td> <input type="checkbox" aria-label="Checkbox for following text input" style="border: 1px solid #D9E0E6"> {{$exercicio->exercicio->titulo}} <a href=""><i class="fa fa-play-circle-o playicon" aria-hidden="true" style="font-size: 25px"></i></a></td>
+        <td> <input type="checkbox" aria-label="Checkbox for following text input" style="border: 1px solid #D9E0E6"> {{$exercicio->exercicio->titulo}} 
+            <!-- Button trigger modal -->
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+              <i class="fa fa-play-circle-o playicon" aria-hidden="true" style="font-size: 25px"></i>
+            </button>
+
+          </td>
         <td class="text-center">{{$exercicio->series}} x {{$exercicio->repeticoes}}</td>
         <td class="text-center">{{$exercicio->peso}} Kg</td>
       </tr>
