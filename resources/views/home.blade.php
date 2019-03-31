@@ -7,15 +7,17 @@
 
 <!--Decricacao da academia-->
 
- <div class="jumbotron" style="background-color: #fff">
+ <div class="jumbotron jumbotron-fluid" style="background-image: url(img/.jpg); background-repeat: no-repeat; background-size: cover; background-attachment: fixed; background-color: #fff">
     <div class="container">
       <div class="row">
-        <div class="col-sm-6 col-12">
+        <div class="col-sm-6 col-12 d-flex align-content-center flex-wrap">
+          <div class="d-flex align-content-center flex-wrap">
           <p>Já pensou em ter seu treino em mão onde e quando quiser, com demostrativos dos execicios de forma correta. Aqui na Academia Fitness você pode baixar nosso Aplicativo e seguir seu treino elaborado pelos instrutores e com base na sua avaliação fisica. </p>
           <p>Venha conhecer a <strong>Academia Fitness!</strong></p>
+          </div>
         </div>
-         <div class="col-sm-6 col-12 text-right">
-          <img src="img/aplicativo.png" class="img-fluid" alt="Responsive image">
+         <div class="col-sm-6 col-12 text-center">
+          <img src="img/celular.png" class="img-fluid" alt="Responsive image" style="max-height: 300px;">
         </div>
       </div>
     </div>
@@ -26,8 +28,8 @@
 <div class="container text-center"  >
     <center>
     <div style="max-width: 600px">
-    <p class=" textacademia h1  " >ACADEMIA FITNESS</p>
-    <hr style="max-width: 222px; height: 3px; background-color: #131852;">
+    <h1 class="fontvigor " style="font-size: 40px; color:#B95922;  ">ACADEMIA FITNESS</h1>
+    <hr style="max-width: 222px; height: 3px; background-color: #060D56;">
     </div>
     
     <div style="max-width: 500px;  " >
@@ -44,7 +46,7 @@
           <h2 class="text-center ">MODALIDADES</h2>
     </div>
 </div>
-
+<br>
 <!--tipos de modalidades-->
 
 <div class="container text-center ">

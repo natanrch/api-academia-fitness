@@ -5,6 +5,7 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet ">
     <link href="https://fonts.googleapis.com/css?family=Roboto:900" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,500,600,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Viga" rel="stylesheet">
 
     <link href="{{ url('lib/font-awesome/css/font-awesome.min.css') }}" rel="stylesheet">
   <link href="{{ url('lib/animate/animate.min.css') }}" rel="stylesheet">
@@ -37,7 +38,7 @@
       @if(!Auth::check())
         <li class="nav-item ">
           
-          <a class="nav-link btn btnlaranja"  href="/escolha-perfil" style="color: #F1F1F1 " ><i class="fa fa-user-o " aria-hidden="true"></i>
+          <a class="nav-link btn btnlaranja"  href="/login" style="color: #F1F1F1 " ><i class="fa fa-user-o " aria-hidden="true"></i>
            LOGIN</a>
          
         </li>
@@ -45,7 +46,7 @@
         <li class="nav-item ">
           
           <a class="nav-link btn btnlaranja"  href="/logout" style="color: #F1F1F1 " ><i class="fa fa-user-o " aria-hidden="true"></i>
-           LOGOUT</a>
+           SAIR</a>
          
         </li>
       @endif
