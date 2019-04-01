@@ -6,8 +6,10 @@ use App\Ficha;
 use App\FichaExercicio;
 use App\Exercicio;
 use App\TipoExercicio;
+use App\FichaInstrutor;
 use Illuminate\Http\Request;
 use Session;
+use Auth;
 
 class FichaController extends Controller
 {
@@ -16,14 +18,16 @@ class FichaController extends Controller
     protected $fichaExercicio;
     protected $exercicio;
     protected $tipoExercicio;
+    protected $fichaInstrutor;
 
-    public function __construct(Ficha $ficha, FichaExercicio $fichaExercicio, Exercicio $exercicio, TipoExercicio $tipoExercicio)
+    public function __construct(Ficha $ficha, FichaExercicio $fichaExercicio, Exercicio $exercicio, TipoExercicio $tipoExercicio, FichaInstrutor $fichaInstrutor)
     {
 
         $this->exercicio = $exercicio;
         $this->ficha = $ficha;
         $this->fichaExercicio = $fichaExercicio;
         $this->tipoExercicio = $tipoExercicio;
+        $this->fichaInstrutor = $fichaInstrutor;
     }
 
     /**
@@ -91,6 +95,10 @@ class FichaController extends Controller
                 ]);
             }
         }
+        $this->fichaInstrutor->create([
+            'ficha_id' => $ficha->id,
+            'instrutor_id' => Auth::id(),
+        ]);
         return redirect('/ficha/'.session('user_id'));
         
     }

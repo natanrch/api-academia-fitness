@@ -17,4 +17,9 @@ class Ficha extends Model
     {
     	return $this->hasMany(FichaExercicio::class);
     }
+
+    public function ficha_instrutor()
+    {
+    	return $this->hasOne(FichaInstrutor::class);
+    }
 }

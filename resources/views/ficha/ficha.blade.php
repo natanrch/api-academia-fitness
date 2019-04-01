@@ -25,8 +25,8 @@
   </thead>
   <tbody>
     <tr>
-      <td scope="row" class="ficha" >10 Minutos</td>
-      <td class="ficha">30 Seguntos </td>
+      <td scope="row" class="ficha" >{{$ficha->aquecimento}} minutos</td>
+      <td class="ficha">{{$ficha->intervalo}} minutos</td>
     </tr>
     
   </tbody>
@@ -111,12 +111,12 @@
   <tfoot class="fonttd">
     <tr>
       <th scope="col" colspan="3">
-        Instrutor: <img src="../img/usuario.png" alt="..." class="rounded-circle" style="width: 30px; height: 30px"> Jorge Costa   
+        Instrutor: <img src="../img/usuario.png" alt="..." class="rounded-circle" style="width: 30px; height: 30px"> {{$ficha->ficha_instrutor->instrutor->name}}   
       </th scope="col">
     </tr>
     <tr>
       <th>
-        Data: 25/02/2019
+        Data: {{$ficha->created_at}}
       </th>
        <th scope="col" colspan="2">
         Revisão: 25/02/2019
