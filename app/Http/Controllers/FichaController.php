@@ -78,6 +78,20 @@ class FichaController extends Controller
             'fichaExercicio_aerobico' => $request->aerobico,
             'observacoes' => $request->observacoes,
         ]);
+        foreach($request->exercicio as $i => $exercicio) {
+            if(!is_null($request->treino[$i])) {
+
+                $this->fichaExercicio->create([
+                    'ficha_id' => $ficha->id,
+                    'exercicio_id' => $exercicio,
+                    'repeticoes' => $request->repeticoes[$i],
+                    'series' => $request->series[$i],
+                    'peso' => $request->peso[$i],
+                    'treino' => $request->treino[$i],
+                ]);
+            }
+        }
+        return redirect('/ficha/'.session('user_id'));
         
     }
 

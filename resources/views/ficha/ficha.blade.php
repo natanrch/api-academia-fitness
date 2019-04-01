@@ -7,7 +7,7 @@
           <h2 class="text-center">MINHA FICHA</h2>
           <hr style="width: 13%">
         </div>
-        <h2>Treino de Hoje: {{$treino->titulo}} </h2>
+        <h2>Treino de Hoje:</h2>
     </div>
    
 
@@ -94,7 +94,7 @@
     </tr>
   </thead>
   <tbody class="fonttd">
-    @foreach($treino->programa_exercicios as $exercicio)
+    @foreach($ficha->ficha_exercicios as $exercicio)
       <tr>
         <td> <input type="checkbox" aria-label="Checkbox for following text input" style="border: 1px solid #D9E0E6"> {{$exercicio->exercicio->titulo}} 
             <!-- Button trigger modal -->

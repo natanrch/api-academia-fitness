@@ -12,4 +12,9 @@ class Ficha extends Model
     {
     	return $this->belongsTo(User::class);
     }
+
+    public function ficha_exercicios()
+    {
+    	return $this->hasMany(FichaExercicio::class);
+    }
 }

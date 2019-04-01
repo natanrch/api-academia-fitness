@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class FichaExercicio extends Model
 {
-	protected $fillable = ['programa_de_treinamento_id', 'exercicio_id', 'repeticoes', 'series', 'peso', 'treino'];
+	protected $fillable = ['ficha_id', 'exercicio_id', 'repeticoes', 'series', 'peso', 'treino'];
 
     public function exercicio()
     {
