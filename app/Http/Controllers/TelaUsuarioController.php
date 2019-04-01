@@ -39,11 +39,15 @@ class TelaUsuarioController extends Controller
             'treino' => $fichaExercicio,
         ]);
     }
-    
 
     public function adm()
     {
         return view('site.perfil-adm');
+    }
+
+    public function sobreNos()
+    {
+        return view('layouts.sobrenos');
     }
 }
 
