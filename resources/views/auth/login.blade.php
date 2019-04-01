@@ -8,6 +8,7 @@
     <div class="col-12">
   <div class="login-form">
     <form method="POST" action="/login">
+        {{csrf_field()}}
         <h2 class="text-center">Login</h2> 
         <hr style="max-width: 122px; height: 2px; background-color:  #060D56;">
         <div class="form-group">

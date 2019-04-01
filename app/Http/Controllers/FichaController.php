@@ -69,16 +69,16 @@ class FichaController extends Controller
      */
     public function store(Request $request)
     {
-        // $ficha = $this->ficha->create([
-        //     'user_id' => session('user_id'),
-        //     'dias_de_treinamento' => $request->dias,
-        //     'objetivo' => $request->objetivo,
-        //     'metodo' => $request->metodo,
-        //     'aquecimento' => $request->aquecimento,
-        //     'fichaExercicio_aerobico' => $request->aerobico,
-        //     'observacoes' => $request->observacoes,
-        // ]);
-        return redirect('/fichaExercicio/create');
+        $ficha = $this->ficha->create([
+            'user_id' => session('user_id'),
+            'dias_de_treinamento' => $request->dias,
+            'objetivo' => $request->objetivo,
+            'metodo' => $request->metodo,
+            'aquecimento' => $request->aquecimento,
+            'fichaExercicio_aerobico' => $request->aerobico,
+            'observacoes' => $request->observacoes,
+        ]);
+        
     }
 
     /**

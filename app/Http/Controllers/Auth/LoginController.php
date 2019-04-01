@@ -50,6 +50,17 @@ class LoginController extends Controller
         return view('auth.instrutor.login');
     }
 
+    public function login()
+    {
+        $credenciais = Request::only('cpf', 'password');
+        if(Auth::attempt($credenciais)) {
+            if(Auth::user()->isInstrutor()) {
+                return redirect('/perfil-instrutor');
+            }
+            return redirect('/perfil');
+        }   
+    }
+
     public function loginInstrutor()
     {
         $credenciais = Request::only('cpf', 'password');
