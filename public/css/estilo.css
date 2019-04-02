@@ -12,6 +12,12 @@ h3{
   color: #343434;
   font-size: 25px;
 }
+
+label{
+  font-family: 'Roboto', Black;
+  color: #343434;
+  font-size: 16px
+}
 .inputb{
   background-color: #DDDDDD;
 }

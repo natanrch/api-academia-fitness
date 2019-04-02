@@ -21,10 +21,10 @@
   <div class="row">
     <div class="col-12 col-sm-3 text-center" >
       
-      <img src="../img/usuario.png" alt="..." class="img-thumbnail fotoaluno text-center" style="border: 1px solid #131852">
+      <img src="../img/usuario.png" alt="..." class="img-thumbnail rounded-circle fotoaluno text-center" style="border: 1px solid #131852">
       
       <p class="Nomeperfil">Nome Instrutor</p>
-      <p class="descriperfil"> Data de nascimento: <br> 00/00/000</P>
+      <p class="descriperfil"> CREF: <br> 0000000000</P>
  
       <p class="descriperfil"> Meu Horário: <br> Segunda à Sexta:  </p>
       <button type="button" class="btn  btnlaranja" style="width: 170px">ADICIONAR FOTO</button>
@@ -32,7 +32,7 @@
     
     </div>
     <div class="col-12 col-sm-9" style="padding-right: 2em; padding-left: 2em">
-      <h2>MEUS ALUNOS</h2>
+      <h2>MEUS ALUNOS <button type="button" class="btn btnlaranja" data-toggle="modal" data-target=".modalaluno">ADICIONAR  <i class="fa fa-user-plus" aria-hidden="true"></i></button></h2>
 
 
      <form class="form-row" >
@@ -44,26 +44,30 @@
     </div>
     </form>
     <br>
+
 @foreach($users as $user)
 <div class="row" >
-  <div class="col-6 col-sm-2">
+  <div class="col-12 col-sm-2 ">
    
     <div class="text-center">
     <img src="../img/usuario.png" alt="..." class="rounded-circle" style="width: 80px; height: 80px">
     </div>
   
  </div>
-  <div class="col-4 col-sm-4">
-    <p class="nomealuno " style=" margin-top: 5px;">{{$user->name}}</p>
+  <div class="col-12 col-sm-6 text-left">
+    <p class="nomealuno " style=" margin-bottom: 5px;">{{$user->name}}</p>
     <div class="form-group">
-      <a href="user/{{$user->id}}" class="btn btnazul btn-sm">Ver Perfil <i class="fa fa-chevron-right" aria-hidden="true"></i></a>
-      <a href="ficha/create?user={{$user->id}}" class="btn btn-info">Criar ficha </a>
+      <a href="user/{{$user->id}}" class="btn btnazul" >Avaliação Física <i class="fa fa-download"  aria-hidden="true"></i></a>
+      <a href="ficha/create?user={{$user->id}}" class="btn btnazul" style="margin-top: 2px">Criar Ficha <i class="fa fa-file-text-o " aria-hidden="true"></i></a>
     </div>
   </div>
 </div>
 @endforeach
   <br>
-    <a href=""><i class="fa fa-plus-circle text-left" aria-hidden="true" style="font-size: 50px; color: #242B8C"></i></a>
+
+  <div>
+      <h3>TOTAL:</h3>
+    </div>
 
     </div>
   </div>
