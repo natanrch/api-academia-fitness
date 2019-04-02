@@ -21,7 +21,7 @@
   <div class="row">
     <div class="col-12 col-sm-6" >
 
-    	<h2>INSTRUTOR  <button type="button" class="btn btnlaranja" data-toggle="modal" data-target=".bd-example-modal-lg">ADICINIONAR <i class="fa fa-user-plus" aria-hidden="true"></i></button></h2>
+    	<h2>INSTRUTOR  <button type="button" class="btn btnlaranja" data-toggle="modal" data-target=".bd-example-modal-lg">ADICIONAR <i class="fa fa-user-plus" aria-hidden="true"></i></button></h2>
     	
 
        <form class="form-row" >
@@ -57,7 +57,7 @@
 
 
     <div class="col-12 col-sm-6">
-      <h2>ALUNO <button type="button" class="btn btnlaranja" data-toggle="modal" data-target=".modalaluno">ADICINIONAR <i class="fa fa-user-plus" aria-hidden="true"></i></button></h2>
+      <h2>ALUNO <button type="button" class="btn btnlaranja" data-toggle="modal" data-target=".modalaluno">ADICIONAR  <i class="fa fa-user-plus" aria-hidden="true"></i></button></h2>
 
 
      <form class="form-row" >
@@ -109,6 +109,7 @@
 
 <br>
 
+<!-- modal de cadastrar Instrutor -->
 
 <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-lg">
@@ -204,6 +205,7 @@
   </div>
 </div>
 
+<!-- modal de cadastrar aluno -->
 
 <div class="modal fade modalaluno" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-lg">
@@ -266,6 +268,22 @@
                         </div>
 
                         <div class="form-group row">
+                            <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('DATA DE PAGAMENTO') }}</label>
+
+                            <div class="col-md-6">
+                              <div class="input-group">
+                                 <input id="email" type="date" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" required><span class="input-group-addon" style="border: 1px solid #ccc; padding: 3px;"><i class="fa fa-calendar playicon text-center" style="font-size: 20px; margin-top: 4px" aria-hidden="true"></i></span>
+                            </div>
+                                @if ($errors->has('email'))
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('email') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        </div>
+
+
+                        <div class="form-group row">
                             <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('MODALIDADE') }}</label>
 
                             <div class="col-md-6">
@@ -315,6 +333,8 @@
     </div>
 </div>
 
+
+<!-- modal de avaliação fisica -->
 
 
 <div class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
