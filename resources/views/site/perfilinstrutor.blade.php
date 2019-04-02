@@ -78,6 +78,7 @@
 
 <br>
 
+@include('site.partials.modal-aluno')
 
 <br>
 
