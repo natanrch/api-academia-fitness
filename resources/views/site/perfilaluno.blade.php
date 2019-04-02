@@ -21,16 +21,13 @@
   <div class="row">
     <div class="col-sm-3 text-center" >
       
-     <img src="../img/usuario.png" alt="..." class="img-thumbnail fotoaluno text-center" style="border: 1px solid #131852">
+     <img src="../img/usuario.png" alt="..." class="img-thumbnail rounded-circle fotoaluno text-center" style="border: 1px solid #131852">
       
       <p class="Nomeperfil">Nome Aluno</p>
-      <p class="descriperfil"> Data de nascimento: <br> 00/00/000</P>
-      <p class="descriperfil"> Dias que treino: <br> Seg, Ter, Sex  </p>
-      <button type="button" class="btn  btnlaranja" style="width: 170px">ADICIONAR FOTO</button>
-
-      <!-- BOTÃO PARA QUANDO O INSTRUTOR FOR VER O PERFIL DO ALUNO 
-
-        <button type="button" class="btn  btnlaranja" style="width: 170px">CRIAR FICHA</button> -->
+      <span class="descriperfil"> <b>Modalidade:</b>  <br> Musculação </span>
+      <p class="descriperfil">  <b> Data de Pagamento: </b><br> data  </p>
+      <button type="button" class="btn  btnazul " style="width: 170px;">ADICIONAR FOTO <i class="fa fa-file-image-o" aria-hidden="true"></i></button>
+      <button type="button" class="btn  btnlaranja" style="width: 170px; margin-top: 2px">MINHA AVALIAÇÃO <i class="fa fa-download"  aria-hidden="true"></i></button>
       <br><br>
     
     
@@ -38,59 +35,136 @@
 
 
     <div class="col-sm-9">
-      <h2>AVALIAÇÃO FÍSICA</h2>
       <br>
-<table class="table ">
+<div class="container">
+        <div class="section-header">
+          <h2 class="text-center">MINHA FICHA</h2>
+          <hr style="width: 13%">
+        </div>
+        <h2>Treino de Hoje:</h2>
+    </div>
+   
+
+    <div class="container justify-content-center ">
+<div class="row " >
+  <div class="col-sm-12">
+    <div class="row">
+      <div class="col-12 col-sm-6">
+<table class="table table-sm table-borderless">
   <thead>
     <tr>
-      <td scope="col">Peso:</td>
-      <td scope="col">Altura:</td>
-      
+      <th scope="col" class="ficha">Aquecimento:</th>
+      <th scope="col" class="ficha">Intervalo:</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td scope="row">IMC:</td>
-      <td>Gordura:</td>
-      
+      <td scope="row" class="ficha" >{{$ficha->aquecimento}} minutos</td>
+      <td class="ficha">{{$ficha->intervalo}} minutos</td>
     </tr>
-    <tr>
-      <td scope="row">...</td>
-      <td>...</td>
-      
-    </tr>
-    <tr>
-      <td scope="row">...</td>
-      <td>...</td>
-      
-    </tr>
+    
   </tbody>
 </table>
-<br>
-<!--
-<div class="container">
-<div class="row">
-  <div class="col-sm-12">
-    <div class="row">
+
+  
+</table>
+</div>      
       <div class="col-12 col-sm-6">
-         <div class="fakeimg"></div>
-      </div>
-      <div class="col-12 col-sm-6">
-        <div class="fakeimg"></div>
+       <table class="table table-sm text-center table-bordered " style="max-width: 500px;">
+  <thead>
+    <tr>
+      <th scope="col">S</th>
+      <th scope="col">T</th>
+      <th scope="col">Q</th>
+      <th scope="col">Q</th>
+      <th scope="col">S</th>
+      <th scope="col">S</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td scope="row"><a href="">A</a></td>
+      <td><a href="">B</a></td>
+      <td><a href="">C</a></td>
+      <td><a href="">A</a></td>
+      <td><a href="">B</a></td>
+      <td><a href="">C</a></td>
+    </tr>
+    <tr>
+      <td scope="row"><a href="">A</a></td>
+      <td><a href="">B</a></td>
+      <td><a href="">C</a></td>
+      <td><a href="">A</a></td>
+      <td><a href="">B</a></td>
+      <td><a href="">C</a></td>
+    </tr>
+    <tr>
+      <td scope="row"><a href="">A</a></td>
+      <td><a href="">B</a></td>
+      <td><a href="">C</a></td>
+      <td><a href="">A</a></td>
+      <td><a href="">B</a></td>
+      <td><a href="">C</a></td>
+    </tr> 
+  </tbody>
+</table>
       </div>
     </div>
-    <br>
-    <div class="row">
-      <div class="col-12 col-sm-6">
-        <div class="fakeimg"></div>
-      </div>
-      <div class="col-12 col-sm-6">
-         <div class="fakeimg"></div>
-      </div>
     </div>
-  </div>
+    </div>
+
+
+
+
+<div class="container justify-content-center">
+  <div class="row ">
+
+  <table class="table table-sm table-bordered  col-12 col-sm-12">
+  <thead class="text-center fontth">
+    <tr>
+      <th scope="col">EXERCÍCIO</th>
+      <th scope="col">SÉRIE</th>
+      <th scope="col">PESO</th>
+    </tr>
+  </thead>
+  <tbody class="fonttd">
+    @foreach($ficha->ficha_exercicios as $exercicio)
+      <tr>
+        <td> <input type="checkbox" aria-label="Checkbox for following text input" style="border: 1px solid #D9E0E6"> {{$exercicio->exercicio->titulo}} 
+            <!-- Button trigger modal -->
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+              <i class="fa fa-play-circle-o playicon" aria-hidden="true" style="font-size: 25px"></i>
+            </button>
+
+          </td>
+        <td class="text-center">{{$exercicio->series}} x {{$exercicio->repeticoes}}</td>
+        <td class="text-center">{{$exercicio->peso}} Kg</td>
+      </tr>
+    @endforeach
+  </tbody>
+  <tfoot class="fonttd">
+    <tr>
+      <th scope="col" colspan="3">
+        Instrutor: <img src="../img/usuario.png" alt="..." class="rounded-circle" style="width: 30px; height: 30px"> {{$ficha->ficha_instrutor->instrutor->name}}   
+      </th scope="col">
+    </tr>
+    <tr>
+      <th>
+        Data: {{$ficha->created_at}}
+      </th>
+       <th scope="col" colspan="2">
+        Revisão: 25/02/2019
+      </th>
+    </tr>
+  </tfoot>
+</table>
 </div>
-</div> -->
+</div>
+</div>
+</div>
+      <br>
+
 <br>
+
 
 @endsection
