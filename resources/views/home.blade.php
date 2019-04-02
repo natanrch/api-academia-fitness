@@ -7,12 +7,12 @@
 
 <!--Decricacao da academia-->
 
- <div class="jumbotron jumbotron-fluid" style="background-image: url(img/.jpg); background-repeat: no-repeat; background-size: cover; background-attachment: fixed; background-color: #fff">
+ <div class="jumbotron jumbotron-fluid border-bottom" style="background-image: url(img/.jpg); background-repeat: no-repeat; background-size: cover; background-attachment: fixed; background-color: #fff">
     <div class="container">
       <div class="row">
         <div class="col-sm-6 col-12 d-flex align-content-center flex-wrap">
           <div class="d-flex align-content-center flex-wrap">
-          <p>Já pensou em ter seu treino em mão onde e quando quiser, com demostrativos dos execicios de forma correta. Aqui na Academia Fitness você pode baixar nosso Aplicativo e seguir seu treino elaborado pelos instrutores e com base na sua avaliação fisica. </p>
+          <p class="lead" style="font-family: IBM Plex Sans, Regular; font-size: 20px">Já pensou em ter seu treino em mão onde e quando quiser, com demostrativos dos execicios de forma correta. Aqui na Academia Fitness você pode baixar nosso Aplicativo e seguir seu treino elaborado pelos instrutores e com base na sua avaliação fisica. </p>
           <p>Venha conhecer a <strong>Academia Fitness!</strong></p>
           </div>
         </div>
@@ -51,33 +51,91 @@
 
 <div class="container text-center ">
   <div class="row" >
-    <div class="col-12 col-sm-4  " style="border:none;"  >
-      <img class="card-img-top imgmodalidades" src="img/musculacao.jpg" alt="Imagem de capa do card">
+    <div class="col-12 col-sm-4  "  >
       <p class="text-center fontmodalidades font-weight-normal">Musculação</p>
-      
+      <img class="card-img-top imgmodalidades" src="img/musculacao.jpg" alt="Imagem de capa do card">
+      <center>
+        <div class="pmodalidades " style=" padding: 5px; border-bottom: 1px solid  #B95922" >
+        <div class="d-flex  mb-2 ">
+          <div class="mr-auto  "><span class="valorplanos" >R$ 65,00 <i class="fa fa-money" style="color: green; font-size: 20px" aria-hidden="true"></i></span><br><span class="preco">DINHEIRO</span></div>
+          
+          <div class="bd-highlight"><span class="valorplanos">R$ 70,00 <i class="fa fa-credit-card-alt playicon" aria-hidden="true"></i></span><br><span class="preco">CARTÃO</span></div>
+        </div>
+      </div>
+      </center>
     </div>
     <div class=" col-12 col-sm-4"  style="border:none;">
+      <p class="text-center fontmodalidades font-weight-normal">Ritmos</p>
       <img class="card-img-top  imgmodalidades" src="img/ritmos.jpg" alt="Imagem de capa do card">
-      <p class="text-center fontmodalidades font-weight-normal">Ritmos</p> 
+      <center>
+        <div class="pmodalidades " style=" padding: 5px; border-bottom: 1px solid  #B95922" >
+        <div class="d-flex  mb-2 ">
+          <div class="mr-auto  "><span class="valorplanos" >R$ 60,00 <i class="fa fa-money" style="color: green; font-size: 20px" aria-hidden="true"></i></span><br><span class="preco">DINHEIRO</span></div>
+          
+          <div class="bd-highlight"><span class="valorplanos">R$ 65,00 <i class="fa fa-credit-card-alt playicon" aria-hidden="true"></i></span><br><span class="preco">CARTÃO</span></div>
+        </div>
+      </div>
+      </center>
+       
     </div>
     <div class="col-12 col-sm-4 " style="border:none;" >
-      <img class="card-img-top imgmodalidades" src="img/funcional.jpg" alt="Imagem de capa do card">
       <p class="text-center fontmodalidades font-weight-normal">Treinamento Funcional</p>
+      <img class="card-img-top imgmodalidades" src="img/funcional.jpg" alt="Imagem de capa do card">
+      <center>
+        <div class="pmodalidades " style=" padding: 5px; border-bottom: 1px solid  #B95922" >
+        <div class="d-flex  mb-2 ">
+          <div class="mr-auto  "><span class="valorplanos" >R$ 70,00 <i class="fa fa-money" style="color: green; font-size: 20px" aria-hidden="true"></i></span><br><span class="preco">DINHEIRO</span></div>
+          
+          <div class="bd-highlight"><span class="valorplanos">R$ 75,00 <i class="fa fa-credit-card-alt playicon" aria-hidden="true"></i></span><br><span class="preco">CARTÃO</span></div>
+        </div>
+      </div>
+      </center>
+      
     </div>
   </div>
 
   <div class="row">
     <div class="col-12 col-sm-4"  style="border:none;">
-      <img class="card-img-top imgmodalidades" src="img/karate.jpg" alt="Imagem de capa do card">
       <p class="text-center fontmodalidades font-weight-normal">Karatê</p> 
+      <img class="card-img-top imgmodalidades" src="img/karate.jpg" alt="Imagem de capa do card">
+      <center>
+        <div class="pmodalidades " style=" padding: 5px; border-bottom: 1px solid  #B95922" >
+        <div class="d-flex  mb-2 ">
+          <div class="mr-auto  "><span class="valorplanos" >R$ 60,00 <i class="fa fa-money" style="color: green; font-size: 20px" aria-hidden="true"></i></span><br><span class="preco">DINHEIRO</span></div>
+          
+          <div class="bd-highlight"><span class="valorplanos">R$ 65,00 <i class="fa fa-credit-card-alt playicon" aria-hidden="true"></i></span><br><span class="preco">CARTÃO</span></div>
+        </div>
+      </div>
+      </center>
+      
     </div>
     <div class="col-12 col-sm-4"  style="border:none;">
+      <p class="text-center fontmodalidades font-weight-normal">Ginástica</p>
       <img class="card-img-top imgmodalidades" src="img/ginastica.jpg" alt="Imagem de capa do card">
-      <p class="text-center fontmodalidades font-weight-normal">Ginástica</p> 
+      <center>
+        <div class="pmodalidades " style=" padding: 5px; border-bottom: 1px solid  #B95922" >
+        <div class="d-flex  mb-2 ">
+          <div class="mr-auto  "><span class="valorplanos" >R$ 70,00 <i class="fa fa-money" style="color: green; font-size: 20px" aria-hidden="true"></i></span><br><span class="preco">DINHEIRO</span></div>
+          
+          <div class="bd-highlight"><span class="valorplanos">R$ 75,00 <i class="fa fa-credit-card-alt playicon" aria-hidden="true"></i></span><br><span class="preco">CARTÃO</span></div>
+        </div>
+      </div>
+      </center>
+       
     </div>
     <div class="col-12 col-sm-4"  style="border:none;">
+      <p class="text-center fontmodalidades font-weight-normal">Muay-thai</p>
       <img class="card-img-top imgmodalidades" src="img/muay-thai.jpg" alt="Imagem de capa do card">
-      <p class="text-center fontmodalidades font-weight-normal">Muay-thai</p> 
+      <center>
+        <div class="pmodalidades " style=" padding: 5px; border-bottom: 1px solid  #B95922" >
+        <div class="d-flex  mb-2 ">
+          <div class="mr-auto  "><span class="valorplanos" >R$ 70,00 <i class="fa fa-money" style="color: green; font-size: 20px" aria-hidden="true"></i></span><br><span class="preco">DINHEIRO</span></div>
+          
+          <div class="bd-highlight"><span class="valorplanos">R$ 75,00 <i class="fa fa-credit-card-alt playicon" aria-hidden="true"></i></span><br><span class="preco">CARTÃO</span></div>
+        </div>
+      </div>
+      </center>
+       
     </div>
   </div>
 </div>
@@ -113,68 +171,39 @@
 <!--tipos de planos-->
 <div class="container"> 
 <div class="card-deck">
-  <div class="card" style="border:none; background-color: #242B8C; ">
-    <div class="card-body text-center">
-      <h5 class="card-title" style="color: #FFFFFF; font-family: 'Roboto', sans-serif; font-size: 18px">MUSCULAÇÃO</h5>
-      <p class="card-text" style="color: #F1F1F1; font-family: IBM Plex Sans, Regular; font-size: 15px;" >A primeira mensalidade tem o valor de R$ 75,00. <br> A partir da segunda:</p>
-       
-
-        <div class="d-flex  mb-2 ">
-          <div class="mr-auto  "><img src="svg/001-money-color.svg" class="iconpgd"><small class="valorplanos">R$ 65,00</small></div>
-          
-          <div class="bd-highlight"><img src="svg/002-debit-card-color.svg" class="iconpgc"><small class="valorplanos">R$ 70,00</small></div>
-        </div>
-    </div>
-  </div>
-  <div class="card" style="border:none; background-color: #B95922">
-    <div class="card-body text-center">
-      <h5 class="card-title" style="color: #FFFFFF; font-family: 'Roboto', sans-serif; font-size: 20px">RITMOS E KARATÊ</h5>
-      <p class="card-text" style="color: #F1F1F1; font-family: IBM Plex Sans, Regular; font-size: 16px;">Valor promocional até a data de vencimento da mensalidade</p>
-      <br>
-
-      <div class="d-flex  mb-2 ">
-          <div class="mr-auto  "><img src="svg/001-money-color.svg" class="iconpgd"><small class="valorplanos">R$ 65,00</small></div>
-          
-          <div class="bd-highlight"><img src="svg/002-debit-card-color.svg" class="iconpgc"><small class="valorplanos">R$ 70,00</small></div>
-        </div>
-    </div>
-  </div>
-  <div class="card" style="border:none; background-color: #242B8C;">
-   <div class="card-body text-center">
-      <h5 class="card-title" style="color: #FFFFFF; font-family: 'Roboto', sans-serif; font-size: 20px">PLANO FAMÍLIA</h5>
-      <p class="card-text" style="color: #F1F1F1; font-family: IBM Plex Sans, Regular; font-size: 16px;">Valor promocional até a data de vencimento da mensalidade</p><br>
-      <div class="d-flex  mb-2 ">
-          <div class="mr-auto  "><img src="svg/001-money-color.svg" class="iconpgd"><small class="valorplanos">R$ 65,00</small></div>
-          
-          <div class="bd-highlight"><img src="svg/002-debit-card-color.svg" class="iconpgc"><small class="valorplanos">R$ 70,00</small></div>
-        </div>
-    </div>
-  </div>
-</div>
-<br>
+  
 <div class="card-deck">
   <div class="card" style="border:none; background-color: #B95922;  ">
     <div class="card-body text-center">
       <h5 class="card-title" style="color: #FFFFFF; font-family: 'Roboto', sans-serif; font-size: 20px">AVALIAÇÃO FÍSICA</h5>
       <p class="card-text" style="color: #F1F1F1; font-family: IBM Plex Sans, Regular; font-size: 16px;">Faça sua avaliação física completa com a gente.</p><br>
 
-      <div class="d-flex  mb-4">
-          <div class="mr-auto  "><img src="svg/001-money-color.svg" class="iconpgd"><small class="valorplanos">R$ 65,00</small></div>
+      <center>
+        <div class="pmodalidades " style=" padding: 5px; ">
+        <div class="d-flex  mb-2 ">
+          <div class="mr-auto  "><span class="valorplanos1" >R$ 30,00 <i class="fa fa-money" style="color: green; font-size: 20px" aria-hidden="true"></i></span><br><span class="preco1">DINHEIRO</span></div>
           
-          <div class="bd-highlight"><img src="svg/002-debit-card-color.svg" class="iconpgc"><small class="valorplanos">R$ 70,00</small></div>
+          <div class="bd-highlight"><span class="valorplanos1">R$ 35,00 <i class="fa fa-credit-card-alt" style="color:#ae0707; margin-top: 4px" aria-hidden="true"></i></span><br><span class="preco1">CARTÃO</span></div>
         </div>
-      
+      </div>
+      </center>
+       
     </div>
   </div>
-  <div class="card" style="border:none; background-color: #242B8C;">
-    <div class="card-body text-center">
-      <h5 class="card-title" style="color: #FFFFFF; font-family: 'Roboto', sans-serif; font-size: 20px">FUNCIONAL, GINÁSTICA E MUAY-THAI</h5>
-      <p class="card-text" style="color: #F1F1F1; font-family: IBM Plex Sans, Regular; font-size: 16px;">Valor promocional até a data de vencimento da mensalidade</p>
-      <div class="d-flex  mb-2 ">
-          <div class="mr-auto  "><img src="svg/001-money-color.svg" class="iconpgd"><small class="valorplanos">R$ 65,00</small></div>
+   <div class="card" style="border:none; background-color: #242B8C;">
+   <div class="card-body text-center">
+      <h5 class="card-title" style="color: #FFFFFF; font-family: 'Roboto', sans-serif; font-size: 20px">PLANO FAMÍLIA</h5>
+      <p class="card-text" style="color: #F1F1F1; font-family: IBM Plex Sans, Regular; font-size: 16px;">Valor promocional até a data de vencimento da mensalidade</p><br>
+     <center>
+        <div class="pmodalidades " style=" padding: 5px;"  >
+        <div class="d-flex  mb-2 ">
+          <div class="mr-auto  "><span class="valorplanos1" >R$ 75,00 <i class="fa fa-money" style="color: green; font-size: 20px" aria-hidden="true"></i></span><br><span class="preco1">DINHEIRO</span></div>
           
-          <div class="bd-highlight"><img src="svg/002-debit-card-color.svg" class="iconpgc"><small class="valorplanos">R$ 70,00</small></div>
+          <div class="bd-highlight"><span class="valorplanos1">R$ 75,00 <i class="fa fa-credit-card-alt" style="color:#ae0707; margin-top: 4px" aria-hidden="true"></i></span><br><span class="preco1">CARTÃO</span></div>
         </div>
+      </div>
+      </center>
+       
     </div>
   </div>
   <div class="card" style="border:none; background-color: #B95922">
@@ -182,11 +211,16 @@
 
       <h5 class="card-title" style="color: #FFFFFF; font-family: 'Roboto', sans-serif; font-size: 20px">DUAS MODALIDADES</h5>
       <p class="card-text" style="color: #F1F1F1; font-family: IBM Plex Sans, Regular; font-size: 16px;">Valor promocional até a data de vencimento da mensalidade</p><br>
-      <div class="d-flex  mb-2 ">
-          <div class="mr-auto  "><img src="svg/001-money-color.svg" class="iconpgd"><small class="valorplanos">R$ 65,00</small></div>
+      <center>
+        <div class="pmodalidades " style=" padding: 5px;" >
+        <div class="d-flex  mb-2 ">
+          <div class="mr-auto  "><span class="valorplanos1" >R$ 110,00 <i class="fa fa-money" style="color: green; font-size: 20px" aria-hidden="true"></i></span><br><span class="preco1">DINHEIRO</span></div>
           
-          <div class="bd-highlight"><img src="svg/002-debit-card-color.svg" class="iconpgc"><small class="valorplanos">R$ 70,00</small></div>
+          <div class="bd-highlight"><span class="valorplanos1">R$ 115,00 <i class="fa fa-credit-card-alt"  style="color:#ae0707; margin-top: 4px" aria-hidden="true"></i></span><br><span class="preco1">CARTÃO</span></div>
         </div>
+      </div>
+      </center>
+       
     </div>
   </div>
 </div>

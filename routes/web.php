@@ -26,7 +26,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/escolha-perfil', 'TelaUsuarioController@escolhaperfil');
 Route::get('/perfil', 'TelaUsuarioController@perfilUsuario');
 Route::get('/ficha-aluno', 'TelaUsuarioController@ficha');
-Route::get('/SobreNos', 'TelaUsuarioController@sobreNos');
+Route::get('/sobrenos', 'TelaUsuarioController@sobreNos');
 
 Route::get('/perfil-instrutor', 'TelaUsuarioController@perfilInstrutor')->middleware('instrutor');
 

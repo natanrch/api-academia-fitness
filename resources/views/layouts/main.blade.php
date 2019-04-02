@@ -33,7 +33,7 @@
         <a class="nav-link " href="/" style="color: #F1F1F1">HOME</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link " href="layout/grupomuscular.blade.php" style="color: #F1F1F1">SOBRE NÓS</a>
+        <a class="nav-link " href="/sobrenos" style="color: #F1F1F1">SOBRE NÓS</a>
       </li>
       @if(!Auth::check())
         <li class="nav-item ">

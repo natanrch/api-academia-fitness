@@ -77,11 +77,7 @@ label{
 
 
 
-.valorplanos{
-  color: #FFFFFF;
-  font-family: IBM Plex Sans, Bold;
-  font-size: 15px;
-}
+
 /* MENU */
 
 .colormenu{
@@ -140,6 +136,10 @@ label{
   border-radius: 5px
 
 }
+.pmodalidades{
+  max-width: 300px;
+
+}
 .fontmodalidades{
   font-family: IBM Plex Sans, Regular;
   color: #363636;
@@ -158,6 +158,28 @@ label{
   margin-bottom: 10px;
   font-family: 'Roboto', sans-serif;
   color: #343434;
+}
+.valorplanos{
+   font-family: 'Roboto', Black;
+  color: #343434;
+  font-size: 16px
+
+}
+.valorplanos1{
+   font-family: 'Roboto', Black;
+  color: #fff;
+  font-size: 18px
+
+}
+.preco{
+    font-family: IBM Plex Sans, Regular;
+  color: #363636;
+  font-size: 12px;
+}
+.preco1{
+    font-family: IBM Plex Sans, Regular;
+  color: #fff;
+  font-size: 12px;
 }
 
 
