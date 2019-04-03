@@ -11,6 +11,8 @@
   <link href="{{ url('lib/animate/animate.min.css') }}" rel="stylesheet">
   <link href="{{ url('lib/venobox/venobox.css') }}" rel="stylesheet">
   <link href="{{ url('lib/owlcarousel/assets/owl.carousel.min.css') }}" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.2.0/sweetalert2.min.css">
+
 
 
     <title>Academia Fitness</title>
@@ -89,5 +91,8 @@
 
 </html>
 <script type="text/javascript" src="/js/app.js"></script>
+<script type="text/javascript" src="/js/sweetalert.js"></script>
 <script type="text/javascript" src="../js/efeito.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.2.0/sweetalert2.all.min.js"></script>
+
 @stack('scripts')

@@ -21,7 +21,7 @@
   <div class="row">
     <div class="col-12 col-sm-6" >
 
-    	<h2>INSTRUTOR  <button type="button" class="btn btnlaranja" data-toggle="modal" data-target=".bd-example-modal-lg">ADICIONAR <i class="fa fa-user-plus" aria-hidden="true"></i></button></h2>
+    	<h2>INSTRUTOR  <button type="button" class="btn btnlaranja" data-toggle="modal" data-target=".bd-example-modal-lg" >ADICIONAR <i class="fa fa-user-plus" aria-hidden="true"></i></button></h2>
     	
 
        <form class="form-row" >
@@ -190,7 +190,7 @@
 
                         <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-4">
-                                <button type="submit" class="btn btnlaranja">
+                                <button type="submit" class="btn btnlaranja" id="success">
                                     {{ __('CADASTRAR') }}
                                 </button>
                             </div>
