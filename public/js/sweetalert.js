@@ -1,8 +1,8 @@
 // Alert Modal Type
 		$(document).on('click', '#success', function(e) {
 			swal(
-				'Success',
-				'You clicked the <b style="color:green;">Success</b> button!',
+				'Parabéns!!!',
+				'Cadastrado com <b style="color:green;">sucesso</b>!',
 				'success'
 			)
 		});
