@@ -40,16 +40,10 @@ class TelaUsuarioController extends Controller
             'users' => $users,
         ]);
     }
-    public function escolhaPerfil()
+
+    public function cadastraSenha()
     {
-    	return view('site.primeiraetapalogin');
-    }
-    public function ficha()
-    {
-        $fichaExercicio = $this->fichaExercicio->find(2);
-        return view('ficha.ficha', [
-            'treino' => $fichaExercicio,
-        ]);
+        return view('site.cadastrasenha');
     }
 
     public function adm()

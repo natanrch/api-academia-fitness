@@ -28,7 +28,7 @@ Route::get('/perfil', 'TelaUsuarioController@perfilUsuario');
 Route::get('/ficha-aluno', 'TelaUsuarioController@ficha');
 Route::get('/sobrenos', 'TelaUsuarioController@sobreNos');
 
-Route::get('/perfil-instrutor', 'TelaUsuarioController@perfilInstrutor')->middleware('instrutor');
+Route::get('/instrutor/perfil', 'TelaUsuarioController@perfilInstrutor')->middleware('instrutor');
 
 Route::group([
 		'prefix' => 'adm',
@@ -37,11 +37,6 @@ Route::group([
 	Route::get('/', 'TelaUsuarioController@adm');
 });
 
-
-Route::group(['prefix' => 'treino'], function() {
-	Route::get('create', 'TreinoController@create');
-	Route::post('create', 'TreinoController@store');
-});
 Route::group([
 		'prefix' => 'ficha',
 		'middleware' => 'instrutor',

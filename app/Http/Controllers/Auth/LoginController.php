@@ -55,7 +55,7 @@ class LoginController extends Controller
         $credenciais = Request::only('cpf', 'password');
         if(Auth::attempt($credenciais)) {
             if(Auth::user()->isInstrutor()) {
-                return redirect('/perfil-instrutor');
+                return redirect('/instrutor/perfil');
             }
             if(Auth::user()->isAdmin()) {
                 return redirect('/adm');

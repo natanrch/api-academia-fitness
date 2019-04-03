@@ -57,8 +57,8 @@
   <div class="col-12 col-sm-6 text-left">
     <p class="nomealuno " style=" margin-bottom: 5px;">{{$user->name}}</p>
     <div class="form-group">
-      <a href="user/{{$user->id}}" class="btn btnazul" >Avaliação Física <i class="fa fa-download"  aria-hidden="true"></i></a>
-      <a href="ficha/create?user={{$user->id}}" class="btn btnazul" style="margin-top: 2px">Criar Ficha <i class="fa fa-file-text-o " aria-hidden="true"></i></a>
+      <a href="/user/{{$user->id}}" class="btn btnazul" >Avaliação Física <i class="fa fa-download"  aria-hidden="true"></i></a>
+      <a href="/ficha/create?user={{$user->id}}" class="btn btnazul" style="margin-top: 2px">Criar Ficha <i class="fa fa-file-text-o " aria-hidden="true"></i></a>
     </div>
   </div>
 </div>
