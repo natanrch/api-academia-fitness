@@ -38,9 +38,13 @@
       <label for="aerobico">Treino aeróbico (minutos)</label>
 		<input class="form-control" type="number" name="aerobico" id="aerobico">
     </div>
-    <div class="form-group col-md-6">
+    <div class="form-group col-md-3">
       <label for="aquecimento">Aquecimento (minutos)</label>
 		<input class="form-control" type="number" name="aquecimento" id="aquecimento">
+    </div>
+    <div class="form-group col-md-3">
+      <label for="aquecimento">Intervalo (minutos)</label>
+		 <input type="number" class="form-control" name="email" required>
     </div>
     <div class="form-group col-md-6">
       <label for="aquecimento">Data de Revisão</label>

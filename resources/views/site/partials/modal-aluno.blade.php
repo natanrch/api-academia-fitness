@@ -63,7 +63,7 @@
 
                             <div class="col-md-6">
                               <div class="input-group">
-                                 <input id="email" type="date" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" required><span class="input-group-addon" style="border: 1px solid #ccc; padding: 3px;"><i class="fa fa-calendar playicon text-center" style="font-size: 20px; margin-top: 4px" aria-hidden="true"></i></span>
+                                 <input id="email" type="date" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" required>
                             </div>
                                 @if ($errors->has('email'))
                                     <span class="invalid-feedback" role="alert">
