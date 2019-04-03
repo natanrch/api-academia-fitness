@@ -4,21 +4,33 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\FichaExercicio;
+use App\Ficha;
 use App\User;
+use Auth;
 
 
 class TelaUsuarioController extends Controller
 {
     protected $fichaExercicio;
+    protected $ficha;
+    protected $user;
 
-    public function __construct(FichaExercicio $fichaExercicio)
+    public function __construct(FichaExercicio $fichaExercicio, Ficha $ficha, User $user)
     {
         $this->fichaExercicio = $fichaExercicio;
+        $this->ficha = $ficha;
+        $this->user = $user;
     }
 
     public function perfilUsuario()
-    {
-    	return view('site.perfilaluno');
+    {   
+        $ficha = $this->ficha->where('user_id', Auth::id())->first();
+        if($ficha == null) {
+            abort('404');
+        }
+    	return view('site.perfilaluno', [
+            'ficha' => $ficha,
+        ]);
     }
 
     public function perfilInstrutor()

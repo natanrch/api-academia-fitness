@@ -30,7 +30,12 @@ Route::get('/sobrenos', 'TelaUsuarioController@sobreNos');
 
 Route::get('/perfil-instrutor', 'TelaUsuarioController@perfilInstrutor')->middleware('instrutor');
 
-Route::get('/adm', 'TelaUsuarioController@adm');
+Route::group([
+		'prefix' => 'adm',
+		'middleware' => 'admin',
+	],  function() {
+	Route::get('/', 'TelaUsuarioController@adm');
+});
 
 
 Route::group(['prefix' => 'treino'], function() {

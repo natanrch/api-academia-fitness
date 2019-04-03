@@ -57,6 +57,9 @@ class LoginController extends Controller
             if(Auth::user()->isInstrutor()) {
                 return redirect('/perfil-instrutor');
             }
+            if(Auth::user()->isAdmin()) {
+                return redirect('/adm');
+            }
             return redirect('/perfil');
         }   
     }
