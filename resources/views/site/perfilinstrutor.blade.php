@@ -2,20 +2,6 @@
 
 @section('content')
 
- <nav id="navbar-example2" class="navbar navbar-light bg-light">
-  <a class="navbar-brand" href="#">Navbar</a>
-  <ul class="nav nav-pills">
-    <li class="nav-item">
-      <a class="nav-link" href="#mdo"><img src="../img/usuario.png" alt="..." class="rounded-circle" style="width: 30px; height: 30px"></a>
-    </li>
-    <li class="nav-item dropdown">
-      <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">MENU</a>
-      <div class="dropdown-menu">
-        <a class="dropdown-item" href="#one">MEUS DADOS</a>
-        <a class="dropdown-item" href="#two">MINHS FICHA</a>
-    </li>
-  </ul>
-</nav>
 
 <div class="container " style="margin-top:30px">
   <div class="row">
@@ -44,7 +30,7 @@
     </div>
     </form>
     <br>
-
+<div class="overflow-auto">
 @foreach($users as $user)
 <div class="row" >
   <div class="col-12 col-sm-2 ">
@@ -63,6 +49,7 @@
   </div>
 </div>
 @endforeach
+</div>
   <br>
 
   <div>

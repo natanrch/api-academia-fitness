@@ -5,18 +5,42 @@
 <div class="container">
         <div class="section-header">
           <h2 class="text-center">MINHA FICHA</h2>
-          <hr style="width: 13%">
+          <hr style="max-width: 122px; height: 3px; background-color: #B95922;">
         </div>
-        <h2>Treino de Hoje:</h2>
+        <h2>Treino de Hoje: </h2>
+        <p class="text-right">
+  <a class="btn btnlaranja" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+    Observações
+  </a>
+</p>
+<div class="collapse" id="collapseExample">
+  <div class="card card-body">
+    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+  </div>
     </div>
-   
+   </div>
 
     <div class="container justify-content-center ">
 <div class="row " >
   <div class="col-sm-12">
     <div class="row">
       <div class="col-12 col-sm-6">
-<table class="table table-sm table-borderless">
+        <div class="table-responsive">
+<table class="table table-sm text-center " >
+  <thead>
+    <tr>
+      <th scope="col" class="ficha">Objetivo:</th>
+      <th scope="col" class="ficha">Método:</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td scope="row" class="ficha" > </td>
+      <td class="ficha"> </td>
+    </tr>
+  </tbody>
+</table>
+<table class="table table-sm text-center table-bordered">
   <thead>
     <tr>
       <th scope="col" class="ficha">Aquecimento:</th>
@@ -26,17 +50,17 @@
   <tbody>
     <tr>
       <td scope="row" class="ficha" >{{$ficha->aquecimento}} minutos</td>
-      <td class="ficha">{{$ficha->intervalo}} minutos</td>
+      <td class="ficha">{{$ficha->intervalo}} segundos</td>
+      
     </tr>
+
     
   </tbody>
 </table>
-
-  
-</table>
+</div>
 </div>      
-      <div class="col-12 col-sm-6">
-       <table class="table table-sm text-center table-bordered " style="max-width: 500px;">
+      <div class="col-12 col-sm-6 table-responsive">
+       <table class="table table-sm text-center table-bordered "  >
   <thead>
     <tr>
       <th scope="col">S</th>
@@ -74,18 +98,18 @@
     </tr> 
   </tbody>
 </table>
+</table>
+</div>
       </div>
+
     </div>
-    </div>
-    </div>
-
-
-
-
-<div class="container justify-content-center">
-  <div class="row ">
-
-  <table class="table table-sm table-bordered  col-12 col-sm-12">
+ </div>
+</div>
+ <div class="container " >
+<div class="row " >
+      <div class="col-12 col-sm-12 ">
+        <div class="table-responsive " style="min-width: -50em">
+  <table class="table table-sm table-bordered " >
   <thead class="text-center fontth">
     <tr>
       <th scope="col">EXERCÍCIO</th>
@@ -96,9 +120,9 @@
   <tbody class="fonttd">
     @foreach($ficha->ficha_exercicios as $exercicio)
       <tr>
-        <td> <input type="checkbox" aria-label="Checkbox for following text input" style="border: 1px solid #D9E0E6"> {{$exercicio->exercicio->titulo}} 
+        <td scope="row"> <input type="checkbox" aria-label="Checkbox for following text input" style="border: 1px solid #D9E0E6"> {{$exercicio->exercicio->titulo}} 
             <!-- Button trigger modal -->
-            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+            <button type="button" class="btn" data-toggle="modal" data-target=".bd-example-modal-xl" style="border-radius: 20%">
               <i class="fa fa-play-circle-o playicon" aria-hidden="true" style="font-size: 25px"></i>
             </button>
 
@@ -115,7 +139,7 @@
       </th scope="col">
     </tr>
     <tr>
-      <th>
+      <th scope="col">
         Data: {{$ficha->created_at}}
       </th>
        <th scope="col" colspan="2">
@@ -126,5 +150,7 @@
 </table>
 </div>
 </div>
-
+</div>
+</div>
+@include('site.partials.modal-demostrativo')
 @endsection

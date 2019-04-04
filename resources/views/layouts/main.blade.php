@@ -44,12 +44,16 @@
          
         </li>
       @else
-        <li class="nav-item ">
-          
-          <a class="nav-link btn btnlaranja"  href="/logout" style="color: #F1F1F1 " ><i class="fa fa-user-o " aria-hidden="true"></i>
-           SAIR</a>
-         
         </li>
+        <li class="nav-item dropdown" >
+    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false" style="color: #B95922; font-size: 20px"><img src="../img/usuario.png" alt="..." class="rounded-circle" style="width: 30px; height: 30px"></a>
+    <div class="dropdown-menu " style=" margin-left: -90px; min-width: 10em; max-width: 100%">
+      <a class="dropdown-item" href="#" role="button" data-toggle="modal" data-target="#exampleModalperfilaluno">PERFIL <i class="fa fa-user-o " aria-hidden="true"></i></a>
+      <a class="dropdown-item" href="/logout">SAIR</a>
+    </div>
+  </li>
+        
+        
       @endif
     </ul>
   </div>
@@ -86,6 +90,7 @@
 </div>
 <br>
 </footer>
+
 </body>
 
 </html>
