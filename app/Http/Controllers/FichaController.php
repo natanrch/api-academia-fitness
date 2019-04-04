@@ -79,8 +79,11 @@ class FichaController extends Controller
             'objetivo' => $request->objetivo,
             'metodo' => $request->metodo,
             'aquecimento' => $request->aquecimento,
-            'fichaExercicio_aerobico' => $request->aerobico,
+            'treino_aerobico' => $request->aerobico,
             'observacoes' => $request->observacoes,
+            'tempo_aerobico' => $request->tempo_aerobico,
+            'intervalo' => $request->intervalo,
+            'revisao' => $request->revisao,
         ]);
         foreach($request->exercicio as $i => $exercicio) {
             if(!is_null($request->treino[$i])) {

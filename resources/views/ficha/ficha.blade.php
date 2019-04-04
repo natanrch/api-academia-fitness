@@ -15,7 +15,7 @@
 </p>
 <div class="collapse" id="collapseExample">
   <div class="card card-body">
-    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+    {{$ficha->observacoes}}
   </div>
     </div>
    </div>
@@ -35,8 +35,8 @@
   </thead>
   <tbody>
     <tr>
-      <td scope="row" class="ficha" > </td>
-      <td class="ficha"> </td>
+      <td scope="row" class="ficha" > {{$ficha->objetivo}} </td>
+      <td class="ficha">{{$ficha->metodo}} </td>
     </tr>
   </tbody>
 </table>

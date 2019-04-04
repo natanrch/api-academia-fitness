@@ -27,28 +27,28 @@
     </div>
     <div class="form-group col-md-3">
       <label for="aquecimento">Treino aeróbico </label>
-		<select name="" class="form-control">
+		<select name="aerobico" class="form-control">
 						<option selected>escolha</option>
-						<option value="A">Esteira</option>
-						<option value="B">Elíptico</option>
-						<option value="B">Bicicleta Ergométrica</option>
+						<option value="Esteira">Esteira</option>
+						<option value="Elíptico">Elíptico</option>
+						<option value="Bicicleta Ergométrica">Bicicleta Ergométrica</option>
 		</select>
     </div>
     <div class="form-group col-md-3">
       <label for="aerobico">Treino aeróbico (minutos)</label>
-		<input class="form-control" type="number" name="aerobico" id="aerobico">
+		<input class="form-control" type="number" name="tempo_aerobico" id="aerobico">
     </div>
     <div class="form-group col-md-3">
       <label for="aquecimento">Aquecimento (minutos)</label>
 		<input class="form-control" type="number" name="aquecimento" id="aquecimento">
     </div>
     <div class="form-group col-md-3">
-      <label for="aquecimento">Intervalo (minutos)</label>
-		 <input type="number" class="form-control" name="email">
+      <label for="intervalo">Intervalo (segundos)</label>
+		 <input type="number" class="form-control" name="intervalo" id="intervalo">
     </div>
     <div class="form-group col-md-6">
-      <label for="aquecimento">Data de Revisão</label>
-		 <input type="date" class="form-control" name="email" >
+      <label for="revisao">Data de Revisão</label>
+		 <input type="date" class="form-control" name="revisao" id="revisao">
     </div>
     <div class="form-group col-md-6">
       <label for="observacoes">Observações</label>
@@ -71,8 +71,8 @@
   <tbody>
     <tr>
       <td scope="row">
-      	<select name="treino[]" class="form-control">
-						<option selected>x</option>
+      	<select name="treino_do_dia[]" class="form-control">
+						<option selected value="">x</option>
 						<option value="A">A</option>
 						<option value="B">B</option>
 						<option value="C">C</option>
@@ -83,7 +83,7 @@
 		</select>
 	</td>
       <td scope="row">
-      	<select name="treino[]" class="form-control">
+      	<select name="treino_do_dia[]" class="form-control">
 						<option selected>x</option>
 						<option value="A">A</option>
 						<option value="B">B</option>
@@ -96,7 +96,7 @@
 	</td>
       
       <td scope="row">
-      	<select name="treino[]" class="form-control">
+      	<select name="treino_do_dia[]" class="form-control">
 						<option selected>x</option>
 						<option value="A">A</option>
 						<option value="B">B</option>
@@ -112,7 +112,7 @@
     </tr>
     <tr>
       <td scope="row">
-		<select name="treino[]" class="form-control">
+		<select name="treino_do_dia[]" class="form-control">
 						<option selected>x</option>
 						<option value="A">A</option>
 						<option value="B">B</option>
@@ -124,7 +124,7 @@
 		</select>
 	</td>
       <td scope="row">
-      	<select name="treino[]" class="form-control">
+      	<select name="treino_do_dia[]" class="form-control">
 						<option selected>x</option>
 						<option value="A">A</option>
 						<option value="B">B</option>
@@ -136,7 +136,7 @@
 		</select>
 	</td>
       <td scope="row">
-      	<select name="treino[]" class="form-control">
+      	<select name="treino_do_dia[]" class="form-control">
 						<option selected>x</option>
 						<option value="A">A</option>
 						<option value="B">B</option>
@@ -154,7 +154,7 @@
       
      
       <td scope="row">
-      	<select name="treino[]" class="form-control">
+      	<select name="treino_do_dia[]" class="form-control">
 						<option selected>x</option>
 						<option value="A">A</option>
 						<option value="B">B</option>
@@ -167,7 +167,7 @@
 	</td>
      
       <td scope="row">
-      	<select name="treino[]" class="form-control">
+      	<select name="treino_do_dia[]" class="form-control">
 						<option selected>x</option>
 						<option value="A">A</option>
 						<option value="B">B</option>
@@ -179,7 +179,7 @@
 		</select>
 	</td>
       <td scope="row">
-      	<select name="treino[]" class="form-control">
+      	<select name="treino_do_dia[]" class="form-control">
 						<option selected>x</option>
 						<option value="A">A</option>
 						<option value="B">B</option>
@@ -207,7 +207,7 @@
   <tbody>
     <tr>
       <td scope="row">
-      	<select name="treino[]" class="form-control">
+      	<select name="treino_do_dia[]" class="form-control">
 						<option selected>x</option>
 						<option value="A">A</option>
 						<option value="B">B</option>
@@ -219,7 +219,7 @@
 		</select>	
 	</td>
       <td scope="row">
-      	<select name="treino[]" class="form-control">
+      	<select name="treino_do_dia[]" class="form-control">
 						<option selected>x</option>
 						<option value="A">A</option>
 						<option value="B">B</option>
@@ -232,7 +232,7 @@
 	</td>
       
       <td scope="row">
-      	<select name="treino[]" class="form-control">
+      	<select name="treino_do_dia[]" class="form-control">
 						<option selected>x</option>
 						<option value="A">A</option>
 						<option value="B">B</option>
@@ -248,7 +248,7 @@
     </tr>
     <tr>
       <td scope="row">
-      	<select name="treino[]" class="form-control">
+      	<select name="treino_do_dia[]" class="form-control">
 						<option selected>x</option>
 						<option value="A">A</option>
 						<option value="B">B</option>
@@ -260,7 +260,7 @@
 		</select>
 	</td>
       <td scope="row">
-      	<select name="treino[]" class="form-control">
+      	<select name="treino_do_dia[]" class="form-control">
 						<option selected>x</option>
 						<option value="A">A</option>
 						<option value="B">B</option>
@@ -272,7 +272,7 @@
 		</select>
 	</td>
       <td scope="row">
-      	<select name="treino[]" class="form-control">
+      	<select name="treino_do_dia[]" class="form-control">
 						<option selected>x</option>
 						<option value="A">A</option>
 						<option value="B">B</option>
@@ -290,7 +290,7 @@
       
      
       <td scope="row">
-      	<select name="treino[]" class="form-control">
+      	<select name="treino_do_dia[]" class="form-control">
 						<option selected>x</option>
 						<option value="A">A</option>
 						<option value="B">B</option>
@@ -303,7 +303,7 @@
 	</td>
      
       <td scope="row">
-      	<select name="treino[]" class="form-control">
+      	<select name="treino_do_dia[]" class="form-control">
 						<option selected>x</option>
 						<option value="A">A</option>
 						<option value="B">B</option>
@@ -315,7 +315,7 @@
 		</select>
 	</td>
       <td scope="row">
-      	<select name="treino[]" class="form-control">
+      	<select name="treino_do_dia[]" class="form-control">
 						<option selected>x</option>
 						<option value="A">A</option>
 						<option value="B">B</option>
@@ -348,7 +348,7 @@
 				<div class="col-md-1">
 					<label>Treino</label>
 					<select name="treino[]" class="form-control">
-						<option selected>x</option>
+						<option selected value="">x</option>
 						<option value="A">A</option>
 						<option value="B">B</option>
 						<option value="C">C</option>

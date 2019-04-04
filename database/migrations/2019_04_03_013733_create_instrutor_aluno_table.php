@@ -35,6 +35,6 @@ class CreateInstrutorAlunoTable extends Migration
             $table->dropForeign(['aluno_id']);
             $table->dropForeign(['instrutor_id']);
         });
-        Schema::dropIfExists('instrutor_aluno');
+        Schema::dropIfExists('instrutor_alunos');
     }
 }
