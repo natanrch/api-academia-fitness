@@ -38,13 +38,17 @@
       <label for="aerobico">Treino aeróbico (minutos)</label>
 		<input class="form-control" type="number" name="aerobico" id="aerobico">
     </div>
-    <div class="form-group col-md-6">
+    <div class="form-group col-md-3">
       <label for="aquecimento">Aquecimento (minutos)</label>
 		<input class="form-control" type="number" name="aquecimento" id="aquecimento">
     </div>
+    <div class="form-group col-md-3">
+      <label for="aquecimento">Intervalo (minutos)</label>
+		 <input type="number" class="form-control" name="email">
+    </div>
     <div class="form-group col-md-6">
       <label for="aquecimento">Data de Revisão</label>
-		 <input type="date" class="form-control" name="email" required>
+		 <input type="date" class="form-control" name="email" >
     </div>
     <div class="form-group col-md-6">
       <label for="observacoes">Observações</label>
@@ -326,7 +330,6 @@
     </tbody>
 	</table>
     </div>
-  </form>
   </div>
 
   <!--texto eXERCICIOS-->
@@ -335,7 +338,6 @@
 	          <h2 class="text-center">EXERCÍCIOS</h2>
 	          <hr style="max-width: 170px; height: 3px; background-color: #B95922;">
 	        </div>
-
 
 	
 	<div class="container ficha ">
@@ -375,7 +377,6 @@
 			</div>
 		@endforeach
 	@endforeach
-
 	<button type="submit" class="btn btnlaranja">CRIAR FICHA <i class="fa fa-check-circle" aria-hidden="true"></i></button>
 
 </form>
