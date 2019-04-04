@@ -21,7 +21,7 @@
   <div class="row">
     <div class="col-12 col-sm-3 text-center" >
       
-      <img src="../img/usuario.png" alt="..." class="img-thumbnail rounded-circle fotoaluno text-center" style="border: 1px solid #131852">
+      <img src="../img/usuario.png" alt="..." class="img-thumbnail rounded-circle fotoaluno text-center">
       
       <p class="Nomeperfil">Nome Instrutor</p>
       <p class="descriperfil"> CREF: <br> 0000000000</P>

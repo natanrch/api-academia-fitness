@@ -21,7 +21,7 @@
   <div class="row">
     <div class="col-sm-3 text-center" >
       
-     <img src="../img/usuario.png" alt="..." class="img-thumbnail rounded-circle fotoaluno text-center" style="border: 1px solid #131852">
+     <img src="../img/usuario.png" alt="..." class="img-thumbnail rounded-circle fotoaluno text-center" >
       
       <p class="Nomeperfil">Nome Aluno</p>
       <span class="descriperfil"> <b>Modalidade:</b>  <br> Musculação </span>
@@ -116,7 +116,7 @@
 
 
 
-<div class="container justify-content-center">
+
   <div class="row ">
 
   <table class="table table-sm table-bordered  col-12 col-sm-12">

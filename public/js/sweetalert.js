@@ -1,4 +1,5 @@
 // Alert Modal Type
+	/*
 		$(document).on('click', '#success', function(e) {
 			swal(
 				'Parabéns!!!',
@@ -115,3 +116,5 @@
 					}
 				})
 		});
+
+*/
