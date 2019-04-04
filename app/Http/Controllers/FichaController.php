@@ -7,6 +7,8 @@ use App\FichaExercicio;
 use App\Exercicio;
 use App\TipoExercicio;
 use App\FichaInstrutor;
+use App\Treino;
+
 use Illuminate\Http\Request;
 use Session;
 use Auth;
@@ -94,7 +96,7 @@ class FichaController extends Controller
                     'repeticoes' => $request->repeticoes[$i],
                     'series' => $request->series[$i],
                     'peso' => $request->peso[$i],
-                    'treino' => $request->treino[$i],
+                    'treino_id' => $request->treino[$i],
                 ]);
             }
         }
@@ -114,8 +116,21 @@ class FichaController extends Controller
      */
     public function show(Ficha $ficha)
     {
+        $treinoA = $this->fichaExercicio->where('ficha_id', $ficha->id)->where('treino_id', '1')->get();
+        $treinoB = $this->fichaExercicio->where('ficha_id', $ficha->id)->where('treino_id', '2')->get();
+        $treinoC = $this->fichaExercicio->where('ficha_id', $ficha->id)->where('treino_id', '3')->get();
+        $treinoD = $this->fichaExercicio->where('ficha_id', $ficha->id)->where('treino_id', '4')->get();
+        $treinoE = $this->fichaExercicio->where('ficha_id', $ficha->id)->where('treino_id', '5')->get();
+        $treinoF = $this->fichaExercicio->where('ficha_id', $ficha->id)->where('treino_id', '6')->get();
+
         return view('ficha.ficha', [
             'ficha' => $ficha,
+            'treinoA' => $treinoA,
+            'treinoB' => $treinoB,
+            'treinoC' => $treinoC,
+            'treinoD' => $treinoD,
+            'treinoE' => $treinoE,
+            'treinoF' => $treinoF,
         ]);
 
     }

@@ -349,12 +349,12 @@
 					<label>Treino</label>
 					<select name="treino[]" class="form-control">
 						<option selected value="">x</option>
-						<option value="A">A</option>
-						<option value="B">B</option>
-						<option value="C">C</option>
-						<option value="D">D</option>
-						<option value="E">E</option>
-						<option value="F">F</option>
+						<option value="1">A</option>
+						<option value="2">B</option>
+						<option value="3">C</option>
+						<option value="4">D</option>
+						<option value="5">E</option>
+						<option value="6">F</option>
 					</select>
 				</div>
 				<div class="col-md-5">
