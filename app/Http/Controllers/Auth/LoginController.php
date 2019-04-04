@@ -61,7 +61,9 @@ class LoginController extends Controller
                 return redirect('/adm');
             }
             return redirect('/perfil');
-        }   
+        } else {
+            return redirect()->back();
+        }
     }
 
     public function loginInstrutor()
