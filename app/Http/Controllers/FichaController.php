@@ -8,6 +8,7 @@ use App\Exercicio;
 use App\TipoExercicio;
 use App\FichaInstrutor;
 use App\Treino;
+use App\UltimoTreino;
 
 use Illuminate\Http\Request;
 use Session;
@@ -21,8 +22,9 @@ class FichaController extends Controller
     protected $exercicio;
     protected $tipoExercicio;
     protected $fichaInstrutor;
+    protected $ultimoTreino;
 
-    public function __construct(Ficha $ficha, FichaExercicio $fichaExercicio, Exercicio $exercicio, TipoExercicio $tipoExercicio, FichaInstrutor $fichaInstrutor)
+    public function __construct(Ficha $ficha, FichaExercicio $fichaExercicio, Exercicio $exercicio, TipoExercicio $tipoExercicio, FichaInstrutor $fichaInstrutor, UltimoTreino $ultimoTreino)
     {
 
         $this->exercicio = $exercicio;
@@ -30,6 +32,7 @@ class FichaController extends Controller
         $this->fichaExercicio = $fichaExercicio;
         $this->tipoExercicio = $tipoExercicio;
         $this->fichaInstrutor = $fichaInstrutor;
+        $this->ultimoTreino = $ultimoTreino;
     }
 
     /**
@@ -114,23 +117,21 @@ class FichaController extends Controller
      * @param  \App\Ficha  $ficha
      * @return \Illuminate\Http\Response
      */
-    public function show(Ficha $ficha)
+    public function show(Ficha $ficha, Request $request)
     {
-        $treinoA = $this->fichaExercicio->where('ficha_id', $ficha->id)->where('treino_id', '1')->get();
-        $treinoB = $this->fichaExercicio->where('ficha_id', $ficha->id)->where('treino_id', '2')->get();
-        $treinoC = $this->fichaExercicio->where('ficha_id', $ficha->id)->where('treino_id', '3')->get();
-        $treinoD = $this->fichaExercicio->where('ficha_id', $ficha->id)->where('treino_id', '4')->get();
-        $treinoE = $this->fichaExercicio->where('ficha_id', $ficha->id)->where('treino_id', '5')->get();
-        $treinoF = $this->fichaExercicio->where('ficha_id', $ficha->id)->where('treino_id', '6')->get();
+
+        $ultimoTreino = $this->ultimoTreino->where('ficha_id', $ficha->id)->orderBy('created_at', 'desc')->first();
+        $treino = $this->fichaExercicio->where('ficha_id', $ficha->id)->where('treino_id', $ultimoTreino->treino_id + 1)->get();
+        if(count($treino) == 0) {
+            $treino = $this->fichaExercicio->where('ficha_id', $ficha->id)->where('treino_id', 1)->get();
+        }
+
+        $treinoDeHoje = $treino->first()->treino;
 
         return view('ficha.ficha', [
             'ficha' => $ficha,
-            'treinoA' => $treinoA,
-            'treinoB' => $treinoB,
-            'treinoC' => $treinoC,
-            'treinoD' => $treinoD,
-            'treinoE' => $treinoE,
-            'treinoF' => $treinoF,
+            'treino' => $treino,
+            'treinoDeHoje' => $treinoDeHoje,
         ]);
 
     }

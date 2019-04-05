@@ -1,4 +1,4 @@
-
+      <tr><td colspan="3" class="text-center"><h3>Treino A</h3></td></tr>
       @foreach($treino as $exercicio)
         <tr>
           <td scope="row"> <input type="checkbox" aria-label="Checkbox for following text input" style="border: 1px solid #D9E0E6"> {{$exercicio->exercicio->titulo}} 

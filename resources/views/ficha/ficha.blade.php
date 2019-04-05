@@ -7,7 +7,7 @@
           <h2 class="text-center">MINHA FICHA</h2>
           <hr style="max-width: 122px; height: 3px; background-color: #B95922;">
         </div>
-        <h2>Treino de Hoje: </h2>
+        <h2>Treino de Hoje: {{$treinoDeHoje->treino}}</h2>
         <p class="text-right">
   <a class="btn btnlaranja" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
     Observações
@@ -118,43 +118,19 @@
     </tr>
   </thead>
   <tbody class="fonttd">
-    @if(count($treinoA) > 0)
-            <tr><td colspan="3" class="text-center"><h3>Treino A</h3></td></tr>
-      @include('ficha.treino', [
-        'treino' => $treinoA
-      ])
-    @endif
+      @foreach($treino as $exercicio)
+        <tr>
+          <td scope="row"> <input type="checkbox" aria-label="Checkbox for following text input" style="border: 1px solid #D9E0E6"> {{$exercicio->exercicio->titulo}} 
+              <!-- Button trigger modal -->
+              <button type="button" class="btn" data-toggle="modal" data-target=".bd-example-modal-xl" style="border-radius: 20%">
+                <i class="fa fa-play-circle-o playicon" aria-hidden="true" style="font-size: 25px"></i>
+              </button>
 
-    @if(count($treinoB) > 0)
-            <tr><td colspan="3" class="text-center"><h3>Treino B</h3></td></tr>
-      @include('ficha.treino', [
-        'treino' => $treinoB
-      ])
-    @endif
-    @if(count($treinoC) > 0)
-            <tr><td colspan="3" class="text-center"><h3>Treino C</h3></td></tr>
-      @include('ficha.treino', [
-        'treino' => $treinoC
-      ])
-    @endif
-    @if(count($treinoD) > 0)
-          <tr><td colspan="3" class="text-center"><h3>Treino D</h3></td></tr>
-      @include('ficha.treino', [
-        'treino' => $treinoD
-      ])
-    @endif
-    @if(count($treinoE) > 0)
-            <tr><td colspan="3" class="text-center"><h3>Treino E</h3></td></tr>
-      @include('ficha.treino', [
-        'treino' => $treinoE
-      ])
-    @endif
-    @if(count($treinoF) > 0)
-            <tr><td colspan="3" class="text-center"><h3>Treino F</h3></td></tr>
-      @include('ficha.treino', [
-        'treino' => $treinoF
-      ])
-    @endif
+            </td>
+          <td class="text-center">{{$exercicio->series}} x {{$exercicio->repeticoes}}</td>
+          <td class="text-center">{{$exercicio->peso}} Kg</td>
+        </tr>
+      @endforeach
   </tbody>
   <tfoot class="fonttd">
     <tr>
@@ -172,6 +148,11 @@
     </tr>
   </tfoot>
 </table>
+<form method="POST">
+  {{csrf_field()}}
+  <input type="hidden" name="treino" value="{{$treinoDeHoje->id}}">
+  <button class="btn btn-success" type="submit">Finalizar Treino!</button>
+</form>
 </div>
 </div>
 </div>
