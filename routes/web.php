@@ -24,11 +24,14 @@ Route::get('/cadastro', 'Auth\RegisterController@cadastroInstrutor');
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/escolha-perfil', 'TelaUsuarioController@escolhaperfil');
-Route::get('/perfil', 'TelaUsuarioController@perfilUsuario');
-Route::get('/ficha-aluno', 'TelaUsuarioController@ficha');
+Route::get('/perfil', 'TelaUsuarioController@perfilUsuario')->middleware(['auth', 'usuario-com-senha']);
+Route::get('/ficha-aluno', 'TelaUsuarioController@ficha')->middleware(['auth', 'usuario-com-senha']);
+
 Route::get('/sobrenos', 'TelaUsuarioController@sobreNos');
 
-Route::get('/instrutor/perfil', 'TelaUsuarioController@perfilInstrutor')->middleware('instrutor');
+Route::get('/instrutor/perfil', 'TelaUsuarioController@perfilInstrutor')->middleware(['instrutor', 'usuario-com-senha']);
+
+Route::get('/cadastra-senha', 'TelaUsuarioController@cadastraSenha')->middleware('auth');
 
 Route::group([
 		'prefix' => 'adm',

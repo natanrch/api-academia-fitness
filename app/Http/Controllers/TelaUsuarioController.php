@@ -48,7 +48,6 @@ class TelaUsuarioController extends Controller
 
     public function adm()
     {
-        dd(Auth::user()->isNovoUsuario());
         return view('site.perfil-adm');
     }
 

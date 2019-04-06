@@ -17,6 +17,11 @@ class UsersSeeder extends Seeder
             'password' => bcrypt('123456'),
             'cpf' => '00000000000',
             'tipo' => 'default',
+            'data_de_nascimento' => '1990-07-01',
+            'data_de_pagamento' => '2020-10-01',
+            'modalidade' => 'musculação',
+            'avaliacao' => 'arquivo.pdf',
+            'novo_usuario' => 1,
         ]);
         DB::table('users')->insert([
             'name' => 'teste',
@@ -24,6 +29,11 @@ class UsersSeeder extends Seeder
             'password' => bcrypt('123456'),
             'cpf' => '44444444444',
             'tipo' => 'default',
+            'data_de_nascimento' => '1990-07-01',
+            'data_de_pagamento' => '2020-10-01',
+            'modalidade' => 'musculação',
+            'avaliacao' => 'arquivo.pdf',
+            'novo_usuario' => 0,
         ]);
         DB::table('users')->insert([
             'name' => 'teste instrutor',
@@ -31,6 +41,8 @@ class UsersSeeder extends Seeder
             'password' => bcrypt('123456'),
             'cpf' => '11111111111',
             'tipo' => 'instrutor',
+            'cref' => '111111',
+            'novo_usuario' => 0,
         ]);
         DB::table('users')->insert([
             'name' => 'teste admin',
@@ -38,6 +50,7 @@ class UsersSeeder extends Seeder
             'password' => bcrypt('123456'),
             'cpf' => '22222222222',
             'tipo' => 'admin',
+            'novo_usuario' => 0,
         ]);
 
     }
