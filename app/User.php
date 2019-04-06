@@ -16,7 +16,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password', 'cpf', 'tipo', 'data_de_nascimento', 'data_de_pagamento', 'modalidade', 'avaliacao', 'cref'
+        'name', 'email', 'password', 'cpf', 'tipo', 'data_de_nascimento', 'data_de_pagamento', 'modalidade', 'avaliacao', 'cref', 'novo_usuario'
     ];
 
     /**
@@ -39,9 +39,15 @@ class User extends Authenticatable
     public function isInstrutor()    {        
         return $this->tipo === self::INSTRUTOR_TIPO;    
     }
+    
+    public function isNovoUsuario()
+    {
+        return $this->novo_usuario == true;
+    } 
 
     public function ficha()
     {
         return $this->hasOne('App\Ficha');
     }
+
 }
