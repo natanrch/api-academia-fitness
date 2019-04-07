@@ -1,9 +1,30 @@
 // Alert Modal Type
-	/*
+	
 		$(document).on('click', '#success', function(e) {
 			swal(
 				'Parabéns!!!',
 				'Cadastrado com <b style="color:green;">sucesso</b>!',
+				'success'
+			)
+		});
+		$(document).on('click', '#successficha', function(e) {
+			swal(
+				'Parabéns!!!',
+				'Ficha criada com <b style="color:green;">sucesso</b>!',
+				'success'
+			)
+		});
+		$(document).on('click', '#successaluno', function(e) {
+			swal(
+				'Parabéns!!!',
+				'Aluno cadastrado com <b style="color:green;">sucesso</b>!',
+				'success'
+			)
+		});
+		$(document).on('click', '#successinstrutor', function(e) {
+			swal(
+				'Parabéns!!!',
+				'Instrutor cadastrado com <b style="color:green;">sucesso</b>!',
 				'success'
 			)
 		});
@@ -31,6 +52,14 @@
 				'info'
 			)
 		});
+		$(document).on('click', '#info', function(e) {
+			swal(
+				'Info!',
+				'Se a vida se tornar uma barra, coloque as anilhas, apoie nas costas e agacha!',
+				'info'
+			)
+		});
+
 
 		$(document).on('click', '#question', function(e) {
 			swal(
@@ -117,4 +146,6 @@
 				})
 		});
 
-*/
+
+
+

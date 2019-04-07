@@ -11,9 +11,8 @@
       
       <p class="Nomeperfil">Nome Instrutor</p>
       <p class="descriperfil"> CREF: <br> 0000000000</P>
- 
-      <p class="descriperfil"> Meu Horário: <br> Segunda à Sexta:  </p>
-      <button type="button" class="btn  btnlaranja" style="width: 170px">ADICIONAR FOTO</button>
+      <label for="adcionar-arquivo" class="btn btnazul" style="max-width: 170px" > ADICIONAR <i class="fa fa-camera" aria-hidden="true"></i></label>
+      <input type="file" name="" id="adcionar-arquivo">
       <hr class="d-sm-none">
     
     </div>
@@ -23,7 +22,7 @@
 
      <form class="form-row" >
       <div class="form-group col-6 col-sm-8">
-        <input class="form-control inputb" type="search" placeholder="Pesquisar" aria-label="Search">
+        <input class="form-control inputb" type="search" placeholder="Pesquisar " aria-label="Search">
       </div>
       <div class="form-group col-2 col-sm-2">
       <button class="btn btnlaranja"  type="submit">PESQUISAR</button>

@@ -7,7 +7,7 @@
 
 <!--Decricacao da academia-->
 
- <div class="jumbotron jumbotron-fluid border-bottom" style="background-image: url(img/.jpg); background-repeat: no-repeat; background-size: cover; background-attachment: fixed; background-color: #fff">
+ <div class="jumbotron jumbotron-fluid" style="background-image: url(img/.jpg); background-repeat: no-repeat; background-size: cover; background-attachment: fixed; background-color: #fff">
     <div class="container">
       <div class="row">
         <div class="col-sm-6 col-12 d-flex align-content-center flex-wrap">
@@ -22,14 +22,14 @@
       </div>
     </div>
 </div>
+<hr class="linha">
 
-
-
+<br>
 <div class="container text-center"  >
     <center>
     <div style="max-width: 600px">
     <h1 class="fontvigor " style="font-size: 40px; color:#B95922;  ">ACADEMIA FITNESS</h1>
-    <hr style="max-width: 222px; height: 3px; background-color: #060D56;">
+    
     </div>
     
     <div style="max-width: 500px;  " >
@@ -38,12 +38,14 @@
     </center>
   </div>
      <br>
+     <hr class="linha">
 
 
 <!--texto modalidades-->
 <div class="container text-center">
         <div class="section-header">
           <h2 class="text-center ">MODALIDADES</h2>
+          <p class="ficha text-center">Valor promocional até a data de vencimento</p>
     </div>
 </div>
 <br>

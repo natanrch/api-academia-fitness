@@ -12,6 +12,11 @@ h3{
   color: #343434;
   font-size: 25px;
 }
+.linha{
+  background-color: #B95922;
+  max-width: 79%;
+  text-align: center;
+}
 
 label{
   font-family: 'Roboto', Black;
@@ -21,6 +26,12 @@ label{
 .inputb{
   background-color: #DDDDDD;
 }
+/* Esconde o input */
+input[type='file'] {
+  display: none
+}
+
+
 .btnlogin{
    font-family:IBM Plex Sans, Medium;
   font-size: 18px;
@@ -87,9 +98,16 @@ label{
   font-family:IBM Plex Sans, Medium;
   font-size: 16px;
 }
+.linkmenud a{
+  font-family:IBM Plex Sans, Medium;
+  font-size: 16px;
+}
 .logincolor{
   color: #B95922;
 }
+
+
+
 
 /* PERFIL */
 .Nomeperfil{
@@ -122,6 +140,11 @@ label{
   background-image: url(img/img.jpg);
   background-size: auto;
 
+}
+.box {
+  -webkit-box-shadow: 6px 6px 10px #B95922; 
+     -moz-box-shadow: 6px 6px 10px #B95922;
+          box-shadow: 6px 6px 10px #B95922;  
 }
 
 /* SECTION MODALIDADES */
@@ -291,8 +314,8 @@ label{
         font-weight: bold;
     }
 
-    /*  sweetalert   
-button {
+    /*  sweetalert   */
+button .alert{
   background-color: cadetblue;
   color: whitesmoke;
   border: 0;
@@ -306,17 +329,9 @@ button {
   white-space: nowrap;
   margin: 10px;
 }
-img {
-  width: 200px;
-}
-input[type="text"] {
-  padding: 12px 20px;
-  display: inline-block;
-  border: 1px solid #ccc;
-  border-radius: 0px;
-  box-sizing: border-box;
-}
-h1 {
+
+
+h1 .alerttexto{
   border-bottom: solid 2px grey;
 }
 #success {
@@ -334,4 +349,3 @@ h1 {
 #question {
   background: grey;
 }
-*/

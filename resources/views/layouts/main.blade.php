@@ -11,53 +11,60 @@
   <link href="{{ url('lib/animate/animate.min.css') }}" rel="stylesheet">
   <link href="{{ url('lib/venobox/venobox.css') }}" rel="stylesheet">
   <link href="{{ url('lib/owlcarousel/assets/owl.carousel.min.css') }}" rel="stylesheet">
-  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.2.0/sweetalert2.min.css"> -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.2.0/sweetalert2.min.css">
 
 
     <title>Academia Fitness</title>
 </head>
 <body>
  	<header>
- 		
- 	<nav class="navbar navbar-expand-lg  navbar-light colormenu " style="padding: .1rem">
 
+    <nav class="navbar navbar-expand-lg navbar-light colormenu" style="padding: .1rem">
+       <div class="container">
   <!--logo -->
-  <a class="navbar-brand" href="#"><img src="img/logo.png" style="width: 111px; height: 50px"></a>
-
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+  <a class="navbar-brand" href="/"><img src="../img/logo.png" style="max-width:200px; max-height: 50px"></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
-  <!--links -->
-<div class="collapse navbar-collapse linkmenu justify-content-end" id="navbarSupportedContent">
-    <ul class="navbar-nav ">
+ 
+  <div class="collapse navbar-collapse  justify-content-end linkmenu" id="navbarNavDropdown">
+    <ul class="navbar-nav">
       <li class="nav-item">
         <a class="nav-link " href="/" style="color: #F1F1F1">HOME</a>
       </li>
       <li class="nav-item">
         <a class="nav-link " href="/sobrenos" style="color: #F1F1F1">SOBRE NÓS</a>
       </li>
-      @if(!Auth::check())
-        <li class="nav-item ">
-          
-          <a class="nav-link btn btnlaranja"  href="/login" style="color: #F1F1F1 " ><i class="fa fa-user-o " aria-hidden="true"></i>
-           LOGIN</a>
+       @if(!Auth::check())
+       <li class="nav-item "> 
+          <a class="nav-link btn btnlaranja"  href="/login" style="color: #F1F1F1; border-radius: 20px; " ><i class="fa fa-user-o " aria-hidden="true"></i>
+           LOGIN</a> 
+        </li>
+       
+        @else
+         <li class="nav-item ">
+            <a href="" class="nav-link">
+               <i class="fa fa-bell-o playicon" aria-hidden="true" style="font-size: 20px"></i> <span class="badge " style=" color: #fff; font-size: 17px; margin-left: -9px"><sup>9</sup></span>
+                 <span class="sr-only">unread messages</span>
+            </a>
          
         </li>
-      @else
-        </li>
-        <li class="nav-item dropdown" >
-    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false" style="color: #B95922; font-size: 20px"><img src="../img/usuario.png" alt="..." class="rounded-circle" style="width: 30px; height: 30px"></a>
-    <div class="dropdown-menu " style=" margin-left: -90px; min-width: 10em; max-width: 100%">
-      <a class="dropdown-item" href="#" role="button" data-toggle="modal" data-target="#exampleModalperfilaluno">PERFIL <i class="fa fa-user-o " aria-hidden="true"></i></a>
-      <a class="dropdown-item" href="/logout">SAIR</a>
-    </div>
-  </li>
-        
-        
-      @endif
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: #B95922; font-size: 18px ">
+          <img src="../img/usuario.png" alt="..." class="rounded-circle" style="max-width: 30px; max-height: 30px">
+        </a>
+        <div class="dropdown-menu linkmenud" aria-labelledby="navbarDropdownMenuLink" >
+          <a class="dropdown-item" href="#" >Action</a>
+          <a class="dropdown-item" href="/instrutor/perfil">PERFIL <i class="fa fa-user-o playicon" aria-hidden="true"></i></a>
+          <a class="dropdown-item" href="/logout">SAIR</a>
+        </div>
+      </li>
+         @endif
     </ul>
   </div>
+  </div>
 </nav>
+ 		
 
     
     @yield('content')
@@ -97,6 +104,6 @@
 <script type="text/javascript" src="/js/app.js"></script>
 <script type="text/javascript" src="/js/sweetalert.js"></script>
 <script type="text/javascript" src="../js/efeito.js"></script>
-<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.2.0/sweetalert2.all.min.js"></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.2.0/sweetalert2.all.min.js"></script> 
 
 @stack('scripts')
