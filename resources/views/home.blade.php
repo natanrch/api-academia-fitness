@@ -6,18 +6,17 @@
 
 
 <!--Decricacao da academia-->
-
- <div class="jumbotron jumbotron-fluid" style="background-image: url(img/.jpg); background-repeat: no-repeat; background-size: cover; background-attachment: fixed; background-color: #fff">
+ <div class="jumbotron jumbotron-fluid " style="background-image: url(img/fund3.jpg); background-repeat: no-repeat; background-size: cover; background-attachment: fixe; background-color: #fff; background-size: 100% 100%">
     <div class="container">
       <div class="row">
         <div class="col-sm-6 col-12 d-flex align-content-center flex-wrap">
           <div class="d-flex align-content-center flex-wrap">
-          <p class="lead" style="font-family: IBM Plex Sans, Regular; font-size: 20px">Já pensou em ter seu treino em mão onde e quando quiser, com demostrativos dos execicios de forma correta. Aqui na Academia Fitness você pode baixar nosso Aplicativo e seguir seu treino elaborado pelos instrutores e com base na sua avaliação fisica. </p>
+          <p class="lead" style="font-family: IBM Plex Sans, Regular; font-size: 20px; color: #000">Já pensou em ter seu treino em mão onde e quando quiser, com demostrativos dos execicios de forma correta. Aqui na Academia Fitness você pode baixar nosso Aplicativo e seguir seu treino elaborado pelos instrutores e com base na sua avaliação fisica. </p>
           <p>Venha conhecer a <strong>Academia Fitness!</strong></p>
           </div>
         </div>
          <div class="col-sm-6 col-12 text-center">
-          <img src="img/celular.png" class="img-fluid" alt="Responsive image" style="max-height: 300px;">
+          <img src="img/celular.png" class="img-fluid " alt="Responsive image" >
         </div>
       </div>
     </div>

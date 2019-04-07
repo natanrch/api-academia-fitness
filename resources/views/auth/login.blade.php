@@ -2,15 +2,14 @@
 
 @section('content')
 
-<br>
-<div class="container">
-  <div class="row">
+<div style="background: url(../img/im.jpg); background-repeat: no-repeat; background-size: contain; background-size: 100% 100%; background-color:  ">
+  <div class="container">
+  <div class="row "  >
     <div class="col-12">
-  <div class="login-form">
+  <div class="login-form" >
     <form method="POST" action="/login">
         {{csrf_field()}}
-        <h2 class="text-center">Login</h2> 
-        <hr style="max-width: 122px; height: 2px; background-color:  #060D56;">
+        <h2 class="text-center">ENTRAR</h2> 
         <div class="form-group">
           <div class="input-group">
             <label for="cpf"></label>
@@ -55,6 +54,5 @@
 </div>
 </div>
 </div>
-
-
+</div>
 @endsection
