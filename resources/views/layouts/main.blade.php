@@ -56,7 +56,13 @@
         </a>
         <div class="dropdown-menu linkmenud" aria-labelledby="navbarDropdownMenuLink" >
           <a class="dropdown-item" href="#" >Action</a>
-          <a class="dropdown-item" href="/instrutor/perfil">PERFIL <i class="fa fa-user-o playicon" aria-hidden="true"></i></a>
+          @if(Auth::user()->isInstrutor())
+            <a class="dropdown-item" href="/instrutor/perfil">PERFIL <i class="fa fa-user-o playicon" aria-hidden="true"></i></a>
+          @elseif(Auth::user()->isAdmin())
+            <a class="dropdown-item" href="/adm">PERFIL <i class="fa fa-user-o playicon" aria-hidden="true"></i></a>
+          @else
+            <a class="dropdown-item" href="/perfil">PERFIL <i class="fa fa-user-o playicon" aria-hidden="true"></i></a>
+          @endif
           <a class="dropdown-item" href="/logout">SAIR</a>
         </div>
       </li>
