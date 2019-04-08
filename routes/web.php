@@ -47,10 +47,12 @@ Route::get('/instrutor/perfil', 'TelaUsuarioController@perfilInstrutor')->middle
 Route::get('/cadastra-senha', 'TelaUsuarioController@cadastraSenha')->middleware('auth');
 
 Route::group([
-		'prefix' => 'adm',
+		'prefix' => 'admin',
 		'middleware' => 'admin',
 	],  function() {
 	Route::get('/', 'TelaUsuarioController@adm');
+	Route::post('/cadastra-instrutor', 'AdminController@cadastraInstrutor');
+	Route::post('/cadastra-aluno', 'AdminController@cadastraAluno');
 });
 
 Route::group([

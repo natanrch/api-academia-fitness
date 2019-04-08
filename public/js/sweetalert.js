@@ -14,20 +14,20 @@
 				'success'
 			)
 		});
-		$(document).on('click', '#successaluno', function(e) {
-			swal(
-				'Parabéns!!!',
-				'Aluno cadastrado com <b style="color:green;">sucesso</b>!',
-				'success'
-			)
-		});
-		$(document).on('click', '#successinstrutor', function(e) {
-			swal(
-				'Parabéns!!!',
-				'Instrutor cadastrado com <b style="color:green;">sucesso</b>!',
-				'success'
-			)
-		});
+		// $(document).on('click', '#successaluno', function(e) {
+		// 	swal(
+		// 		'Parabéns!!!',
+		// 		'Aluno cadastrado com <b style="color:green;">sucesso</b>!',
+		// 		'success'
+		// 	)
+		// });
+		// $(document).on('click', '#successinstrutor', function(e) {
+		// 	swal(
+		// 		'Parabéns!!!',
+		// 		'Instrutor cadastrado com <b style="color:green;">sucesso</b>!',
+		// 		'success'
+		// 	)
+		// });
 
 		$(document).on('click', '#error', function(e) {
 			swal(
