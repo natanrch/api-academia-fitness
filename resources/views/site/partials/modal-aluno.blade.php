@@ -46,6 +46,21 @@
                             </div>
                         </div>
 
+                        <div class="form-group row">
+                            <label for="nascimento" class="col-md-4 col-form-label text-md-right">{{ __('DATA DE NASCIMENTO') }}</label>
+
+                            <div class="col-md-6">
+                              <div class="input-group">
+                                 <input id="nascimento" type="date" class="form-control{{ $errors->has('data') ? ' is-invalid' : '' }}" name="nascimento" value="{{ old('nascimento') }}" required>
+                            </div>
+                                @if ($errors->has('nascimento'))
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('nascimento') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        </div>
+
                          <div class="form-group row">
                             <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-MAIL') }}</label>
 
@@ -61,15 +76,15 @@
                         </div>
 
                         <div class="form-group row">
-                            <label for="data" class="col-md-4 col-form-label text-md-right">{{ __('DATA DE PAGAMENTO') }}</label>
+                            <label for="pagamento" class="col-md-4 col-form-label text-md-right">{{ __('DATA DE PAGAMENTO') }}</label>
 
                             <div class="col-md-6">
                               <div class="input-group">
-                                 <input id="data" type="date" class="form-control{{ $errors->has('data') ? ' is-invalid' : '' }}" name="data" value="{{ old('data') }}" required>
+                                 <input id="pagamento" type="date" class="form-control{{ $errors->has('data') ? ' is-invalid' : '' }}" name="pagamento" value="{{ old('pagamento') }}" required>
                             </div>
-                                @if ($errors->has('data'))
+                                @if ($errors->has('pagamento'))
                                     <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $errors->first('data') }}</strong>
+                                        <strong>{{ $errors->first('pagamento') }}</strong>
                                     </span>
                                 @endif
                             </div>
