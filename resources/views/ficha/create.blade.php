@@ -4,6 +4,7 @@
 
 <br><br>
 <!--texto CRIAR FICHA-->
+<section>
 <div class="container">
 	        <div class="section-header">
 	          <h2 class="text-center">CRIAR TREINOS</h2>
@@ -415,6 +416,7 @@
 	<button type="submit" class="btn btnlaranja">CRIAR FICHA <i class="fa fa-check-circle" aria-hidden="true"></i></button>
 
 </form>
+</section>
 <br>
 <br>
 @endsection

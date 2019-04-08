@@ -17,10 +17,11 @@
     <title>Academia Fitness</title>
 </head>
 <body>
- 	<header>
+  <main>
+ 	<header >
 
-    <nav class="navbar navbar-expand-lg navbar-light colormenu fixed-top" id="navbar" style="padding: .1rem">
-       <div class="container">
+    <nav class="navbar navbar-expand-lg navbar-light colormenu" id="navbar" style="padding: .1rem">
+       <div class="container" id="topo">
   <!--logo -->
   <a class="navbar-brand" href="/"><img src="../img/logo.png" style="max-width:200px; max-height: 50px"></a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation" style="color: #fff; background-color: #fff; ">
@@ -64,11 +65,10 @@
   </div>
   </div>
 </nav>
- 		
-
-    
-    @yield('content')
 </header>
+
+    @yield('content')
+</section>
  		
 <footer class="footer ">
 <div class="container">
@@ -90,13 +90,20 @@
       <div class="col-12 col-sm-4">
         <P class="pfooter">CONTATO</P>
         <small class="p1footer"> <i class="fa fa-whatsapp playicon" aria-hidden="true" style="font-size: 16px;"></i> (96) 9 9144-5397  <br><i class="fa fa-phone playicon" aria-hidden="true" style="font-size: 16px;"></i> (96)  9 8118-1047 </small>
+
       </div>
     </div>
   </div>
 </div>
-</div>
 <br>
+
 </footer>
+  <div class="smoothscroll-top">
+    <span class="scroll-top-inner">
+        <i class="fa fa-2x fa-arrow-circle-up"></i>
+    </span>
+</div>
+</main>
 
 </body>
 
