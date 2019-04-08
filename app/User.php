@@ -30,14 +30,21 @@ class User extends Authenticatable
 
     const ADMIN_TIPO = 'admin';
     const INSTRUTOR_TIPO = 'instrutor';
+    const DEFAULT_TIPO = 'default';
 
 
     public function isAdmin()    {        
         return $this->tipo === self::ADMIN_TIPO;    
     }
 
-    public function isInstrutor()    {        
+    public function isInstrutor()   
+    {        
         return $this->tipo === self::INSTRUTOR_TIPO;    
+    }
+
+    public function isDefault()
+    {
+        return $this->tipo === self::DEFAULT_TIPO;
     }
     
     public function isNovoUsuario()

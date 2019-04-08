@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\FichaExercicio;
 use App\Ficha;
+use App\UltimoTreino;
 use App\User;
 use Auth;
 
@@ -14,12 +15,14 @@ class TelaUsuarioController extends Controller
     protected $fichaExercicio;
     protected $ficha;
     protected $user;
+    protected $ultimoTreino;
 
-    public function __construct(FichaExercicio $fichaExercicio, Ficha $ficha, User $user)
+    public function __construct(FichaExercicio $fichaExercicio, Ficha $ficha, User $user, UltimoTreino $ultimoTreino)
     {
         $this->fichaExercicio = $fichaExercicio;
         $this->ficha = $ficha;
         $this->user = $user;
+        $this->ultimoTreino = $ultimoTreino;
     }
 
     public function perfilUsuario()
@@ -28,8 +31,25 @@ class TelaUsuarioController extends Controller
         if($ficha == null) {
             abort('404');
         }
+
+        $ultimoTreino = $this->ultimoTreino->where('ficha_id', $ficha->id)->orderBy('created_at', 'desc')->first();
+        if($ultimoTreino != null) {
+
+            $treino = $this->fichaExercicio->where('ficha_id', $ficha->id)->where('treino_id', $ultimoTreino->treino_id + 1)->get();
+            if(count($treino) == 0) {
+                $treino = $this->fichaExercicio->where('ficha_id', $ficha->id)->where('treino_id', 1)->get();
+            }
+        } else {
+            $treino = $this->fichaExercicio->where('ficha_id', $ficha->id)->where('treino_id', 1)->get();
+        }
+
+        $treinoDeHoje = $treino->first()->treino;
+
+
     	return view('site.perfilaluno', [
             'ficha' => $ficha,
+            'treino' => $treino,
+            'treinoDeHoje' => $treinoDeHoje,
         ]);
     }
 

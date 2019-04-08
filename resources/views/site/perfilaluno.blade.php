@@ -1,15 +1,13 @@
 @extends('layouts.main')
 
 @section('content')
-
-
 <br>
 <div class="container">
         <div class="section-header">
           <h2 class="text-center">MINHA FICHA</h2>
           <hr style="max-width: 122px; height: 3px; background-color: #B95922;">
         </div>
-        <h2>Treino de Hoje: </h2>
+        <h2>Treino de Hoje: {{$treinoDeHoje->treino}}</h2>
         <p class="text-right">
   <a class="btn btnlaranja" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
     Observações
@@ -17,7 +15,7 @@
 </p>
 <div class="collapse" id="collapseExample">
   <div class="card card-body">
-    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+    {{$ficha->observacoes}}
   </div>
     </div>
    </div>
@@ -37,8 +35,8 @@
   </thead>
   <tbody>
     <tr>
-      <td scope="row" class="ficha" > </td>
-      <td class="ficha"> </td>
+      <td scope="row" class="ficha" > {{$ficha->objetivo}} </td>
+      <td class="ficha">{{$ficha->metodo}} </td>
     </tr>
   </tbody>
 </table>
@@ -120,19 +118,19 @@
     </tr>
   </thead>
   <tbody class="fonttd">
-    @foreach($ficha->ficha_exercicios as $exercicio)
-      <tr>
-        <td scope="row"> <input type="checkbox" aria-label="Checkbox for following text input" style="border: 1px solid #D9E0E6"> {{$exercicio->exercicio->titulo}} 
-            <!-- Button trigger modal -->
-            <button type="button" class="btn" data-toggle="modal" data-target=".bd-example-modal-xl" style="border-radius: 20%">
-              <i class="fa fa-play-circle-o playicon" aria-hidden="true" style="font-size: 25px"></i>
-            </button>
+      @foreach($treino as $exercicio)
+        <tr>
+          <td scope="row"> <input type="checkbox" aria-label="Checkbox for following text input" style="border: 1px solid #D9E0E6"> {{$exercicio->exercicio->titulo}} 
+              <!-- Button trigger modal -->
+              <button type="button" class="btn" data-toggle="modal" data-target=".bd-example-modal-xl" style="border-radius: 20%">
+                <i class="fa fa-play-circle-o playicon" aria-hidden="true" style="font-size: 25px"></i>
+              </button>
 
-          </td>
-        <td class="text-center">{{$exercicio->series}} x {{$exercicio->repeticoes}}</td>
-        <td class="text-center">{{$exercicio->peso}} Kg</td>
-      </tr>
-    @endforeach
+            </td>
+          <td class="text-center">{{$exercicio->series}} x {{$exercicio->repeticoes}}</td>
+          <td class="text-center">{{$exercicio->peso}} Kg</td>
+        </tr>
+      @endforeach
   </tbody>
   <tfoot class="fonttd">
     <tr>
@@ -150,6 +148,12 @@
     </tr>
   </tfoot>
 </table>
+<form method="POST" id="finaliza">
+  {{csrf_field()}}
+  <input type="hidden" name="treino" value="{{$treinoDeHoje->id}}">
+  <input type="hidden" name="ficha" value="{{$ficha->id}}">
+  <button class="btn btn-success" type="submit">Finalizar Treino!</button>
+</form>
 </div>
 </div>
 </div>
@@ -158,3 +162,8 @@
 @include('site.partials.modal-perfilaluno')
 
 @endsection
+
+@push('scripts')
+<script type="text/javascript">
+  //lançar alerta quando formulário for submetido
+</script>

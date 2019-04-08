@@ -148,11 +148,6 @@
     </tr>
   </tfoot>
 </table>
-<form method="POST">
-  {{csrf_field()}}
-  <input type="hidden" name="treino" value="{{$treinoDeHoje->id}}">
-  <button class="btn btn-success" type="submit">Finalizar Treino!</button>
-</form>
 </div>
 </div>
 </div>

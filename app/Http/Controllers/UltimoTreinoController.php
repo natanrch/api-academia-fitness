@@ -7,11 +7,20 @@ use Illuminate\Http\Request;
 
 class UltimoTreinoController extends Controller
 {
+
+    protected $ultimoTreino;
+
+    public function __construct(UltimoTreino $ultimoTreino)
+    {
+        $this->ultimoTreino = $ultimoTreino;
+    }
+
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
+
     public function index()
     {
         //

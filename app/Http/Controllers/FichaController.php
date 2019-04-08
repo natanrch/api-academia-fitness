@@ -121,8 +121,13 @@ class FichaController extends Controller
     {
 
         $ultimoTreino = $this->ultimoTreino->where('ficha_id', $ficha->id)->orderBy('created_at', 'desc')->first();
-        $treino = $this->fichaExercicio->where('ficha_id', $ficha->id)->where('treino_id', $ultimoTreino->treino_id + 1)->get();
-        if(count($treino) == 0) {
+        if($ultimoTreino != null) {
+
+            $treino = $this->fichaExercicio->where('ficha_id', $ficha->id)->where('treino_id', $ultimoTreino->treino_id + 1)->get();
+            if(count($treino) == 0) {
+                $treino = $this->fichaExercicio->where('ficha_id', $ficha->id)->where('treino_id', 1)->get();
+            }
+        } else {
             $treino = $this->fichaExercicio->where('ficha_id', $ficha->id)->where('treino_id', 1)->get();
         }
 
@@ -134,6 +139,17 @@ class FichaController extends Controller
             'treinoDeHoje' => $treinoDeHoje,
         ]);
 
+    }
+
+    public function setUltimoTreino(Request $request)
+    {
+        $treino = $request->treino;
+        $ficha = $request->ficha;
+        $ultimoTreino = $this->ultimoTreino->create([
+            'ficha_id' => $ficha,
+            'treino_id' => $treino,
+        ]);
+        return redirect()->back();
     }
 
     /**
@@ -169,4 +185,5 @@ class FichaController extends Controller
     {
         //
     }
+
 }
