@@ -103,7 +103,11 @@ input[type='file'] {
 .logincolor{
   color: #B95922;
 }
-
+#navbar a:hover {
+  background-color: #525CE0E6;
+  color: black;
+  border-radius: 12px
+}
 
 
 

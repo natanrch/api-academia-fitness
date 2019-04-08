@@ -19,15 +19,15 @@
 <body>
  	<header>
 
-    <nav class="navbar navbar-expand-lg navbar-light colormenu" style="padding: .1rem">
+    <nav class="navbar navbar-expand-lg navbar-light colormenu fixed-top" id="navbar" style="padding: .1rem">
        <div class="container">
   <!--logo -->
   <a class="navbar-brand" href="/"><img src="../img/logo.png" style="max-width:200px; max-height: 50px"></a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation" style="color: #fff; background-color: #fff; ">
     <span class="navbar-toggler-icon"></span>
   </button>
  
-  <div class="collapse navbar-collapse  justify-content-end linkmenu" id="navbarNavDropdown">
+  <div class="collapse navbar-collapse  justify-content-end linkmenu" id="navbarNavDropdown" style="padding: 3px">
     <ul class="navbar-nav">
       <li class="nav-item">
         <a class="nav-link " href="/" style="color: #F1F1F1">HOME</a>
@@ -51,7 +51,7 @@
         </li>
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: #B95922; font-size: 18px ">
-          <img src="../img/usuario.png" alt="..." class="rounded-circle" style="max-width: 30px; max-height: 30px">
+          <img src="../img/usuario.png" alt="foto de perfil" class="rounded-circle" style="max-width: 30px; max-height: 30px;">
         </a>
         <div class="dropdown-menu linkmenud" aria-labelledby="navbarDropdownMenuLink" >
           <a class="dropdown-item" href="#" >Action</a>
