@@ -58,7 +58,49 @@
   </tbody>
 </table>
 </div>
-</div>      
+</div>  
+      <div class="col-12 col-sm-6 table-responsive">
+       <table class="table table-sm text-center table-bordered "  >
+  <thead>
+    <tr>
+      <th scope="col">S</th>
+      <th scope="col">T</th>
+      <th scope="col">Q</th>
+      <th scope="col">Q</th>
+      <th scope="col">S</th>
+      <th scope="col">S</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td scope="row"><a href="">A</a></td>
+      <td><a href="">B</a></td>
+      <td><a href="">C</a></td>
+      <td><a href="">A</a></td>
+      <td><a href="">B</a></td>
+      <td><a href="">C</a></td>
+    </tr>
+    <tr>
+      <td scope="row"><a href="">A</a></td>
+      <td><a href="">B</a></td>
+      <td><a href="">C</a></td>
+      <td><a href="">A</a></td>
+      <td><a href="">B</a></td>
+      <td><a href="">C</a></td>
+    </tr>
+    <tr>
+      <td scope="row"><a href="">A</a></td>
+      <td><a href="">B</a></td>
+      <td><a href="">C</a></td>
+      <td><a href="">A</a></td>
+      <td><a href="">B</a></td>
+      <td><a href="">C</a></td>
+    </tr> 
+  </tbody>
+</table>
+</table>
+</div>
+    
       </div>
 
     </div>

@@ -56,8 +56,10 @@ class TelaUsuarioController extends Controller
     public function perfilInstrutor()
     {
         $users = User::where('tipo', 'default')->get();
+        $instrutores = User::where('tipo', 'instrutor')->get();
     	return view('site.perfilinstrutor', [
             'users' => $users,
+            'instrutores' => $instrutores,
         ]);
     }
 
