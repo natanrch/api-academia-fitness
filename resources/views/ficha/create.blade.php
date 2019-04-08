@@ -17,9 +17,9 @@
 <form method="POST">
 	{{csrf_field()}}
   <div class="form-row">
-    <div class="form-group col-md-6">
+    <div class="form-group col-md-6 ">
       <label for="objetivo">Objetivo</label>
-      <input class="form-control" type="text" name="objetivo" id="objetivo">
+      <input class="form-control " type="text" name="objetivo" id="objetivo">
     </div>
     <div class="form-group col-md-6">
       <label for="metodo">Método</label>
@@ -332,13 +332,48 @@
     </div>
   </div>
 
+
+
   <!--texto eXERCICIOS-->
-<div class="container">
+<div class="container text-center">
 	        <div class="section-header">
 	          <h2 class="text-center">EXERCÍCIOS</h2>
 	          <hr style="max-width: 170px; height: 3px; background-color: #B95922;">
 	        </div>
-
+	        <br>
+</div>
+<div class="">
+	
+    <form>
+  <div class="form-row">
+  	<div class="form-group col-md-12 ">
+  		<p class="nomealuno" style="font-size: 20px">FILTRAR <i class="fa fa-filter playicon" aria-hidden="true" style="font-size: 20px"></i></p>
+  	</div>
+    <div class="form-group col-md-3 ">
+      <select name="" class="form-control">
+						<option selected>Categorias</option>
+						<option value="abdomem">abdomem</option>
+						
+						
+		</select>
+    </div>
+    <div class="form-group col-md-3">
+      <select name="" class="form-control">
+						<option selected>Exercícios</option>
+						<option value="A">Supra na Prancha</option>
+						
+		</select>
+    </div>
+    <div class="form-group col-md-2 text-left">
+      <button class="btn btnlaranja"  type="submit" style="border-radius: 50%"> <i class="fa fa-search" aria-hidden="true"></i></button>
+  </div>
+  <div class="form-group col-md-4 text-right fixte">
+      <button type="submit" class="btn btnlaranja">CRIAR FICHA <i class="fa fa-check-circle" aria-hidden="true"></i></button>
+  </div>
+  </div>
+  </div>
+</div>
+<br>
 	
 	<div class="container ficha ">
 	@foreach($tipos as $tipo)
