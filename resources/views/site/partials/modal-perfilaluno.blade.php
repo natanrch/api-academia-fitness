@@ -13,7 +13,8 @@
         <div class="row">
           <div class="col-12 col-sm-6 text-center">
             <p><img src="../img/usuario.png" alt="..." class="img-thumbnail rounded-circle fotoaluno text-center" ></p>
-     <button type="button" class="btn  btnazul  ">ADICIONAR <i class="fa fa-camera" aria-hidden="true"></i></button>
+            <label for="adcionar-arquivo" class="btn btnazul" style="max-width: 170px" > ADICIONAR <i class="fa fa-camera" aria-hidden="true"></i></label>
+            <input type="file" name="" id="adcionar-arquivo">
           </div>
           <div class="col-12 col-sm-6 text-center">
             <br>  

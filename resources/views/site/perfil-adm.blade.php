@@ -1,7 +1,7 @@
 @extends('layouts.main')
 
 @section('content')
-
+<br><br>
 <div class="container " >
   <div class="row">
     <div class="col-12 col-sm-6" >
@@ -67,8 +67,12 @@
     <p class="nomealuno " style=" margin-top: 5px;">Nome Aluno</p>
 
     <div class="form-group" >
-      <button type="button" class="btn btnazul btn-sm" data-toggle="modal" data-target=".bd-example-modal-sm" style="margin-top: 5px;">Reavaliar <i class="fa fa-share" aria-hidden="true"></i></button>
+      <label for="selecao-arquivo" class="btn btnazul btn-sm" style="margin-top: 13px;" >Reavaliar <i class="fa fa-share" aria-hidden="true"></i></label>
+      <input type="file" id='selecao-arquivo'>
+      
+
       <button type="button" class="btn btnazul btn-sm" style="margin-top: 5px; width: 80px">Excluir <i class="fa fa-trash-o" aria-hidden="true"></i></button>
+
       <button type="button" class="btn btnazul btn-sm" style="margin-top: 5px;">Bloquear <i class="fa fa-user-times" aria-hidden="true"></i></button>
     </div>
   </div>
@@ -175,7 +179,7 @@
 
                         <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-4">
-                                <button type="submit" class="btn btnlaranja">
+                                <button type="submit" class="btn btnlaranja" id="successinstrutor">
                                     {{ __('CADASTRAR') }}
                                 </button>
                             </div>
@@ -195,7 +199,7 @@
 @include('site.partials.modal-aluno')
 
 
-<!-- modal de avaliação fisica -->
+<!-- modal de avaliação fisica 
 
 
 <div class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
@@ -224,6 +228,6 @@
     </div>
   </div>
 </div>
-
+-->
 
 @endsection

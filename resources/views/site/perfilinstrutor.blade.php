@@ -3,6 +3,7 @@
 @section('content')
 
 
+
 <div class="container " style="margin-top:30px">
   <div class="row">
     <div class="col-12 col-sm-3 text-center" >
@@ -11,9 +12,8 @@
       
       <p class="Nomeperfil">Nome Instrutor</p>
       <p class="descriperfil"> CREF: <br> 0000000000</P>
- 
-      <p class="descriperfil"> Meu Horário: <br> Segunda à Sexta:  </p>
-      <button type="button" class="btn  btnlaranja" style="width: 170px">ADICIONAR FOTO</button>
+      <label for="adcionar-arquivo" class="btn btnazul" style="max-width: 170px" > ADICIONAR <i class="fa fa-camera" aria-hidden="true"></i></label>
+      <input type="file" name="" id="adcionar-arquivo">
       <hr class="d-sm-none">
     
     </div>
@@ -23,7 +23,7 @@
 
      <form class="form-row" >
       <div class="form-group col-6 col-sm-8">
-        <input class="form-control inputb" type="search" placeholder="Pesquisar" aria-label="Search">
+        <input class="form-control inputb" type="search" placeholder="Pesquisar " aria-label="Search">
       </div>
       <div class="form-group col-2 col-sm-2">
       <button class="btn btnlaranja"  type="submit">PESQUISAR</button>
@@ -61,7 +61,19 @@
   
   
 </div>
-
+<div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+  <div class="toast-header">
+    <img src="..." class="rounded mr-2" alt="...">
+    <strong class="mr-auto">Bootstrap</strong>
+    <small>11 mins ago</small>
+    <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="toast-body">
+    Hello, world! This is a toast message.
+  </div>
+</div>
 
 <br>
 

@@ -6,30 +6,30 @@
 
 
 <!--Decricacao da academia-->
-
- <div class="jumbotron jumbotron-fluid border-bottom" style="background-image: url(img/.jpg); background-repeat: no-repeat; background-size: cover; background-attachment: fixed; background-color: #fff">
+<section>
+ <div class="jumbotron jumbotron-fluid " style="background-image: url(img/fund.jpg); background-repeat: no-repeat; background-size: cover; background-attachment: fixe; background-color: #fff; background-size: 100% 100%">
     <div class="container">
       <div class="row">
         <div class="col-sm-6 col-12 d-flex align-content-center flex-wrap">
           <div class="d-flex align-content-center flex-wrap">
-          <p class="lead" style="font-family: IBM Plex Sans, Regular; font-size: 20px">Já pensou em ter seu treino em mão onde e quando quiser, com demostrativos dos execicios de forma correta. Aqui na Academia Fitness você pode baixar nosso Aplicativo e seguir seu treino elaborado pelos instrutores e com base na sua avaliação fisica. </p>
+          <p class="lead" style="font-family: IBM Plex Sans, Regular; font-size: 20px; color: #000">Já pensou em ter seu treino em mão onde e quando quiser, com demostrativos dos execicios de forma correta. Aqui na Academia Fitness você pode baixar nosso Aplicativo e seguir seu treino elaborado pelos instrutores e com base na sua avaliação fisica. </p>
           <p>Venha conhecer a <strong>Academia Fitness!</strong></p>
           </div>
         </div>
-         <div class="col-sm-6 col-12 text-center">
-          <img src="img/celular.png" class="img-fluid" alt="Responsive image" style="max-height: 300px;">
+         <div class="col-sm-6 col-12 text-right">
+          <img src="img/celular.png" class="img-fluid " alt="demostração do Aplicativo" style="max-width: 400px;">
         </div>
       </div>
     </div>
 </div>
-
-
-
+</section>
+<hr class="linha">
+<section>
 <div class="container text-center"  >
     <center>
     <div style="max-width: 600px">
     <h1 class="fontvigor " style="font-size: 40px; color:#B95922;  ">ACADEMIA FITNESS</h1>
-    <hr style="max-width: 222px; height: 3px; background-color: #060D56;">
+    
     </div>
     
     <div style="max-width: 500px;  " >
@@ -37,13 +37,15 @@
     </div>
     </center>
   </div>
-     <br>
+  </section>
+     <hr class="linha">
 
-
+<section>
 <!--texto modalidades-->
 <div class="container text-center">
         <div class="section-header">
           <h2 class="text-center ">MODALIDADES</h2>
+          <p class="ficha text-center">Valor promocional até a data de vencimento</p>
     </div>
 </div>
 <br>
@@ -52,8 +54,9 @@
 <div class="container text-center ">
   <div class="row" >
     <div class="col-12 col-sm-4  "  >
+      <article>
       <p class="text-center fontmodalidades font-weight-normal">Musculação</p>
-      <img class="card-img-top imgmodalidades" src="img/musculacao.jpg" alt="Imagem de capa do card">
+      <img class="card-img-top imgmodalidades" src="img/musculacao.jpg" alt="Musculação">
       <center>
         <div class="pmodalidades " style=" padding: 5px; border-bottom: 1px solid  #B95922" >
         <div class="d-flex  mb-2 ">
@@ -63,10 +66,12 @@
         </div>
       </div>
       </center>
+      <article>
     </div>
     <div class=" col-12 col-sm-4"  style="border:none;">
+      <article>
       <p class="text-center fontmodalidades font-weight-normal">Ritmos</p>
-      <img class="card-img-top  imgmodalidades" src="img/ritmos.jpg" alt="Imagem de capa do card">
+      <img class="card-img-top  imgmodalidades" src="img/ritmos.jpg" alt="Ritmos">
       <center>
         <div class="pmodalidades " style=" padding: 5px; border-bottom: 1px solid  #B95922" >
         <div class="d-flex  mb-2 ">
@@ -76,11 +81,12 @@
         </div>
       </div>
       </center>
-       
+      </article>
     </div>
     <div class="col-12 col-sm-4 " style="border:none;" >
+      <article>
       <p class="text-center fontmodalidades font-weight-normal">Treinamento Funcional</p>
-      <img class="card-img-top imgmodalidades" src="img/funcional.jpg" alt="Imagem de capa do card">
+      <img class="card-img-top imgmodalidades" src="img/funcional.jpg" alt="Treinamento Funcional">
       <center>
         <div class="pmodalidades " style=" padding: 5px; border-bottom: 1px solid  #B95922" >
         <div class="d-flex  mb-2 ">
@@ -92,12 +98,14 @@
       </center>
       
     </div>
+    </article>
   </div>
 
   <div class="row">
     <div class="col-12 col-sm-4"  style="border:none;">
+      <article>
       <p class="text-center fontmodalidades font-weight-normal">Karatê</p> 
-      <img class="card-img-top imgmodalidades" src="img/karate.jpg" alt="Imagem de capa do card">
+      <img class="card-img-top imgmodalidades" src="img/karate.jpg" alt="Karatê">
       <center>
         <div class="pmodalidades " style=" padding: 5px; border-bottom: 1px solid  #B95922" >
         <div class="d-flex  mb-2 ">
@@ -105,13 +113,15 @@
           
           <div class="bd-highlight"><span class="valorplanos">R$ 65,00 <i class="fa fa-credit-card-alt playicon" aria-hidden="true"></i></span><br><span class="preco">CARTÃO</span></div>
         </div>
+
       </div>
       </center>
-      
+      </article>
     </div>
     <div class="col-12 col-sm-4"  style="border:none;">
+      <article>
       <p class="text-center fontmodalidades font-weight-normal">Ginástica</p>
-      <img class="card-img-top imgmodalidades" src="img/ginastica.jpg" alt="Imagem de capa do card">
+      <img class="card-img-top imgmodalidades" src="img/ginastica.jpg" alt="Ginástica">
       <center>
         <div class="pmodalidades " style=" padding: 5px; border-bottom: 1px solid  #B95922" >
         <div class="d-flex  mb-2 ">
@@ -121,11 +131,12 @@
         </div>
       </div>
       </center>
-       
+       </article>
     </div>
     <div class="col-12 col-sm-4"  style="border:none;">
+      <article>
       <p class="text-center fontmodalidades font-weight-normal">Muay-thai</p>
-      <img class="card-img-top imgmodalidades" src="img/muay-thai.jpg" alt="Imagem de capa do card">
+      <img class="card-img-top imgmodalidades" src="img/muay-thai.jpg" alt="Muay-thai">
       <center>
         <div class="pmodalidades " style=" padding: 5px; border-bottom: 1px solid  #B95922" >
         <div class="d-flex  mb-2 ">
@@ -135,19 +146,19 @@
         </div>
       </div>
       </center>
-       
+       </article>
     </div>
   </div>
 </div>
-
+</section>
 <!-- chamada para planos -->
 <br>
+<section>
+  <article>
 <div class="container">
-<div class="row">
-  <div class="col-sm-12">
     <div class="row">
       <div class="col-12 col-sm-6">
-        <p class="h2 text-left planosh2">PLANOS PERFEITOS PARA VOCÊ</p>
+        <h2 class="planosh2">PLANOS PERFEITOS PARA VOCÊ</h2>
           <br>
         <div style="max-width: 300px; margin-left: 30px">
         <P class="descplanos text-left">Na Academia Fitness você encontra planos acessíveis ao seu bolso, e que te oferecem diversas modalidades.
@@ -157,21 +168,18 @@
       
       </div>
       <div class="col-12 col-sm-6 text-center" >
-        <img src="svg/img-planos.svg" class="img-fluid " alt="Imagem responsiva" style="max-height: 330px">
+        <img src="svg/img-planos.svg" class="img-fluid " alt="comprando planos" style="max-height: 330px">
       </div>
     </div>
-  </div>
 </div>
-</div>
-
+</article>
 <br>
 
 
 
 <!--tipos de planos-->
+<article>
 <div class="container"> 
-<div class="card-deck">
-  
 <div class="card-deck">
   <div class="card" style="border:none; background-color: #B95922;  ">
     <div class="card-body text-center">
@@ -225,8 +233,8 @@
   </div>
 </div>
 </div>
-
-
+</div>
+</article>
 <br>
 <br>
 
