@@ -43,13 +43,14 @@
         </li>
        
         @else
+        @if(Auth::user()->isInstrutor() || Auth::user()->isDefault())
          <li class="nav-item ">
             <a href="" class="nav-link">
                <i class="fa fa-bell-o playicon" aria-hidden="true" style="font-size: 20px"></i> <span class="badge " style=" color: #fff; font-size: 17px; margin-left: -9px"><sup>9</sup></span>
                  <span class="sr-only">unread messages</span>
             </a>
-         
         </li>
+        @endif
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: #B95922; font-size: 18px ">
           <img src="../img/usuario.png" alt="foto de perfil" class="rounded-circle" style="max-width: 30px; max-height: 30px;">
@@ -58,9 +59,7 @@
           <a class="dropdown-item" href="#" >Action</a>
           @if(Auth::user()->isInstrutor())
             <a class="dropdown-item" href="/instrutor/perfil">PERFIL <i class="fa fa-user-o playicon" aria-hidden="true"></i></a>
-          @elseif(Auth::user()->isAdmin())
-            <a class="dropdown-item" href="/adm">PERFIL <i class="fa fa-user-o playicon" aria-hidden="true"></i></a>
-          @else
+          @elseif(Auth::user()->isDefault())
             <a class="dropdown-item" href="/perfil">PERFIL <i class="fa fa-user-o playicon" aria-hidden="true"></i></a>
           @endif
           <a class="dropdown-item" href="/logout">SAIR</a>

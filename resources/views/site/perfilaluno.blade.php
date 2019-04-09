@@ -165,6 +165,11 @@
 @endsection
 
 @push('scripts')
-<script type="text/javascript">
-  //lançar alerta quando formulário for submetido
-</script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $('finaliza').submit() {
+        alert('Mais um pra conta!');
+      }
+    });
+  </script>
+@endpush
