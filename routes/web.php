@@ -44,7 +44,8 @@ Route::get('/sobrenos', 'TelaUsuarioController@sobreNos');
 
 Route::get('/instrutor/perfil', 'TelaUsuarioController@perfilInstrutor')->middleware(['instrutor', 'usuario-com-senha']);
 
-Route::get('/cadastra-senha', 'TelaUsuarioController@cadastraSenha')->middleware('auth');
+Route::get('/cadastra-senha', 'TelaUsuarioController@formSenha')->middleware('auth');
+Route::post('/cadastra-senha', 'TelaUsuarioController@cadastraSenha')->middleware('auth');
 
 Route::group([
 		'prefix' => 'admin',

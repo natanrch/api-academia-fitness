@@ -63,9 +63,24 @@ class TelaUsuarioController extends Controller
         ]);
     }
 
-    public function cadastraSenha()
+    public function formSenha()
     {
         return view('site.cadastrasenha');
+    }
+
+    public function cadastraSenha(Request $request)
+    {
+        $request->validate([
+            'password' => 'required|string|min:6|confirmed'
+        ]);
+
+        $user = $this->user->find(Auth::id());
+        $user->update([
+            'password' => bcrypt($request->password),
+            'novo_usuario' => 0,
+        ]);
+
+        dd($user);
     }
 
     public function adm()
