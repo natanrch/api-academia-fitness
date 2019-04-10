@@ -388,3 +388,25 @@ h1 .alerttexto{
 #question {
   background: grey;
 }
+
+
+
+
+
+@media (min-width: 1270px) {
+  .search-nm .breadcrumbs, .nav-quaternary.nav-quinary {
+    padding-top: 190px !important;
+    }
+  }
+
+  @media (max-width: 765px) and (min-width: 450px) {
+  .search-nm .breadcrumbs, .nav-quaternary.nav-quinary {
+    padding-top: 65px !important;
+    }
+  }
+
+  @media (max-width: 1024px) and (min-width: 768px) {
+  .search-nm .breadcrumbs, .nav-quaternary.nav-quinary {
+    padding-top: 56px !important;
+    }
+  }

@@ -43,3 +43,8 @@ function scrollToTop() {
     $('html, body').animate({scrollTop: offsetTop}, 600, 'linear');
 }
 
+$('.carousel').carousel({
+    pause: true,
+    interval: false
+});
+
