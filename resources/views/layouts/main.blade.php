@@ -55,11 +55,13 @@
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: #fff; font-size: 18px ">
           <img src="../img/usuario.png" alt="foto de perfil" width="30" height="30" class="d-inline-block align-top rounded-circle">
         </a>
-        <div class="dropdown-menu linkmenu colormenu" aria-labelledby="navbarDropdownMenuLink" style="border:none" >
+        <div class="dropdown-menu linkmenud colormenu text-left" aria-labelledby="navbarDropdownMenuLink" style="border:none;" >
           @if(Auth::user()->isInstrutor())
-            <a class="dropdown-item" href="/instrutor/perfil" style="color: #F1F1F1">PERFIL <i class="fa fa-user-o" aria-hidden="true" style="color: #fff" ></i></a>
+            <a class="dropdown-item" href="/instrutor/perfil" style="color: #F1F1F1">PERFIL <i class="fa fa-user-o" aria-hidden="true" style="color: #F1F1F1" ></i></a>
           @elseif(Auth::user()->isDefault())
-            <a class="dropdown-item" href="/perfil" style="color: #F1F1F1">PERFIL <i class="fa fa-user-o playicon" aria-hidden="true"></i></a>
+            <a class="dropdown-item" href="/perfil" style="color: #F1F1F1">PERFIL <i class="fa fa-user-o" aria-hidden="true " style="color: #F1F1F1"></i></a>
+            <a class="dropdown-item" href="/perfil" style="color: #F1F1F1">FICHA <i class="fa fa-file-text-o " aria-hidden="true" style="color: #F1F1F1"></i></a>
+            <a class="dropdown-item" href="/perfil" style="color: #F1F1F1">AVALIAÇÃO FÍSICA <i class="fa fa-line-chart" aria-hidden="true"  style="color: #F1F1F1"></i></a>
           @endif
           <a class="dropdown-item" href="/logout" style="color: #F1F1F1">SAIR</a>
         </div>

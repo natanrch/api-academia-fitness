@@ -72,14 +72,12 @@
   
  </div>
   <div class="col-6 col-sm-8">
-    <p class="nomealuno " style=" margin-top: 5px;">Nome Aluno</p>
-
+    <p class="nomealuno ">Nome Aluno</p>
     <div class="form-group" >
-      <label for="selecao-arquivo" class="btn btnazul btn-sm" style="margin-top: 13px;" >Reavaliar <i class="fa fa-share" aria-hidden="true"></i></label>
-      <input type="file" id='selecao-arquivo'>
+      <button type="button" class="btn btnazul btn-sm" data-toggle="modal" data-target=".avaliar" style="margin-top: 5px;">Reavaliar <i class="fa fa-share" aria-hidden="true" ></i></button>
       
 
-      <button type="button" class="btn btnazul btn-sm" style="margin-top: 5px; width: 80px">Excluir <i class="fa fa-trash-o" aria-hidden="true"></i></button>
+      <button type="button" class="btn btnazul btn-sm" style="margin-top: 5px;">Excluir <i class="fa fa-trash-o" aria-hidden="true"></i></button>
 
       <button type="button" class="btn btnazul btn-sm" style="margin-top: 5px;">Bloquear <i class="fa fa-user-times" aria-hidden="true"></i></button>
     </div>
@@ -115,35 +113,29 @@
 @include('site.partials.modal-aluno')
 
 
-<!-- modal de avaliação fisica 
+<!-- modal de avaliação fisica -->
 
 
-<div class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
 
+<div class="modal fade avaliar" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-sm">
-   
+    <div class="modal-content">
+      <div class="container">
         <button type="button" class="close text-right" data-dismiss="modal" aria-label="Close" style="font-size: 30px;">
           <span aria-hidden="true">&times;</span>
         </button>
-        
-    <div class="modal-content">
-      <div class="container" style="margin-top: 20px; margin-bottom: 10px">
-        <div class=" row">             
-            <div class="col-12">
-             <div class="custom-file">
-               <input type="file" class="custom-file-input">
-               <label class="custom-file-label" for="customFile">Arquivo</label>
-               </div>
-              
-                 <div class="modal-footer">
-                  <button type="submit" class="btn btnlaranja">ENVIAR <i class="fa fa-upload" aria-hidden="true"></i></button>
-                  </div>
-           </div>
-      </div>
-      </div>
+      <form>
+  <div class="form-group">
+    <label for="exampleFormControlFile1">Escolha arquivo</label>
+    <input type="file" class="form-control-file" id="exampleFormControlFile1">
+  </div>
+  <div class="form-group text-right">
+    <button type="submit" class="btn btnlaranja">Enviar</button>
+  </div>
+</form>
+</div>
     </div>
   </div>
 </div>
--->
 
 @endsection

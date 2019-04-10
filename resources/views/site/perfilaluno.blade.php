@@ -121,7 +121,7 @@
   <tbody class="fonttd">
       @foreach($treino as $exercicio)
         <tr>
-          <td scope="row"> <input type="checkbox" aria-label="Checkbox for following text input" style="border: 1px solid #D9E0E6"> {{$exercicio->exercicio->titulo}} 
+          <td scope="row"> <input type="checkbox" aria-label="Checkbox for following text input" style="border: 1px solid #ccc"> {{$exercicio->exercicio->titulo}} 
               <!-- Button trigger modal -->
               <button type="button" class="btn" data-toggle="modal" data-target=".bd-example-modal-xl" style="border-radius: 20%">
                 <i class="fa fa-play-circle-o playicon" aria-hidden="true" style="font-size: 25px"></i>
@@ -153,7 +153,7 @@
   {{csrf_field()}}
   <input type="hidden" name="treino" value="{{$treinoDeHoje->id}}">
   <input type="hidden" name="ficha" value="{{$ficha->id}}">
-  <button class="btn btn-success" type="submit">Finalizar Treino!</button>
+  <button class="btn btnlaranja" type="submit" id="successtreino">FIM DE TREINO!</button>
 </form>
 </div>
 </div>

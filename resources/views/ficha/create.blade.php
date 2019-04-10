@@ -365,12 +365,11 @@
 						
 		</select>
     </div>
+    <!-- 
     <div class="form-group col-md-2 text-left">
       <button class="btn btnlaranja"  type="submit" style="border-radius: 50%"> <i class="fa fa-search" aria-hidden="true"></i></button>
-  </div>
-  <div class="form-group col-md-4 text-right fixte">
-      <button type="submit" class="btn btnlaranja">CRIAR FICHA <i class="fa fa-check-circle" aria-hidden="true"></i></button>
-  </div>
+  </div> 
+	-->
   </div>
   </div>
 </div>

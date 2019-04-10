@@ -14,6 +14,13 @@
 				'success'
 			)
 		});
+		$(document).on('click', '#successtreino', function(e) {
+			swal(
+				'Mais um pra conta!!!',
+				'',
+				'success'
+			)
+		});
 		// $(document).on('click', '#successaluno', function(e) {
 		// 	swal(
 		// 		'Parabéns!!!',

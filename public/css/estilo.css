@@ -24,10 +24,6 @@ label{
   font-size: 16px
 }
 
-/* Esconde o input */
-input[type='file'] {
-  display: none
-}
 
 
 .btnlogin{
@@ -108,7 +104,9 @@ input[type='file'] {
   color: black;
   border-radius: 12px
 }
-
+.dropdown-menu a{
+  padding: .25rem 1rem;
+}
 
 
 /* PERFIL */
