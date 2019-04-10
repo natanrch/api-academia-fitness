@@ -46,23 +46,22 @@
         @if(Auth::user()->isInstrutor() || Auth::user()->isDefault())
          <li class="nav-item ">
             <a href="" class="nav-link">
-               <i class="fa fa-bell-o playicon" aria-hidden="true" style="font-size: 20px"></i> <span class="badge " style=" color: #fff; font-size: 17px; margin-left: -9px"><sup>9</sup></span>
+               <i class="fa fa-bell-o"  aria-hidden="true" style="font-size: 20px; color: #fff"></i> <span class="badge " style=" color: #fff; font-size: 17px; margin-left: -9px"><sup><i>9</i></sup></span>
                  <span class="sr-only">unread messages</span>
             </a>
         </li>
         @endif
       <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: #B95922; font-size: 18px ">
-          <img src="../img/usuario.png" alt="foto de perfil" class="rounded-circle" style="max-width: 30px; max-height: 30px;">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: #fff; font-size: 18px ">
+          <img src="../img/usuario.png" alt="foto de perfil" width="30" height="30" class="d-inline-block align-top rounded-circle">
         </a>
-        <div class="dropdown-menu linkmenud" aria-labelledby="navbarDropdownMenuLink" >
-          <a class="dropdown-item" href="#" >Action</a>
+        <div class="dropdown-menu linkmenu colormenu" aria-labelledby="navbarDropdownMenuLink" style="border:none" >
           @if(Auth::user()->isInstrutor())
-            <a class="dropdown-item" href="/instrutor/perfil">PERFIL <i class="fa fa-user-o playicon" aria-hidden="true"></i></a>
+            <a class="dropdown-item" href="/instrutor/perfil" style="color: #F1F1F1">PERFIL <i class="fa fa-user-o" aria-hidden="true" style="color: #fff" ></i></a>
           @elseif(Auth::user()->isDefault())
-            <a class="dropdown-item" href="/perfil">PERFIL <i class="fa fa-user-o playicon" aria-hidden="true"></i></a>
+            <a class="dropdown-item" href="/perfil" style="color: #F1F1F1">PERFIL <i class="fa fa-user-o playicon" aria-hidden="true"></i></a>
           @endif
-          <a class="dropdown-item" href="/logout">SAIR</a>
+          <a class="dropdown-item" href="/logout" style="color: #F1F1F1">SAIR</a>
         </div>
       </li>
          @endif
@@ -87,8 +86,7 @@
       </div>
       <div class="col-12 col-sm-4">
         <P class="pfooter">ONDE NOS ENCONTRAR?</P>
-        <small class="small p1footer" ><a href="https://goo.gl/maps/ZhcBZ68Cu5K2" style="color: #fff"><i class="fa fa-map-marker playicon " style="font-size: 25px;" aria-hidden="true"></i> Google Maps</a></small><br>
-        <small class="small p1footer">Rua São José, 1143</small><br>
+        <small><a href="https://goo.gl/maps/ZhcBZ68Cu5K2" class="small p1footer"><i class="fa fa-map-marker playicon " style="font-size: 25px;" aria-hidden="true"></i> Rua São José, 1143</a></small><br>
         <small class="small p1footer">Proximo a escola Pudium</small><br>
         
       </div>
