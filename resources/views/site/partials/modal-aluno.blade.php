@@ -118,11 +118,8 @@
                       <div class="form-group row">
                             <label for="avaliacao" class="col-md-4 col-form-label text-md-right">{{ __('AVALIAÇÃO FÍSICA') }}</label>
 
-                             <div class="col-md-6">
-                               <div class="custom-file">
-                                <input type="file" class="custom-file-input" id="avaliacao" name="avaliacao">
-                                <label class="custom-file-label" for="avaliacao">Arquivo</label>
-                                </div>
+                             <div class="col-md-6" >
+                                <input type="file" class="form-control-file" id="avaliacao" name="avaliacao" style=" border: 1px solid #ced4da; border-radius: 2px;" >
                             </div>
                         </div>
 
