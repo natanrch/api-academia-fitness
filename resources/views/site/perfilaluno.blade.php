@@ -167,14 +167,24 @@
   {{csrf_field()}}
   <input type="hidden" name="treino" value="{{$treinoDeHoje->id}}">
   <input type="hidden" name="ficha" value="{{$ficha->id}}">
-  <button class="btn btnlaranja" type="button" id="successtreino">CONCLUIR TREINO <i class="fa fa-check-circle" aria-hidden="true"></i></button>
+  <!--<button class="btn btnlaranja" type="submit" id="suss">CONCLUIR TREINO <i class="fa fa-check-circle" aria-hidden="true"></i></button>-->
+  <button class="btn btnlaranja" type="button" data-toggle="modal" data-target="#modal-alert" id="suss">CONCLUIR TREINO <i class="fa fa-check-circle" aria-hidden="true"></i></button>
 </form>
 </div>
 </div>
 </div>
 </div>
 
+<div class="modal fade" id="modal-alert">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-body">texto aqui</div>
+      <div class="modal-footer"><button type="button" id="enviar" class="btn btn-primary">enviar</button></div>
+    </div>
+  </div>
+  
 
+</div>
 @include('site.partials.modal-demostrativo')
 
 
