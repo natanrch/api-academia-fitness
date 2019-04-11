@@ -26,7 +26,7 @@
     <div class="form-group">
             <div class="input-group">
               <label for="senha"></label>
-                <span class="input-group-addon" style="border: 1px solid #ccc; padding: 3px;"><i class="fa fa-lock playicon text-center" style="font-size: 30px;" aria-hidden="true"></i></span>
+                <span class="input-group-addon" style="border: 1px solid #ccc; padding: 3px;"><i class="fa fa-key playicon text-center" aria-hidden="true" style="font-size: 20px"></i></span>
                 <input id="password" type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" required placeholder="senha">
 
               @if ($errors->has('password'))
