@@ -67,7 +67,7 @@
       <div class="col-12 col-sm-6 table-responsive">
        <table class="table table-sm text-center table-bordered "  >
   <thead>
-    <tr>
+    <tr class="bg-primary">
       <th scope="col">S</th>
       <th scope="col">T</th>
       <th scope="col">Q</th>
@@ -142,7 +142,7 @@
     <tr>
       <th scope="col" colspan="3">
         Instrutor: <img src="../img/usuario.png" alt="..." class="rounded-circle" style="width: 30px; height: 30px"> {{$ficha->ficha_instrutor->instrutor->name}} 
-  <span><a class="btn btnlaranja " data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+  <span><a class="btn btnazul " data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
     Observações
   </a></span>
   <div class="collapse" id="collapseExample">
@@ -167,12 +167,14 @@
   {{csrf_field()}}
   <input type="hidden" name="treino" value="{{$treinoDeHoje->id}}">
   <input type="hidden" name="ficha" value="{{$ficha->id}}">
-  <button class="btn btnlaranja" type="submit" id="successtreino">CONCLUIR TREINO <i class="fa fa-check-circle" aria-hidden="true"></i></button>
+  <button class="btn btnlaranja" type="button" id="successtreino">CONCLUIR TREINO <i class="fa fa-check-circle" aria-hidden="true"></i></button>
 </form>
 </div>
 </div>
 </div>
 </div>
+
+
 @include('site.partials.modal-demostrativo')
 
 
@@ -181,10 +183,11 @@
 @push('scripts')
   <script type="text/javascript">
     $(document).ready(function() {
-      $('finaliza').submit() {
+      $('successtreino').submit() {
         alert('Mais um pra conta!');
       }
     });
   </script>
+
   <br>
 @endpush

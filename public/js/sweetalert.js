@@ -19,6 +19,8 @@
 				'Mais um pra conta!!!',
 				'',
 				'success'
+				
+				
 			)
 		});
 		// $(document).on('click', '#successaluno', function(e) {
@@ -137,13 +139,13 @@
 				title: "Are you sure?", 
 				text: "You will be redirected to https://utopian.io", 
 				type: "warning",
-				confirmButtonText: "Yes, visit link!",
+				confirmButtonText: "ok!",
 				showCancelButton: true
 		    })
 		    	.then((result) => {
 					if (result.value) {
 					    window.location = 'https://utopian.io';
-					} else if (result.dismiss === 'cancel') {
+					} else if (result.dismiss === 'cancelar') {
 					    swal(
 					      'Cancelled',
 					      'Your stay here :)',

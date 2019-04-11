@@ -34,16 +34,14 @@
 <div class="container">
   <div class="row "  >
     <div class="col-12">
-  <div class="login-form" >
-    <form method="POST" action="/login">
+  <div class="login-form"  >
+    <form method="POST" action="/login" style="border-radius: 50px;">
         {{csrf_field()}}
-        <h2 class="text-center">Cadastre sua nova senha</h2> 
+        <h2 class="text-center">Crie sua nova senha</h2> 
         <div class="form-group">
              <label for="password">{{ __('Senha') }}</label>
           <div class="input-group">
-           
-                <span class="input-group-addon"  style="border: 1px solid #ccc; padding: 3px;"><i class="fa fa-key playicon" aria-hidden="true"></i></span>
-                <input id="password" type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" placeholder="nova senha" required autofocus>
+                <input id="password" type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" placeholder="nova senha" required autofocus style="border-radius: 50px;">
 
               
                    @if ($errors->has('password'))
@@ -56,13 +54,11 @@
     <div class="form-group">
         <label for="password-confirm">{{ __('Confirmar Senha') }}</label>
             <div class="input-group">
-              
-                <span class="input-group-addon" style="border: 1px solid #ccc; padding: 3px;"><i class="fa fa-key playicon" aria-hidden="true"></i></span>
-                <input id="password-confirm" type="password" class="form-control" name="password_confirmation" placeholder="nova senha" required>
+                <input id="password-confirm" type="password" class="form-control" name="password_confirmation" placeholder="nova senha" required style="border-radius: 50px;">
             </div>
         </div>        
         <div class="form-group">
-            <button type="submit" class="btn btnlaranja btn-block">CONFIRMAR</button>
+            <button type="submit" class="btn btnlaranja btn-block" style="border-radius: 50px;">CRIAR</button>
         </div>  
     </form>
 </div>
