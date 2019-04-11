@@ -2,23 +2,28 @@
 
 @section('content')
 <br>
+
 <div class="container">
         <div class="section-header">
           <h2 class="text-center">MINHA FICHA</h2>
           <hr style="max-width: 122px; height: 3px; background-color: #B95922;">
         </div>
         <h2>Treino de Hoje: {{$treinoDeHoje->treino}}</h2>
-        <p class="text-right">
-  <a class="btn btnlaranja" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
-    Observações
-  </a>
-</p>
-<div class="collapse" id="collapseExample">
-  <div class="card card-body">
-    {{$ficha->observacoes}}
-  </div>
-    </div>
-   </div>
+         <label>Mudar de Treino:</label>
+          <div class="col-md-1 col-5" style="display: inline-block;">
+          <select name="treino[]" class="form-control">
+            <option selected value="">x</option>
+            <option value="1">A</option>
+            <option value="2">B</option>
+            <option value="3">C</option>
+            <option value="4">D</option>
+            <option value="5">E</option>
+            <option value="6">F</option>
+          </select>
+        </div>
+        </div>
+        <br><br>
+
 
     <div class="container justify-content-center ">
 <div class="row " >
@@ -26,9 +31,9 @@
     <div class="row">
       <div class="col-12 col-sm-6">
         <div class="table-responsive">
-<table class="table table-sm text-center " >
+<table class="table table-sm text-center table-bordered " >
   <thead>
-    <tr>
+    <tr class="bg-primary">
       <th scope="col" class="ficha">Objetivo:</th>
       <th scope="col" class="ficha">Método:</th>
     </tr>
@@ -42,15 +47,15 @@
 </table>
 <table class="table table-sm text-center table-bordered">
   <thead>
-    <tr>
+    <tr class="bg-primary">
       <th scope="col" class="ficha">Aquecimento:</th>
       <th scope="col" class="ficha">Intervalo:</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td scope="row" class="ficha" >{{$ficha->aquecimento}} minutos</td>
-      <td class="ficha">{{$ficha->intervalo}} segundos</td>
+      <td scope="row" class="ficha" >{{$ficha->aquecimento}} minutos <i class="fa fa-clock-o playicon" aria-hidden="true "></i></td>
+      <td class="ficha">{{$ficha->intervalo}} segundos <i class="fa fa-clock-o playicon" aria-hidden="true"></i></td>
       
     </tr>
 
@@ -112,7 +117,7 @@
         <div class="table-responsive " style="min-width: -50em">
   <table class="table table-sm table-bordered " >
   <thead class="text-center fontth">
-    <tr>
+    <tr class="bg-primary">
       <th scope="col">EXERCÍCIO</th>
       <th scope="col">SÉRIE</th>
       <th scope="col">PESO</th>
@@ -136,7 +141,16 @@
   <tfoot class="fonttd">
     <tr>
       <th scope="col" colspan="3">
-        Instrutor: <img src="../img/usuario.png" alt="..." class="rounded-circle" style="width: 30px; height: 30px"> {{$ficha->ficha_instrutor->instrutor->name}}   
+        Instrutor: <img src="../img/usuario.png" alt="..." class="rounded-circle" style="width: 30px; height: 30px"> {{$ficha->ficha_instrutor->instrutor->name}} 
+  <span><a class="btn btnlaranja " data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+    Observações
+  </a></span>
+  <div class="collapse" id="collapseExample">
+  <div class="card card-body">
+    {{$ficha->observacoes}}
+  </div>
+    </div>
+   </div>
       </th scope="col">
     </tr>
     <tr>
@@ -153,14 +167,14 @@
   {{csrf_field()}}
   <input type="hidden" name="treino" value="{{$treinoDeHoje->id}}">
   <input type="hidden" name="ficha" value="{{$ficha->id}}">
-  <button class="btn btnlaranja" type="submit" id="successtreino">FIM DE TREINO!</button>
+  <button class="btn btnlaranja" type="submit" id="successtreino">CONCLUIR TREINO <i class="fa fa-check-circle" aria-hidden="true"></i></button>
 </form>
 </div>
 </div>
 </div>
 </div>
 @include('site.partials.modal-demostrativo')
-@include('site.partials.modal-perfilaluno')
+
 
 @endsection
 
@@ -172,4 +186,5 @@
       }
     });
   </script>
+  <br>
 @endpush

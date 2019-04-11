@@ -399,14 +399,25 @@ h1 .alerttexto{
     }
   }
 
-  @media (max-width: 765px) and (min-width: 450px) {
-  .search-nm .breadcrumbs, .nav-quaternary.nav-quinary {
-    padding-top: 65px !important;
+  @media (max-width: 770px) and (min-width: 578px) {
+  .foto, .botoes {
+    margin-left: 65px !important;
     }
   }
 
-  @media (max-width: 1024px) and (min-width: 768px) {
-  .search-nm .breadcrumbs, .nav-quaternary.nav-quinary {
-    padding-top: 56px !important;
+  @media (max-width: 991px) and (min-width: 573px) {
+      .fotos, .botoes1 {
+        margin-left: 65px !important;
+      }
+       .fotosins, .botoesins {
+        margin-left: 80px !important;
+      }
+    }
+  }
+
+    @media (min-width: 300px) {
+  table{
+    padding-right: 15px !important;
+    padding-left: 15px !important;
     }
   }

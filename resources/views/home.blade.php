@@ -3,8 +3,6 @@
 @section('content')
 
 <!-- O menu esta dentro da pasta layout, nome do aquivo main-->
-
-
 <!--Decricacao da academia-->
 <section>
  <div class="jumbotron jumbotron-fluid " style="background-image: url(img/fund.jpg); background-repeat: no-repeat; background-size: cover; background-attachment: fixe; background-color: #fff; background-size: 100% 100%">
@@ -16,8 +14,11 @@
           <p>Venha conhecer a <strong>Academia Fitness!</strong></p>
           </div>
         </div>
-         <div class="col-sm-6 col-12 text-right">
-          <img src="img/celular.png" class="img-fluid " alt="demostração do Aplicativo" style="max-width: 400px;">
+         <div class="col-sm-6 col-12">
+          <div class="embed-responsive embed-responsive-16by9">
+        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/zpOULjyy-n8?rel=0" allowfullscreen></iframe>
+      </div>
+    </div>
         </div>
       </div>
     </div>
