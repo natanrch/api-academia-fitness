@@ -57,11 +57,11 @@
         </a>
         <div class="dropdown-menu linkmenud colormenu text-left" aria-labelledby="navbarDropdownMenuLink" style="border:none;" >
           @if(Auth::user()->isInstrutor())
-            <a class="dropdown-item" href="/instrutor/perfil" style="color: #F1F1F1">PERFIL <i class="fa fa-user-o" aria-hidden="true" style="color: #F1F1F1" ></i></a>
+            <a class="dropdown-item" href="/instrutor/perfil" style="color: #F1F1F1"><i class="fa fa-user-o" aria-hidden="true" style="color: #F1F1F1" ></i> PERFIL </a>
           @elseif(Auth::user()->isDefault())
-            <a class="dropdown-item" href="/perfil" style="color: #F1F1F1">PERFIL <i class="fa fa-user-o" aria-hidden="true " style="color: #F1F1F1"></i></a>
-            <a class="dropdown-item" href="/perfil" style="color: #F1F1F1">FICHA <i class="fa fa-file-text-o " aria-hidden="true" style="color: #F1F1F1"></i></a>
-            <a class="dropdown-item" href="/perfil" style="color: #F1F1F1">AVALIAÇÃO FÍSICA <i class="fa fa-line-chart" aria-hidden="true"  style="color: #F1F1F1"></i></a>
+            <a class="dropdown-item" href="/perfil" style="color: #F1F1F1"><i class="fa fa-user-o" aria-hidden="true " style="color: #F1F1F1"></i> PERFIL </a>
+            <a class="dropdown-item" href="/perfil" style="color: #F1F1F1"> <i class="fa fa-file-text-o " aria-hidden="true" style="color: #F1F1F1"></i> FICHA</a>
+            <a class="dropdown-item" href="/perfil" style="color: #F1F1F1"><i class="fa fa-line-chart" aria-hidden="true"  style="color: #F1F1F1"></i> AVALIAÇÃO FÍSICA </a>
           @endif
           <a class="dropdown-item" href="/logout" style="color: #F1F1F1">SAIR</a>
         </div>
