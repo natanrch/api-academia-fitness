@@ -8,8 +8,6 @@ use App\Ficha;
 use App\UltimoTreino;
 use App\User;
 use Auth;
-use DB;
-
 
 class TelaUsuarioController extends Controller
 {
@@ -26,7 +24,7 @@ class TelaUsuarioController extends Controller
         $this->ultimoTreino = $ultimoTreino;
     }
 
-    public function perfilUsuario()
+    public function perfilUsuario(Request $request)
     {   
         $ficha = $this->ficha->where('user_id', Auth::id())->first();
         if($ficha == null) {
@@ -44,9 +42,17 @@ class TelaUsuarioController extends Controller
             $treino = $this->fichaExercicio->where('ficha_id', $ficha->id)->where('treino_id', 1)->get();
         }
 
+
+        if($request->treino) {
+            $treino = $this->fichaExercicio->where('ficha_id', $ficha->id)->where('treino_id', $request->treino)->get();
+            if(count($treino) == 0) {
+                return redirect()->back();
+            }
+        }
+
         $treinoDeHoje = $treino->first()->treino;
 
-        $sequencia = DB::select('SELECT DISTINCT treinos.treino
+        $sequencia = \DB::select('SELECT DISTINCT treinos.treino
             FROM ficha_exercicios 
             JOIN treinos on treinos.id = ficha_exercicios.treino_id 
             WHERE ficha_id = 3');

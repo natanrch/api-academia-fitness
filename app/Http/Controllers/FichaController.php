@@ -58,7 +58,7 @@ class FichaController extends Controller
 
         $ficha = $this->ficha->where('user_id', $request->user)->first();
         if(!is_null($ficha)) {
-            return redirect('/ficha/'.$request->user);
+            return redirect('/ficha/'.$ficha->id);
         }
 
         $exercicios = $this->exercicio->all()->sortBy('tipo_exercicio_id');
@@ -131,15 +131,26 @@ class FichaController extends Controller
             $treino = $this->fichaExercicio->where('ficha_id', $ficha->id)->where('treino_id', 1)->get();
         }
 
+
+        if($request->treino) {
+            $treino = $this->fichaExercicio->where('ficha_id', $ficha->id)->where('treino_id', $request->treino)->get();
+            if(count($treino) == 0) {
+                return redirect()->back();
+            }
+        }
+
         $treinoDeHoje = $treino->first()->treino;
 
-        $treinos = $ficha->join('treinos', 'treino_id', '=' 'treinos.id');
-        dd($treinos);
+        $sequencia = \DB::select('SELECT DISTINCT treinos.treino
+            FROM ficha_exercicios 
+            JOIN treinos on treinos.id = ficha_exercicios.treino_id 
+            WHERE ficha_id = 3');
 
         return view('ficha.ficha', [
             'ficha' => $ficha,
             'treino' => $treino,
             'treinoDeHoje' => $treinoDeHoje,
+            'sequencia' => $sequencia,
         ]);
 
     }

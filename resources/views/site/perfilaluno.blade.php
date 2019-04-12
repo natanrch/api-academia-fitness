@@ -9,17 +9,21 @@
           <hr style="max-width: 122px; height: 3px; background-color: #B95922;">
         </div>
         <h2>Treino de Hoje: {{$treinoDeHoje->treino}}</h2>
-         <label>Mudar de Treino:</label>
-          <div class="col-md-1 col-5" style="display: inline-block;">
-          <select name="treino[]" class="form-control">
-            <option selected value="">x</option>
-            <option value="1">A</option>
-            <option value="2">B</option>
-            <option value="3">C</option>
-            <option value="4">D</option>
-            <option value="5">E</option>
-            <option value="6">F</option>
-          </select>
+          <div class="col-md-3 col-5" style="display: inline-block;">
+            <form>
+              <label>Mudar de Treino:</label>
+              <select name="treino" class="form-control">
+                <option selected value="">x</option>
+                <option value="1">A</option>
+                <option value="2">B</option>
+                <option value="3">C</option>
+                <option value="4">D</option>
+                <option value="5">E</option>
+                <option value="6">F</option>
+              </select>
+              <button class="btn btn-success" type="submit">Muda</button>
+            </form>
+            <a href="{{url()->current()}}" class="btn btn-info">Limpar</a>
         </div>
         </div>
         <br><br>
