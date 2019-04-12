@@ -55,7 +55,8 @@ class TelaUsuarioController extends Controller
         $sequencia = \DB::select('SELECT DISTINCT treinos.treino
             FROM ficha_exercicios 
             JOIN treinos on treinos.id = ficha_exercicios.treino_id 
-            WHERE ficha_id = 3');
+            WHERE ficha_id = '.$ficha->id);
+    
 
     	return view('site.perfilaluno', [
             'ficha' => $ficha,
