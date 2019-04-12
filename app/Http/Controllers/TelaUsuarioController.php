@@ -8,6 +8,7 @@ use App\Ficha;
 use App\UltimoTreino;
 use App\User;
 use Auth;
+use DB;
 
 
 class TelaUsuarioController extends Controller
@@ -45,11 +46,16 @@ class TelaUsuarioController extends Controller
 
         $treinoDeHoje = $treino->first()->treino;
 
+        $sequencia = DB::select('SELECT DISTINCT treinos.treino
+            FROM ficha_exercicios 
+            JOIN treinos on treinos.id = ficha_exercicios.treino_id 
+            WHERE ficha_id = 3');
 
     	return view('site.perfilaluno', [
             'ficha' => $ficha,
             'treino' => $treino,
             'treinoDeHoje' => $treinoDeHoje,
+            'sequencia' => $sequencia,
         ]);
     }
 

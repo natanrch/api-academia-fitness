@@ -64,6 +64,16 @@
 </table>
 </div>
 </div>  
+
+<div class="col-12 col-sm-6 table-responsive">
+  <h1>Sequência de treinos</h1>
+  <h2>
+    @foreach($sequencia as $s)
+      {{$s->treino}} > 
+    @endforeach
+    e repete!
+  </h2>
+</div>
 {{--       <div class="col-12 col-sm-6 table-responsive">
        <table class="table table-sm text-center table-bordered "  >
   <thead>

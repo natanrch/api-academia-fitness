@@ -133,6 +133,9 @@ class FichaController extends Controller
 
         $treinoDeHoje = $treino->first()->treino;
 
+        $treinos = $ficha->join('treinos', 'treino_id', '=' 'treinos.id');
+        dd($treinos);
+
         return view('ficha.ficha', [
             'ficha' => $ficha,
             'treino' => $treino,
