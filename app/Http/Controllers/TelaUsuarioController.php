@@ -29,7 +29,7 @@ class TelaUsuarioController extends Controller
     {   
         $ficha = $this->ficha->where('user_id', Auth::id())->first();
         if($ficha == null) {
-            abort('404');
+            return 'usuário não possui ficha cadastrada';
         }
 
         $ultimoTreino = $this->ultimoTreino->where('ficha_id', $ficha->id)->orderBy('created_at', 'desc')->first();
@@ -80,7 +80,7 @@ class TelaUsuarioController extends Controller
             'novo_usuario' => 0,
         ]);
 
-        dd($user);
+        return redirect('/perfil');
     }
 
     public function adm()

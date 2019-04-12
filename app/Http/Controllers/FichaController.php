@@ -107,7 +107,7 @@ class FichaController extends Controller
             'ficha_id' => $ficha->id,
             'instrutor_id' => Auth::id(),
         ]);
-        return redirect('/ficha/'.session('user_id'));
+        return redirect('ficha/'.$ficha->id);
         
     }
 
