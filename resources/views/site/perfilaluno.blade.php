@@ -152,14 +152,17 @@
 <div class="modal fade" id="modal-alert">
   <div class="modal-dialog">
     <div class="modal-content">
-      <div class="modal-body"><h1>Mais um pra conta!</h1></div>
-      <div class="modal-footer">
+      <div class="modal-body text-center">
+        <h1 class="fontvigor text-center" style=" font-size: 40px;  color: #000">Mais um pra conta!</h1>
+        <img src="img/iconmusculo.png" alt="icone do musculo" class="rounded-circle " width="50" height="50" >
+      </div>
+      <div class="modal-footer" >
         <form method="POST" id="finaliza">
           {{csrf_field()}}
           <input type="hidden" name="treino" value="{{$treinoDeHoje->id}}">
           <input type="hidden" name="ficha" value="{{$ficha->id}}">
           <!--<button class="btn btnlaranja" type="submit" id="suss">CONCLUIR TREINO <i class="fa fa-check-circle" aria-hidden="true"></i></button>-->
-          <button type="submit" id="enviar" class="btn btn-primary">Finalizar</button>
+          <button type="submit" id="enviar" class="btn btnlaranja">FINALIZAR</button>
         </form>
       </div>
     </div>
