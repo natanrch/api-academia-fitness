@@ -108,5 +108,9 @@ class TelaUsuarioController extends Controller
     {
         return view('layouts.sobrenos');
     }
+     public function Perfilnovo()
+    {
+        return view('site.perfilnovo');
+    }
 }
 

@@ -57,7 +57,7 @@
 	<div class="col-12 col-sm-2">
    
     <div class="text-center">
-    <img src="img/ins1.jpg" alt="..." class="rounded-circle fotoaluno" >
+    <img src="img/ins1.jpg" alt="..." class="rounded-circle fotoaluno img-fluid" >
     </div>
   
  </div>
@@ -68,7 +68,7 @@
     <div class="col-12 col-sm-2">
    
     <div class="text-center">
-    <img src="img/ins1.jpg" alt="..." class="rounded-circle fotoaluno" >
+    <img src="img/ins1.jpg" alt="..." class="rounded-circle fotoaluno img-fluid" >
     </div>
   
  </div>

@@ -14,13 +14,14 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.2.0/sweetalert2.min.css">
 
 
+
     <title>Academia Fitness</title>
 </head>
 <body>
   <main>
  	<header >
 
-    <nav class="navbar navbar-expand-lg navbar-light colormenu" id="navbar" style="padding: .1rem">
+    <nav class="navbar navbar-expand-lg navbar-light colormenu " id="navbar" style="padding: .1rem">
        <div class="container" id="topo">
   <!--logo -->
   <a class="navbar-brand" href="/"><img src="../img/logo.png" style="max-width:200px; max-height: 50px"></a>
@@ -43,14 +44,6 @@
         </li>
        
         @else
-        @if(Auth::user()->isInstrutor() || Auth::user()->isDefault())
-         <li class="nav-item ">
-            <a href="" class="nav-link">
-               <i class="fa fa-bell-o"  aria-hidden="true" style="font-size: 20px; color: #fff"></i> <span class="badge " style=" color: #fff; font-size: 17px; margin-left: -9px"><sup><i>9</i></sup></span>
-                 <span class="sr-only">unread messages</span>
-            </a>
-        </li>
-        @endif
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: #fff; font-size: 18px ">
           <img src="../img/usuario.png" alt="foto de perfil" width="30" height="30" class="d-inline-block align-top rounded-circle">
@@ -59,7 +52,7 @@
           @if(Auth::user()->isInstrutor())
             <a class="dropdown-item" href="/instrutor/perfil" style="color: #F1F1F1"><i class="fa fa-user-o" aria-hidden="true" style="color: #F1F1F1" ></i> PERFIL </a>
           @elseif(Auth::user()->isDefault())
-            <a class="dropdown-item" href="/perfil" style="color: #F1F1F1"><i class="fa fa-user-o" aria-hidden="true " style="color: #F1F1F1"></i> PERFIL </a>
+            <a class="dropdown-item" href="/perfilaluno" style="color: #F1F1F1"><i class="fa fa-user-o" aria-hidden="true " style="color: #F1F1F1"></i> PERFIL </a>
             <a class="dropdown-item" href="/perfil" style="color: #F1F1F1"> <i class="fa fa-file-text-o " aria-hidden="true" style="color: #F1F1F1"></i> FICHA</a>
             <a class="dropdown-item" href="/perfil" style="color: #F1F1F1"><i class="fa fa-line-chart" aria-hidden="true"  style="color: #F1F1F1"></i> AVALIAÇÃO FÍSICA </a>
           @endif

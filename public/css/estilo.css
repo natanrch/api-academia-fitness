@@ -126,6 +126,69 @@ label{
   max-width: 40px;
   max-height:40px;
 }
+.profile {
+    margin: 20px 0;
+}
+
+/* Profile sidebar */
+.profile-sidebar {
+    padding: 20px 0 10px 0;
+    background: #a3a8a44d;
+    
+}
+
+.profile-usertitle {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.profile-userbuttons {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.profile-userbuttons .btn:last-child {
+    margin-right: 0px;
+}
+
+
+
+/* Profile Content */
+.profile-content {
+    padding: 20px;
+    background: #fff;
+    min-height: 460px;
+}
+.profile-content>form{
+    padding : 0px 30px;
+}
+table>tbody>tr>td{
+    padding: 15px 0 !important;
+}
+table>tbody>tr:hover{
+    background-color: #ececff;
+    cursor: pointer;
+}
+.profile-img{
+    text-align: center;
+}
+.profile-img .file {
+    position: relative;
+    overflow: hidden;
+    margin-top: -20%;
+    width: 70%;
+    border: none;
+    border-radius: 0;
+    font-size: 15px;
+    background: #1580ecb3;
+    border-radius: 20px
+}
+.profile-img .file input {
+    position: absolute;
+    opacity: 0;
+    right: 0;
+    top: 0;
+}
 
 
 
@@ -355,43 +418,6 @@ line-height:inherit;
         font-weight: bold;
     }
 
-    /*  sweetalert   */
-button .alert{
-  background-color: cadetblue;
-  color: whitesmoke;
-  border: 0;
-  -webkit-box-shadow: none;
-  box-shadow: none;
-  font-size: 18px;
-  font-weight: 500;
-  border-radius: 7px;
-  padding: 15px 35px;
-  cursor: pointer;
-  white-space: nowrap;
-  margin: 10px;
-}
-
-
-h1 .alerttexto{
-  border-bottom: solid 2px grey;
-}
-#success {
-  background: green;
-}
-#error {
-  background: red;
-}
-#warning {
-  background: coral;
-}
-#info {
-  background: cornflowerblue;
-}
-#question {
-  background: grey;
-}
-
-
 
 
 
@@ -416,10 +442,13 @@ h1 .alerttexto{
       }
     }
   }
-
+  
     @media (min-width: 300px) {
   table{
     padding-right: 15px !important;
     padding-left: 15px !important;
+    }
+    .musculo{
+      margin-top: 
     }
   }
