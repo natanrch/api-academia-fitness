@@ -29,7 +29,7 @@
               </select>
            </div>
            <div class="col-auto">
-          <button class="btn btnlaranja mb-2" type="submit">SIM <i class="fa fa-check-circle" aria-hidden="true"></i></button>   
+          <button class="btn btnlaranja mb-2" type="submit" style="min-width: 91px">SIM <i class="fa fa-check-circle" aria-hidden="true"></i></button>   
         </form>
         <a href="{{url()->current()}}" class="btn btnlaranja mb-2">CANCELAR</a>
           </div>
