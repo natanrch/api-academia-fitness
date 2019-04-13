@@ -3,16 +3,22 @@
 @section('content')
 <br>
 
-<div class="container">
+      <div class="container">
         <div class="section-header">
           <h2 class="text-center">MINHA FICHA</h2>
           <hr style="max-width: 122px; height: 3px; background-color: #B95922;">
         </div>
-        <h2>Treino de Hoje: {{$treinoDeHoje->treino}}</h2>
-          <div class="col-md-3 col-5" style="display: inline-block;">
-            <form>
-              <label>Mudar de Treino:</label>
-              <select name="treino" class="form-control">
+        <h2>Treino de Hoje: <i class="fa fa-hand-o-right playicon" aria-hidden="true" ></i> {{$treinoDeHoje->treino}}</h2>
+      </div>
+
+
+      <div class="container justify-content-center ">
+    <div class="row">
+      <div class="col-12 col-sm-6">
+        <form class="form-inline">
+           <div class="form-group mx-sm-3 mb-2 col-12 ">
+             <label for="treino" >Mudar treino </label> 
+             <select name="treino" class="form-control" id="treino">
                 <option selected value="">x</option>
                 <option value="1">A</option>
                 <option value="2">B</option>
@@ -21,17 +27,28 @@
                 <option value="5">E</option>
                 <option value="6">F</option>
               </select>
-              <button class="btn btn-success" type="submit">Muda</button>
-            </form>
-            <a href="{{url()->current()}}" class="btn btn-info">Limpar</a>
+           </div>
+           <div class="col-auto">
+          <button class="btn btnlaranja mb-2" type="submit">SIM <i class="fa fa-check-circle" aria-hidden="true"></i></button>   
+        </form>
+        <a href="{{url()->current()}}" class="btn btnlaranja mb-2">CANCELAR</a>
+          </div>
+        </div>
+        <div class="col-12 col-sm-6 text-center">
+              <p class="nomealuno" style="font-size: 20px">Sequência de treinos: </p>
+           <p class="">
+             @foreach($sequencia as $s)
+              <span class="fontvigor" style="font-size: 25px"> {{$s->treino}} <i class="fa fa-hand-o-right playicon" aria-hidden="true"></i> 
+             @endforeach
+             e repete!</span>
+          </p>
         </div>
         </div>
-        <br><br>
+      </div>
+        
 
 
     <div class="container justify-content-center ">
-<div class="row " >
-  <div class="col-sm-12">
     <div class="row">
       <div class="col-12 col-sm-6">
         <div class="table-responsive">
@@ -49,6 +66,11 @@
     </tr>
   </tbody>
 </table>
+</div>
+</div>
+
+      <div class="col-12 col-sm-6">
+        <div class="table-responsive">
 <table class="table table-sm text-center table-bordered">
   <thead>
     <tr class="bg-primary">
@@ -62,69 +84,13 @@
       <td class="ficha">{{$ficha->intervalo}} segundos <i class="fa fa-clock-o playicon" aria-hidden="true"></i></td>
       
     </tr>
-
-    
   </tbody>
 </table>
 </div>
-</div>  
+</div> 
+</div>
+</div>
 
-<div class="col-12 col-sm-6 table-responsive">
-  <h1>Sequência de treinos</h1>
-  <h2>
-    @foreach($sequencia as $s)
-      {{$s->treino}} > 
-    @endforeach
-    e repete!
-  </h2>
-</div>
-{{--       <div class="col-12 col-sm-6 table-responsive">
-       <table class="table table-sm text-center table-bordered "  >
-  <thead>
-    <tr class="bg-primary">
-      <th scope="col">S</th>
-      <th scope="col">T</th>
-      <th scope="col">Q</th>
-      <th scope="col">Q</th>
-      <th scope="col">S</th>
-      <th scope="col">S</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td scope="row"><a href="">A</a></td>
-      <td><a href="">B</a></td>
-      <td><a href="">C</a></td>
-      <td><a href="">A</a></td>
-      <td><a href="">B</a></td>
-      <td><a href="">C</a></td>
-    </tr>
-    <tr>
-      <td scope="row"><a href="">A</a></td>
-      <td><a href="">B</a></td>
-      <td><a href="">C</a></td>
-      <td><a href="">A</a></td>
-      <td><a href="">B</a></td>
-      <td><a href="">C</a></td>
-    </tr>
-    <tr>
-      <td scope="row"><a href="">A</a></td>
-      <td><a href="">B</a></td>
-      <td><a href="">C</a></td>
-      <td><a href="">A</a></td>
-      <td><a href="">B</a></td>
-      <td><a href="">C</a></td>
-    </tr> 
-  </tbody>
-</table>
-</table>
-</div>
- --}}    
-      </div>
-
-    </div>
- </div>
-</div>
  <div class="container " >
 <div class="row " >
       <div class="col-12 col-sm-12 ">
@@ -177,7 +143,7 @@
     </tr>
   </tfoot>
 </table>
-  <button class="btn btnlaranja" type="button" data-toggle="modal" data-target="#modal-alert" id="suss">CONCLUIR TREINO <i class="fa fa-check-circle" aria-hidden="true"></i></button>
+  <button class="btn btnlaranja" type="button" data-toggle="modal" data-target="#modal-alert" id="suss">CONCLUIR TREINO <i class="fa fa-check-circle" aria-hidden="true"></i></button><br><br>
 </div>
 </div>
 </div>
