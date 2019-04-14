@@ -126,6 +126,9 @@ label{
   max-width: 40px;
   max-height:40px;
 }
+ .table-sm td, .table-sm th {
+    padding: .1rem !important;
+  }
 .profile {
     margin: 20px 0;
 }
@@ -443,12 +446,14 @@ line-height:inherit;
     }
   }
   
-    @media (min-width: 300px) {
-  table{
-    padding-right: 15px !important;
-    padding-left: 15px !important;
+    @media (min-width: 240px) {
+  table, .tableficha{
+    margin-left:15px !important;
+    margin-right: 15px !important;
     }
     .musculo{
       margin-top: 
     }
+    .table-sm td, .table-sm th {
+    padding: .1rem !important;
   }

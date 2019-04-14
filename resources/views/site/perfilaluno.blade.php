@@ -55,8 +55,8 @@
 <table class="table table-sm text-center table-bordered " >
   <thead>
     <tr class="bg-primary">
-      <th scope="col" class="ficha">Objetivo:</th>
-      <th scope="col" class="ficha">Método:</th>
+      <th scope="col" class="ficha">Objetivo</th>
+      <th scope="col" class="ficha">Método</th>
     </tr>
   </thead>
   <tbody>
@@ -74,8 +74,8 @@
 <table class="table table-sm text-center table-bordered">
   <thead>
     <tr class="bg-primary">
-      <th scope="col" class="ficha">Aquecimento:</th>
-      <th scope="col" class="ficha">Intervalo:</th>
+      <th scope="col" class="ficha">Aquecimento</th>
+      <th scope="col" class="ficha">Intervalo</th>
     </tr>
   </thead>
   <tbody>
@@ -91,11 +91,11 @@
 </div>
 </div>
 
- <div class="container " >
+ <div class="container" >
 <div class="row " >
       <div class="col-12 col-sm-12 ">
-        <div class="table-responsive " style="min-width: -50em">
-  <table class="table table-sm table-bordered " >
+        <div class=" " style="min-width: -50em">
+  <table class="table table-sm table-bordered" >
   <thead class="text-center fontth">
     <tr class="bg-primary">
       <th scope="col">EXERCÍCIO</th>
