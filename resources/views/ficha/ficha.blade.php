@@ -3,10 +3,13 @@
 @section('content')
 <br>
 
+
+
       <div class="container">
         <div class="section-header">
           <h2 class="text-center">FICHA COMPLETA</h2>
           <hr style="max-width: 122px; height: 3px; background-color: #B95922;">
+          <a href="/ficha/{{$ficha->id}}/edit" class="btn btn-info">Revisar Ficha</a>
         </div>
         
       </div>

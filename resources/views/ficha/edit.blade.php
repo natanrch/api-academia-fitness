@@ -7,7 +7,7 @@
 <section>
 <div class="container">
 	        <div class="section-header">
-	          <h2 class="text-center">CRIAR FICHA</h2>
+	          <h2 class="text-center">REVISAR FICHA</h2>
 	          <hr style="max-width: 170px; height: 3px; background-color: #B95922;">
 	          <P class="ficha text-center">Preencha os dados para criar os treinos.</P>
 	        </div>
@@ -17,35 +17,36 @@
 <div class="container">
 <form method="POST">
 	{{csrf_field()}}
+	{{method_field('PUT')}}
   <div class="form-row">
     <div class="form-group col-md-6 ">
       <label for="objetivo">Objetivo</label>
-      <input class="form-control " type="text" name="objetivo" id="objetivo">
+      <input class="form-control " type="text" name="objetivo" id="objetivo" value="{{$ficha->objetivo}}">
     </div>
     <div class="form-group col-md-6">
       <label for="metodo">Método</label>
-		<input class="form-control" type="text" name="metodo" id="metodo">
+		<input class="form-control" type="text" name="metodo" id="metodo" value="{{$ficha->metodo}}">
     </div>
     <div class="form-group col-md-3">
       <label for="aquecimento">Treino aeróbico </label>
 		<select name="aerobico" class="form-control">
-						<option selected>escolha</option>
-						<option value="Esteira">Esteira</option>
-						<option value="Elíptico">Elíptico</option>
-						<option value="Bicicleta Ergométrica">Bicicleta Ergométrica</option>
+			<option>escolha</option>
+			<option {{$ficha->treino_aerobico == "Esteira" ? 'selected' : ''}} value="Esteira">Esteira</option>
+			<option {{$ficha->treino_aerobico == "Elíptico" ? 'selected' : ''}} value="Elíptico">Elíptico</option>
+			<option {{$ficha->treino_aerobico == "Bicicleta Ergométrica" ? 'selected' : ''}} value="Bicicleta Ergométrica">Bicicleta Ergométrica</option>
 		</select>
     </div>
     <div class="form-group col-md-3">
       <label for="aerobico">Treino aeróbico (minutos)</label>
-		<input class="form-control" type="number" name="tempo_aerobico" id="aerobico">
+		<input class="form-control" type="number" name="tempo_aerobico" id="aerobico" value="{{$ficha->tempo_aerobico}}">
     </div>
     <div class="form-group col-md-3">
       <label for="aquecimento">Aquecimento (minutos)</label>
-		<input class="form-control" type="number" name="aquecimento" id="aquecimento">
+		<input class="form-control" type="number" name="aquecimento" id="aquecimento" value="{{$ficha->aquecimento}}" >
     </div>
     <div class="form-group col-md-3">
       <label for="intervalo">Intervalo (segundos)</label>
-		 <input type="number" class="form-control" name="intervalo" id="intervalo">
+		 <input type="number" class="form-control" name="intervalo" id="intervalo" value="{{$ficha->intervalo}}">
     </div>
     <div class="form-group col-md-6">
       <label for="revisao">Data de Revisão</label>
@@ -53,7 +54,7 @@
     </div>
     <div class="form-group col-md-6">
       <label for="observacoes">Observações</label>
-			<input class="form-control" type="text" name="observacoes" id="observacoes">
+			<input class="form-control" type="text" name="observacoes" id="observacoes" value="{{$ficha->observacoes}}">
     </div>
 </div>
 </div>

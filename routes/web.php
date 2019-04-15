@@ -67,4 +67,6 @@ Route::group([
 	Route::get('create', 'FichaController@create');
 	Route::post('create', 'FichaController@store');
 	Route::get('{ficha}', 'FichaController@show');
+	Route::get('{ficha}/edit', 'FichaController@edit');
+	Route::put('{ficha}/edit', 'FichaController@update');
 });

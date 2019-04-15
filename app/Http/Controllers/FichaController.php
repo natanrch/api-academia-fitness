@@ -80,7 +80,7 @@ class FichaController extends Controller
     {
         $ficha = $this->ficha->create([
             'user_id' => session('user_id'),
-            'dias_de_treinamento' => $request->dias,
+            // 'dias_de_treinamento' => $request->dias,
             'objetivo' => $request->objetivo,
             'metodo' => $request->metodo,
             'aquecimento' => $request->aquecimento,
@@ -174,7 +174,11 @@ class FichaController extends Controller
      */
     public function edit(Ficha $ficha)
     {
-        //
+        $tipos = $this->tipoExercicio->all()->sortBy('titulo');
+        return view('ficha.edit', [
+            'ficha' => $ficha,
+            'tipos' => $tipos,
+        ]);
     }
 
     /**
@@ -186,7 +190,46 @@ class FichaController extends Controller
      */
     public function update(Request $request, Ficha $ficha)
     {
-        //
+
+        $ficha->update([
+            // 'dias_de_treinamento' => $request->dias,
+            'objetivo' => $request->objetivo,
+            'metodo' => $request->metodo,
+            'aquecimento' => $request->aquecimento,
+            'treino_aerobico' => $request->aerobico,
+            'observacoes' => $request->observacoes,
+            'tempo_aerobico' => $request->tempo_aerobico,
+            'intervalo' => $request->intervalo,
+            'revisao' => $request->revisao,
+        ]);
+
+        $exerciciosAnteriores = $this->fichaExercicio->where('ficha_id', $ficha->id)->get();
+
+        foreach($exerciciosAnteriores as $exercicio) {
+            $exercicio->delete();
+        }
+
+        foreach($request->exercicio as $i => $exercicio) {
+            if(!is_null($request->treino[$i])) {
+
+                $this->fichaExercicio->create([
+                    'ficha_id' => $ficha->id,
+                    'exercicio_id' => $exercicio,
+                    'repeticoes' => $request->repeticoes[$i],
+                    'series' => $request->series[$i],
+                    'peso' => $request->peso[$i],
+                    'treino_id' => $request->treino[$i],
+                ]);
+            }
+        }
+
+        $fichaInstrutor = $this->fichaInstrutor->where('ficha_id', $ficha->id)->first();
+
+        $fichaInstrutor->update([
+            'instrutor_id' => Auth::id(),
+        ]);
+
+        return redirect('ficha/'.$ficha->id);
     }
 
     /**
