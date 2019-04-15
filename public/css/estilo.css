@@ -40,17 +40,17 @@ label{
   color: #F1F1F1;
   font-family: IBM Plex Sans, Regular; 
 }
+.btnlaranja:hover{
+  background-color: #525CE0E6;
+  color: #fff;
+}
 .btnazul{
   background-color: #242B8C;
   color: #FFFFFF;
   font-family:IBM Plex Sans, Medium;
   font-size: 15px
 }
-.nomealuno{
-  font-family: 'Roboto', Black;
-  color: #343434;
-  font-size: 16px
-}
+
 .adcionar{
   width: 50px;
   height: 50px;
@@ -109,9 +109,18 @@ label{
 .dropdown-menu a{
   padding: .25rem 1rem;
 }
-
+.fotomenu{
+  max-width: 40px;
+  max-height:40px;
+}
 
 /* PERFIL */
+.nomealuno{
+  font-family: 'Roboto', Black;
+  color: #343434;
+  font-size: 16px
+} 
+
 .Nomeperfil{
   font-family: BM Plex Sans, SemiBold;
   color: #363636;
@@ -122,10 +131,58 @@ label{
   color: #363636;
   font-size: 15px;
 }
-.fotomenu{
-  max-width: 40px;
-  max-height:40px;
+
+.fotoaluno{
+    width: 170px;
+    height: 170px;
+  }
+
+.input-file-container {
+  position: relative;
+} 
+.input-file-trigger {
+  transition: all .4s;
+  cursor: pointer;
 }
+.input-file {
+  position: absolute;
+  top: 0; left: 0;
+  width: 225px;
+  opacity: 0;
+  padding: 14px 0;
+  cursor: pointer;
+}
+ .input-file:hover + .input-file-trigger,
+ .input-file:focus + .input-file-trigger,
+ .input-file-trigger:hover,
+ .input-file-trigger:focus {
+  background: #525CE0E6;
+  color: #fff;
+}
+
+.file-return {
+  margin: 0;
+}
+.file-return:not(:empty) {
+  margin: 1em 0;
+}
+ .file-return {
+  font-style: italic;
+  font-size: .9em;
+  font-weight: bold;
+}
+.file-return:not(:empty):before {
+  content: "Selected file: ";
+  font-style: normal;
+  font-weight: normal;
+}
+
+
+.input-file-container canvas{max-width:100%; display:none}
+
+
+
+
  .table-sm td, .table-sm th {
     padding: .1rem !important;
   }
@@ -137,6 +194,8 @@ label{
 .profile-sidebar {
     padding: 20px 0 10px 0;
     background: #a3a8a44d;
+    border-radius: 20px
+    
     
 }
 
@@ -160,7 +219,7 @@ label{
 .profile-content {
     padding: 20px;
     background: #fff;
-    min-height: 460px;
+   
 }
 .profile-content>form{
     padding : 0px 30px;
@@ -184,13 +243,14 @@ table>tbody>tr:hover{
     border-radius: 0;
     font-size: 15px;
     background: #1580ecb3;
-    border-radius: 20px
+    border-radius: 20px;
 }
 .profile-img .file input {
     position: absolute;
     opacity: 0;
     right: 0;
     top: 0;
+
 }
 
 
@@ -280,10 +340,7 @@ table>tbody>tr:hover{
     height: 200px;
     background: #aaa;
   }
-  .fotoaluno{
-    width: 170px;
-    height: 200px;
-  }
+  
 
 /* PLANO */
 
@@ -427,6 +484,12 @@ line-height:inherit;
 @media (min-width: 1270px) {
   .search-nm .breadcrumbs, .nav-quaternary.nav-quinary {
     padding-top: 190px !important;
+    }
+    .profile-sidebar{
+     
+    }
+    .profile-content{
+    
     }
   }
 

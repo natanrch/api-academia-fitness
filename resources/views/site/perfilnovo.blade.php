@@ -2,16 +2,21 @@
 
 @section('content')
 <div class="container">
-        <div class="row profile">
-            <div class="col-md-3 perfil">
-                <div class="profile-sidebar">
-                    <div class="profile-img">
-                        <img src="../img/usuario.png" alt="" class="rounded-circle fotoaluno img-fluid"/>
-                        <div class="file btn btn-lg btn-primary">
-                           MUDAR <i class="fa fa-camera" aria-hidden="true"></i>
-                            <input type="file" name="file" />
-                        </div>
-                    </div>
+    <div class="profile">
+        <div class="row   ">
+
+            <div class="col-md-12 col-12 perfil ">
+                <div class="profile-sidebar justify-content-center">
+
+                    <div class="input-file-container text-center">
+                        <center>
+        <canvas id="imageCanvas" class="rounded-circle fotoaluno img-fluid text-center"></canvas>
+        </center>
+    <input class="input-file" id="my-file" type="file">
+    <label tabindex="0" for="my-file" class="input-file-trigger btn btnlaranja text-center">Selecione  <i class="fa fa-camera" aria-hidden="true"></i></label>
+  </div>
+  <p class="file-return text-center"></p>
+                    
 
                     <div class="profile-usertitle">
                         <div class="Nomeperfil">
@@ -36,16 +41,23 @@
 
                 </div>
             </div>
-            <div class="col-md-9">
-                <div class="profile-content border" >
-                    <div class="row">
-                        <div class="col-md-12">
-                            <h3>Historico de Treinos</h3>
-                            <br>
-                        </div>
-                    </div>
-            
+                        
                 </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div>
+                <h2>HISTORICO DE TREINO</h2>
+                <p class="nomealuno" style="font-size: 20px">Sequência realizada: </p>
+           <p class="">
+             
+              <span class="fontvigor" style="font-size: 25px">  <i class="fa fa-hand-o-right playicon" aria-hidden="true"></i> 
+                </span>
+          </p>
             </div>
         </div>
     </div>
