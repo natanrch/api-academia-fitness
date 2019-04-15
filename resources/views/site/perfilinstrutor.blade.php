@@ -48,7 +48,7 @@
   <div class="col-12 col-sm-2 foto">
    
     <div class="text-center">
-    <img src="../img/usuario.png" alt="..." class="rounded-circle" style="width: 80px; height: 80px">
+    <img src="../img/usuario.png" alt="foto de perfil do aluno" class="rounded-circle" style="width: 80px; height: 80px">
     </div>
   
  </div>
@@ -64,7 +64,7 @@
                             <br>
                         </div>
                     </div>
-            <h3>TOTAL:</h3>
+            <h4>TOTAL:</h4>
                 </div>
             </div>
         </div>

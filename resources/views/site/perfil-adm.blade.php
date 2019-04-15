@@ -18,7 +18,7 @@
     	
 
        <form class="form-row" >
-      <div class="form-group col-6 col-sm-8">
+      <div class="form-group col-8 col-sm-8">
         <input class="form-control inputb" type="search" placeholder="Pesquisar" aria-label="Search">
       </div>
       <div class="form-group col-2 col-sm-2">
