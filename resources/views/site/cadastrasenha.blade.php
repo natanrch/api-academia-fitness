@@ -35,7 +35,7 @@
   <div class="row "  >
     <div class="col-12">
   <div class="login-form"  >
-    <form method="POST" action="/login" style="border-radius: 50px;">
+    <form method="POST" action="" style="border-radius: 50px;">
         {{csrf_field()}}
         <h2 class="text-center">Crie sua nova senha</h2> 
         <div class="form-group">

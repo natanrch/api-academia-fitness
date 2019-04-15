@@ -88,6 +88,7 @@ class TelaUsuarioController extends Controller
         ]);
 
         $user = $this->user->find(Auth::id());
+ 
         $user->update([
             'password' => bcrypt($request->password),
             'novo_usuario' => 0,
