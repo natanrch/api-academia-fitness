@@ -1,12 +1,13 @@
 @extends('layouts.main')
 
 @section('content')
+<br><br>
 <div class="container">
     <div class="profile">
-        <div class="row   ">
+        <div class="row ">
 
-            <div class="col-md-12 col-12 perfil ">
-                <div class="profile-sidebar justify-content-center">
+            <div class="col-md-8 col-12 ">
+                <div class="profile-sidebar">
 
                     <div class="input-file-container text-center">
                         <center>
@@ -42,14 +43,8 @@
                 </div>
             </div>
                         
-                </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="container">
-    <div class="row">
-        <div class="col-md-12">
+    
+        <div class="col-md-4">
             <div>
                 <h2>HISTORICO DE TREINO</h2>
                 <p class="nomealuno" style="font-size: 20px">Sequência realizada: </p>
@@ -62,6 +57,8 @@
         </div>
     </div>
     </div>
+</div>
     <br>
     <br>
+
     @endsection
