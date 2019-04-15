@@ -92,8 +92,17 @@ label{
 }
 
 
-
-
+/* MENU APP*/
+.nav-app{
+  background-color: #fff;
+  
+}
+.link-nav{
+  padding: 10px;
+}
+.link-nav i{
+  font-size: 20px;
+}
 /* MENU */
 
 .colormenu{

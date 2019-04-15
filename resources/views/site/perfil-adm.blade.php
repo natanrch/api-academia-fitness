@@ -17,15 +17,11 @@
     	<h2>INSTRUTOR  <button type="button" class="btn btnlaranja" data-toggle="modal" data-target=".bd-example-modal-lg" >ADICIONAR <i class="fa fa-user-plus" aria-hidden="true"></i></button></h2>
     	
 
-       <form class="form-row" >
-      <div class="form-group col-8 col-sm-8">
-        <input class="form-control inputb" type="search" placeholder="Pesquisar" aria-label="Search">
-      </div>
-      <div class="form-group col-2 col-sm-2">
-      <button class="btn btnlaranja"  type="submit" style="border-radius: 50%"> <i class="fa fa-search" aria-hidden="true"></i></button>
-    </div>
-    </form>
-    <br>
+       <form class="form-row" > <div class="form-group col-8 col-sm-8"> <input
+class="form-control inputb" type="search" placeholder="Pesquisar"
+aria-label="Search"> </div> <div class="form-group col-2 col-sm-2"> <button
+class="btn btnlaranja"  type="submit" style="border-radius: 50%"> <i class="fa
+fa-search" aria-hidden="true"></i></button> </div> </form> <br>
 
     <div class="row" >
   <div class="col-6 col-sm-2 fotosins">
