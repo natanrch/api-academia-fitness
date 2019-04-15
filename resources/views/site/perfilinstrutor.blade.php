@@ -2,20 +2,35 @@
 
 @section('content')
 
-<div class="container " style="margin-top:30px">
-  <div class="row">
-    <div class="col-12 col-sm-4 text-center" >
-      
-      <img src="../img/usuario.png" alt="..." class="img-thumbnail rounded-circle fotoaluno text-center">
-      
-      <p class="Nomeperfil">Nome Instrutor</p>
-      <p class="descriperfil"> CREF: <br> 0000000000</P>
-      <button type="button" class="btn btnazul btn-sm" data-toggle="modal" data-target=".foto" style="margin-top: 5px;">ADICIONAR <i class="fa fa-camera" aria-hidden="true"></i></button>
-      <hr class="d-sm-none">
-    
-    </div>
-    <div class="col-12 col-sm-8" style="padding-right: 2em; padding-left: 2em">
-      <h2>MEUS ALUNOS <button type="button" class="btn btnlaranja" data-toggle="modal" data-target=".modalaluno">ADICIONAR  <i class="fa fa-user-plus" aria-hidden="true"></i></button></h2>
+<div class="container">
+        <div class="row profile">
+            <div class="col-md-3 perfil">
+                <div class="profile-sidebar">
+                    <div class="profile-img">
+                        <img src="../img/usuario.png" alt="foto de perfil do Instrutor" class="rounded-circle fotoaluno img-fluid"/>
+                        <div class="file btn btn-lg btn-primary">
+                           MUDAR <i class="fa fa-camera" aria-hidden="true"></i>
+                            <input type="file" name="file" />
+                        </div>
+                    </div>
+
+                    <div class="profile-usertitle">
+                        <div class="Nomeperfil">
+                            Nome do Instrutor
+                        </div>
+                        <div class="descriperfil">
+                            CREF:<br>
+                            
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-md-9">
+                <div class="profile-content" >
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h2>MEUS ALUNOS <button type="button" class="btn btnlaranja" data-toggle="modal" data-target=".modalaluno">ADICIONAR  <i class="fa fa-user-plus" aria-hidden="true"></i></button></h2>
 
 
      <form class="form-row" >
@@ -33,7 +48,7 @@
   <div class="col-12 col-sm-2 foto">
    
     <div class="text-center">
-    <img src="../img/usuario.png" alt="..." class="rounded-circle" style="width: 80px; height: 80px">
+    <img src="../img/usuario.png" alt="foto de perfil do aluno" class="rounded-circle" style="width: 80px; height: 80px">
     </div>
   
  </div>
@@ -46,26 +61,18 @@
   </div>
 </div>
 @endforeach
-</div>
-  <br>
-
-  <div>
-      <h3>TOTAL:</h3>
+                            <br>
+                        </div>
+                    </div>
+            <h4>TOTAL:</h4>
+                </div>
+            </div>
+        </div>
     </div>
-
     </div>
-  </div>
-  
-  
-</div>
-<br>
-<br>
+    <br>
+
 @include('site.partials.modal-aluno')
-
-@include('site.partials.modal-foto')
-
-
-<br>
 
 
 @endsection

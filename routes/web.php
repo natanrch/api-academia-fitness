@@ -23,7 +23,10 @@ Route::get('/logout', 'Auth\LoginController@logout');
 Route::get('/cadastro', 'Auth\RegisterController@cadastroInstrutor');
 
 Route::get('/home', 'HomeController@index')->name('home');
-Route::get('/escolha-perfil', 'TelaUsuarioController@escolhaperfil');
+Route::get('/login-app', 'TelaUsuarioController@LoginApp');
+Route::get('/perfil-app', 'TelaUsuarioController@PerfilApp');
+Route::get('/ficha-app', 'TelaUsuarioController@FichaApp');
+
 
 // Route::group([
 // 		'prefix' => 'aluno',
@@ -36,6 +39,7 @@ Route::get('/escolha-perfil', 'TelaUsuarioController@escolhaperfil');
 // 		Route::post('ficha/{id}', 'FichaController@setUltimoTreino');
 // 	}
 // );
+Route::get('/perfilaluno', 'TelaUsuarioController@Perfilnovo')->middleware(['auth', 'usuario-com-senha']);
 Route::get('/perfil', 'TelaUsuarioController@perfilUsuario')->middleware(['auth', 'usuario-com-senha']);
 Route::post('/perfil', 'FichaController@setUltimoTreino')->middleware(['usuario-com-senha']);
 Route::get('/ficha-aluno', 'TelaUsuarioController@ficha')->middleware(['auth', 'usuario-com-senha']);

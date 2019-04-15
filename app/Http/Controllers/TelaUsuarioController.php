@@ -109,5 +109,23 @@ class TelaUsuarioController extends Controller
     {
         return view('layouts.sobrenos');
     }
+     public function Perfilnovo()
+    {
+        return view('site.perfilnovo');
+    }
+
+     public function LoginApp()
+    {
+        return view('app.login-app');
+    }
+
+    public function PerfilApp()
+    {
+        return view('app.perfil-app');
+    }
+     public function FichaApp()
+    {
+        return view('app.ficha-app');
+    }
 }
 
