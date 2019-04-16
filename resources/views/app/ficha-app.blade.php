@@ -1,18 +1,10 @@
-@extends('layouts.main')
+@extends('app.main-app')
 
-@section('content')
+@section('sessao')
 <br><br>
 <!-- Just an image -->
-<nav class="navbar navbar-light colormenu">
-    <a class="navbar-brand" href="/"><img src="../img/logo.png" style="max-width:200px; max-height: 50px"></a>
-  <a class="navbar-brand" href="#">
-    <a href="#" class="btn btnlaranja" style="color: #F1F1F1; border-radius: 20px; ">Sair <i class="fa fa-share-square-o" aria-hidden="true"></i></a>
-  </a>
-</nav>
-<nav class="nav nav-pills nav-fill colormenu fixed-bottom">
-  <a class="nav-item nav-link link-nav" href="/perfil-app" ><i class="fa fa-user-o "style="color: #F1F1F1" aria-hidden="true" ></i></a>
-  <a class="nav-item nav-link link-nav" href="/ficha-app"><i class="fa fa-file-text-o" style="color: #F1F1F1" aria-hidden="true"></i></a>
-</nav>
+
+
  <div class="container">
         <div class="section-header">
           <h2 class="text-center">MINHA FICHA</h2>
@@ -60,9 +52,9 @@
         <div class="table-responsive">
 <table class="table table-sm text-center table-bordered " >
   <thead>
-    <tr class="bg-primary">
-      <th scope="col" class="ficha">Objetivo</th>
-      <th scope="col" class="ficha">Método</th>
+    <tr class="colormenu">
+      <th scope="col" class="ficha text-white">Objetivo</th>
+      <th scope="col" class="ficha text-white">Método</th>
     </tr>
   </thead>
   <tbody>
@@ -79,9 +71,9 @@
         <div class="table-responsive">
 <table class="table table-sm text-center table-bordered">
   <thead>
-    <tr class="bg-primary">
-      <th scope="col" class="ficha">Aquecimento</th>
-      <th scope="col" class="ficha">Intervalo</th>
+    <tr class="colormenu">
+      <th scope="col" class="ficha text-white">Aquecimento</th>
+      <th scope="col" class="ficha text-white">Intervalo</th>
     </tr>
   </thead>
   <tbody>
@@ -99,7 +91,7 @@
 
 
 <div class="container">
-<div class="card mb-3 text-white " style="max-width: 540px; border-radius: 20px; border:none; background: #9EDEF366">
+<div class="card mb-3 text-white colormenu  " style="max-width: 540px; border-radius: 20px; border:none;">
   <div class="row">
     <div class="col-4 text-center">
        <button type="button" class="btn" data-toggle="modal" data-target=".bd-example-modal-xl" style="border-radius: 20%; background-color: #fff0">
@@ -109,16 +101,16 @@
     </div>
     <div class="col-8">
       <div class="card-body">
-        <h5 class="card-title text-left ficha" >Agachamento Livre</h5>
-        <p class="card-text ficha" style="font-size:16px">SÉRIE: <strong>4 X 20</strong></p>
-        <p class="card-text ficha" style="font-size:16px">PESO: <strong>40kg</strong> </p>
+        <h5 class="card-title text-left ficha text-white" >Agachamento Livre</h5>
+        <p class="card-text ficha text-white" style="font-size:16px"><strong>SÉRIE: 4 X 20</strong></p>
+        <p class="card-text ficha text-white" style="font-size:16px"><strong>PESO: 40kg</strong> </p>
       </div>
     </div>
   </div>
 </div>
 
 
-<div class="card mb-3 text-white " style="max-width: 540px; border-radius: 20px; border:none; background: #9EDEF366">
+<div class="card mb-3 text-white colormenu" style="max-width: 540px; border-radius: 20px; border:none;">
   <div class="row">
     <div class="col-4 text-center">
        <button type="button" class="btn" data-toggle="modal" data-target=".bd-example-modal-xl" style="border-radius: 20%; background-color: #fff0">
@@ -128,13 +120,33 @@
     </div>
     <div class="col-8">
       <div class="card-body">
-        <h5 class="card-title text-left ficha" >Agachamento Livre</h5>
-        <p class="card-text ficha" style="font-size:16px">SÉRIE: <strong>4 X 20</strong></p>
-        <p class="card-text ficha" style="font-size:16px">PESO: <strong>40kg</strong> </p>
+        <h5 class="card-title text-left ficha text-white" >Agachamento Livre</h5>
+        <p class="card-text ficha text-white" style="font-size:16px"><strong>SÉRIE: 4 X 20</strong></p>
+        <p class="card-text ficha text-white" style="font-size:16px"><strong>PESO: 40kg</strong> </p>
       </div>
     </div>
   </div>
 </div>
+
+<div class="card mb-3 text-white colormenu" style="max-width: 540px; border-radius: 20px; border:none;">
+  <div class="row">
+    <div class="col-4 text-center">
+       <button type="button" class="btn" data-toggle="modal" data-target=".bd-example-modal-xl" style="border-radius: 20%; background-color: #fff0">
+                <img src="../img/play.png" style="max-width: 90px; margin-top:15px;">
+                
+              </button>
+    </div>
+    <div class="col-8">
+      <div class="card-body">
+        <h5 class="card-title text-left ficha text-white" >Agachamento Livre</h5>
+        <p class="card-text ficha text-white" style="font-size:16px"><strong>SÉRIE: 4 X 20</strong></p>
+        <p class="card-text ficha text-white" style="font-size:16px"><strong>PESO: 40kg</strong> </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
 
 </div>
 
@@ -151,7 +163,7 @@
     <tr>
       <th scope="col" colspan="3">
         Instrutor: <img src="../img/usuario.png" alt="..." class="rounded-circle" style="width: 30px; height: 30px"> 
-  <span><a class="btn btnazul " data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+  <span><a class="btn btnlaranja " data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
     Observações
   </a></span>
   <div class="collapse" id="collapseExample">

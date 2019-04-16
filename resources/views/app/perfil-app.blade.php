@@ -1,76 +1,54 @@
-@extends('layouts.main')
+@extends('app.main-app')
 
-@section('content')
-<br><br>
-<!-- Just an image -->
-<nav class="navbar navbar-light colormenu">
-    <a class="navbar-brand" href="/"><img src="../img/logo.png" style="max-width:200px; max-height: 50px"></a>
-  <a class="navbar-brand" href="#">
-    <a href="#" class="btn btnlaranja" style="color: #F1F1F1; border-radius: 20px; ">Sair <i class="fa fa-share-square-o" aria-hidden="true"></i></a>
-  </a>
-</nav>
-<nav class="nav nav-pills nav-fill colormenu fixed-bottom">
-  <a class="nav-item nav-link link-nav" href="/perfil-app" ><i class="fa fa-user-o "style="color: #F1F1F1" aria-hidden="true" ></i></a>
-  <a class="nav-item nav-link link-nav" href="/ficha-app"><i class="fa fa-file-text-o" style="color: #F1F1F1" aria-hidden="true"></i></a>
-</nav>
+@section('sessao')
+<br>
 
 <div class="container">
-    <div class="profile">
-        <div class="row ">
 
-            <div class="col-md-8 col-12 ">
-                <div class="profile-sidebar">
-
-                    <div class="input-file-container text-center">
-                        <center>
-        <canvas id="imageCanvas" class="rounded-circle fotoaluno img-fluid text-center"></canvas>
-        </center>
-    <input class="input-file" id="my-file" type="file">
-    <label tabindex="0" for="my-file" class="input-file-trigger btn btnlaranja text-center">Selecione  <i class="fa fa-camera" aria-hidden="true"></i></label>
-  </div>
-  <p class="file-return text-center"></p>
-                    
-
-                    <div class="profile-usertitle">
-                        <div class="Nomeperfil">
-                            Nome do Aluno
-                        </div>
-                        <div class="descriperfil">
-                            Modalidade:<br>
+<div class="card mb-3" style="max-width: 540px; background: #8fb1b31a; border: none;">
+  <div class="row">
+    <div class="col-md-4 text-center"><br>
+      <img src="../img/usuario.png" alt="foto de aluno" class="rounded-circle fotoaluno img-fluid"/>
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title Nomeperfil">Nome do Aluno</h5>
+        <div class="descriperfil">
+                            Modalidade: Musculação
                             
                         </div>
                          <div class="descriperfil">
-                            Data de Pagamento: <br>
+                            Data de Pagamento: 20/04/2019
                         </div>
                          <div class="descriperfil">
-                            Instrutor: <br>
+                            Instrutor: Jorce Costa
                         </div>
-                    </div>
+                        <br>
+                        <div class="text-center">
+                          <a href="edit.html" class="btn btnlaranja btn-sm">AVALIAÇÃO FÍSICA <i class="fa fa-line-chart" aria-hidden="true"  style="color: #F1F1F1"></i></a>
+                        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
-                    <div class="profile-userbuttons">
-
-                        <a href="edit.html" class="btn btnlaranja btn-sm">AVALIAÇÃO FÍSICA <i class="fa fa-line-chart" aria-hidden="true"  style="color: #F1F1F1"></i></a>
-                    </div>
-
-                </div>
-            </div>
+    
                         
     
-        <div class="col-md-4">
-            <div>
-                <h2>HISTORICO DE TREINO</h2>
-                <p class="nomealuno" style="font-size: 20px">Sequência realizada: </p>
+        <div class="col-md-4 ">
+           <div class="">
+              <p class="nomealuno" style="font-size: 20px">Sequência Realizada </p>
            <p class="">
+      
+              <span class="fontvigor" style="font-size: 25px"> A  <i class="fa fa-hand-o-right playicon" aria-hidden="true"></i> B <i class="fa fa-hand-o-right playicon" aria-hidden="true"></i> C
              
-              <span class="fontvigor" style="font-size: 25px">  <i class="fa fa-hand-o-right playicon" aria-hidden="true"></i> 
-                </span>
+             </span>
           </p>
-            </div>
+        </div>
         </div>
     </div>
     </div>
 </div>
-    <br>
-    <br>
+   
 
     @endsection

@@ -9,11 +9,11 @@
         <div class="section-header">
           <h2 class="text-center">FICHA COMPLETA</h2>
           <hr style="max-width: 122px; height: 3px; background-color: #B95922;">
-          <a href="/ficha/{{$ficha->id}}/edit" class="btn btn-info">Revisar Ficha</a>
+          <a href="/ficha/{{$ficha->id}}/edit" class="btn btnlaranja">Editar <i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
         </div>
         
       </div>
-
+<br>
     <div class="container justify-content-center ">
     <div class="row">
       <div class="col-12 col-sm-6">
@@ -21,8 +21,8 @@
 <table class="table table-sm text-center table-bordered " >
   <thead>
     <tr class="bg-primary">
-      <th scope="col" class="ficha">Objetivo:</th>
-      <th scope="col" class="ficha">Método:</th>
+      <th scope="col" class="ficha  text-white">Objetivo:</th>
+      <th scope="col" class="ficha text-white">Método:</th>
     </tr>
   </thead>
   <tbody>
@@ -40,8 +40,8 @@
 <table class="table table-sm text-center table-bordered">
   <thead>
     <tr class="bg-primary">
-      <th scope="col" class="ficha">Aquecimento:</th>
-      <th scope="col" class="ficha">Intervalo:</th>
+      <th scope="col" class="ficha text-white">Aquecimento:</th>
+      <th scope="col" class="ficha text-white">Intervalo:</th>
     </tr>
   </thead>
   <tbody>
@@ -64,22 +64,24 @@
   <table class="table table-sm table-bordered " >
   <thead class="text-center fontth">
     <tr class="bg-primary">
-      <th scope="col">EXERCÍCIO</th>
-      <th scope="col">SÉRIE</th>
-      <th scope="col">PESO</th>
+      <th scope="col" class="text-white">EXERCÍCIO</th>
+      <th scope="col" class="text-white">SÉRIE</th>
+      <th scope="col" class="text-white">PESO</th>
     </tr>
   </thead>
   <tbody class="fonttd">
       @foreach($treino as $exercicio)
         <tr>
           <td scope="row"> <input type="checkbox" aria-label="Checkbox for following text input" style="border: 1px solid #ccc"> {{$exercicio->exercicio->titulo}} 
-              <!-- Button trigger modal -->
+              <!-- Button trigger modal 
               <button type="button" class="btn" data-toggle="modal" data-target=".bd-example-modal-xl" style="border-radius: 20%">
                 <i class="fa fa-play-circle-o playicon" aria-hidden="true" style="font-size: 25px"></i>
-              </button>
+              </button>--> 
+              <button type="button" class="btn" data-toggle="modal" data-target=".bd-example-modal-xl" style="border-radius: 20%; background-color: #fff0">
+                <img src="../img/play.png" style="max-width: 40px; ">
 
             </td>
-          <td class="text-center">{{$exercicio->series}} x {{$exercicio->repeticoes}}</td>
+          <td class="text-center"> {{$exercicio->series}} x {{$exercicio->repeticoes}}</td>
           <td class="text-center">{{$exercicio->peso}} Kg</td>
         </tr>
       @endforeach
@@ -88,7 +90,7 @@
     <tr>
       <th scope="col" colspan="3">
         Instrutor: <img src="../img/usuario.png" alt="..." class="rounded-circle" style="width: 30px; height: 30px"> {{$ficha->ficha_instrutor->instrutor->name}} 
-  <span><a class="btn btnazul " data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+  <span><a class="btn btnlaranja " data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
     Observações
   </a></span>
   <div class="collapse" id="collapseExample">

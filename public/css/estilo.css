@@ -32,8 +32,6 @@ label{
   font-size: 16px
 }
 
-
-
 .btnlogin{
    font-family:IBM Plex Sans, Medium;
   font-size: 18px;
@@ -84,7 +82,7 @@ label{
 }
 .fonttd{
   color: #363636;
-  font-family: IBM Plex Sans, Regular;
+  font-family: IBM Plex Sans, Bold;
   font-size: 16px;
 }
 .playicon{
@@ -142,12 +140,12 @@ label{
 .Nomeperfil{
   font-family: BM Plex Sans, SemiBold;
   color: #363636;
-  font-size: 20px;
+  font-size: 22px;
 }
 .descriperfil{
   font-family: IBM Plex Sans, Regular;
   color: #363636;
-  font-size: 15px;
+  font-size: 18px;
 }
 
 .fotoaluno{
@@ -211,7 +209,7 @@ label{
 /* Profile sidebar */
 .profile-sidebar {
     padding: 20px 0 10px 0;
-    background: #a3a8a44d;
+    background: #daeadd4d;
     border-radius: 20px
     
     

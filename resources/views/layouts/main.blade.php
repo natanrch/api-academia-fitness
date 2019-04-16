@@ -70,7 +70,7 @@
 </section>
  		
 <footer class="footer ">
-<div class="container">
+<div class="container text-center" style="padding-top: 10px">
 <div class="row ">
   <div class="col-sm-12">
     <div class="row">
@@ -80,10 +80,11 @@
         <a href=""><i class="fa fa-instagram playicon" aria-hidden="true" style=" font-size:  25px;"></i></a>
       </div>
       <div class="col-12 col-sm-4">
+        <div >
         <P class="pfooter">ONDE NOS ENCONTRAR?</P>
-        <small><a href="https://goo.gl/maps/ZhcBZ68Cu5K2" class="small p1footer"><i class="fa fa-map-marker playicon " style="font-size: 25px;" aria-hidden="true"></i> Rua São José, 1143</a></small><br>
+        <small ><a href="https://goo.gl/maps/ZhcBZ68Cu5K2" class="small p1footer"><i class="fa fa-map-marker playicon " style="font-size: 25px;" aria-hidden="true"></i> Rua São José, 1143</a></small><br>
         <small class="small p1footer">Proximo a escola Pudium</small><br>
-        
+        </div>
       </div>
       <div class="col-12 col-sm-4">
         <P class="pfooter">CONTATO</P>
