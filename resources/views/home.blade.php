@@ -7,7 +7,7 @@
 
 
 <section>
- <div class="jumbotron jumbotron-fluid " style="background-image: url(img/fund.jpg); background-repeat: no-repeat; background-size: cover; background-attachment: fixe; background-color: #fff; background-size: 100% 100%">
+ <div class="jumbotron jumbotron-fluid " style="background-image: url(img/hom.jpg); background-repeat: repeat; background-size: cover; background-attachment: fixed; background-color: #fff; background-size: 100% 100%">
     <div class="container">
       <div class="row">
         <div class="col-sm-6 col-12 d-flex align-content-center flex-wrap">
@@ -161,9 +161,9 @@
 <div class="container">
     <div class="row">
       <div class="col-12 col-sm-6">
-        <h2 class="planosh2">PLANOS PERFEITOS PARA VOCÊ</h2>
+        <h2 class="planosh2 text-center">PLANOS PERFEITOS PARA VOCÊ</h2>
           <br>
-        <div style="max-width: 300px; margin-left: 30px">
+        <div style="max-width: 300px; margin-left: 90px">
         <P class="descplanos text-left">Na Academia Fitness você encontra planos acessíveis ao seu bolso, e que te oferecem diversas modalidades.
             <br><br>
          Você pode pagar no dinheiro ou no cartão de crédito. Além disso oferecemos descontos para alunos que pagam antes do vencimento.</P>
@@ -201,7 +201,7 @@
        
     </div>
   </div>
-   <div class="card" style="border:none; background-color: #242B8C;">
+   <div class="card" style="border:none; background-color: #060A4B;">
    <div class="card-body text-center">
       <h5 class="card-title" style="color: #FFFFFF; font-family: 'Roboto', sans-serif; font-size: 20px">PLANO FAMÍLIA</h5>
       <p class="card-text" style="color: #F1F1F1; font-family: IBM Plex Sans, Regular; font-size: 16px;">Valor promocional até a data de vencimento da mensalidade</p><br>

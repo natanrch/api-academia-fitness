@@ -54,7 +54,7 @@
         <div class="table-responsive">
 <table class="table table-sm text-center table-bordered " >
   <thead>
-    <tr class="bg-primary ">
+    <tr class="colormenu">
       <th scope="col" class="ficha text-white">Objetivo</th>
       <th scope="col" class="ficha text-white">Método</th>
     </tr>
@@ -73,7 +73,7 @@
         <div class="table-responsive">
 <table class="table table-sm text-center table-bordered">
   <thead>
-    <tr class="bg-primary">
+    <tr class="colormenu">
       <th scope="col" class="ficha text-white">Aquecimento</th>
       <th scope="col" class="ficha text-white">Intervalo</th>
     </tr>
@@ -97,7 +97,7 @@
         <div class=" " style="min-width: -50em">
   <table class="table table-sm table-bordered" >
   <thead class="text-center fontth">
-    <tr class="bg-primary">
+    <tr class="colormenu">
       <th scope="col" class="text-white">EXERCÍCIO</th>
       <th scope="col" class="text-white">SÉRIE</th>
       <th scope="col" class="text-white">PESO</th>

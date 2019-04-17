@@ -20,7 +20,7 @@
         <div class="table-responsive">
 <table class="table table-sm text-center table-bordered " >
   <thead>
-    <tr class="bg-primary">
+    <tr class="colormenu">
       <th scope="col" class="ficha  text-white">Objetivo:</th>
       <th scope="col" class="ficha text-white">Método:</th>
     </tr>
@@ -39,7 +39,7 @@
         <div class="table-responsive">
 <table class="table table-sm text-center table-bordered">
   <thead>
-    <tr class="bg-primary">
+    <tr class="colormenu">
       <th scope="col" class="ficha text-white">Aquecimento:</th>
       <th scope="col" class="ficha text-white">Intervalo:</th>
     </tr>
@@ -63,7 +63,7 @@
         <div class="table-responsive " style="min-width: -50em">
   <table class="table table-sm table-bordered " >
   <thead class="text-center fontth">
-    <tr class="bg-primary">
+    <tr class="colormenu">
       <th scope="col" class="text-white">EXERCÍCIO</th>
       <th scope="col" class="text-white">SÉRIE</th>
       <th scope="col" class="text-white">PESO</th>
@@ -77,6 +77,9 @@
               <button type="button" class="btn" data-toggle="modal" data-target=".bd-example-modal-xl" style="border-radius: 20%">
                 <i class="fa fa-play-circle-o playicon" aria-hidden="true" style="font-size: 25px"></i>
               </button>--> 
+              <button type="button" class="btn" data-toggle="modal" data-target=".bd-example-modal-xl" style="border-radius: 20%">
+                <i class="fa fa-play-circle-o playicon" aria-hidden="true" style="font-size: 25px"></i>
+              </button>
               <button type="button" class="btn" data-toggle="modal" data-target=".bd-example-modal-xl" style="border-radius: 20%; background-color: #fff0">
                 <img src="../img/play.png" style="max-width: 40px; ">
 
