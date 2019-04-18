@@ -3,29 +3,26 @@
 @section('content')
 
 <div class="container">
-        <div class="row profile">
+        <div class="row ">
             <div class="col-md-3 perfil">
-                <div class="profile-sidebar">
-                    <div class="profile-img">
-                        <img src="../img/usuario.png" alt="foto de perfil do Instrutor" class="rounded-circle fotoaluno img-fluid"/>
-                        <div class="file btn btn-lg btn-primary">
-                           MUDAR <i class="fa fa-camera" aria-hidden="true"></i>
-                            <input type="file" name="file" />
-                        </div>
-                    </div>
+                <br>
 
-                    <div class="profile-usertitle">
-                        <div class="Nomeperfil">
-                            Nome do Instrutor
-                        </div>
-                        <div class="descriperfil">
-                            CREF:<br>
-                            
-                        </div>
-                    </div>
-
-                </div>
+                <div class="card mb-3" style="max-width: 500px; background: #8fb1b31a; border: none;">
+  
+    <div class="col-md-12 text-center"><br>
+      <img src="../img/usuario.png" alt="foto de aluno" class="rounded-circle fotoaluno img-fluid"/>
+    </div>
+    <div class="col-md-12">
+      <div class="card-body">
+        <h5 class="card-title Nomeperfil">Nome do Instrutor</h5>
+            <div class="descriperfil">
+                CRF: 0000000000-00                           
             </div>
+        <br>
+      </div>
+    </div>
+</div>
+</div>
             <div class="col-md-9">
                 <div class="profile-content" >
                     <div class="row">

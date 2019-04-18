@@ -1,7 +1,7 @@
 @extends('layouts.main')
 
 @section('content')
-<br>
+<br>g
 <div class="container">
 <div class="row ">
     <div class="col-sm-6">
