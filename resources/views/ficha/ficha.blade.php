@@ -109,7 +109,7 @@
         Data: {{$ficha->created_at}}
       </th>
        <th scope="col" colspan="2">
-        Revisão: 25/02/2019
+        Revisão: {{$ficha->revisao}}
       </th>
     </tr>
   </tfoot>

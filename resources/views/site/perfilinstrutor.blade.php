@@ -1,3 +1,8 @@
+@php
+use Carbon\Carbon;
+@endphp
+
+
 @extends('layouts.main')
 
 @section('content')
@@ -57,6 +62,12 @@
     <div class="form-group">
       <a href="{{asset('storage/'.$user->avaliacao)}}" class="btn btnazul" >Avaliação Física <i class="fa fa-download"  aria-hidden="true"></i></a>
       <a href="/ficha/create?user={{$user->id}}" class="btn btnazul" style="margin-top: 2px">Criar Ficha <i class="fa fa-file-text-o " aria-hidden="true"></i></a>
+    @if(!$user->ficha)
+        <span class="text-danger">Novo aluno!</span>
+    @endif
+    @if(!is_null($user->ficha) && $user->ficha->revisao <= Carbon::now())
+        <span class="text-success">Revisar ficha!</span>
+    @endif
     </div>
   </div>
 </div>
