@@ -5,12 +5,12 @@
 <!-- O menu esta dentro da pasta layout, nome do aquivo main-->
 <!--Decricacao da academia-->
 <section>
- <div class="jumbotron jumbotron-fluid " style="background-image: url(svg/hom.svg); background-repeat: no-repeat; background-size: cover; background-attachment: fixed; background-color: #fff ">
+ <div class="jumbotron jumbotron-fluid " style="background-image: url(img/Fotoram.io.jpg); background-repeat: no-repeat; background-size: cover; background-attachment: fixed; background-color: #fff ;   ">
      <div class="container">
       <div class="row">
         <div class="col-sm-6 col-12 ">
           <div class="d-flex align-content-center flex-wrap ">
-          <p class=" fontvigor" style=" font-size: 35px; color: #000"> <strong>CONHEÇA O APLICATIVO <br> DE TREINO DA <span style="color:">ACADEMIA FITNESS</span>  </strong> </p>
+          <p class=" fontvigor" style=" font-size: 40px; color: #fff"> <strong>CONHEÇA O APLICATIVO <br> DE TREINO DA <span style="color:">ACADEMIA FITNESS</span>  </strong> </p>
           <div class="text-center">
             <a href="" class="btn "><img src="img/store.png" alt="..." class="img-fluid" style="max-width: 200px; max-height: 50px" ></a>
             <a href="" class="btn "><img src="img/app.png" alt="..." class="img-fluid" style="max-width: 200px; max-height: 50px" ></a>
