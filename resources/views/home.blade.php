@@ -8,20 +8,21 @@
  <div class="jumbotron jumbotron-fluid " style="background-image: url(img/Fotoram.io.jpg); background-repeat: no-repeat; background-size: cover; background-attachment: fixed; background-color: #fff ;   ">
      <div class="container">
       <div class="row">
-        <div class="col-sm-6 col-12 ">
-          <div class="d-flex align-content-center flex-wrap ">
-          <p class=" fontvigor" style=" font-size: 40px; color: #fff"> <strong>CONHEÇA O APLICATIVO <br> DE TREINO DA <span style="color:">ACADEMIA FITNESS</span>  </strong> </p>
-          <div class="text-center">
-            <a href="" class="btn "><img src="img/store.png" alt="..." class="img-fluid" style="max-width: 200px; max-height: 50px" ></a>
-            <a href="" class="btn "><img src="img/app.png" alt="..." class="img-fluid" style="max-width: 200px; max-height: 50px" ></a>
-            <br><br>
-          </div>
+        <div class="col-sm-6 col-12 d-flex align-content-center flex-wrap ">
+          <div class=" align-content-sm-center text-center">
+          <p class=" fontvigor" style=" font-size: 48px; color: #000c"> <strong>CONHEÇA O APLICATIVO DE TREINO DA <span style="color:">ACADEMIA FITNESS</span>  </strong> </p>
+          
           </div>
         </div>
          <div class="col-sm-6 col-12">
           <div class="embed-responsive embed-responsive-16by9">
         <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/zpOULjyy-n8?rel=0" allowfullscreen></iframe>
       </div>
+      <div class="text-center">
+            <a href="" class="btn "><img src="img/store.png" alt="..." class="img-fluid" style="max-width: 200px; max-height: 50px" ></a>
+            <a href="" class="btn "><img src="img/app.png" alt="..." class="img-fluid" style="max-width: 200px; max-height: 50px" ></a>
+            <br>
+          </div>
       
     </div>
         </div>
