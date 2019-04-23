@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\User;
 use App\InstrutorAluno;
+use App\Helpers\CPFHelper;
 
 class AdminController extends Controller
 {
@@ -39,12 +40,25 @@ class AdminController extends Controller
 
     public function cadastraAluno(Request $request)
     {
+        $request->validate([
+            'name' => 'required',
+            'cpf' => 'cpf|required',
+            'email' => 'email|required',
+            'data_de_nascimento' => 'date',
+            'data_de_pagamento' => 'date',
+            'modalidade' => 'required',
+            'instrutor' => 'required',
+            'avaliacao' => 'file|required',
+        ]);
+
         $upload = $request->avaliacao->store('avaliacoes');
+
+        $cpf = CPFHelper::somenteNumeros($request->cpf);
         
         $user = $this->user->create([
             'name' => $request->name,
             'email' => $request->email,
-            'cpf' => $request->cpf,
+            'cpf' => $cpf,
             'password' => bcrypt($request->password),
             'tipo' => 'default',
             'data_de_nascimento' => $request->nascimento,

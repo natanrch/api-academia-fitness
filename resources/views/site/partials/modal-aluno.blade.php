@@ -1,3 +1,9 @@
+{{-- @php
+if(count($errors) > 0) {
+    dd($errors);
+}
+@endphp --}}
+
 <div class="modal fade modalaluno" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-lg">
     <div class="modal-content">
@@ -33,7 +39,7 @@
                         </div>
 
                          <div class="form-group row">
-                            <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('CPF') }}</label>
+                            <label for="cpf" class="col-md-4 col-form-label text-md-right">{{ __('CPF') }}</label>
 
                             <div class="col-md-6">
                                 <input id="cpf" type="text" class="form-control{{ $errors->has('cpf') ? ' is-invalid' : '' }}" name="cpf" value="{{ old('cpf') }}" required>
@@ -80,8 +86,8 @@
 
                             <div class="col-md-6">
                               <div class="input-group">
-                                 <input id="pagamento" type="date" class="form-control{{ $errors->has('data') ? ' is-invalid' : '' }}" name="pagamento" value="{{ old('pagamento') }}" required>
-                            </div>
+                                 <input id="pagamento" type="date" class="form-control{{ $errors->has('pagamento') ? ' is-invalid' : '' }}" name="pagamento" value="{{ old('pagamento') }}" required>
+                                </div>
                                 @if ($errors->has('pagamento'))
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $errors->first('pagamento') }}</strong>
@@ -96,9 +102,14 @@
 
                             <div class="col-md-6">
                                <select class="form-control" style="border: 1px solid #1827f580" id="modalidade" name="modalidade">
-                                   <option selected>Selecione</option>
+                                   <option value="" selected></option>
                                     <option value="musculação">Musculação</option>
                                </select>
+                                @if ($errors->has('modalidade'))
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('modalidade') }}</strong>
+                                    </span>
+                                @endif
                             </div>
                         </div>
 
@@ -107,11 +118,16 @@
 
                              <div class="col-md-6">
                                <select class="form-control" style="border: 1px solid #1827f580" id="instrutor" name="instrutor">
-                                   <option selected>Selecione</option>
+                                   <option selected></option>
                                    @foreach($instrutores as $instrutor)
                                         <option value="{{$instrutor->id}}">{{$instrutor->name}}</option>
                                     @endforeach
                                </select>
+                                @if ($errors->has('instrutor'))
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('instrutor') }}</strong>
+                                    </span>
+                                @endif
                             </div>
                         </div>
                       
@@ -120,6 +136,11 @@
 
                              <div class="col-md-6" >
                                 <input type="file" class="form-control-file" id="avaliacao" name="avaliacao" style=" border: 1px solid #ced4da; border-radius: 2px;" >
+                                @if ($errors->has('avaliacao'))
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('avaliacao') }}</strong>
+                                    </span>
+                                @endif
                             </div>
                         </div>
 
