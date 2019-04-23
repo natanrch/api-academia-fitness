@@ -62,7 +62,9 @@ class LoginController extends Controller
             }
             return redirect('/perfil');
         } else {
-            return redirect()->back();
+            return redirect()->back()->withErrors([
+                'invalido' => 'Login ou senha inválidos'
+            ]);
         }
     }
 

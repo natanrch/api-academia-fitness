@@ -2,6 +2,12 @@
 
 @section('content')
 
+@if(count($errors) > 0)
+<div class="alert alert-danger">
+  {{$errors->get('invalido')[0]}}
+</div>
+@endif
+
 <div style="background: url(../img/im.jpg); background-repeat: no-repeat; background-size: contain; background-size: 100% 100%; background-color:  ">
   <div class="container">
   <div class="row "  >
@@ -14,11 +20,11 @@
           <div class="input-group">
             <label for="cpf"></label>
                 <span class="input-group-addon"  style="border: 1px solid #ccc; padding: 4px;"><i class="fa fa-user playicon text-center" aria-hidden="true" style="font-size: 25px;"></i></span>
-                <input id="email" type="text" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="cpf" value="{{ old('cpf') }}" placeholder="CPF" required autofocus>
+                <input id="email" type="text" class="form-control{{ $errors->has('cpf') ? ' is-invalid' : '' }}" name="cpf" value="{{ old('cpf') }}" placeholder="CPF" required autofocus>
 
               @if ($errors->has('cpf'))
                   <span class="invalid-feedback" role="alert">
-                      <strong>{{ $errors->first('email') }}</strong>
+                      <strong>{{ $errors->first('cpf') }}</strong>
                   </span>
               @endif
             </div>
