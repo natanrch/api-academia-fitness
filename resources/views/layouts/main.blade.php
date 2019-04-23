@@ -21,7 +21,7 @@
   <main>
  	<header >
 
-    <nav class="navbar navbar-expand-lg navbar-light colormenu " id="navbar" style="padding: .1rem">
+    <nav class="navbar navbar-expand-lg navbar-light colormenu" id="navbar" style="padding: .1rem">
        <div class="container" id="topo">
   <!--logo -->
   <a class="navbar-brand" href="/"><img src="../img/logo.png" style="max-width:200px; max-height: 50px"></a>
@@ -110,6 +110,7 @@
 <script type="text/javascript" src="/js/app.js"></script>
 <script type="text/javascript" src="/js/sweetalert.js"></script>
 <script type="text/javascript" src="../js/efeito.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.2.0/sweetalert2.all.min.js"></script> 
 
 @stack('scripts')

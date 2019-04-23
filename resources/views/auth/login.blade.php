@@ -18,9 +18,9 @@
         <h2 class="text-center">ENTRAR</h2> 
         <div class="form-group">
           <div class="input-group">
-            <label for="cpf"></label>
                 <span class="input-group-addon"  style="border: 1px solid #ccc; padding: 4px;"><i class="fa fa-user playicon text-center" aria-hidden="true" style="font-size: 25px;"></i></span>
                 <input id="email" type="text" class="form-control{{ $errors->has('cpf') ? ' is-invalid' : '' }}" name="cpf" value="{{ old('cpf') }}" placeholder="CPF" required autofocus>
+
 
               @if ($errors->has('cpf'))
                   <span class="invalid-feedback" role="alert">
@@ -31,10 +31,9 @@
         </div>
     <div class="form-group">
             <div class="input-group">
-              <label for="senha"></label>
                 <span class="input-group-addon" style="border: 1px solid #ccc; padding: 3px;"><i class="fa fa-key playicon text-center" aria-hidden="true" style="font-size: 20px"></i></span>
-                <input id="password" type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" required placeholder="senha">
-
+                <input id="password" type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" required>
+                <label class="form-control-placeholder" for="password">SENHA</label>
               @if ($errors->has('password'))
                   <span class="invalid-feedback" role="alert">
                       <strong>{{ $errors->first('password') }}</strong>
