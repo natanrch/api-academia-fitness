@@ -49,6 +49,11 @@ class AdminController extends Controller
             'modalidade' => 'required',
             'instrutor' => 'required',
             'avaliacao' => 'file|required',
+        ], [
+            'message' => [
+                'content' => 'Informações incompletas ou inválidas',
+                'type' => 'danger',
+            ]
         ]);
 
         $upload = $request->avaliacao->store('avaliacoes');
@@ -74,6 +79,11 @@ class AdminController extends Controller
             'status' => 'sem_ficha',
         ]);
 
-        return redirect()->back();
+        return redirect()->back()->with([
+            'message' => [
+                'content' => 'Aluno cadastrado com sucesso!',
+                'type' => 'success',
+            ]
+        ]);
     }
 }
