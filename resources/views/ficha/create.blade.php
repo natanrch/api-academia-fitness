@@ -5,6 +5,15 @@
 <br><br>
 <!--texto CRIAR FICHA-->
 <section>
+@if(count($errors) > 0)
+	<div class="alert alert-danger">
+		<ul>
+			@foreach($errors->all() as $error)
+				<li>{{$error}}</li>
+			@endforeach
+		</ul>
+	</div>
+@endif
 <div class="container">
 	        <div class="section-header">
 	          <h2 class="text-center">CRIAR FICHA</h2>

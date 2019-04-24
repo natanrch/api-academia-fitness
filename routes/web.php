@@ -39,10 +39,14 @@ Route::get('/ficha-app', 'TelaUsuarioController@FichaApp');
 // 		Route::post('ficha/{id}', 'FichaController@setUltimoTreino');
 // 	}
 // );
-Route::get('/perfilaluno', 'TelaUsuarioController@Perfilnovo')->middleware(['auth', 'usuario-com-senha']);
-Route::get('/perfil', 'TelaUsuarioController@perfilUsuario')->middleware(['auth', 'usuario-com-senha']);
-Route::post('/perfil', 'FichaController@setUltimoTreino')->middleware(['usuario-com-senha']);
-Route::get('/ficha-aluno', 'TelaUsuarioController@ficha')->middleware(['auth', 'usuario-com-senha']);
+
+Route::group([
+	'prefix' => 'aluno'
+], function() {
+	Route::get('/perfil', 'TelaUsuarioController@Perfilnovo')->middleware(['auth', 'usuario-com-senha']);
+	Route::get('/ficha', 'TelaUsuarioController@ficha')->middleware(['auth', 'usuario-com-senha']);
+	Route::post('/ficha', 'FichaController@setUltimoTreino')->middleware(['usuario-com-senha']);
+});
 
 Route::get('/sobrenos', 'TelaUsuarioController@sobreNos');
 

@@ -60,7 +60,7 @@ class LoginController extends Controller
             if(Auth::user()->isAdmin()) {
                 return redirect('/admin');
             }
-            return redirect('/perfil');
+            return redirect('/aluno/ficha');
         } else {
             return redirect()->back()->withErrors([
                 'invalido' => 'Login ou senha inválidos'

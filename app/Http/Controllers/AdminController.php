@@ -20,6 +20,14 @@ class AdminController extends Controller
 
     public function cadastraInstrutor(Request $request)
     {
+
+        $request->validate([
+            'name' => 'required',
+            'cpf' => 'cpf|required',
+            'email' => 'email|required',
+            'cref' => 'required',
+        ]);
+
     	$user = $this->user->create([
     		'name' => $request->name,
     		'email' => $request->email,
@@ -49,11 +57,6 @@ class AdminController extends Controller
             'modalidade' => 'required',
             'instrutor' => 'required',
             'avaliacao' => 'file|required',
-        ], [
-            'message' => [
-                'content' => 'Informações incompletas ou inválidas',
-                'type' => 'danger',
-            ]
         ]);
 
         $upload = $request->avaliacao->store('avaliacoes');

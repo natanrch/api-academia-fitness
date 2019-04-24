@@ -78,6 +78,16 @@ class FichaController extends Controller
      */
     public function store(Request $request)
     {
+        $request->validate([
+            'objetivo' => 'required',
+            'metodo' => 'required',
+            'aquecimento' => 'numeric|required',
+            'treino_aerobico' => 'required',
+            'tempo_aerobico' => 'numeric|required',
+            'intervalo' => 'required',
+            'revisao' => 'date',
+        ]);
+
         $ficha = $this->ficha->create([
             'user_id' => session('user_id'),
             // 'dias_de_treinamento' => $request->dias,

@@ -24,11 +24,11 @@ class TelaUsuarioController extends Controller
         $this->ultimoTreino = $ultimoTreino;
     }
 
-    public function perfilUsuario(Request $request)
+    public function ficha(Request $request)
     {   
         $ficha = $this->ficha->where('user_id', Auth::id())->first();
         if($ficha == null) {
-            return 'usuário não possui ficha cadastrada';
+            return redirect('aluno/perfil');
         }
 
         $ultimoTreino = $this->ultimoTreino->where('ficha_id', $ficha->id)->orderBy('created_at', 'desc')->first();
@@ -58,7 +58,7 @@ class TelaUsuarioController extends Controller
             WHERE ficha_id = '.$ficha->id);
     
 
-    	return view('site.perfilaluno', [
+    	return view('site.ficha-aluno', [
             'ficha' => $ficha,
             'treino' => $treino,
             'treinoDeHoje' => $treinoDeHoje,
