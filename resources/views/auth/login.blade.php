@@ -2,11 +2,7 @@
 
 @section('content')
 
-@if(count($errors) > 0)
-<div class="alert alert-danger">
-  {{$errors->get('invalido')[0]}}
-</div>
-@endif
+
 
 <div style="background: url(../img/im.jpg); background-repeat: no-repeat; background-size: contain; background-size: 100% 100%; background-color:  ">
   <div class="container">
@@ -16,11 +12,17 @@
     <form method="POST" action="/login">
         {{csrf_field()}}
         <h2 class="text-center">ENTRAR</h2> 
+        @if(count($errors) > 0)
+<div class="alert alert-danger">
+  {{$errors->get('invalido')[0]}}
+</div>
+@endif
         <div class="form-group">
           <div class="input-group">
-                <span class="input-group-addon"  style="border: 1px solid #ccc; padding: 4px;"><i class="fa fa-user playicon text-center" aria-hidden="true" style="font-size: 25px;"></i></span>
-                <input id="email" type="text" class="form-control{{ $errors->has('cpf') ? ' is-invalid' : '' }}" name="cpf" value="{{ old('cpf') }}" placeholder="CPF" required autofocus>
 
+                <span class="input-group-addon"  style="border: 1px solid #ccc; padding: 4px;"><i class="fa fa-user playicon text-center" aria-hidden="true" style="font-size: 25px;"></i></span>
+                <input id="password" type="text" class="form-control{{ $errors->has('cpf') ? ' is-invalid' : '' }}" name="cpf" value="{{ old('cpf') }}"  required autofocus>
+                <label class="form-control-placeholder" for="password">CPF</label>
 
               @if ($errors->has('cpf'))
                   <span class="invalid-feedback" role="alert">
