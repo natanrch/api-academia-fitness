@@ -276,6 +276,16 @@ table>tbody>tr:hover{
 
 /* DESCRIÇÃO ACADEMIA */
 
+.textoapp{
+  font-size: 45px; 
+  color: #fff; 
+  font-family: 'Carter One', cursive;
+  text-shadow: 0 0 5px #000; 
+  border-radius: 15px 50px; 
+  background-color: ;
+  border: 1px solid #B95922;
+}
+
 .textacademia{
   color: #B95922;
   font-family: Cooper, Black;
@@ -535,6 +545,9 @@ line-height:inherit;
   .foto, .botoes {
     margin-left: 65px !important;
     }
+    .textoapp{
+      font-size: 40px !important;
+    }
   }
 
   @media (max-width: 991px) and (min-width: 573px) {
@@ -545,16 +558,11 @@ line-height:inherit;
         margin-left: 80px !important;
       }
     }
-  }
   
-    @media (min-width: 240px) {
-  table, .tableficha{
-    margin-left:15px !important;
-    margin-right: 15px !important;
+    @media (max-width: 500px) {
+
+  .textoapp{
+      font-size: 40px ;
+      padding: 3px;
     }
-    .musculo{
-      margin-top: 
-    }
-    .table-sm td, .table-sm th {
-    padding: .1rem !important;
-  }
+}
