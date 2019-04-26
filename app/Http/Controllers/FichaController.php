@@ -81,9 +81,9 @@ class FichaController extends Controller
         $request->validate([
             'objetivo' => 'required',
             'metodo' => 'required',
-            'aquecimento' => 'numeric|required',
-            'treino_aerobico' => 'required',
-            'tempo_aerobico' => 'numeric|required',
+            'aquecimento' => 'numeric',
+            'aerobico' => 'required',
+            'tempo_aerobico' => 'numeric',
             'intervalo' => 'required',
             'revisao' => 'date',
         ]);
@@ -200,6 +200,15 @@ class FichaController extends Controller
      */
     public function update(Request $request, Ficha $ficha)
     {
+        $request->validate([
+            'objetivo' => 'required',
+            'metodo' => 'required',
+            'aquecimento' => 'numeric',
+            'aerobico' => 'required',
+            'tempo_aerobico' => 'numeric',
+            'intervalo' => 'required',
+            'revisao' => 'date',
+        ]);
 
         $ficha->update([
             // 'dias_de_treinamento' => $request->dias,
