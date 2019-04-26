@@ -5,23 +5,23 @@
 <!-- O menu esta dentro da pasta layout, nome do aquivo main-->
 <!--Decricacao da academia-->
 <section>
- <div class="jumbotron jumbotron-fluid altura  d-flex align-content-center flex-wrap " style="background-image: url(img/homee.jpg); background-repeat: no-repeat; background-size: cover; background-attachment: fixed; background-color: #fff ;   ">
+ <div class="jumbotron jumbotron-fluid altura  d-flex align-content-center flex-wrap " style="background-image: url(img/Fotoram.io.jpg); background-repeat: no-repeat; background-size: cover; background-attachment: fixed; background-color: #fff ;   ">
      <div class="container">
       <div class="row">
-        <div class="col-sm-6 col-12 align-content-sm-center ">
-          <div class=" align-content-sm-center text-center">
-          <p class=" fontvigor" style=" font-size: 48px; color: #fff"> <strong>CONHEÇA O APLICATIVO DE TREINO DA <span style="color:">ACADEMIA FITNESS</span>  </strong> </p>
+        <div class="col-sm-5 col-12 align-content-sm-center text-center">
+          <br>
           
-          </div>
+          <p class="textoapp">CONHEÇA O APLICATIVO DE TREINO DA ACADEMIA FITNESS </p>
+          
         </div>
-         <div class="col-sm-6 col-12 align-content-sm-center">
+         <div class="col-sm-7 col-12 align-content-sm-center">
           <div class="embed-responsive embed-responsive-16by9">
-        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/zpOULjyy-n8?rel=0" allowfullscreen></iframe>
+        <iframe class="embed-responsive-item" src="img/video.mp4" allowfullscreen></iframe>
       </div>
       <div class="text-center">
-            <a href="" class="btn "><img src="img/store.png" alt="..." class="img-fluid" style="max-width: 200px; max-height: 50px" ></a>
-            <a href="" class="btn "><img src="img/app.png" alt="..." class="img-fluid" style="max-width: 200px; max-height: 50px" ></a>
-            
+            <a href="" class="btn "><img src="img/store.png" alt="baixa aplicativo na play store" class="img-fluid" style="max-width: 200px; max-height: 50px" ></a>
+            <a href="" class="btn "><img src="img/app.png" alt="baixa aplicativo na App store" class="img-fluid" style="max-width: 200px; max-height: 50px" ></a>
+            <br><br>
           </div>
       
     </div>

@@ -12,6 +12,8 @@
   <link href="{{ url('lib/venobox/venobox.css') }}" rel="stylesheet">
   <link href="{{ url('lib/owlcarousel/assets/owl.carousel.min.css') }}" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.2.0/sweetalert2.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Carter+One|Russo+One" rel="stylesheet">
+
 
 
 
@@ -21,7 +23,7 @@
   <main>
  	<header >
 
-    <nav class="navbar navbar-expand-lg navbar-light colormenu" id="navbar" style="padding: .1rem">
+    <nav class="navbar navbar-expand-lg navbar-light colormenu " id="navbar" style="padding: .1rem">
        <div class="container" id="topo">
   <!--logo -->
   <a class="navbar-brand" href="/"><img src="../img/logo.png" style="max-width:200px; max-height: 50px"></a>
