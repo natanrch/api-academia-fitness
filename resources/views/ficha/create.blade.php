@@ -1,3 +1,7 @@
+@php
+use App\Helpers\RemoveAcentosHelper;
+@endphp
+
 @extends('layouts.main')
 
 @section('content')
@@ -87,19 +91,12 @@
   		<p class="nomealuno" style="font-size: 20px">FILTRAR <i class="fa fa-filter playicon" aria-hidden="true" style="font-size: 20px"></i></p>
   	</div>
     <div class="form-group col-md-3 ">
-      <select name="" class="form-control">
-						<option selected>Categorias</option>
-						<option value="abdomem">abdomem</option>
-						
-						
-		</select>
-    </div>
-    <div class="form-group col-md-3">
-      <select name="" class="form-control">
-						<option selected>Exercícios</option>
-						<option value="A">Supra na Prancha</option>
-						
-		</select>
+    	Navegação rápida
+    	<ul>
+    		@foreach($tipos as $tipo)
+    			<li><a href="#{{RemoveAcentosHelper::removeAcentos($tipo->titulo)}}">{{$tipo->titulo}}</a></li>
+    		@endforeach
+    	</ul>
     </div>
     <!-- 
     <div class="form-group col-md-2 text-left">
@@ -113,7 +110,7 @@
 	
 	<div class="container ficha ">
 	@foreach($tipos as $tipo)
-		<h2>{{ucfirst($tipo->titulo)}}</h2>
+		<h2 id="{{RemoveAcentosHelper::removeAcentos($tipo->titulo)}}">{{ucfirst($tipo->titulo)}}</h2>
 		@foreach($tipo->exercicios as $exercicio)
 			<div class="row mb-3 " style="border-top:1px solid  #B95922 ">
 				<div class="col-md-1">

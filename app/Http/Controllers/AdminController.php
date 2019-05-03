@@ -18,6 +18,16 @@ class AdminController extends Controller
         $this->instrutorAluno = $instrutorAluno;
 	}
 
+    public function painel()
+    {
+        $instrutores = $this->user->where('tipo', 'instrutor')->get();
+        $alunos = $this->user->where('tipo', 'default')->get();
+        return view('site.perfil-adm', [
+            'instrutores' => $instrutores,
+            'alunos' => $alunos,
+        ]);
+    }
+
     public function cadastraInstrutor(Request $request)
     {
 

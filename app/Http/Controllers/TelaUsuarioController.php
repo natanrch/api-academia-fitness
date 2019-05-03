@@ -97,14 +97,6 @@ class TelaUsuarioController extends Controller
         return redirect('/perfil');
     }
 
-    public function adm()
-    {
-        $instrutores = $this->user->where('tipo', 'instrutor')->get();
-        return view('site.perfil-adm', [
-            'instrutores' => $instrutores,
-        ]);
-    }
-
     public function sobreNos()
     {
         return view('layouts.sobrenos');

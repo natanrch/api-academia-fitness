@@ -59,7 +59,7 @@ Route::group([
 		'prefix' => 'admin',
 		'middleware' => 'admin',
 	],  function() {
-	Route::get('/', 'TelaUsuarioController@adm');
+	Route::get('/', 'AdminController@painel');
 	Route::post('/cadastra-instrutor', 'AdminController@cadastraInstrutor');
 	Route::post('/cadastra-aluno', 'AdminController@cadastraAluno');
 });
