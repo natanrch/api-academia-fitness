@@ -50,6 +50,32 @@
 </div>
 <br>
 <div class="container">
+	<h3 class="text-center fontvigor ">PROPRIETÁRIO</h3>
+	<br>
+	<div class="row">
+	<div class="col-sm-12">
+
+	<div class="row">
+	<div class="col-12 col-sm-6">
+   
+    <div class="text-right imgdono">
+    <img src="img/dono.jpeg" alt="foto do proprietário" class="rounded-circle fotoaluno img-fluid"  >
+    </div>
+  
+ </div>
+  <div class="col-12 col-sm-4 ">
+    <h5 class="mt-0 nomealuno" >JORGE COSTA</h5>
+    <p class="ficha text-justify"> Doutorando em Ciências do Desporto pela UTAD/PT. Tem experiência em educação física, com ênfase em Avaliação Física, atuando principalmente dos seguintes temas: saúde, obesidade, aptidão física relacionada à saúde e condicionamento físico.</p>
+    </div>
+    
+</div>
+
+</div>
+</div>
+</div>
+<br>
+<div class="container">
+	<h3 class="text-center fontvigor ">INSTRUTORES</h3><br>
 	<div class="row">
 	<div class="col-sm-12">
 
@@ -57,24 +83,24 @@
 	<div class="col-12 col-sm-2">
    
     <div class="text-center">
-    <img src="img/ins1.jpg" alt="..." class="rounded-circle fotoaluno img-fluid" >
+    <img src="img/dono.jpeg" alt="foto do instrutor" class="rounded-circle fotoaluno img-fluid" >
     </div>
   
  </div>
   <div class="col-12 col-sm-4">
     <h5 class="mt-0 nomealuno" >JORGE COSTA</h5>
-    <p class="ficha">• Dono da Academia Fitness <br> Formado em Educação Física e Pós Graduado em (?). Atua na área a (?) anos, como (?).</p>
+     <p class="ficha text-justify"> Doutorando em Ciências do Desporto pela UTAD/PT. Tem experiência em educação física, com ênfase em Avaliação Física, atuando principalmente dos seguintes temas: saúde, obesidade, aptidão física relacionada à saúde e condicionamento físico.</p>
     </div>
     <div class="col-12 col-sm-2">
    
     <div class="text-center">
-    <img src="img/ins1.jpg" alt="..." class="rounded-circle fotoaluno img-fluid" >
+    <img src="img/dono.jpeg" alt="foto do instrutor" class="rounded-circle fotoaluno img-fluid" >
     </div>
   
  </div>
     <div class="col-12 col-sm-4">
     <h5 class="mt-0 nomealuno" >JORGE COSTA</h5>
-    <p class="ficha">• Dono da Academia Fitness <br> Formado em Educação Física e Pós Graduado em (?). Atua na área a (?) anos, como (?).</p>
+     <p class="ficha text-justify"> Doutorando em Ciências do Desporto pela UTAD/PT. Tem experiência em educação física, com ênfase em Avaliação Física, atuando principalmente dos seguintes temas: saúde, obesidade, aptidão física relacionada à saúde e condicionamento físico.</p>
     </div>
   </div>
 </div>
