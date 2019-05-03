@@ -18,10 +18,17 @@ class AdminController extends Controller
         $this->instrutorAluno = $instrutorAluno;
 	}
 
-    public function painel()
+    public function painel(Request $request)
     {
-        $instrutores = $this->user->where('tipo', 'instrutor')->get();
-        $alunos = $this->user->where('tipo', 'default')->get();
+        $instrutores = $this->user->where('tipo', 'instrutor')->limit(5)->get();
+        if($request->instrutor) {
+            $instrutores = $this->user->where('tipo', 'instrutor')->where('name', 'like', '%'.$request->instrutor.'%')->get();
+        }
+
+        $alunos = $this->user->where('tipo', 'default')->limit(5)->get();
+        if($request->aluno) {
+            $alunos = $this->user->where('tipo', 'default')->where('name', 'like', '%'.$request->aluno.'%')->get();
+        }
         return view('site.perfil-adm', [
             'instrutores' => $instrutores,
             'alunos' => $alunos,

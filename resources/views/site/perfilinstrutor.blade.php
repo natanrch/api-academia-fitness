@@ -37,7 +37,7 @@ use Carbon\Carbon;
 
      <form class="form-row" >
       <div class="form-group col-8 col-sm-8">
-        <input class="form-control inputb" type="search" placeholder="Pesquisar " aria-label="Search">
+        <input class="form-control inputb" type="search" placeholder="Pesquisar " aria-label="Search" name="aluno">
       </div>
       <div class="form-group col-2 col-sm-2">
       <button class="btn btnlaranja"  type="submit" style="border-radius: 50%"> <i class="fa fa-search" aria-hidden="true"></i></button>
