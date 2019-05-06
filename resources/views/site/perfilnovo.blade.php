@@ -2,28 +2,39 @@
 
 @section('content')
 <br>  
+
+<div class="container">
+        <div class="section-header">
+          <h2 class="text-center">MEU PERFIL</h2>
+          <hr style="max-width: 122px; height: 3px; background-color: #B95922;">
+        </div>
+        
+      </div>
+      <br>
 <div class="container">
 <div class="row ">
     <div class="col-sm-6">
-<div class="card mb-3" style="max-width: 540px; background: #8fb1b31a; border: none;">
+<div class="card mb-3" style="max-width: 540px; background: #060a4b; border: none;">
   <div class="row">
     <div class="col-md-4 text-center"><br>
-      <img src="../img/usuario.png" alt="foto de aluno" class="rounded-circle fotoaluno img-fluid"/>
+      <img src="../img/pp.jpg" alt="foto de aluno" class="rounded-circle fotoaluno img-fluid"/ style="margin:  5px"><br>
+      <button type="button" class="btn " data-toggle="modal" data-target=".adcfoto" style="margin-top: 5px; background-color: ; border: 1px solid #; border-radius: 15%"> <img src="../svg/photo-camera.svg" alt="foto de aluno" class=" img-fluid" width="25" height="25" style=""></button>
+
     </div>
     <div class="col-md-8">
       <div class="card-body">
-        <h5 class="card-title Nomeperfil">Nome do Aluno</h5>
-        <div class="descriperfil">
+        <h5 class="card-title Nomeperfil text-white">Nome do Aluno</h5>
+        <div class="descriperfil text-white">
                             Modalidade: Musculação
                             
                         </div>
-                         <div class="descriperfil">
+                         <div class="descriperfil text-white">
                             Data de Pagamento: 20/04/2019
                         </div>
-                         <div class="descriperfil">
+                         <div class="descriperfil text-white">
                             Data da Avaliação Física: 20/04/2019
                         </div>
-                         <div class="descriperfil">
+                         <div class="descriperfil text-white">
                             Instrutor: Jorce Costa
                         </div>
                         <br>
@@ -51,6 +62,8 @@
     </div>
 </div>
 </div>
+<!-- modal de avaliação fisica -->
 
-<br><br><br><br><br><br><br>
+@include('site.partials.modal-fotoperfil')
+<br><br><br>
     @endsection

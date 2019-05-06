@@ -433,7 +433,7 @@ transition-delay:.2s;
 }
 
 .smoothscroll-top:hover {
-background-color:#3877d4;
+background-color: #060A4B;
 color:#fff;
 transition:all .2s ease-in-out;
 transition-delay:0;

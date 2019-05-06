@@ -1,4 +1,4 @@
-<div class="modal fade foto" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+<div class="modal fade adcfoto" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-sm">
     <div class="modal-content">
       <div class="container">
@@ -7,8 +7,8 @@
         </button>
       <form>
   <div class="form-group">
-    <label for="exampleFormControlFile1">Escolha arquivo</label>
-    <input type="file" class="form-control-file" id="adcionar-arquivo" style=" border: 1px solid #ced4da; border-radius: 2px;">
+    <label for="exampleFormControlFile1">Escolha a Foto</label>
+    <input type="file" class="form-control-file" id="exampleFormControlFile1" style=" border: 1px solid #ced4da; border-radius: 2px;">
   </div>
   <div class="form-group text-right">
     <button type="submit" class="btn btnlaranja">Enviar</button>
@@ -18,3 +18,4 @@
     </div>
   </div>
 </div>
+
