@@ -90,13 +90,13 @@ use App\Helpers\RemoveAcentosHelper;
   	<div class="form-group col-md-12 ">
   		<p class="nomealuno" style="font-size: 20px">FILTRAR <i class="fa fa-filter playicon" aria-hidden="true" style="font-size: 20px"></i></p>
   	</div>
-    <div class="form-group col-md-3 ">
-    	Navegação rápida
-    	<ul>
+    <div class="form-group col-md-12 text-center ">
+    
     		@foreach($tipos as $tipo)
-    			<li><a href="#{{RemoveAcentosHelper::removeAcentos($tipo->titulo)}}">{{$tipo->titulo}}</a></li>
+
+    			<a href="#{{RemoveAcentosHelper::removeAcentos($tipo->titulo)}}" class="btn btnlaranja" style="margin:2px; text-transform: capitalize;">{{$tipo->titulo}}</a>
     		@endforeach
-    	</ul>
+    	
     </div>
     <!-- 
     <div class="form-group col-md-2 text-left">
