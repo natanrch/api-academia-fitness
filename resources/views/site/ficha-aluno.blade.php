@@ -106,16 +106,16 @@
   <tbody class="fonttd">
       @foreach($treino as $exercicio)
         <tr >
-          <td scope="row" > <input type="checkbox" aria-label="Checkbox for following text input" style="border: 1px solid #ccc"> {{$exercicio->exercicio->titulo}} 
+          <td scope="row" > <input type="checkbox" aria-label="Checkbox for following text input" style="border: 1px solid #ccc"> <span><strong>{{$exercicio->exercicio->titulo}}</strong> </span>
               <!-- Button trigger modal -->
               <button type="button" class="btn" data-toggle="modal" data-target=".bd-example-modal-xl" style="border-radius: 20%; background-color: #fff0">
-                <img src="../img/play.png" style="max-width: 40px; ">
+                <img src="../svg/play.svg" style="max-width: 40px; ">
                 
               </button>
 
             </td>
-          <td class="text-center">{{$exercicio->series}} x {{$exercicio->repeticoes}}</td>
-          <td class="text-center">{{$exercicio->peso}} Kg</td>
+          <td class="text-center"><span><strong>{{$exercicio->series}} x {{$exercicio->repeticoes}}</strong> </span></td>
+          <td class="text-center"><span><strong>{{$exercicio->peso}} Kg</strong> </span></td>
         </tr>
       @endforeach
   </tbody>
