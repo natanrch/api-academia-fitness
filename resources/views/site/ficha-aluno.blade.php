@@ -155,7 +155,7 @@
     <div class="modal-content">
       <div class="modal-body text-center">
         <h1 class="fontvigor text-center" style=" font-size: 40px;  color: #000">Mais um pra conta!</h1>
-        <img src="img/iconmusculo.png" alt="icone do musculo" class="rounded-circle " width="50" height="50" >
+        <img src="/img/iconmusculo.png" alt="icone do musculo" class="rounded-circle " width="50" height="50" >
       </div>
       <div class="modal-footer" >
         <form method="POST" id="finaliza">

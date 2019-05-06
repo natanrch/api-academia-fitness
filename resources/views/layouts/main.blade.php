@@ -26,7 +26,7 @@
     <nav class="navbar navbar-expand-lg navbar-light colormenu " id="navbar" style="padding: .1rem">
        <div class="container" id="topo">
   <!--logo -->
-  <a class="navbar-brand" href="/"><img src="../img/logo.png" style="max-width:200px; max-height: 50px"></a>
+  <a class="navbar-brand" href="/"><img src="/../img/logo.png" style="max-width:200px; max-height: 50px"></a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation" style="color: #fff; background-color: #fff; ">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -48,7 +48,7 @@
         @else
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: #fff; font-size: 18px ">
-          <img src="../img/usuario.png" alt="foto de perfil" width="30" height="30" class="d-inline-block align-top rounded-circle">
+          <img src="/../img/usuario.png" alt="foto de perfil" width="30" height="30" class="d-inline-block align-top rounded-circle">
         </a>
         <div class="dropdown-menu linkmenud colormenu text-left" aria-labelledby="navbarDropdownMenuLink" style="border:none;" >
           @if(Auth::user()->isInstrutor())

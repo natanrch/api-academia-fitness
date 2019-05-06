@@ -12,8 +12,8 @@
             <br>  
             <div >
             <p class="Nomeperfil">Nome Aluno</p>
-      <span class="descriperfil"> <b>Modalidade:</b>  <br> Musculação </span>
-      <p class="descriperfil">  <b> Data de Pagamento: </b><br> data  </p>
+      <span class="descriperfil"> Modalidade:  <br> Musculação </span>
+      <p class="descriperfil">   Data de Pagamento: <br> data  </p>
       <button type="file" class="btn  btnlaranja" >MINHA AVALIAÇÃO <i class="fa fa-download"  aria-hidden="true"></i></button></div>
           </div>
         </div>
