@@ -548,6 +548,9 @@ line-height:inherit;
     .textoapp{
       font-size: 40px !important;
     }
+     .contperfil{
+        max-width: 100%;
+      }
   }
 
   @media (max-width: 991px) and (min-width: 573px) {
@@ -557,6 +560,7 @@ line-height:inherit;
        .fotosins, .botoesins {
         margin-left: 80px !important;
       }
+
     }
   
     @media (max-width: 500px) {

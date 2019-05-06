@@ -62,7 +62,7 @@
     </div>
 </div>
 </div>
-<!-- modal de avaliação fisica -->
+<!-- modal de adcionar foto -->
 
 @include('site.partials.modal-fotoperfil')
 <br><br><br>

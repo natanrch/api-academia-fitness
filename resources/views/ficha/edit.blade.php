@@ -101,7 +101,7 @@ use App\Helpers\RemoveAcentosHelper;
 	
 	<div class="container ficha ">
 	@foreach($tipos as $tipo)
-		<h2>{{ucfirst($tipo->titulo)}}</h2>
+		<h2 id="{{RemoveAcentosHelper::removeAcentos($tipo->titulo)}}">{{ucfirst($tipo->titulo)}}</h2>
 		@foreach($tipo->exercicios as $exercicio)
 			<div class="row mb-3 " style="border-top:1px solid  #B95922 ">
 				<div class="col-md-1">

@@ -9,18 +9,19 @@ use Carbon\Carbon;
 
 <div class="container">
         <div class="row ">
-            <div class="col-md-3 perfil">
+            <div class="col-sm-3 col-12" >
                 <br>
 
-                <div class="card mb-3" style="max-width: 500px; background: #8fb1b31a; border: none;">
+                <div class="card mb-12 contperfil" style="max-width: 540px; max-height: 500px; background: #060a4b; border: none;">
   
-    <div class="col-md-12 text-center"><br>
-      <img src="../img/usuario.png" alt="foto de aluno" class="rounded-circle fotoaluno img-fluid"/>
+    <div class=" text-center"><br>
+      <img src="../img/pp.jpg" alt="foto de aluno" class="rounded-circle fotoaluno img-fluid"/ style="margin:  5px"><br>
+      <button type="button" class="btn " data-toggle="modal" data-target=".adcfoto" style="margin-top: 5px; background-color: ; border: 1px solid #; border-radius: 15%"> <img src="../svg/photo-camera.svg" alt="foto de aluno" class=" img-fluid" width="25" height="25" style=""></button>
     </div>
-    <div class="col-md-12">
+    <div class="">
       <div class="card-body">
-        <h5 class="card-title Nomeperfil">Nome do Instrutor</h5>
-            <div class="descriperfil">
+        <h5 class="card-title Nomeperfil text-white">Nome do Instrutor</h5>
+            <div class="descriperfil text-white">
                 CRF: 0000000000-00                           
             </div>
         <br>
@@ -82,5 +83,8 @@ use Carbon\Carbon;
 
 @include('site.partials.modal-aluno')
 
+<!-- modal de adcionar foto -->
+
+@include('site.partials.modal-fotoperfil')
 
 @endsection
