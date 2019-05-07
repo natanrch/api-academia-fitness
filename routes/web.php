@@ -43,7 +43,7 @@ Route::get('/ficha-app', 'TelaUsuarioController@FichaApp');
 Route::group([
 	'prefix' => 'aluno'
 ], function() {
-	Route::get('/perfil', 'TelaUsuarioController@Perfilnovo')->middleware(['auth', 'usuario-com-senha']);
+	Route::get('/perfil', 'TelaUsuarioController@perfilNovo')->middleware(['auth', 'usuario-com-senha']);
 	Route::get('/ficha', 'TelaUsuarioController@ficha')->middleware(['auth', 'usuario-com-senha']);
 	Route::post('/ficha', 'FichaController@setUltimoTreino')->middleware(['usuario-com-senha']);
 });
@@ -63,6 +63,8 @@ Route::group([
 	Route::post('/cadastra-instrutor', 'AdminController@cadastraInstrutor');
 	Route::post('/cadastra-aluno', 'AdminController@cadastraAluno');
 });
+
+Route::post('/upload-imagem', 'TelaUsuarioController@fotoPerfil')->middleware('auth');
 
 Route::group([
 		'prefix' => 'ficha',

@@ -73,9 +73,11 @@ class TelaUsuarioController extends Controller
         if($request->aluno) {
             $users = User::where('tipo', 'default')->where('name', 'like', '%'.$request->aluno.'%')->get();
         }
+        $instrutor = $this->user->find(Auth::id());
     	return view('site.perfilinstrutor', [
             'users' => $users,
             'instrutores' => $instrutores,
+            'instrutor' => $instrutor,
         ]);
     }
 
@@ -104,12 +106,25 @@ class TelaUsuarioController extends Controller
     {
         return view('layouts.sobrenos');
     }
-     public function Perfilnovo()
+    public function perfilNovo(Request $request)
     {
-        return view('site.perfilnovo');
+        $aluno = $this->user->find(Auth::id());
+        return view('site.perfilnovo', [
+            'aluno' => $aluno,
+        ]);
     }
 
-     public function LoginApp()
+    public function fotoPerfil(Request $request)
+    {
+        $upload = $request->imagem->store('perfil');
+        $user = $this->user->find(Auth::id());
+        $user->imagem = $upload;
+        $user->save();
+
+        return redirect()->back();
+    }
+
+    public function LoginApp()
     {
         return view('app.login-app');
     }
