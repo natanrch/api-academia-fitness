@@ -22,7 +22,7 @@ use Carbon\Carbon;
       <div class="card-body">
         <h5 class="card-title Nomeperfil text-white">{{$instrutor->name}}</h5>
             <div class="descriperfil text-white">
-                CRF: {{$instrutor->CRF}}                        
+                CREF: {{$instrutor->cref}}                        
             </div>
         <br>
       </div>
