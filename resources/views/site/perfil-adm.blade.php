@@ -40,7 +40,11 @@ fa-search" aria-hidden="true"></i></button> </div> </form> <br>
   <div class="col-6 col-sm-4 botoesins">
     <p class="nomealuno " style=" margin-top: 5px;">{{$instrutor->name}}</p>
     <div class="form-group">
-      <button type="button" class="btn btnazul btn-sm">Excluir <i class="fa fa-trash-o" aria-hidden="true"></i></button>
+      <form method="POST" action="/admin/bloqueia-usuario" class="form-bloquear">
+        {{csrf_field()}}
+        <input type="hidden" name="id" value="{{$instrutor->id}}">
+        <button type="submit" type="button" class="btn btnazul btn-sm" style="margin-top: 5px;">Bloquear <i class="fa fa-user-times" aria-hidden="true"></i></button>
+      </form>    
     </div>
   </div>
     </div>
@@ -79,11 +83,11 @@ fa-search" aria-hidden="true"></i></button> </div> </form> <br>
             <p class="nomealuno ">{{$aluno->name}}</p>
             <div class="form-group" >
               <button type="button" class="btn btnazul btn-sm" data-toggle="modal" data-target=".avaliar" style="margin-top: 5px;">Reavaliar <i class="fa fa-share" aria-hidden="true" ></i></button>
-              
-
-              <button type="button" class="btn btnazul btn-sm" style="margin-top: 5px;">Excluir <i class="fa fa-trash-o" aria-hidden="true"></i></button>
-
-              <button type="button" class="btn btnazul btn-sm" style="margin-top: 5px;">Bloquear <i class="fa fa-user-times" aria-hidden="true"></i></button>
+              <form method="POST" action="/admin/bloqueia-usuario" class="form-bloquear">
+                {{csrf_field()}}
+                <input type="hidden" name="id" value="{{$aluno->id}}">
+                <button type="submit" type="button" class="btn btnazul btn-sm" style="margin-top: 5px;">Bloquear <i class="fa fa-user-times" aria-hidden="true"></i></button>
+              </form>
             </div>
         </div>
       </div>
@@ -119,7 +123,27 @@ fa-search" aria-hidden="true"></i></button> </div> </form> <br>
 
 @include('site.partials.modal-avaliacao')
 
+@push('scripts')
+<script type="text/javascript">
+    $('.form-bloquear').submit(function(event) {
+    var ret = false;
+    event.preventDefault();
+    swal({
+      title: "Atenção!!",
+      text: "Deseja bloquear esse usuário?",
+      icon: "warning",
+      buttons: true,
+      dangerMode: true,
+    })
+    .then((willBloquear) => {
+      if (willBloquear) {
+        event.currentTarget.submit();
 
+      }
+    });
+  });
+</script>
+@endpush
 
 
 

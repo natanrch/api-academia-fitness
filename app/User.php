@@ -67,4 +67,11 @@ class User extends Authenticatable
         return $this->hasOne(InstrutorAluno::class, 'aluno_id');
     }
 
+    public function bloqueia()
+    {
+        $this->bloqueado = 1;
+        $this->save();
+        return $this;
+    }
+
 }

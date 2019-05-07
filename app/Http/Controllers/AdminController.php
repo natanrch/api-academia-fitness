@@ -109,4 +109,17 @@ class AdminController extends Controller
             ]
         ]);
     }
+
+    public function bloqueiaUsuario(Request $request)
+    {
+        $user = $this->user->find($request->id);
+        $user->bloqueia();
+
+        return redirect()->back()->with([
+            'message' => [
+                'content' => 'Usuário bloqueado com sucesso!',
+                'type' => 'success',
+            ]
+        ]);
+    }
 }
