@@ -23,23 +23,23 @@
     </div>
     <div class="col-md-8">
       <div class="card-body">
-        <h5 class="card-title Nomeperfil text-white">Nome do Aluno</h5>
+        <h5 class="card-title Nomeperfil text-white">{{$aluno->name}}</h5>
         <div class="descriperfil text-white">
-                            Modalidade: Musculação
+                            Modalidade: {{$aluno->modalidade}}
                             
                         </div>
                          <div class="descriperfil text-white">
-                            Data de Pagamento: 20/04/2019
+                            Data de Pagamento: {{$aluno->data_de_pagamento}}
                         </div>
                          <div class="descriperfil text-white">
-                            Data da Avaliação Física: 20/04/2019
+                            Data da Próxima Avaliação Física: {{$aluno->proxima_avaliacao}}
                         </div>
                          <div class="descriperfil text-white">
-                            Instrutor: Jorce Costa
+                            Instrutor: {{$aluno->instrutor->instrutor->name}}
                         </div>
                         <br>
                         <div class="">
-                          <a href="edit.html" class="btn btnlaranja btn-sm">AVALIAÇÃO FÍSICA <i class="fa fa-line-chart" aria-hidden="true"  style="color: #F1F1F1"></i></a>
+                          <a href="{{asset('storage/'.$aluno->avaliacao)}}" class="btn btnlaranja btn-sm">AVALIAÇÃO FÍSICA <i class="fa fa-line-chart" aria-hidden="true"  style="color: #F1F1F1"></i></a>
                         </div>
       </div>
     </div>

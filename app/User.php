@@ -16,7 +16,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password', 'cpf', 'tipo', 'data_de_nascimento', 'data_de_pagamento', 'modalidade', 'avaliacao', 'cref', 'novo_usuario'
+        'name', 'email', 'password', 'cpf', 'tipo', 'data_de_nascimento', 'data_de_pagamento', 'modalidade', 'avaliacao', 'cref', 'novo_usuario', 'proxima_avaliacao'
     ];
 
     /**
@@ -55,6 +55,11 @@ class User extends Authenticatable
     public function ficha()
     {
         return $this->hasOne('App\Ficha');
+    }
+
+    public function instrutor()
+    {
+        return $this->hasOne(InstrutorAluno::class, 'aluno_id');
     }
 
 }

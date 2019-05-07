@@ -144,6 +144,21 @@ if(count($errors) > 0) {
                             </div>
                         </div>
 
+                        <div class="form-group row">
+                            <label for="proxima_avaliacao" class="col-md-4 col-form-label text-md-right">{{ __('DATA DA PRÓXIMA AVALIAÇÃO') }}</label>
+
+                            <div class="col-md-6">
+                              <div class="input-group">
+                                 <input id="proxima_avaliacao" type="date" class="form-control{{ $errors->has('proxima_avaliacao') ? ' is-invalid' : '' }}" name="proxima_avaliacao" value="{{ old('proxima_avaliacao') }}" required>
+                                </div>
+                                @if ($errors->has('proxima_avaliacao'))
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('proxima_avaliacao') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        </div>
+
                         <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-4">
                                 <button type="submit" class="btn btnlaranja " id="successaluno">

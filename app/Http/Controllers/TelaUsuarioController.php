@@ -99,7 +99,13 @@ class TelaUsuarioController extends Controller
             'novo_usuario' => 0,
         ]);
 
-        return redirect('/perfil');
+        if($user->isDefault()) {
+            return redirect('/aluno/perfil');
+        }
+
+        if($user->isInstrutor()) {
+            return redirect('/instrutor/perfil');
+        }
     }
 
     public function sobreNos()

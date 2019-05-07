@@ -74,8 +74,10 @@ class AdminController extends Controller
             'modalidade' => 'required',
             'instrutor' => 'required',
             'avaliacao' => 'file|required',
+            'proxima_avaliacao' => 'date'
         ]);
 
+        // dd($request->proxima_avaliacao);
         $upload = $request->avaliacao->store('avaliacoes');
 
         $cpf = CPFHelper::somenteNumeros($request->cpf);
@@ -91,6 +93,7 @@ class AdminController extends Controller
             'modalidade' => $request->modalidade,
             'avaliacao' => $upload,
             'novo_usuario' => 1,
+            'proxima_avaliacao' => $request->proxima_avaliacao,
         ]);
 
         $instrutorAluno = $this->instrutorAluno->create([
