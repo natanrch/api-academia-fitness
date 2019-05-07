@@ -41,7 +41,8 @@ Route::get('/ficha-app', 'TelaUsuarioController@FichaApp');
 // );
 
 Route::group([
-	'prefix' => 'aluno'
+	'prefix' => 'aluno',
+	'middleware' => 'bloqueado'
 ], function() {
 	Route::get('/perfil', 'TelaUsuarioController@perfilNovo')->middleware(['auth', 'usuario-com-senha']);
 	Route::get('/ficha', 'TelaUsuarioController@ficha')->middleware(['auth', 'usuario-com-senha']);
@@ -50,7 +51,7 @@ Route::group([
 
 Route::get('/sobrenos', 'TelaUsuarioController@sobreNos');
 
-Route::get('/instrutor/perfil', 'TelaUsuarioController@perfilInstrutor')->middleware(['instrutor', 'usuario-com-senha']);
+Route::get('/instrutor/perfil', 'TelaUsuarioController@perfilInstrutor')->middleware(['instrutor', 'usuario-com-senha', 'bloqueado']);
 
 Route::get('/cadastra-senha', 'TelaUsuarioController@formSenha')->middleware('auth');
 Route::post('/cadastra-senha', 'TelaUsuarioController@cadastraSenha')->middleware('auth');
@@ -68,7 +69,7 @@ Route::post('/upload-imagem', 'TelaUsuarioController@fotoPerfil')->middleware('a
 
 Route::group([
 		'prefix' => 'ficha',
-		'middleware' => 'instrutor',
+		'middleware' => ['instrutor', 'bloqueado']
 	], function() {
 	Route::get('create', 'FichaController@create');
 	Route::post('create', 'FichaController@store');

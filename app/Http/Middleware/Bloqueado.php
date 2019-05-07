@@ -2,10 +2,11 @@
 
 namespace App\Http\Middleware;
 
+
 use Closure;
 use Auth;
 
-class Instrutor
+class Bloqueado
 {
     /**
      * Handle an incoming request.
@@ -16,13 +17,13 @@ class Instrutor
      */
     public function handle($request, Closure $next)
     {
-        if (Auth::check() && Auth::user()->isInstrutor()) {
+        if (Auth::check() && !Auth::user()->isBloqueado()) {
             return $next($request);
         } else {
             Auth::logout();
             return redirect('login')->with([
                 'message' => [
-                    'content' => 'Usuário não é instrutor.',
+                    'content' => 'Usuário bloqueado, entre em contato com o adminstrador do sistema.',
                     'type' => 'danger',
                 ]
             ]);

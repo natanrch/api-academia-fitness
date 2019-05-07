@@ -17,6 +17,12 @@
   {{$errors->get('invalido')[0]}}
 </div>
 @endif
+@if(session('message'))
+  @component('components.alert')
+    @slot('type'){{ session('message')['type'] }}@endslot
+    {{ session('message')['content'] }}
+  @endcomponent
+@endif
         <div class="form-group">
           <div class="input-group">
 

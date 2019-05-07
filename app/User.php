@@ -52,6 +52,11 @@ class User extends Authenticatable
         return $this->novo_usuario == true;
     } 
 
+    public function isBloqueado()
+    {
+        return $this->bloqueado == true;
+    }
+
     public function ficha()
     {
         return $this->hasOne('App\Ficha');

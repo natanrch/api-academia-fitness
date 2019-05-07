@@ -1,4 +1,5 @@
 <html>
+
 <head>
     <link href="/css/app.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="/css/estilo.css">
@@ -22,7 +23,6 @@
 <body>
   <main>
  	<header >
-
     <nav class="navbar navbar-expand-lg navbar-light colormenu " id="navbar" style="padding: .1rem">
        <div class="container" id="topo">
   <!--logo -->
