@@ -64,6 +64,7 @@ Route::group([
 	Route::post('/cadastra-instrutor', 'AdminController@cadastraInstrutor');
 	Route::post('/cadastra-aluno', 'AdminController@cadastraAluno');
 	Route::post('/bloqueia-usuario', 'AdminController@bloqueiaUsuario');
+	Route::post('/reavaliar', 'AdminController@reavaliar');
 });
 
 Route::post('/upload-imagem', 'TelaUsuarioController@fotoPerfil')->middleware('auth');

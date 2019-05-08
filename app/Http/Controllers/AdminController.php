@@ -122,4 +122,18 @@ class AdminController extends Controller
             ]
         ]);
     }
+
+    public function reavaliar(Request $request)
+    {
+        $user = $this->user->find($request->id);
+        $upload = $request->avaliacao->store('avaliacoes');
+        $user->reavalia($upload);
+
+        return redirect()->back()->with([
+            'message' => [
+                'content' => 'Reavaliação realizada com sucesso!',
+                'type' => 'success',
+            ]
+        ]);
+    }
 }

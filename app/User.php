@@ -74,4 +74,11 @@ class User extends Authenticatable
         return $this;
     }
 
+    public function reavalia($upload)
+    {
+        $this->avaliacao = $upload;
+        $this->save();
+        return $this;
+    }
+
 }
