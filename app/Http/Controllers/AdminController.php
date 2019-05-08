@@ -125,6 +125,10 @@ class AdminController extends Controller
 
     public function reavaliar(Request $request)
     {
+        $request->validate([
+            'avaliacao' => 'file|required',
+            'proxima_avaliacao' => 'date|required',
+        ]);
         $user = $this->user->find($request->id);
         $upload = $request->avaliacao->store('avaliacoes');
         $user->reavalia($upload);

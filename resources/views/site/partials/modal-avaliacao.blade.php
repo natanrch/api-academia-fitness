@@ -7,6 +7,8 @@
         </button>
       <form method="POST" action="admin/reavaliar" enctype="multipart/form-data">
   <div class="form-group">
+    <label for="proxima_avaliacao" class="col-md-4 col-form-label text-md-right">{{ __('DATA DA PRÓXIMA AVALIAÇÃO') }}</label>
+    <input id="proxima_avaliacao" type="date" class="form-control{{ $errors->has('proxima_avaliacao') ? ' is-invalid' : '' }}" name="proxima_avaliacao" value="{{ old('proxima_avaliacao') }}" required>
     <label for="exampleFormControlFile1">Escolha arquivo</label>
     <input type="file" name="avaliacao" class="form-control-file" id="exampleFormControlFile1" style=" border: 1px solid #ced4da; border-radius: 2px;">
     <input type="hidden" name="id" value="{{$aluno->id}}">
