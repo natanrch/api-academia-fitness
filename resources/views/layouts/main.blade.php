@@ -14,6 +14,7 @@
   <link href="{{ url('lib/owlcarousel/assets/owl.carousel.min.css') }}" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.2.0/sweetalert2.min.css">
   <link href="https://fonts.googleapis.com/css?family=Carter+One|Russo+One" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Secular+One" rel="stylesheet">
 
 
 

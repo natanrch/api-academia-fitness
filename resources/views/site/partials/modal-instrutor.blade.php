@@ -22,7 +22,7 @@
                         <input type="hidden" name="password" value="senhapadrao">
 
                         <div class="form-group row">
-                            <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('NOME') }}</label>
+                            <label for="name" class="col-md-4 col-form-label text-md-right required">{{ __('NOME') }}</label>
 
                             <div class="col-md-6">
                                 <input id="name" type="text" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" name="name" value="{{ old('name') }}" required autofocus>
@@ -36,7 +36,7 @@
                         </div>
 
                         <div class="form-group row">
-                            <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('CREF') }}</label>
+                            <label for="email" class="col-md-4 col-form-label text-md-right required">{{ __('CREF') }}</label>
 
                             <div class="col-md-6">
                                 <input id="cref" type="text" class="form-control{{ $errors->has('cref') ? ' is-invalid' : '' }}" name="cref" value="{{ old('cref') }}" required>
@@ -49,7 +49,7 @@
                             </div>
                         </div>
                         <div class="form-group row">
-                            <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('CPF') }}</label>
+                            <label for="email" class="col-md-4 col-form-label text-md-right required">{{ __('CPF') }}</label>
 
                             <div class="col-md-6">
                                 <input id="cpf" type="text" class="form-control{{ $errors->has('cpf') ? ' is-invalid' : '' }}" name="cpf" value="{{ old('cpf') }}" required>
@@ -62,7 +62,7 @@
                             </div>
                         </div>
                         <div class="form-group row">
-                            <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail') }}</label>
+                            <label for="email" class="col-md-4 col-form-label text-md-right required">{{ __('E-Mail') }}</label>
 
                             <div class="col-md-6">
                                 <input id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" required>

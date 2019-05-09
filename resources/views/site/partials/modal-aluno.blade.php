@@ -25,7 +25,7 @@ if(count($errors) > 0) {
                         <input type="hidden" name="password" value="senhapadrao">
 
                         <div class="form-group row">
-                            <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('NOME') }}</label>
+                            <label for="name" class="col-md-4 col-form-label text-md-right required">{{ __('NOME') }}</label>
 
                             <div class="col-md-6">
                                 <input id="name" type="text" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" name="name" value="{{ old('name') }}" required autofocus>
@@ -39,7 +39,7 @@ if(count($errors) > 0) {
                         </div>
 
                          <div class="form-group row">
-                            <label for="cpf" class="col-md-4 col-form-label text-md-right">{{ __('CPF') }}</label>
+                            <label for="cpf" class="col-md-4 col-form-label text-md-right required">{{ __('CPF') }}</label>
 
                             <div class="col-md-6">
                                 <input id="cpf" type="text" class="form-control{{ $errors->has('cpf') ? ' is-invalid' : '' }}" name="cpf" value="{{ old('cpf') }}" required>
@@ -68,7 +68,7 @@ if(count($errors) > 0) {
                         </div> -->
 
                          <div class="form-group row">
-                            <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-MAIL') }}</label>
+                            <label for="email" class="col-md-4 col-form-label text-md-right required">{{ __('E-MAIL') }}</label>
 
                             <div class="col-md-6">
                                 <input id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" required>
@@ -98,7 +98,7 @@ if(count($errors) > 0) {
 
 
                         <div class="form-group row">
-                            <label for="modalidade" class="col-md-4 col-form-label text-md-right">{{ __('MODALIDADE') }}</label>
+                            <label for="modalidade" class="col-md-4 col-form-label text-md-right required">{{ __('MODALIDADE') }}</label>
 
                             <div class="col-md-6">
                                <select class="form-control" style="border: 1px solid #1827f580" id="modalidade" name="modalidade">
@@ -114,7 +114,7 @@ if(count($errors) > 0) {
                         </div>
 
                           <div class="form-group row">
-                            <label for="instrutor" class="col-md-4 col-form-label text-md-right">{{ __('INSTRUTOR') }}</label>
+                            <label for="instrutor" class="col-md-4 col-form-label text-md-right required">{{ __('INSTRUTOR') }}</label>
 
                              <div class="col-md-6">
                                <select class="form-control" style="border: 1px solid #1827f580" id="instrutor" name="instrutor">
@@ -145,7 +145,7 @@ if(count($errors) > 0) {
                         </div>
 
                         <div class="form-group row">
-                            <label for="proxima_avaliacao" class="col-md-4 col-form-label text-md-right">{{ __('DATA DA PRÓXIMA AVALIAÇÃO') }}</label>
+                            <label for="proxima_avaliacao" class="col-md-4 col-form-label text-md-right ">{{ __('DATA DA PRÓXIMA AVALIAÇÃO') }}</label>
 
                             <div class="col-md-6">
                               <div class="input-group">

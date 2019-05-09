@@ -39,7 +39,7 @@
                 {{csrf_field()}}
                 <h2 class="text-center">Crie sua nova senha</h2> 
                 <div class="form-group">
-                     <label for="password">{{ __('Senha') }}</label>
+                     <label for="password" class="required">{{ __('Senha') }}</label>
                   <div class="input-group">
                         <input id="password" type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" placeholder="nova senha" required autofocus style="border-radius: 50px;">
 
@@ -52,7 +52,7 @@
                     </div>
                 </div>
                 <div class="form-group">
-                    <label for="password-confirm">{{ __('Confirmar Senha') }}</label>
+                    <label for="password-confirm" class="required">{{ __('Confirmar Senha') }}</label>
                     <div class="input-group">
                         <input id="password-confirm" type="password" class="form-control" name="password_confirmation" placeholder="nova senha" required style="border-radius: 50px;">
                     </div>
