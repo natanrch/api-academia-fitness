@@ -1,0 +1,1 @@
+Instrutor: {{$aluno->instrutor->instrutor->name}} 

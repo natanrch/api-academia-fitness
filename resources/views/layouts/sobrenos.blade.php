@@ -64,7 +64,7 @@
   
  </div>
   <div class="col-12 col-sm-4 ">
-    <h5 class="mt-0 nomealuno" >JORGE COSTA</h5>
+    <h5 class="mt-0 nomealuno" style="font-size: 20px">Jorge Costa</h5>
     <p class="ficha text-justify"> Doutorando em Ciências do Desporto pela UTAD/PT. Tem experiência em educação física, com ênfase em Avaliação Física, atuando principalmente dos seguintes temas: saúde, obesidade, aptidão física relacionada à saúde e condicionamento físico.</p>
     </div>
     
@@ -73,9 +73,9 @@
 </div>
 </div>
 </div>
-<br>
+<hr class="linha">
 <div class="container">
-	<h3 class="text-center fontvigor ">INSTRUTORES</h3><br>
+	<h3 class="text-center fontvigor " >INSTRUTORES</h3><br>
 	<div class="row">
 	<div class="col-sm-12">
 
@@ -83,24 +83,24 @@
 	<div class="col-12 col-sm-2">
    
     <div class="text-center">
-    <img src="img/dono.jpeg" alt="foto do instrutor" class="rounded-circle fotoaluno img-fluid" >
+    <img src="img/keyton.jpeg" alt="foto do instrutor" class="rounded-circle fotoaluno img-fluid" >
     </div>
-  
+  <br>
  </div>
   <div class="col-12 col-sm-4">
-    <h5 class="mt-0 nomealuno" >JORGE COSTA</h5>
-     <p class="ficha text-justify"> Doutorando em Ciências do Desporto pela UTAD/PT. Tem experiência em educação física, com ênfase em Avaliação Física, atuando principalmente dos seguintes temas: saúde, obesidade, aptidão física relacionada à saúde e condicionamento físico.</p>
+    <h5 class="mt-0 nomealuno" style="font-size: 20px">Kleyton Souza Pereira</h5>
+     <p class="ficha text-justify"><span>CREF: <br></span> Graduado em Educação Física - Licenciatura (2017) pela FAMA. Pós graduado em fisiologia do exercício, nutrição e nutrição esportiva. Trabalho  como Instrutor  na Fitness Academia desde 2017.</p>
     </div>
     <div class="col-12 col-sm-2">
    
     <div class="text-center">
-    <img src="img/dono.jpeg" alt="foto do instrutor" class="rounded-circle fotoaluno img-fluid" >
+    <img src="img/camilo.jpeg" alt="foto do instrutor" class="rounded-circle fotoaluno img-fluid" >
     </div>
-  
+  <br>
  </div>
     <div class="col-12 col-sm-4">
-    <h5 class="mt-0 nomealuno" >JORGE COSTA</h5>
-     <p class="ficha text-justify"> Doutorando em Ciências do Desporto pela UTAD/PT. Tem experiência em educação física, com ênfase em Avaliação Física, atuando principalmente dos seguintes temas: saúde, obesidade, aptidão física relacionada à saúde e condicionamento físico.</p>
+    <h5 class="mt-0 nomealuno" style="font-size: 20px">Camilo Abrahão</h5>
+     <p class="ficha text-justify"><span>CREF: <br></span>Graduado em Educação Física - Licenciatura (2017) e cursando Educação Física - Bacharelado. Cursos em ginástica, aperfeiçoamento e conteúdo para transmitir aos alunos um melhor atendimento. Instrutor na Fitness Academia desde 2018.</p>
     </div>
   </div>
 </div>

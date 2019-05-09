@@ -15,7 +15,7 @@ use Carbon\Carbon;
                 <div class="card mb-12 contperfil" style="max-width: 540px; max-height: 500px; background: #060a4b; border: none;">
   
     <div class=" text-center"><br>
-      <img src="{{asset('storage/'.$instrutor->imagem)}}" alt="foto de aluno" class="rounded-circle fotoaluno img-fluid"/ style="margin:  5px"><br>
+      <img src="{{asset('storage/'.$instrutor->imagem)}}" alt="foto de instrutor" class="rounded-circle fotoaluno img-fluid"/ style="margin:  5px"><br>
       <button type="button" class="btn " data-toggle="modal" data-target=".adcfoto" style="margin-top: 5px; background-color: ; border: 1px solid #; border-radius: 15%"> <img src="../svg/photo-camera.svg" alt="foto de aluno" class=" img-fluid" width="25" height="25" style=""></button>
     </div>
     <div class="">

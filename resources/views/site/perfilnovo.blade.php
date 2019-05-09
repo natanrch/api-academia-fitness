@@ -18,7 +18,7 @@
   <div class="row">
     <div class="col-md-4 text-center"><br>
       <img src="{{asset('storage/'.$aluno->imagem)}}" alt="foto de aluno" class="rounded-circle fotoaluno img-fluid"/ style="margin:  5px"><br>
-      <button type="button" class="btn " data-toggle="modal" data-target=".adcfoto" style="margin-top: 5px; background-color: ; border: 1px solid #; border-radius: 15%"> <img src="../svg/photo-camera.svg" alt="foto de aluno" class=" img-fluid" width="25" height="25" style=""></button>
+      <button type="button" class="btn " data-toggle="modal" data-target=".adcfoto" style="margin-top: 5px; background-color: ; border: 1px solid #; border-radius: 15%"> <img src="../svg/photo-camera.svg" alt="foto de aluno" class=" img-fluid" width="25" height="25" style=""></button><br><br>
 
     </div>
     <div class="col-md-8">
@@ -35,7 +35,7 @@
                             Data da Próxima Avaliação Física: {{$aluno->proxima_avaliacao}}
                         </div>
                          <div class="descriperfil text-white">
-                            Instrutor: {{$aluno->instrutor->instrutor->name}}
+                             
                         </div>
                         <br>
                         <div class="">

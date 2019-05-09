@@ -128,7 +128,7 @@ use App\Helpers\RemoveAcentosHelper;
 				<div class="col-md-5">
 					<label>Exercicio</label>
 					<input type="text" value="{{$exercicio->titulo}}" class="form-control" readonly>
-					<input type="hidden" name="exercicio[]" value="{{$exercicio->id}}">c
+					<input type="hidden" name="exercicio[]" value="{{$exercicio->id}}">
 				</div>
 				<div class="col-md-2">
 					<label>Séries</label>
