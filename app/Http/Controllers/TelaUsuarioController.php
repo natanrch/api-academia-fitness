@@ -28,7 +28,12 @@ class TelaUsuarioController extends Controller
     {   
         $ficha = $this->ficha->where('user_id', Auth::id())->first();
         if($ficha == null) {
-            return redirect('aluno/perfil');
+            return redirect('aluno/perfil')->with([
+                'message' => [
+                    'content' => 'Sua ficha ainda não foi criada, fale com seu instrutor',
+                    'type' => 'danger',
+                ]
+            ]);
         }
 
         $ultimoTreino = $this->ultimoTreino->where('ficha_id', $ficha->id)->orderBy('created_at', 'desc')->first();
@@ -73,11 +78,14 @@ class TelaUsuarioController extends Controller
         if($request->aluno) {
             $alunos = User::where('tipo', 'default')->where('name', 'like', '%'.$request->aluno.'%')->get();
         }
+
+        $totalAlunos = count($alunos);
         $instrutor = $this->user->find(Auth::id());
     	return view('site.perfilinstrutor', [
             'alunos' => $alunos,
             'instrutores' => $instrutores,
             'instrutor' => $instrutor,
+            'totalAlunos' => $totalAlunos,
         ]);
     }
 

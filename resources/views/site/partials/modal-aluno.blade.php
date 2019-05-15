@@ -1,8 +1,3 @@
-{{-- @php
-if(count($errors) > 0) {
-    dd($errors);
-}
-@endphp --}}
 
 <div class="modal fade modalaluno" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-lg">
@@ -86,11 +81,12 @@ if(count($errors) > 0) {
 
                             <div class="col-md-6">
                               <div class="input-group">
-                                 <input id="pagamento" type="date" class="form-control{{ $errors->has('pagamento') ? ' is-invalid' : '' }}" name="pagamento" value="{{ old('pagamento') }}" required>
+                                 <input id="pagamento" type="number" class="form-control{{ $errors->has('pagamento') ? ' is-invalid' : '' }}" name="pagamento" value="{{ old('pagamento') }}" required>
                                 </div>
                                 @if ($errors->has('pagamento'))
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $errors->first('pagamento') }}</strong>
+                                        }
                                     </span>
                                 @endif
                             </div>

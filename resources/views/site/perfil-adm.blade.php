@@ -51,7 +51,7 @@ fa-search" aria-hidden="true"></i></button> </div> </form> <br>
 @endforeach
 <br><br>
     <div>
-    	<h3>TOTAL:</h3>
+    	<h3>TOTAL: {{$totalInstrutores}}</h3>
     </div>
 </div>
 
@@ -94,7 +94,7 @@ fa-search" aria-hidden="true"></i></button> </div> </form> <br>
     @endforeach
 <br><br>
     <div>
-    	<h3>TOTAL:</h3>
+    	<h3>TOTAL: {{$totalAlunos}}</h3>
     </div>
 
     </div>

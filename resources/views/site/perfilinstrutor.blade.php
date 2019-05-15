@@ -73,7 +73,7 @@ use Carbon\Carbon;
                             <br>
                         </div>
                     </div>
-            <h4>TOTAL:</h4>
+            <h4>TOTAL:{{$totalAlunos}}</h4>
                 </div>
             </div>
         </div>

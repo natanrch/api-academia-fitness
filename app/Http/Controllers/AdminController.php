@@ -29,9 +29,14 @@ class AdminController extends Controller
         if($request->aluno) {
             $alunos = $this->user->where('tipo', 'default')->where('name', 'like', '%'.$request->aluno.'%')->get();
         }
+
+        $totalAlunos = count($alunos);
+        $totalInstrutores = count($instrutores);
         return view('site.perfil-adm', [
             'instrutores' => $instrutores,
             'alunos' => $alunos,
+            'totalAlunos' => $totalAlunos,
+            'totalInstrutores' => $totalInstrutores
         ]);
     }
 
@@ -70,7 +75,7 @@ class AdminController extends Controller
             'cpf' => 'cpf|required',
             'email' => 'email|required',
             'data_de_nascimento' => 'date',
-            'data_de_pagamento' => 'date',
+            'pagamento' => 'numeric|min:1|max:31',
             'modalidade' => 'required',
             'instrutor' => 'required',
             'avaliacao' => 'file|required',

@@ -82,8 +82,6 @@ class FichaController extends Controller
             'objetivo' => 'required',
             'metodo' => 'required',
             'aquecimento' => 'numeric',
-            'aerobico' => 'required',
-            'tempo_aerobico' => 'numeric',
             'intervalo' => 'required',
             'revisao' => 'date',
         ]);
@@ -174,8 +172,6 @@ class FichaController extends Controller
             'objetivo' => 'required',
             'metodo' => 'required',
             'aquecimento' => 'numeric',
-            'aerobico' => 'required',
-            'tempo_aerobico' => 'numeric',
             'intervalo' => 'required',
             'revisao' => 'date',
         ]);
