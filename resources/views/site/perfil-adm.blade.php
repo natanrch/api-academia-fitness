@@ -33,7 +33,7 @@ fa-search" aria-hidden="true"></i></button> </div> </form> <br>
   <div class="col-6 col-sm-2 fotosins">
    
     <div class="text-center">
-    <img src="../img/usuario.png" alt="..." class="rounded-circle" style="width: 80px; height: 80px">
+    <img src="{{$instrutor->imagem ? asset('storage/'.$instrutor->imagem) : '../img/usuario.png'}}" alt="..." class="rounded-circle" style="width: 80px; height: 80px">
     </div>
   
  </div>
@@ -75,7 +75,7 @@ fa-search" aria-hidden="true"></i></button> </div> </form> <br>
         <div class="col-6 col-sm-2 fotos">
          
           <div class="text-center">
-          <img src="../img/usuario.png" alt="..." class="rounded-circle" style="width: 80px; height: 80px">
+          <img src="{{$aluno->imagem ? asset('storage/'.$aluno->imagem) : '../img/usuario.png'}}" alt="..." class="rounded-circle" style="width: 80px; height: 80px">
           </div>
         
        </div>

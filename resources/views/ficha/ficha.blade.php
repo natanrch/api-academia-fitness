@@ -1,4 +1,6 @@
-
+@php
+  use App\Helpers\DataHelper;
+@endphp
 @extends('layouts.main')
 
 @section('content')
@@ -71,9 +73,9 @@
     </tr>
   </thead>
   <tbody class="fonttd">
-      @foreach($treino as $exercicio)
+      @foreach($ficha->ficha_exercicios as $exercicio)
         <tr>
-          <td scope="row"> <input type="checkbox" aria-label="Checkbox for following text input" style="border: 1px solid #ccc"> <span><strong>{{$exercicio->exercicio->titulo}}</strong> </span>
+          <td scope="row"> <input type="checkbox" aria-label="Checkbox for following text input" style="border: 1px solid #ccc"> <span><strong>{{$exercicio->treino->treino}} - {{$exercicio->exercicio->titulo}}</strong> </span>
               <!-- Button trigger modal 
               <button type="button" class="btn" data-toggle="modal" data-target=".bd-example-modal-xl" style="border-radius: 20%">
                 <i class="fa fa-play-circle-o playicon" aria-hidden="true" style="font-size: 25px"></i>
@@ -91,7 +93,7 @@
   <tfoot class="fonttd">
     <tr>
       <th scope="col" colspan="3">
-        Instrutor: <img src="../img/usuario.png" alt="..." class="rounded-circle" style="width: 30px; height: 30px"> {{$ficha->ficha_instrutor->instrutor->name}} 
+        Instrutor: <img src="{{$ficha->ficha_instrutor->instrutor->imagem ? asset('storage/'.$ficha->ficha_instrutor->instrutor->imagem) : '../img/usuario.png'}}" alt="..." class="rounded-circle" style="width: 30px; height: 30px"> {{$ficha->ficha_instrutor->instrutor->name}} 
   <span><a class="btn btnlaranja " data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
     Observações
   </a></span>
@@ -105,10 +107,10 @@
     </tr>
     <tr>
       <th scope="col">
-        Data: {{$ficha->created_at}}
+        Data: {{DataHelper::pegaDataDeDateTime($ficha->created_at)}}
       </th>
        <th scope="col" colspan="2">
-        Revisão: {{$ficha->revisao}}
+        Revisão: {{DataHelper::formataData($ficha->revisao)}}
       </th>
     </tr>
   </tfoot>

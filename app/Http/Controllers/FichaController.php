@@ -127,40 +127,10 @@ class FichaController extends Controller
      * @param  \App\Ficha  $ficha
      * @return \Illuminate\Http\Response
      */
-    public function show(Ficha $ficha, Request $request)
+    public function show(Ficha $ficha)
     {
-
-        $ultimoTreino = $this->ultimoTreino->where('ficha_id', $ficha->id)->orderBy('created_at', 'desc')->first();
-        if($ultimoTreino != null) {
-
-            $treino = $this->fichaExercicio->where('ficha_id', $ficha->id)->where('treino_id', $ultimoTreino->treino_id + 1)->get();
-            if(count($treino) == 0) {
-                $treino = $this->fichaExercicio->where('ficha_id', $ficha->id)->where('treino_id', 1)->get();
-            }
-        } else {
-            $treino = $this->fichaExercicio->where('ficha_id', $ficha->id)->where('treino_id', 1)->get();
-        }
-
-
-        if($request->treino) {
-            $treino = $this->fichaExercicio->where('ficha_id', $ficha->id)->where('treino_id', $request->treino)->get();
-            if(count($treino) == 0) {
-                return redirect()->back();
-            }
-        }
-
-        $treinoDeHoje = $treino->first()->treino;
-
-        $sequencia = \DB::select('SELECT DISTINCT treinos.treino
-            FROM ficha_exercicios 
-            JOIN treinos on treinos.id = ficha_exercicios.treino_id 
-            WHERE ficha_id = 3');
-
         return view('ficha.ficha', [
             'ficha' => $ficha,
-            'treino' => $treino,
-            'treinoDeHoje' => $treinoDeHoje,
-            'sequencia' => $sequencia,
         ]);
 
     }

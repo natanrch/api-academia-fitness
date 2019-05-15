@@ -1,3 +1,9 @@
+@php
+
+use App\Helpers\DataHelper;
+
+@endphp
+
 @extends('layouts.main')
 
 @section('content')
@@ -17,7 +23,7 @@
 <div class="card mb-3" style="max-width: 540px; background: #060a4b; border: none;">
   <div class="row">
     <div class="col-md-4 text-center"><br>
-      <img src="{{asset('storage/'.$aluno->imagem)}}" alt="foto de aluno" class="rounded-circle fotoaluno img-fluid"/ style="margin:  5px"><br>
+        <img src="{{$aluno->imagem ? asset('storage/'.$aluno->imagem) : '../img/usuario.png'}}" alt="foto de aluno" class="rounded-circle fotoaluno img-fluid"/ style="margin:  5px"><br>
       <button type="button" class="btn " data-toggle="modal" data-target=".adcfoto" style="margin-top: 5px; background-color: ; border: 1px solid #; border-radius: 15%"> <img src="../svg/photo-camera.svg" alt="foto de aluno" class=" img-fluid" width="25" height="25" style=""></button><br><br>
 
     </div>
@@ -53,9 +59,20 @@
               <p class="nomealuno" style="font-size: 20px">Sequência Realizada </p>
            <p class="">
       
-              <span class="fontvigor" style="font-size: 25px"> A  <i class="fa fa-hand-o-right playicon" aria-hidden="true"></i> B <i class="fa fa-hand-o-right playicon" aria-hidden="true"></i> C
-             
-             </span>
+{{--               <span class="fontvigor" style="font-size: 25px">
+                @foreach($treinos as $treino)
+                  {{$treino->treino->treino}}  <i class="fa fa-hand-o-right playicon" aria-hidden="true"></i> {{$treino->created_at}}
+                @endforeach
+             </span> --}}
+             @if(!is_null($treinos))
+                 <ul>
+                    @foreach($treinos as $treino)
+                      <li>{{$treino->treino->treino}}  <i class="fa fa-hand-o-right playicon" aria-hidden="true"></i> {{DataHelper::pegaDataDeDateTime($treino->created_at)}}</li>
+                    @endforeach
+                 </ul>
+             @else
+                Ainda não foi realizado nenhum treino
+             @endif
           </p>
         </div>
         </div>

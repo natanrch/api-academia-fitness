@@ -68,14 +68,14 @@ class TelaUsuarioController extends Controller
 
     public function perfilInstrutor(Request $request)
     {
-        $users = User::where('tipo', 'default')->get();
+        $alunos = User::where('tipo', 'default')->get();
         $instrutores = User::where('tipo', 'instrutor')->get();
         if($request->aluno) {
-            $users = User::where('tipo', 'default')->where('name', 'like', '%'.$request->aluno.'%')->get();
+            $alunos = User::where('tipo', 'default')->where('name', 'like', '%'.$request->aluno.'%')->get();
         }
         $instrutor = $this->user->find(Auth::id());
     	return view('site.perfilinstrutor', [
-            'users' => $users,
+            'alunos' => $alunos,
             'instrutores' => $instrutores,
             'instrutor' => $instrutor,
         ]);
@@ -115,8 +115,16 @@ class TelaUsuarioController extends Controller
     public function perfilNovo(Request $request)
     {
         $aluno = $this->user->find(Auth::id());
+        $ficha = $this->ficha->where('user_id', Auth::id())->first();
+
+        if(!is_null($ficha)) {          
+            $treinos = $this->ultimoTreino->where('ficha_id', $ficha->id)->orderBy('created_at', 'desc')->get();
+        } else {
+            $treinos = null;
+        }
         return view('site.perfilnovo', [
             'aluno' => $aluno,
+            'treinos' => $treinos
         ]);
     }
 

@@ -46,24 +46,24 @@ use Carbon\Carbon;
     </form>
     <br>
 <div class="overflow-auto">
-@foreach($users as $user)
+@foreach($alunos as $aluno)
 <div class="row" >
   <div class="col-12 col-sm-2 foto">
    
     <div class="text-center">
-    <img src="../img/usuario.png" alt="foto de perfil do aluno" class="rounded-circle" style="width: 80px; height: 80px">
+    <img src="{{$aluno->imagem ? asset('storage/'.$aluno->imagem) : '../img/usuario.png'}}" alt="foto de perfil do aluno" class="rounded-circle" style="width: 80px; height: 80px">
     </div>
   
  </div>
   <div class="col-12 col-sm-6 text-left botoes">
-    <p class="nomealuno " style=" margin-bottom: 5px;">{{$user->name}}</p>
+    <p class="nomealuno " style=" margin-bottom: 5px;">{{$aluno->name}}</p>
     <div class="form-group">
-      <a href="{{asset('storage/'.$user->avaliacao)}}" class="btn btnazul" >Avaliação Física <i class="fa fa-download"  aria-hidden="true"></i></a>
-      <a href="/ficha/create?user={{$user->id}}" class="btn btnazul" style="margin-top: 2px">Criar Ficha <i class="fa fa-file-text-o " aria-hidden="true"></i></a>
-    @if(!$user->ficha)
+      <a href="{{asset('storage/'.$aluno->avaliacao)}}" class="btn btnazul" >Avaliação Física <i class="fa fa-download"  aria-hidden="true"></i></a>
+      <a href="/ficha/create?user={{$aluno->id}}" class="btn btnazul" style="margin-top: 2px">Criar Ficha <i class="fa fa-file-text-o " aria-hidden="true"></i></a>
+    @if(!$aluno->ficha)
         <span class="text-danger">Novo aluno!</span>
     @endif
-    @if(!is_null($user->ficha) && $user->ficha->revisao <= Carbon::now())
+    @if(!is_null($aluno->ficha) && $aluno->ficha->revisao <= Carbon::now())
         <span class="text-success">Revisar ficha!</span>
     @endif
     </div>

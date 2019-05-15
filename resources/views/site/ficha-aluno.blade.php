@@ -1,3 +1,8 @@
+@php
+use App\Helpers\DataHelper;
+@endphp
+
+
 @extends('layouts.main')
 
 @section('content')
@@ -122,7 +127,9 @@
   <tfoot class="fonttd">
     <tr>
       <th scope="col" colspan="3">
-        Instrutor: <img src="../img/usuario.png" alt="..." class="rounded-circle" style="width: 30px; height: 30px"> {{$ficha->ficha_instrutor->instrutor->name}} 
+        Instrutor: 
+          <img src="{{$ficha->ficha_instrutor->instrutor->imagem ? asset('storage/'.$ficha->ficha_instrutor->instrutor->imagem) : '../img/usuario.png'}}" alt="..." class="rounded-circle" style="width: 30px; height: 30px"> 
+        {{$ficha->ficha_instrutor->instrutor->name}} 
   <span><a class="btn btnlaranja " data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
     Observações
   </a></span>
@@ -136,10 +143,10 @@
     </tr>
     <tr>
       <th scope="col">
-        Data: {{$ficha->created_at}}
+        Data: {{DataHelper::pegaDataDeDateTime($ficha->created_at)}}
       </th>
        <th scope="col" colspan="2">
-        Revisão: 25/02/2019
+        Revisão: {{DataHelper::formataData($ficha->revisao)}}
       </th>
     </tr>
   </tfoot>

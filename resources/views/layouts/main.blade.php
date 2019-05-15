@@ -49,7 +49,7 @@
         @else
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: #fff; font-size: 18px ">
-          <img src="/../img/usuario.png" alt="foto de perfil" width="30" height="30" class="d-inline-block align-top rounded-circle">
+          <img src="{{auth()->user()->imagem ? asset('storage/'.auth()->user()->imagem) : '../img/usuario.png'}}" alt="foto de perfil" width="30" height="30" class="d-inline-block align-top rounded-circle">
         </a>
         <div class="dropdown-menu linkmenud colormenu text-left" aria-labelledby="navbarDropdownMenuLink" style="border:none;" >
           @if(Auth::user()->isInstrutor())

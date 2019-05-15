@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Treino
+use App\Treino;
 use Illuminate\Http\Request;
 
 class TreinoController extends Controller
@@ -52,7 +52,7 @@ class TreinoController extends Controller
     }
 
 
-    public function update(Request $request, )
+    public function update(Request $request)
     {
         //
     }
