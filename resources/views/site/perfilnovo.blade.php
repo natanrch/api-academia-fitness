@@ -45,7 +45,7 @@ use App\Helpers\DataHelper;
                             Data de Pagamento: {{$aluno->data_de_pagamento}}
                         </div>
                          <div class="descriperfil text-white">
-                            Data da Próxima Avaliação Física: {{$aluno->proxima_avaliacao}}
+                            Data da Próxima Avaliação Física: {{DataHelper::formataData($aluno->proxima_avaliacao)}}
                         </div>
                          <div class="descriperfil text-white">
                              
