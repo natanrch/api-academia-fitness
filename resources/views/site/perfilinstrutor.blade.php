@@ -45,6 +45,7 @@ use Carbon\Carbon;
     </div>
     </form>
     <br>
+<div class="scroll">
 <div class="overflow-auto">
 @foreach($alunos as $aluno)
 <div class="row" >
@@ -72,6 +73,7 @@ use Carbon\Carbon;
 @endforeach
                             <br>
                         </div>
+                      </div>
                     </div>
             <h4>TOTAL:{{$totalAlunos}}</h4>
                 </div>
