@@ -16,19 +16,6 @@
   <link href="{{ url('lib/owlcarousel/assets/owl.carousel.min.css') }}" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.2.0/sweetalert2.min.css">
 
- <!-- <link rel="stylesheet"  href="{{ url('fonts/IBM_Plex_Sans/IBMPlexSans-Bold.ttf') }}">
-  <link rel="stylesheet"  href="{{ url('fonts/IBM_Plex_Sans/IBMPlexSans-Medium.ttf')}}">
-  <link rel="stylesheet"  href="{{ url('fonts/IBM_Plex_Sans/IBMPlexSans-Regular.ttf')}}">
-  <link rel="stylesheet"  href="{{ url('fonts/IBM_Plex_Sans/IBMPlexSans-SemiBold.ttf')}}">
-  <link rel="stylesheet"  href="{{ url('fonts/Roboto/Roboto-Black.ttf')}}">
-  <link rel="stylesheet"  href="{{ url('fonts/Roboto/Roboto-Bold.ttf')}}">
-  <link rel="stylesheet"  href="{{ url('fonts/Viga/Viga-Regular.ttf')}}">
-  <link rel="stylesheet"  href="{{ url('fonts/Secular_One/SecularOne-Regular.ttf')}}"> -->
- 
-
-
-
-
     <title>Academia Fitness</title>
 </head>
 <body>
