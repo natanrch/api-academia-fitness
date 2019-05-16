@@ -57,6 +57,21 @@ use App\Helpers\DataHelper;
     <div class="row">
       <div class="col-12 col-sm-6">
         <div class="table-responsive">
+          <table class="table table-sm text-center table-bordered">
+  <thead>
+    <tr class="colormenu">
+      <th scope="col" class="ficha text-white">Data de Revisão</th>
+      <th scope="col" class="ficha text-white">Data de Criação</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td scope="row" class="ficha" >{{DataHelper::formataData($ficha->revisao)}} <i class="fa fa-calendar playicon" aria-hidden="true"></i> </td>
+      <td class="ficha">{{DataHelper::pegaDataDeDateTime($ficha->created_at)}} <i class="fa fa-calendar playicon" aria-hidden="true"></i></td>
+      
+    </tr>
+  </tbody>
+</table>
 <table class="table table-sm text-center table-bordered " >
   <thead>
     <tr class="colormenu">
@@ -71,11 +86,28 @@ use App\Helpers\DataHelper;
     </tr>
   </tbody>
 </table>
+
+
 </div>
 </div>
 
       <div class="col-12 col-sm-6">
         <div class="table-responsive">
+          <table class="table table-sm text-center table-bordered " >
+  <thead>
+    <tr class="colormenu">
+      <th scope="col" class="ficha text-white">Aeróbico </th>
+      <th scope="col" class="ficha text-white">Tempo</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td scope="row" class="ficha" >  </td>
+      <td class="ficha"> minutos <i class="fa fa-clock-o playicon" aria-hidden="true"></i></td>
+    </tr>
+  </tbody>
+</table>
+
 <table class="table table-sm text-center table-bordered">
   <thead>
     <tr class="colormenu">
@@ -91,6 +123,7 @@ use App\Helpers\DataHelper;
     </tr>
   </tbody>
 </table>
+
 </div>
 </div> 
 </div>
@@ -141,14 +174,14 @@ use App\Helpers\DataHelper;
    </div>
       </th scope="col">
     </tr>
-    <tr>
+   <!-- <tr>
       <th scope="col">
         Data: {{DataHelper::pegaDataDeDateTime($ficha->created_at)}}
       </th>
        <th scope="col" colspan="2">
         Revisão: {{DataHelper::formataData($ficha->revisao)}}
       </th>
-    </tr>
+    </tr> -->
   </tfoot>
 </table>
   <button class="btn btnlaranja" type="button" data-toggle="modal" data-target="#modal-alert" id="suss">CONCLUIR TREINO <i class="fa fa-check-circle" aria-hidden="true"></i></button><br><br>
