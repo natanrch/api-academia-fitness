@@ -21,11 +21,26 @@
     <div class="row">
       <div class="col-12 col-sm-6">
         <div class="table-responsive">
+<table class="table table-sm text-center table-bordered">
+  <thead>
+    <tr class="colormenu">
+      <th scope="col" class="ficha text-white">Data de Revisão</th>
+      <th scope="col" class="ficha text-white">Data de Criação</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td scope="row" class="ficha" >{{DataHelper::formataData($ficha->revisao)}} <i class="fa fa-calendar playicon" aria-hidden="true"></i> </td>
+      <td class="ficha">{{DataHelper::pegaDataDeDateTime($ficha->created_at)}} <i class="fa fa-calendar playicon" aria-hidden="true"></i></td>
+      
+    </tr>
+  </tbody>
+</table>
 <table class="table table-sm text-center table-bordered " >
   <thead>
     <tr class="colormenu">
-      <th scope="col" class="ficha  text-white">Objetivo:</th>
-      <th scope="col" class="ficha text-white">Método:</th>
+      <th scope="col" class="ficha text-white">Objetivo</th>
+      <th scope="col" class="ficha text-white">Método</th>
     </tr>
   </thead>
   <tbody>
@@ -35,16 +50,32 @@
     </tr>
   </tbody>
 </table>
+
 </div>
 </div>
 
       <div class="col-12 col-sm-6">
         <div class="table-responsive">
+<table class="table table-sm text-center table-bordered " >
+  <thead>
+    <tr class="colormenu">
+      <th scope="col" class="ficha text-white">Aeróbico </th>
+      <th scope="col" class="ficha text-white">Tempo</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td scope="row" class="ficha" >  </td>
+      <td class="ficha"> minutos <i class="fa fa-clock-o playicon" aria-hidden="true"></i></td>
+    </tr>
+  </tbody>
+</table>
+
 <table class="table table-sm text-center table-bordered">
   <thead>
     <tr class="colormenu">
-      <th scope="col" class="ficha text-white">Aquecimento:</th>
-      <th scope="col" class="ficha text-white">Intervalo:</th>
+      <th scope="col" class="ficha text-white">Aquecimento</th>
+      <th scope="col" class="ficha text-white">Intervalo</th>
     </tr>
   </thead>
   <tbody>
@@ -75,7 +106,7 @@
   <tbody class="fonttd">
       @foreach($ficha->ficha_exercicios as $exercicio)
         <tr>
-          <td scope="row"> <input type="checkbox" aria-label="Checkbox for following text input" style="border: 1px solid #ccc"> <span><strong>{{$exercicio->treino->treino}} - {{$exercicio->exercicio->titulo}}</strong> </span>
+          <td scope="row"> <strong>{{$exercicio->treino->treino}} - {{$exercicio->exercicio->titulo}}</strong> </span>
               <!-- Button trigger modal 
               <button type="button" class="btn" data-toggle="modal" data-target=".bd-example-modal-xl" style="border-radius: 20%">
                 <i class="fa fa-play-circle-o playicon" aria-hidden="true" style="font-size: 25px"></i>
@@ -105,14 +136,14 @@
    </div>
       </th scope="col">
     </tr>
-    <tr>
+   <!-- <tr>
       <th scope="col">
         Data: {{DataHelper::pegaDataDeDateTime($ficha->created_at)}}
       </th>
        <th scope="col" colspan="2">
         Revisão: {{DataHelper::formataData($ficha->revisao)}}
       </th>
-    </tr>
+    </tr> -->
   </tfoot>
 </table>
   
