@@ -36,19 +36,20 @@ use App\Helpers\DataHelper;
     </div>
     <div class="col-md-8">
       <div class="card-body">
-        <h5 class="card-title Nomeperfil text-white">{{$aluno->name}}</h5>
+        <h5 class="card-title ficha text-white" style="font-size: 25px"><strong>{{$aluno->name}}</strong></h5>
         <div class="descriperfil text-white">
-                            Modalidade: {{$aluno->modalidade}}
+                            <strong> Modalidade: </strong>{{$aluno->modalidade}}
                             
                         </div>
                          <div class="descriperfil text-white">
-                            Data de Pagamento: {{$aluno->data_de_pagamento}}
+                            <strong>Instrutor:</strong> {{$aluno->instrutor->instrutor->name}} 
+                            
                         </div>
                          <div class="descriperfil text-white">
-                            Data da Próxima Avaliação Física: {{DataHelper::formataData($aluno->proxima_avaliacao)}}
+                            <strong>Pagamento:</strong> Dia {{$aluno->data_de_pagamento}}
                         </div>
                          <div class="descriperfil text-white">
-                             
+                              <strong>Próxima Avaliação Física: </strong>{{DataHelper::formataData($aluno->proxima_avaliacao)}}
                         </div>
                         <br>
                         <div class="">
@@ -62,25 +63,28 @@ use App\Helpers\DataHelper;
     </div>
         <div class="col-sm-6">
             <h2>Historico de Treinos</h2>
-           <div class="">
+           <div class=" ">
               <p class="nomealuno" style="font-size: 20px">Sequência Realizada </p>
            <p class="">
-      
+        
+          <div class="scrolltreino">
 {{--               <span class="fontvigor" style="font-size: 25px">
+            
                 @foreach($treinos as $treino)
                   {{$treino->treino->treino}}  <i class="fa fa-hand-o-right playicon" aria-hidden="true"></i> {{$treino->created_at}}
                 @endforeach
              </span> --}}
              @if(!is_null($treinos))
-                 <ul>
+                 <ul class="fontvigor" style="font-size: 25px">
                     @foreach($treinos as $treino)
-                      <li>{{$treino->treino->treino}}  <i class="fa fa-hand-o-right playicon" aria-hidden="true"></i> {{DataHelper::pegaDataDeDateTime($treino->created_at)}}</li>
+                      <li style="list-style-type: none;"><i class="fa fa-arrow-down" aria-hidden="true"></i> {{$treino->treino->treino}}  <i class="fa fa-hand-o-right playicon" aria-hidden="true"></i> {{DataHelper::pegaDataDeDateTime($treino->created_at)}}</li>
                     @endforeach
                  </ul>
              @else
-                Ainda não foi realizado nenhum treino
+                  <p class="ficha">Ainda não foi realizado nenhum treino.</p>
              @endif
           </p>
+          </div>
         </div>
         </div>
     </div>

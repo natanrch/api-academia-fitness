@@ -42,6 +42,11 @@ label{
   overflow-y: scroll;
   overflow-x: hidden;
 }
+.scrolltreino{
+  height: 200px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
 .altura{
   height: 100vh;
 }
