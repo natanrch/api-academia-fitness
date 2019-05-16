@@ -27,7 +27,8 @@
 class="form-control inputb" type="search" placeholder="Pesquisar"
 aria-label="Search" name="instrutor"> </div> <div class="form-group col-2 col-sm-2"> <button
 class="btn btnlaranja"  type="submit" style="border-radius: 50%"> <i class="fa
-fa-search" aria-hidden="true"></i></button> </div> </form> <br>
+fa-search" aria-hidden="true"></i></button> <button class="btn btnlaranja"  type="reset" style="border-radius: 50%"><i class="fa fa-times" aria-hidden="true"></i></button> </div> </form> <br>
+<div class="scroll">
 @foreach($instrutores as $instrutor)
     <div class="row" >
   <div class="col-6 col-sm-2 fotosins">
@@ -50,6 +51,7 @@ fa-search" aria-hidden="true"></i></button> </div> </form> <br>
     </div>
 @endforeach
 <br><br>
+</div>
     <div>
     	<h3>TOTAL: {{$totalInstrutores}}</h3>
     </div>
@@ -65,13 +67,15 @@ fa-search" aria-hidden="true"></i></button> </div> </form> <br>
         <input class="form-control inputb" type="search" placeholder="Pesquisar" aria-label="Search" name="aluno">
       </div>
       <div class="form-group col-2 col-sm-2">
-      <button class="btn btnlaranja"  type="submit" style="border-radius: 50%"> <i class="fa fa-search" aria-hidden="true"></i></button>
+      <button class="btn btnlaranja"  type="submit" style="border-radius: 50%"> <i class="fa fa-search" aria-hidden="true"></i></button> 
+      <button class="btn btnlaranja"  type="reset" style="border-radius: 50%"><i class="fa fa-times" aria-hidden="true"></i></button>
     </div>
     </form>
     <br>
-
+<div class="scroll">
     @foreach($alunos as $aluno)
-      <div class="row" >
+      <div class="row " >
+
         <div class="col-6 col-sm-2 fotos">
          
           <div class="text-center">
@@ -94,11 +98,13 @@ fa-search" aria-hidden="true"></i></button> </div> </form> <br>
     @endforeach
 <br><br>
     <div>
+       </div>
+     </div>
     	<h3>TOTAL: {{$totalAlunos}}</h3>
-    </div>
+   
 
     </div>
-
+   </div>
   </div>
   
   

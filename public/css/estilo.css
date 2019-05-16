@@ -37,6 +37,11 @@ label{
   font-size: 18px;
 
 }
+.scroll{
+  height: 400px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
 .altura{
   height: 100vh;
 }
