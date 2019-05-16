@@ -35,7 +35,7 @@ use App\Helpers\DataHelper;
 
     </div>
     <div class="col-md-8">
-      <div class="card-body">
+      <div class="card-body" style="">
         <h5 class="card-title ficha text-white" style="font-size: 25px"><strong>{{$aluno->name}}</strong></h5>
         <div class="descriperfil text-white">
                             <strong> Modalidade: </strong>{{$aluno->modalidade}}
@@ -77,7 +77,7 @@ use App\Helpers\DataHelper;
              @if(!is_null($treinos))
                  <ul class="fontvigor" style="font-size: 25px">
                     @foreach($treinos as $treino)
-                      <li style="list-style-type: none;"><i class="fa fa-arrow-down" aria-hidden="true"></i> {{$treino->treino->treino}}  <i class="fa fa-hand-o-right playicon" aria-hidden="true"></i> {{DataHelper::pegaDataDeDateTime($treino->created_at)}}</li>
+                      <li style="list-style-type: none;"><i class="fa fa-arrow-down" aria-hidden="true"></i> {{$treino->treino->treino}}  <i class="fa fa-hand-o-right playicon" aria-hidden="true"></i> <span class="Nomeperfil">{{DataHelper::pegaDataDeDateTime($treino->created_at)}}</span></li>
                     @endforeach
                  </ul>
              @else
