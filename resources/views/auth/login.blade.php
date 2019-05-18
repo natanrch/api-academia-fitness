@@ -47,6 +47,7 @@
                       <strong>{{ $errors->first('password') }}</strong>
                   </span>
               @endif
+              
             </div>
         </div>        
         <div class="form-group">

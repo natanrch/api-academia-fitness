@@ -23,7 +23,7 @@
                             <label for="name" class="col-md-4 col-form-label text-md-right required">{{ __('NOME') }}</label>
 
                             <div class="col-md-6">
-                                <input id="name" type="text" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" name="name" value="{{ old('name') }}" required autofocus>
+                                <input id="name" type="text" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" name="name" value="{{ old('name') }}" placeholder="nome do aluno" required autofocus>
 
                                 @if ($errors->has('name'))
                                     <span class="invalid-feedback" role="alert">
@@ -37,7 +37,7 @@
                             <label for="cpf" class="col-md-4 col-form-label text-md-right required">{{ __('CPF') }}</label>
 
                             <div class="col-md-6">
-                                <input id="cpf" type="text" class="form-control{{ $errors->has('cpf') ? ' is-invalid' : '' }}" name="cpf" value="{{ old('cpf') }}" required>
+                                <input id="cpf" type="text" class="form-control{{ $errors->has('cpf') ? ' is-invalid' : '' }}" name="cpf" value="{{ old('cpf') }}" placeholder="00000000000" required>
 
                                 @if ($errors->has('cpf'))
                                     <span class="invalid-feedback" role="alert">
@@ -66,7 +66,7 @@
                             <label for="email" class="col-md-4 col-form-label text-md-right required">{{ __('E-MAIL') }}</label>
 
                             <div class="col-md-6">
-                                <input id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" required>
+                                <input id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" placeholder="email" required>
 
                                 @if ($errors->has('email'))
                                     <span class="invalid-feedback" role="alert">
@@ -77,11 +77,11 @@
                         </div>
 
                         <div class="form-group row">
-                            <label for="pagamento" class="col-md-4 col-form-label text-md-right">{{ __('DATA DE PAGAMENTO') }}</label>
+                            <label for="pagamento" class="col-md-4 col-form-label text-md-right ">{{ __('PAGAMENTO') }}<span class="required"></span></label>
 
                             <div class="col-md-6">
                               <div class="input-group">
-                                 <input id="pagamento" type="number" class="form-control{{ $errors->has('pagamento') ? ' is-invalid' : '' }}" name="pagamento" value="{{ old('pagamento') }}" required>
+                                 <input id="pagamento" type="number" class="form-control{{ $errors->has('pagamento') ? ' is-invalid' : '' }}" name="pagamento" value="{{ old('pagamento') }}" placeholder="dia" required>
                                 </div>
                                 @if ($errors->has('pagamento'))
                                     <span class="invalid-feedback" role="alert">
@@ -98,7 +98,7 @@
 
                             <div class="col-md-6">
                                <select class="form-control" style="border: 1px solid #1827f580" id="modalidade" name="modalidade">
-                                   <option value="" selected></option>
+                                   <option value="" selected>modalidade</option>
                                     <option value="musculação">Musculação</option>
                                </select>
                                 @if ($errors->has('modalidade'))
@@ -114,7 +114,7 @@
 
                              <div class="col-md-6">
                                <select class="form-control" style="border: 1px solid #1827f580" id="instrutor" name="instrutor">
-                                   <option selected></option>
+                                   <option selected>instrutor</option>
                                    @foreach($instrutores as $instrutor)
                                         <option value="{{$instrutor->id}}">{{$instrutor->name}}</option>
                                     @endforeach
@@ -152,12 +152,15 @@
                                         <strong>{{ $errors->first('proxima_avaliacao') }}</strong>
                                     </span>
                                 @endif
+                                <br>
+                                <div class="text-center" style="">senha: academiafitness</div>
                             </div>
+                            
                         </div>
 
                         <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-4">
-                                <button type="submit" class="btn btnlaranja " id="successaluno">
+                                <button type="submit" class="btn btnlaranja btn-block" id="successaluno">
                                     {{ __('CADASTRAR') }}
                                 </button>
                             </div>

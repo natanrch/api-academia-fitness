@@ -40,8 +40,9 @@ use Carbon\Carbon;
       <div class="form-group col-8 col-sm-8">
         <input class="form-control inputb" type="search" placeholder="Pesquisar " aria-label="Search" name="aluno">
       </div>
-      <div class="form-group col-2 col-sm-2">
+      <div class="form-group col-4 col-sm-4">
       <button class="btn btnlaranja"  type="submit" style="border-radius: 50%"> <i class="fa fa-search" aria-hidden="true"></i></button>
+      <a href="/instrutor/perfil"><i class="fa fa-times" aria-hidden="true" style="font-size: 18px; color:red"></i></a>
     </div>
     </form>
     <br>

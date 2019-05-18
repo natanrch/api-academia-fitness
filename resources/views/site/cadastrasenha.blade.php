@@ -49,9 +49,11 @@
                             <strong>{{ $errors->first('password') }}</strong>
                         </span>
                     @endif
+
                     </div>
+                    <span ><p class="text-right " style="color: #000; font-family: IBM Plex Sans, Regular; font-size: 14px;">mínimo 6 caracteres</p></span>
                 </div>
-                <div class="form-group">
+                <div class="form-group" style="margin-top: -15px">
                     <label for="password-confirm" class="required">{{ __('Confirmar Senha') }}</label>
                     <div class="input-group">
                         <input id="password-confirm" type="password" class="form-control" name="password_confirmation" placeholder="nova senha" required style="border-radius: 50px;">
