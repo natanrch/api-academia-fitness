@@ -47,8 +47,9 @@
                                     </span>
                                 @endif
                             </div>
+                            <span ><p class="text-right " style="color: #000; font-family: IBM Plex Sans, Regular; font-size: 14px;">mínimo 6 caracteres</p></span>
                         </div>
-                         <div class="form-group">
+                         <div class="form-group" style="margin-top: -15px">
                             <label for="password-confirm" class="required" >{{ __('CONFIRMA SENHA') }}</label>
 
                             <div class="input-group">
