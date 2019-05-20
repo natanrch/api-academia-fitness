@@ -15,10 +15,10 @@
           
         </div>
          <div class="col-sm-7 col-12 align-content-sm-center">
-          <img src="../img/video.jpeg" class="img-fluid">
-         <!-- <div class="embed-responsive embed-responsive-16by9">
+         
+          <div class="embed-responsive embed-responsive-16by9">
             
-        <iframe class="embed-responsive-item" src="img/video.mp4" allowfullscreen></iframe> -->
+        <iframe class="embed-responsive-item" src="img/video1.mp4" allowfullscreen></iframe> 
       </div>
       <div class="text-center">
             <a href="" class="btn "><img src="img/store.png" alt="baixa aplicativo na play store" class="img-fluid" style="max-width: 200px; max-height: 50px" ></a>

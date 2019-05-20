@@ -23,11 +23,11 @@ use App\Helpers\RemoveAcentosHelper;
 	{{method_field('PUT')}}
   <div class="form-row">
     <div class="form-group col-md-6 ">
-      <label for="objetivo">Objetivo</label>
-      <input class="form-control " type="text" name="objetivo" id="objetivo" value="{{$ficha->objetivo}}">
+      <label for="objetivo" class="required">Objetivo</label>
+      <input class="form-control " type="text" name="objetivo" id="objetivo" value="{{$ficha->objetivo}}" >
     </div>
     <div class="form-group col-md-6">
-      <label for="metodo">Método</label>
+      <label for="metodo" class="required">Método</label>
 		<input class="form-control" type="text" name="metodo" id="metodo" value="{{$ficha->metodo}}">
     </div>
     <div class="form-group col-md-3">
@@ -44,15 +44,15 @@ use App\Helpers\RemoveAcentosHelper;
 		<input class="form-control" type="number" name="tempo_aerobico" id="aerobico" value="{{$ficha->tempo_aerobico}}">
     </div>
     <div class="form-group col-md-3">
-      <label for="aquecimento">Aquecimento (minutos)</label>
+      <label for="aquecimento" class="required">Aquecimento (minutos)</label>
 		<input class="form-control" type="number" name="aquecimento" id="aquecimento" value="{{$ficha->aquecimento}}" >
     </div>
     <div class="form-group col-md-3">
-      <label for="intervalo">Intervalo (segundos)</label>
+      <label for="intervalo"  class="required">Intervalo (segundos)</label>
 		 <input type="number" class="form-control" name="intervalo" id="intervalo" value="{{$ficha->intervalo}}">
     </div>
     <div class="form-group col-md-6">
-      <label for="revisao">Data de Revisão</label>
+      <label for="revisao" class="required">Data de Revisão</label>
 		 <input type="date" class="form-control" name="revisao" id="revisao">
     </div>
     <div class="form-group col-md-6">
