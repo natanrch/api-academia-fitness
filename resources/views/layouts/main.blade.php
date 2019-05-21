@@ -3,21 +3,18 @@
 <head>
     <link href="/css/app.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="/css/estilo.css">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet ">
+   <!-- <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet ">
     <link href="https://fonts.googleapis.com/css?family=Roboto:900" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,500,600,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Viga" rel="stylesheet">
+     <link href="https://fonts.googleapis.com/css?family=Carter+One|Russo+One" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Secular+One" rel="stylesheet"> -->
 
   <link href="{{ url('lib/font-awesome/css/font-awesome.min.css') }}" rel="stylesheet">
   <link href="{{ url('lib/animate/animate.min.css') }}" rel="stylesheet">
   <link href="{{ url('lib/venobox/venobox.css') }}" rel="stylesheet">
   <link href="{{ url('lib/owlcarousel/assets/owl.carousel.min.css') }}" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.2.0/sweetalert2.min.css">
-  <link href="https://fonts.googleapis.com/css?family=Carter+One|Russo+One" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Secular+One" rel="stylesheet">
-
-
-
 
     <title>Academia Fitness</title>
 </head>

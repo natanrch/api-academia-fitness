@@ -20,9 +20,9 @@ use Carbon\Carbon;
     </div>
     <div class="">
       <div class="card-body">
-        <h5 class="card-title Nomeperfil text-white">{{$instrutor->name}}</h5>
+        <h5 class="card-title text-white ficha"  style="font-size: 25px"><strong>{{$instrutor->name}}</strong></h5>
             <div class="descriperfil text-white">
-                CREF: {{$instrutor->cref}}                        
+               <strong> CREF:</strong> {{$instrutor->cref}}                        
             </div>
         <br>
       </div>
@@ -40,11 +40,13 @@ use Carbon\Carbon;
       <div class="form-group col-8 col-sm-8">
         <input class="form-control inputb" type="search" placeholder="Pesquisar " aria-label="Search" name="aluno">
       </div>
-      <div class="form-group col-2 col-sm-2">
+      <div class="form-group col-4 col-sm-4">
       <button class="btn btnlaranja"  type="submit" style="border-radius: 50%"> <i class="fa fa-search" aria-hidden="true"></i></button>
+      <a href="/instrutor/perfil"><i class="fa fa-times" aria-hidden="true" style="font-size: 18px; color:red"></i></a>
     </div>
     </form>
     <br>
+<div class="scroll">
 <div class="overflow-auto">
 @foreach($alunos as $aluno)
 <div class="row" >
@@ -72,6 +74,7 @@ use Carbon\Carbon;
 @endforeach
                             <br>
                         </div>
+                      </div>
                     </div>
             <h4>TOTAL:{{$totalAlunos}}</h4>
                 </div>

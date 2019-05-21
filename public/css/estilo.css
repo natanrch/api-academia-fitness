@@ -1,22 +1,56 @@
+@font-face{
+   font-family: Roboto;
+ src: url(/fonts/Roboto/Roboto-Black.ttf);
+}
+@font-face{
+  font-family: IBM Plex Sans;
+  src: url(/fonts/IBM_Plex_Sans/IBMPlexSans-Medium.ttf);
+}
+@font-face{
+  font-family: IBM Plex Sans;
+  src: url(/fonts/IBM_Plex_Sans/IBMPlexSans-Regular.ttf);
+}
+@font-face{
+  
+  src: url(/fonts/IBM_Plex_Sans/IBMPlexSans-SemiBold.ttf);
+}
+@font-face{
+  font-family: Viga;
+  src: url(/fonts/Viga/Viga-Regular.ttf);
+}
+@font-face{
+  font-family: IBM Plex Sans ;
+  src: url(/fonts/IBM_Plex_Sans/IBMPlexSans-Bold.ttf);
+  font-weight: bold;
+}
+@font-face{
+  
+  src: url(/fonts/Roboto/Roboto-Bold.ttf);
+}
+@font-face{
+  font-family: SecularOne;
+  src: url(/fonts/Secular_One/SecularOne-Regular.ttf);
+}
+
 main{
   background-color: #fff;
 }
 
 h2{
 
-  font-family: 'Roboto', sans-serif;
+  font-family: Roboto, sans-serif;
   color: #343434;
   font-size: 30px;
 }
 h3{
 
-  font-family: 'Roboto', sans-serif;
+  font-family: Roboto, sans-serif;
   color: #343434;
   font-size: 25px;
 }
 h4{
 
-  font-family: 'Roboto', sans-serif;
+  font-family: Roboto, sans-serif;
   color: #343434;
   font-size: 20px;
 }
@@ -27,7 +61,7 @@ h4{
 }
 
 label{
-  font-family: 'Roboto', Black;
+  font-family: Roboto, Black;
   color: #343434;
   font-size: 16px
 }
@@ -37,11 +71,21 @@ label{
   font-size: 18px;
 
 }
+.scroll{
+  height: 400px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+.scrolltreino{
+  height: 200px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
 .altura{
   height: 100vh;
 }
 .btnlogin{
-   font-family:IBM Plex Sans, Medium;
+   font-family:IBM Plex Sans;
   font-size: 18px;
   background-color: #B95922;
   color: #FFFFFF;
@@ -74,7 +118,7 @@ label{
 
 }
 .fontvigor{
-  font-family: 'Viga', sans-serif;
+  font-family: Viga, sans-serif;
   font-size: 30px;
   color: #343434;
 }
@@ -87,11 +131,13 @@ label{
   color: #363636;
   font-family: IBM Plex Sans, Bold;
   font-size: 18px;
+  font-weight: bold;
 }
 .fonttd{
   color: #363636;
   font-family: IBM Plex Sans, Bold;
   font-size: 16px;
+  font-weight: bold;
 }
 .playicon{
   color: #B95922;
@@ -141,7 +187,7 @@ label{
 
 /* PERFIL */
 .nomealuno{
-  font-family: 'Roboto', Black;
+  font-family: Roboto, Black;
   color: #343434;
   font-size: 16px
 } 
@@ -285,7 +331,7 @@ table>tbody>tr:hover{
 .textoapp{
   font-size: 45px; 
   color: #fff; 
-  font-family: 'Secular One', sans-serif;
+  font-family: SecularOne, sans-serif;
   text-shadow: 0 0 5px #000; 
   border-radius: 15px 50px; 
   background-color: ;
@@ -346,13 +392,13 @@ table>tbody>tr:hover{
   color: #343434;
 }
 .valorplanos{
-   font-family: 'Roboto', Black;
+   font-family: Roboto, Black;
   color: #343434;
   font-size: 16px
 
 }
 .valorplanos1{
-   font-family: 'Roboto', Black;
+   font-family: Roboto, Black;
   color: #fff;
   font-size: 18px
 
@@ -380,7 +426,7 @@ table>tbody>tr:hover{
 /* PLANO */
 
 .planosh2{
-  font-family: 'Roboto', Black;
+  font-family: Roboto, Black;
   color: #343434;
   font-size: 30px;
   letter-spacing: 3px
@@ -403,7 +449,7 @@ table>tbody>tr:hover{
 
 }
 .pfooter{
-  font-family: 'Roboto', Black;
+  font-family: Roboto, Black;
   font-size: 20px;
   color: #FFFFFF; 
 }
@@ -467,8 +513,8 @@ line-height:inherit;
     url(https://example.com/MaterialIcons-Regular.woff2) format('woff2'),
     url(https://example.com/MaterialIcons-Regular.woff) format('woff'),
     url(https://example.com/MaterialIcons-Regular.ttf) format('truetype');
-}
 
+}
 
 
 .glyph{
@@ -499,7 +545,7 @@ line-height:inherit;
     }
     .login-form h2 {
         margin: 0 0 15px;
-       font-family: 'Roboto', Black;
+       font-family: Roboto, Black;
     }
     .form-control, .btn {
         min-height: 38px;
