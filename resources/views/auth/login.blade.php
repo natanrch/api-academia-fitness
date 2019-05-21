@@ -3,7 +3,7 @@
 @section('content')
 
 
-
+<br><br><br>
 <div style="background: url(../img/im.jpg); background-repeat: no-repeat; background-size: contain; background-size: 100% 100%; background-color:  ">
   <div class="container">
   <div class="row "  >
@@ -69,4 +69,5 @@
 </div>
 </div>
 </div>
+<br><br><br>
 @endsection

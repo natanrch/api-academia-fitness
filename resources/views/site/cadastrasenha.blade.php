@@ -30,7 +30,7 @@
 	<button class="btn btn-success" type="submit">Cadastrar</button>
 </form> -->
 
-
+<br><br>
 <div class="container">
   <div class="row "  >
     <div class="col-12">
@@ -68,5 +68,5 @@
 </div>
 </div>
 </div>
-
+<br><br><br>
 @endsection
