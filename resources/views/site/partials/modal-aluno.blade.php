@@ -143,7 +143,7 @@
 
                             <div class="col-md-6">
                               <div class="input-group">
-                                 <input id="proxima_avaliacao" type="date" class="form-control{{ $errors->has('proxima_avaliacao') ? ' is-invalid' : '' }}" name="proxima_avaliacao" value="{{ old('proxima_avaliacao') }}" required>
+                                 <input id="proxima_avaliacao" type="date" class="form-control{{ $errors->has('proxima_avaliacao') ? ' is-invalid' : '' }}" name="proxima_avaliacao" value="{{ old('proxima_avaliacao') }}">
                                 </div>
                                 @if ($errors->has('proxima_avaliacao'))
                                     <span class="invalid-feedback" role="alert">

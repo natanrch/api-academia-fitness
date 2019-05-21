@@ -44,7 +44,8 @@ class AdminController extends Controller
     {
 
         $request->validate([
-            'name' => 'required',
+            //'name' => 'required|min:6|max:255',
+            'name' => 'regex:/^[a-zA-Z ]+$/|required|min:6|max:255',
             'cpf' => 'cpf|required',
             'email' => 'email|required',
             'cref' => 'required',
@@ -71,19 +72,22 @@ class AdminController extends Controller
     public function cadastraAluno(Request $request)
     {
         $request->validate([
-            'name' => 'required',
+            //'name' => 'required|min:6|max:255',
+            'name' => 'regex:/^[a-zA-Z ]+$/|required|min:6|max:255',
             'cpf' => 'cpf|required',
             'email' => 'email|required',
             'data_de_nascimento' => 'date',
             'pagamento' => 'numeric|min:1|max:31',
             'modalidade' => 'required',
             'instrutor' => 'required',
-            'avaliacao' => 'file|required',
-            'proxima_avaliacao' => 'date'
         ]);
 
         // dd($request->proxima_avaliacao);
-        $upload = $request->avaliacao->store('avaliacoes');
+        if($request->avaliacao) {
+            $upload = $request->avaliacao->store('avaliacoes');
+        } else {
+            $upload = null;
+        }
 
         $cpf = CPFHelper::somenteNumeros($request->cpf);
         
