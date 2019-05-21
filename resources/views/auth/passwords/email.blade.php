@@ -2,7 +2,8 @@
 
 @section('content')
 
-<br><br>
+
+<br><br><br><br>
 <div class="container">
                     <div class="section-header " style="margin-bottom: -20px">
           <h2 class="text-center">REDEFINIR SENHA</h2>
@@ -54,5 +55,5 @@
         </div>
     </div>
 </div>
-<br>
+<br><br>
 @endsection

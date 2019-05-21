@@ -60,14 +60,16 @@ use App\Helpers\DataHelper;
           <table class="table table-sm text-center table-bordered">
   <thead>
     <tr class="colormenu">
-      <th scope="col" class="ficha text-white">Data de Revisão</th>
       <th scope="col" class="ficha text-white">Data de Criação</th>
+      <th scope="col" class="ficha text-white">Data de Revisão</th>
+      
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td scope="row" class="ficha" >{{DataHelper::formataData($ficha->revisao)}} <i class="fa fa-calendar playicon" aria-hidden="true"></i> </td>
+     
       <td class="ficha">{{DataHelper::pegaDataDeDateTime($ficha->created_at)}} <i class="fa fa-calendar playicon" aria-hidden="true"></i></td>
+       <td scope="row" class="ficha" >{{DataHelper::formataData($ficha->revisao)}} <i class="fa fa-calendar playicon" aria-hidden="true"></i> </td>
       
     </tr>
   </tbody>
@@ -144,12 +146,16 @@ use App\Helpers\DataHelper;
   <tbody class="fonttd">
       @foreach($treino as $exercicio)
         <tr >
-          <td scope="row" > <input type="checkbox" aria-label="Checkbox for following text input" style="border: 1px solid #ccc"> <span><strong>{{$exercicio->exercicio->titulo}}</strong> </span>
-              <!-- Button trigger modal -->
+          <td scope="row" >
+            
+           <input type="checkbox" aria-label="Checkbox for following text input" style="">
+            <!-- Button trigger modal -->
               <button type="button" class="btn" data-toggle="modal" data-target=".bd-example-modal-xl" style="border-radius: 20%; background-color: #fff0">
                 <img src="../svg/play.svg" style="max-width: 40px; ">
                 
               </button>
+           <span><strong>{{$exercicio->exercicio->titulo}}</strong> </span>
+              
 
             </td>
           <td class="text-center"><span><strong>{{$exercicio->series}} x {{$exercicio->repeticoes}}</strong> </span></td>
@@ -228,5 +234,5 @@ use App\Helpers\DataHelper;
     }
   </script>
 
-  <br>
+  
 @endpush

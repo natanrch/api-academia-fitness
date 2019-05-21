@@ -7,7 +7,7 @@ use App\Helpers\DataHelper;
 @extends('layouts.main')
 
 @section('content')
-<br>  
+<br>  <br>
 
   @if(session('message'))
     @component('components.alert')
@@ -23,7 +23,7 @@ use App\Helpers\DataHelper;
         </div>
         
       </div>
-      <br>
+      <br><br>
 <div class="container">
 <div class="row ">
     <div class="col-sm-6">
@@ -62,7 +62,7 @@ use App\Helpers\DataHelper;
   
     </div>
         <div class="col-sm-6">
-            <h2>Historico de Treinos</h2>
+            <h2>Histórico de Treinos</h2>
            <div class=" ">
               <p class="nomealuno" style="font-size: 20px">Sequência Realizada </p>
            <p class="">
@@ -93,5 +93,5 @@ use App\Helpers\DataHelper;
 <!-- modal de adcionar foto -->
 
 @include('site.partials.modal-fotoperfil')
-<br><br><br>
+<br><br><br><br><br>
     @endsection
