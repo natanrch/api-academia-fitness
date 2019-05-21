@@ -24,14 +24,16 @@
 <table class="table table-sm text-center table-bordered">
   <thead>
     <tr class="colormenu">
-      <th scope="col" class="ficha text-white">Data de Revisão</th>
-      <th scope="col" class="ficha text-white">Data de Criação</th>
+            <th scope="col" class="ficha text-white">Data de Criação</th>
+            <th scope="col" class="ficha text-white">Data de Revisão</th>
+
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td scope="row" class="ficha" >{{DataHelper::formataData($ficha->revisao)}} <i class="fa fa-calendar playicon" aria-hidden="true"></i> </td>
+      
       <td class="ficha">{{DataHelper::pegaDataDeDateTime($ficha->created_at)}} <i class="fa fa-calendar playicon" aria-hidden="true"></i></td>
+      <td scope="row" class="ficha" >{{DataHelper::formataData($ficha->revisao)}} <i class="fa fa-calendar playicon" aria-hidden="true"></i> </td>
       
     </tr>
   </tbody>
@@ -106,14 +108,16 @@
   <tbody class="fonttd">
       @foreach($ficha->ficha_exercicios as $exercicio)
         <tr>
-          <td scope="row"> <strong>{{$exercicio->treino->treino}} - {{$exercicio->exercicio->titulo}}</strong> </span>
+          <td scope="row">
+            <button type="button" class="btn" data-toggle="modal" data-target=".bd-example-modal-xl" style="border-radius: 20%; background-color: #fff0">
+                <img src="../svg/play.svg" style="max-width: 40px; "></button>
+           <strong>{{$exercicio->treino->treino}} - {{$exercicio->exercicio->titulo}}</strong> </span>
               <!-- Button trigger modal 
               <button type="button" class="btn" data-toggle="modal" data-target=".bd-example-modal-xl" style="border-radius: 20%">
                 <i class="fa fa-play-circle-o playicon" aria-hidden="true" style="font-size: 25px"></i>
               </button>--> 
               
-              <button type="button" class="btn" data-toggle="modal" data-target=".bd-example-modal-xl" style="border-radius: 20%; background-color: #fff0">
-                <img src="../svg/play.svg" style="max-width: 40px; ">
+              
 
             </td>
           <td class="text-center"><span><strong>{{$exercicio->series}} x {{$exercicio->repeticoes}}</strong> </span></td>
