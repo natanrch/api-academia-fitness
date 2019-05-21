@@ -17,8 +17,6 @@
                     <form method="POST" action="/admin/cadastra-aluno" enctype="multipart/form-data">
                         @csrf
 
-                        <input type="hidden" name="password" value="senhapadrao">
-
                         <div class="form-group row">
                             <label for="name" class="col-md-4 col-form-label text-md-right required">{{ __('NOME') }}</label>
 
