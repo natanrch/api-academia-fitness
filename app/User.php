@@ -62,6 +62,11 @@ class User extends Authenticatable
         return $this->hasOne('App\Ficha');
     }
 
+    public function instrutor_alunos()
+    {
+        return $this->hasMany(InstrutorAluno::class, 'instrutor_id');
+    }
+
     public function instrutor()
     {
         return $this->hasOne(InstrutorAluno::class, 'aluno_id');

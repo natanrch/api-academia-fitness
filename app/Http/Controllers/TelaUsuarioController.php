@@ -78,6 +78,7 @@ class TelaUsuarioController extends Controller
         if($request->aluno) {
             $alunos = User::where('tipo', 'default')->where('name', 'like', '%'.$request->aluno.'%')->get();
         }
+        $alunos = $alunos->where('instrutor.instrutor_id', Auth::id());
 
         $totalAlunos = count($alunos);
         $instrutor = $this->user->find(Auth::id());
