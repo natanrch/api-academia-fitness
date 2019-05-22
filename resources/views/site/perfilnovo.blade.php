@@ -49,7 +49,7 @@ use App\Helpers\DataHelper;
                             <strong>Pagamento:</strong> Dia {{$aluno->data_de_pagamento}}
                         </div>
                          <div class="descriperfil text-white">
-                              <strong>Próxima Avaliação Física: </strong>{{DataHelper::formataData($aluno->proxima_avaliacao)}}
+                              <strong>Próxima Avaliação Física: </strong>{{$aluno->proxima_avaliacao ? DataHelper::formataData($aluno->proxima_avaliacao) : ''}}
                         </div>
                         <br>
                         <div class="">

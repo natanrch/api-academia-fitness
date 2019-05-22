@@ -52,6 +52,7 @@ Route::group([
 Route::get('/sobrenos', 'TelaUsuarioController@sobreNos');
 
 Route::get('/instrutor/perfil', 'TelaUsuarioController@perfilInstrutor')->middleware(['instrutor', 'usuario-com-senha', 'bloqueado']);
+Route::post('/instrutor/cadastra-aluno', 'TelaUsuarioController@cadastraAluno')->middleware(['instrutor', 'usuario-com-senha', 'bloqueado']);
 
 Route::get('/cadastra-senha', 'TelaUsuarioController@formSenha')->middleware('auth');
 Route::post('/cadastra-senha', 'TelaUsuarioController@cadastraSenha')->middleware('auth');

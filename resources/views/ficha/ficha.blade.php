@@ -67,8 +67,8 @@
   </thead>
   <tbody>
     <tr>
-      <td scope="row" class="ficha" >  </td>
-      <td class="ficha"> minutos <i class="fa fa-clock-o playicon" aria-hidden="true"></i></td>
+      <td scope="row" class="ficha" > {{$ficha->treino_aerobico}} </td>
+      <td class="ficha"> {{$ficha->tempo_aerobico}} minutos <i class="fa fa-clock-o playicon" aria-hidden="true"></i></td>
     </tr>
   </tbody>
 </table>

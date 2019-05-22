@@ -7,7 +7,10 @@ use App\FichaExercicio;
 use App\Ficha;
 use App\UltimoTreino;
 use App\User;
+use App\InstrutorAluno;
 use Auth;
+
+use App\Helpers\CPFHelper;
 
 class TelaUsuarioController extends Controller
 {
@@ -15,13 +18,15 @@ class TelaUsuarioController extends Controller
     protected $ficha;
     protected $user;
     protected $ultimoTreino;
+    protected $instrutorAluno;
 
-    public function __construct(FichaExercicio $fichaExercicio, Ficha $ficha, User $user, UltimoTreino $ultimoTreino)
+    public function __construct(FichaExercicio $fichaExercicio, Ficha $ficha, User $user, UltimoTreino $ultimoTreino, InstrutorAluno $instrutorAluno)
     {
         $this->fichaExercicio = $fichaExercicio;
         $this->ficha = $ficha;
         $this->user = $user;
         $this->ultimoTreino = $ultimoTreino;
+        $this->instrutorAluno = $instrutorAluno;
     }
 
     public function ficha(Request $request)
@@ -147,18 +152,69 @@ class TelaUsuarioController extends Controller
         return redirect()->back();
     }
 
-    public function LoginApp()
+    public function cadastraAluno(Request $request)
     {
-        return view('app.login-app');
+        $request->validate([
+            'name' => 'required|min:6|max:191',
+            // 'name' => 'regex:/^[a-zA-Z ]+$/|required|min:6|max:191',
+            'cpf' => 'cpf|required|unique:users',
+            'email' => 'email|required|unique:users',
+            'data_de_nascimento' => 'date',
+            'pagamento' => 'numeric|min:1|max:31',
+            'modalidade' => 'required',
+            'instrutor' => 'required',
+            'proxima_avaliacao' => 'nullable|after:today'
+        ]);
+
+        // dd($request->proxima_avaliacao);
+        if($request->avaliacao) {
+            $upload = $request->avaliacao->store('avaliacoes');
+        } else {
+            $upload = null;
+        }
+
+        $cpf = CPFHelper::somenteNumeros($request->cpf);
+        
+        $user = $this->user->create([
+            'name' => $request->name,
+            'email' => $request->email,
+            'cpf' => $cpf,
+            'password' => bcrypt('academiafitness'),
+            'tipo' => 'default',
+            'data_de_nascimento' => $request->nascimento,
+            'data_de_pagamento' => $request->pagamento,
+            'modalidade' => $request->modalidade,
+            'avaliacao' => $upload,
+            'novo_usuario' => 1,
+            'proxima_avaliacao' => $request->proxima_avaliacao,
+        ]);
+
+        $instrutorAluno = $this->instrutorAluno->create([
+            'aluno_id' => $user->id,
+            'instrutor_id' => $request->instrutor,
+            'status' => 'sem_ficha',
+        ]);
+
+        return redirect()->back()->with([
+            'message' => [
+                'content' => 'Aluno cadastrado com sucesso!',
+                'type' => 'success',
+            ]
+        ]);
     }
 
-    public function PerfilApp()
-    {
-        return view('app.perfil-app');
-    }
-     public function FichaApp()
-    {
-        return view('app.ficha-app');
-    }
+    // public function LoginApp()
+    // {
+    //     return view('app.login-app');
+    // }
+
+    // public function PerfilApp()
+    // {
+    //     return view('app.perfil-app');
+    // }
+    //  public function FichaApp()
+    // {
+    //     return view('app.ficha-app');
+    // }
 }
 

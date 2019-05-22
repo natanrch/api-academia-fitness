@@ -52,6 +52,16 @@ class UsersSeeder extends Seeder
             'tipo' => 'admin',
             'novo_usuario' => 0,
         ]);
+        DB::table('instrutor_alunos')->insert([
+            'instrutor_id' => 3,
+            'aluno_id' => 1,
+            'status' => 'sem_ficha',
+        ]);
+        DB::table('instrutor_alunos')->insert([
+            'instrutor_id' => 3,
+            'aluno_id' => 2,
+            'status' => 'sem_ficha',
+        ]);
 
     }
 }

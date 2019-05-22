@@ -14,7 +14,7 @@
                 </div>
 
                 <div class="card-body fonttd">
-                    <form method="POST" action="/admin/cadastra-aluno" enctype="multipart/form-data">
+                    <form method="POST" action="{{Auth::user()->isAdmin() ? '/admin/cadastra-aluno' : '/instrutor/cadastra-aluno'}}" enctype="multipart/form-data">
                         @csrf
 
                         <div class="form-group row">
