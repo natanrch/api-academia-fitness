@@ -83,7 +83,15 @@ class FichaController extends Controller
             'metodo' => 'required',
             'aquecimento' => 'numeric',
             'intervalo' => 'required',
-            'revisao' => 'date',
+            'revisao' => 'date|after:today',
+        ]);
+
+        $verificaExercicios = $this->containsOnlyNull($request->treino);
+        if($verificaExercicios) return redirect()->back()->with([
+            'message' => [
+                'type' => 'danger',
+                'content' => 'A ficha não pode ser cadastrada sem exercícios',
+            ]
         ]);
 
         $ficha = $this->ficha->create([
@@ -173,7 +181,16 @@ class FichaController extends Controller
             'metodo' => 'required',
             'aquecimento' => 'numeric',
             'intervalo' => 'required',
-            'revisao' => 'date',
+            'revisao' => 'date|after:today',
+            'treino' => 'required',
+        ]);
+
+        $verificaExercicios = $this->containsOnlyNull($request->treino);
+        if($verificaExercicios) return redirect()->back()->with([
+            'message' => [
+                'type' => 'danger',
+                'content' => 'A ficha não pode ser cadastrada sem exercícios',
+            ]
         ]);
 
         $ficha->update([
@@ -227,5 +244,14 @@ class FichaController extends Controller
     {
         //
     }
+
+
+
+    private function containsOnlyNull($input)
+    {
+        return empty(array_filter($input, function ($a) { return $a !== null;}));
+    }
+
+
 
 }

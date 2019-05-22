@@ -61,7 +61,7 @@ use Carbon\Carbon;
     <p class="nomealuno " style=" margin-bottom: 5px;">{{$aluno->name}}</p>
     <div class="form-group">
       <a href="{{asset('storage/'.$aluno->avaliacao)}}" class="btn btnazul" >Avaliação Física <i class="fa fa-download"  aria-hidden="true"></i></a>
-      <a href="/ficha/create?user={{$aluno->id}}" class="btn btnazul" style="margin-top: 2px">Criar Ficha <i class="fa fa-file-text-o " aria-hidden="true"></i></a>
+      <a href="/ficha/create?user={{$aluno->id}}" class="btn btnazul" style="margin-top: 2px">{{$aluno->ficha ? 'Ver Ficha' : 'Criar Ficha'}}<i class="fa fa-file-text-o " aria-hidden="true"></i></a>
     @if(!$aluno->ficha)
         <span class="text-danger">Novo aluno!</span>
     @endif

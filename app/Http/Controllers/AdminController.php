@@ -44,11 +44,11 @@ class AdminController extends Controller
     {
 
         $request->validate([
-            //'name' => 'required|min:6|max:255',
-            'name' => 'regex:/^[a-zA-Z ]+$/|required|min:6|max:255',
-            'cpf' => 'cpf|required',
-            'email' => 'email|required',
-            'cref' => 'required',
+            'name' => 'required|min:6|max:191',
+            // 'name' => 'regex:/^[a-zA-Z ]+$/|required|min:6|max:191',
+            'cpf' => 'cpf|required|unique:users',
+            'email' => 'email|required|unique:users',
+            'cref' => 'required|unique:users',
         ]);
 
     	$user = $this->user->create([
@@ -72,14 +72,15 @@ class AdminController extends Controller
     public function cadastraAluno(Request $request)
     {
         $request->validate([
-            //'name' => 'required|min:6|max:255',
-            'name' => 'regex:/^[a-zA-Z ]+$/|required|min:6|max:255',
-            'cpf' => 'cpf|required',
-            'email' => 'email|required',
+            'name' => 'required|min:6|max:191',
+            // 'name' => 'regex:/^[a-zA-Z ]+$/|required|min:6|max:191',
+            'cpf' => 'cpf|required|unique:users',
+            'email' => 'email|required|unique:users',
             'data_de_nascimento' => 'date',
             'pagamento' => 'numeric|min:1|max:31',
             'modalidade' => 'required',
             'instrutor' => 'required',
+            'proxima_avaliacao' => 'nullable|after:today'
         ]);
 
         // dd($request->proxima_avaliacao);

@@ -9,6 +9,12 @@ use App\Helpers\RemoveAcentosHelper;
 <br><br>
 <!--texto CRIAR FICHA-->
 <section>
+@if(session('message'))
+    @component('components.alert')
+      @slot('type'){{ session('message')['type'] }}@endslot
+      {{ session('message')['content'] }}
+    @endcomponent
+@endif
 @if(count($errors) > 0)
 	<div class="alert alert-danger">
 		<ul>

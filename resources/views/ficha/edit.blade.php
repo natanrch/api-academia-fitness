@@ -8,6 +8,21 @@ use App\Helpers\RemoveAcentosHelper;
 <br><br>
 <!--texto CRIAR FICHA-->
 <section>
+@if(session('message'))
+    @component('components.alert')
+      @slot('type'){{ session('message')['type'] }}@endslot
+      {{ session('message')['content'] }}
+    @endcomponent
+@endif
+@if(count($errors) > 0)
+	<div class="alert alert-danger">
+		<ul>
+			@foreach($errors->all() as $error)
+				<li>{{$error}}</li>
+			@endforeach
+		</ul>
+	</div>
+@endif
 <div class="container">
 	        <div class="section-header">
 	          <h2 class="text-center">REVISAR FICHA</h2>
