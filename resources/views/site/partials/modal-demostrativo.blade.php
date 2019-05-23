@@ -11,10 +11,10 @@
         </button>
       </div>
       <div class="modal-body">
-        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <div id="carouselExampleIndicators-{{$exercicio}}" class="carousel slide" data-ride="carousel">
   <ol class="carousel-indicators" style="margin-bottom: -20px" >
-    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active" style="background-color: #005dff; "></li>
-    <li data-target="#carouselExampleIndicators" data-slide-to="1" style="background-color: #005dff"></li>
+    <li data-target="#carouselExampleIndicators-{{$exercicio}}" data-slide-to="0" class="active" style="background-color: #005dff; "></li>
+    <li data-target="#carouselExampleIndicators-{{$exercicio}}" data-slide-to="1" style="background-color: #005dff"></li>
   </ol>
   <div class="carousel-inner">
     <div class="carousel-item active">
@@ -23,14 +23,14 @@
       </div>
     </div>
     <div class="carousel-item">
-      <img src="../img/fundo3.jpg" class="d-block w-100" alt="Imagem do musculo trabalhando">
+      <img src="{{asset('storage/musculos/'.$imagem)}}" class="d-block w-100" alt="Imagem do musculo trabalhando">
     </div>
   </div>
-  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+  <a class="carousel-control-prev" href="#carouselExampleIndicators-{{$exercicio}}" role="button" data-slide="prev">
     <span class="carousel-control-prev-icon " aria-hidden="true" style="color: red"></span>
     <span class="sr-only">Previous</span>
   </a>
-  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+  <a class="carousel-control-next" href="#carouselExampleIndicators-{{$exercicio}}" role="button" data-slide="next">
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
     <span class="sr-only">Next</span>
   </a>
