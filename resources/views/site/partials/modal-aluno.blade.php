@@ -97,7 +97,7 @@
                             <div class="col-md-6">
                                <select class="form-control" style="border: 1px solid #1827f580" id="modalidade" name="modalidade">
                                    <option value="" selected>modalidade</option>
-                                    <option value="musculação">Musculação</option>
+                                    <option value="Musculação">Musculação</option>
                                </select>
                                 @if ($errors->has('modalidade'))
                                     <span class="invalid-feedback" role="alert">
