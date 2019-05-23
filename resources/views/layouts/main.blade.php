@@ -76,7 +76,7 @@
     <div class="row">
       <div class="col-12 col-sm-4">
         <p class="pfooter">REDES SOCIAS</p>
-        <a href=""><i class="fa fa-facebook-square playicon" aria-hidden="true" style=" font-size:  25px; margin-right: 5px" ></i></a>
+        <a href="https://www.facebook.com/fitnessacademiaoficial/"><i class="fa fa-facebook-square playicon" aria-hidden="true" style=" font-size:  25px; margin-right: 5px" ></i></a>
         <a href=""><i class="fa fa-instagram playicon" aria-hidden="true" style=" font-size:  25px;"></i></a>
       </div>
       <div class="col-12 col-sm-4">
