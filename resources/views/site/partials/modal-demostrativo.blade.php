@@ -38,7 +38,7 @@
         <hr style="border-top:1px solid  #B95922">
         <div>
           <h3>DESCRIÇÃO</h3>
-          <p class="descplanos">O agachamento é um exercício voltado para a área superior das pernas, trabalhando os quadríceps e glúteos com maior ênfase, e com menor ênfase a área interna das pernas.</p>
+          <p class="descplanos">{{$descricao}}</p>
         </div>
       </div>
       <div class="modal-footer">

@@ -123,6 +123,10 @@
           <td class="text-center"><span><strong>{{$exercicio->series}} x {{$exercicio->repeticoes}}</strong> </span></td>
           <td class="text-center"><span><strong>{{$exercicio->peso}} Kg</strong> </span></td>
         </tr>
+        @include('site.partials.modal-demostrativo', [
+            'descricao' => $exercicio->exercicio->descricao,
+          ])
+
       @endforeach
   </tbody>
   <tfoot class="fonttd">
@@ -155,10 +159,6 @@
 </div>
 </div>
 </div>
-
-
-@include('site.partials.modal-demostrativo')
-
 
 @endsection
 
