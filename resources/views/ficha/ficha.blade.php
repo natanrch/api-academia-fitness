@@ -109,7 +109,7 @@
       @foreach($ficha->ficha_exercicios as $exercicio)
         <tr>
           <td scope="row">
-            <button type="button" class="btn" data-toggle="modal" data-target=".bd-example-modal-xl" style="border-radius: 20%; background-color: #fff0">
+            <button type="button" class="btn" data-toggle="modal" data-target=".modal-{{$exercicio->exercicio->id}}" style="border-radius: 20%; background-color: #fff0">
                 <img src="../svg/play.svg" style="max-width: 40px; "></button>
            <strong>{{$exercicio->treino->treino}} - {{$exercicio->exercicio->titulo}}</strong> </span>
               <!-- Button trigger modal 
@@ -125,6 +125,7 @@
         </tr>
         @include('site.partials.modal-demostrativo', [
             'descricao' => $exercicio->exercicio->descricao,
+            'exercicio' => $exercicio->exercicio->id,
           ])
 
       @endforeach
