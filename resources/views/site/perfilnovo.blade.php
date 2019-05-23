@@ -9,14 +9,13 @@ use App\Helpers\DataHelper;
 @section('content')
 <br>  <br>
 
-  @if(session('message'))
+<div class="container">
+   @if(session('message'))
     @component('components.alert')
       @slot('type'){{ session('message')['type'] }}@endslot
       {{ session('message')['content'] }}
     @endcomponent
   @endif
-
-<div class="container">
         <div class="section-header">
           <h2 class="text-center">MEU PERFIL</h2>
           <hr style="max-width: 122px; height: 3px; background-color: #B95922;">

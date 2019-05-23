@@ -201,7 +201,7 @@
         <div class="d-flex  mb-2 ">
           <div class="mr-auto  "><span class="valorplanos1" >R$ 30,00 <i class="fa fa-money" style="color: green; font-size: 20px" aria-hidden="true"></i></span><br><span class="preco1">DINHEIRO</span></div>
           
-          <div class="bd-highlight"><span class="valorplanos1">R$ 35,00 <i class="fa fa-credit-card-alt" style="color:#0c0303b3; margin-top: 4px" aria-hidden="true"></i></span><br><span class="preco1">CARTÃO</span></div>
+          <div class="bd-highlight"><span class="valorplanos1">R$ 35,00 <i class="fa fa-credit-card-alt" style="color:#fff; margin-top: 4px" aria-hidden="true"></i></span><br><span class="preco1">CARTÃO</span></div>
         </div>
       </div>
       </center>
@@ -217,7 +217,7 @@
         <div class="d-flex  mb-2 ">
           <div class="mr-auto  "><span class="valorplanos1" >R$ 75,00 <i class="fa fa-money" style="color: green; font-size: 20px" aria-hidden="true"></i></span><br><span class="preco1">DINHEIRO</span></div>
           
-          <div class="bd-highlight"><span class="valorplanos1">R$ 75,00 <i class="fa fa-credit-card-alt" style="color:#0c0303b3; margin-top: 4px" aria-hidden="true"></i></span><br><span class="preco1">CARTÃO</span></div>
+          <div class="bd-highlight"><span class="valorplanos1">R$ 75,00 <i class="fa fa-credit-card-alt" style="color:#fff; margin-top: 4px" aria-hidden="true"></i></span><br><span class="preco1">CARTÃO</span></div>
         </div>
       </div>
       </center>
@@ -234,7 +234,7 @@
         <div class="d-flex  mb-2 ">
           <div class="mr-auto  "><span class="valorplanos1" >R$ 110,00 <i class="fa fa-money" style="color: green; font-size: 20px" aria-hidden="true"></i></span><br><span class="preco1">DINHEIRO</span></div>
           
-          <div class="bd-highlight"><span class="valorplanos1">R$ 115,00 <i class="fa fa-credit-card-alt"  style="color:#0c0303b3; margin-top: 4px" aria-hidden="true"></i></span><br><span class="preco1">CARTÃO</span></div>
+          <div class="bd-highlight"><span class="valorplanos1">R$ 115,00 <i class="fa fa-credit-card-alt"  style="color:#fff; margin-top: 4px" aria-hidden="true"></i></span><br><span class="preco1">CARTÃO</span></div>
         </div>
       </div>
       </center>

@@ -14,7 +14,7 @@
   <link href="{{ url('lib/animate/animate.min.css') }}" rel="stylesheet">
   <link href="{{ url('lib/venobox/venobox.css') }}" rel="stylesheet">
   <link href="{{ url('lib/owlcarousel/assets/owl.carousel.min.css') }}" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.2.0/sweetalert2.min.css">
+
 
     <title>Academia Fitness</title>
 </head>
@@ -76,7 +76,7 @@
     <div class="row">
       <div class="col-12 col-sm-4">
         <p class="pfooter">REDES SOCIAS</p>
-        <a href=""><i class="fa fa-facebook-square playicon" aria-hidden="true" style=" font-size:  25px; margin-right: 5px" ></i></a>
+        <a href="https://www.facebook.com/fitnessacademiaoficial/"><i class="fa fa-facebook-square playicon" aria-hidden="true" style=" font-size:  25px; margin-right: 5px" ></i></a>
         <a href=""><i class="fa fa-instagram playicon" aria-hidden="true" style=" font-size:  25px;"></i></a>
       </div>
       <div class="col-12 col-sm-4">
