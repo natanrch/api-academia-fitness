@@ -100,7 +100,7 @@
  </div>
     <div class="col-12 col-sm-4">
     <h5 class="mt-0 nomealuno" style="font-size: 20px">Camilo Abrahão</h5>
-     <p class="ficha text-justify"><span>CREF: <br></span>Graduado em Educação Física - Licenciatura (2017) e cursando Educação Física - Bacharelado. Cursos em ginástica, aperfeiçoamento e conteúdo para transmitir aos alunos um melhor atendimento. Instrutor na Fitness Academia desde 2018.</p>
+     <p class="ficha text-justify"><span>CREF: 001683-G/AP <br></span>Graduado em Educação Física - Licenciatura (2017) e cursando Educação Física - Bacharelado. Cursos em ginástica, aperfeiçoamento e conteúdo para transmitir aos alunos um melhor atendimento. Instrutor na Fitness Academia desde 2018.</p>
     </div>
   </div>
 </div>
