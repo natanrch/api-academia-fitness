@@ -14,6 +14,7 @@
   <link href="{{ url('lib/animate/animate.min.css') }}" rel="stylesheet">
   <link href="{{ url('lib/venobox/venobox.css') }}" rel="stylesheet">
   <link href="{{ url('lib/owlcarousel/assets/owl.carousel.min.css') }}" rel="stylesheet">
+  <link rel="shortcut icon" type="image/x-icon" href="/../img/3054Logomarca---favicon-redonda.ico">
 
 
     <title>Academia Fitness</title>

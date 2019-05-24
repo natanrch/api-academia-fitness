@@ -23,7 +23,7 @@
       </div>
     </div>
     <div class="carousel-item">
-      <img src="{{asset('storage/musculos/'.$imagem)}}" class="d-block w-100" alt="Imagem do musculo trabalhando">
+      <img src="{{asset('storage/musculos/'.$imagem)}}" class="d-block w-100 img-fluid" alt="Imagem do musculo trabalhando" style="max-height: 350px">
     </div>
   </div>
   <a class="carousel-control-prev" href="#carouselExampleIndicators-{{$exercicio}}" role="button" data-slide="prev">
@@ -38,7 +38,7 @@
         <hr style="border-top:1px solid  #B95922">
         <div>
           <h3>DESCRIÇÃO</h3>
-          <p class="descplanos">{{$descricao}}</p>
+          <p class="descplanos" style="text-align: justify; font-size: 18px">{{$descricao}}</p>
         </div>
       </div>
       <div class="modal-footer">
