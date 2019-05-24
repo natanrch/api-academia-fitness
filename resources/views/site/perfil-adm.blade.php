@@ -94,10 +94,10 @@ fa-search" aria-hidden="true"></i></button>
             <p class="nomealuno ">{{$aluno->name}}</p>
             <div class="form-group" >
               <button type="button" class="btn btnazul btn-sm" data-toggle="modal" data-target=".avaliar" style="margin-top: 5px;">Reavaliar <i class="fa fa-share" aria-hidden="true" ></i></button>
-              <form method="POST" action="/admin/bloqueia-usuario" class="form-bloquear">
+              <form method="POST" action="{{$aluno->isBloqueado() ? '/admin/desbloqueia-usuario' : '/admin/bloqueia-usuario'}}" class="form-{{$aluno->isBloqueado() ? 'desbloquear' : 'bloquear'}}">
                 {{csrf_field()}}
                 <input type="hidden" name="id" value="{{$aluno->id}}">
-                <button type="submit" type="button" class="btn btnazul btn-sm" style="margin-top: 5px;">Bloquear <i class="fa fa-user-times" aria-hidden="true"></i></button>
+                <button type="submit" type="button" class="btn btnazul btn-sm" style="margin-top: 5px;">{{$aluno->isBloqueado() ? 'Desbloquear' : 'Bloquear'}} <i class="fa fa-user-times" aria-hidden="true"></i></button>
               </form>
             </div>
         </div>
@@ -144,6 +144,23 @@ fa-search" aria-hidden="true"></i></button>
     swal({
       title: "Atenção!!",
       text: "Deseja bloquear esse usuário?",
+      icon: "warning",
+      buttons: true,
+      dangerMode: true,
+    })
+    .then((willBloquear) => {
+      if (willBloquear) {
+        event.currentTarget.submit();
+
+      }
+    });
+  });
+    $('.form-desbloquear').submit(function(event) {
+    var ret = false;
+    event.preventDefault();
+    swal({
+      title: "Atenção!!",
+      text: "Deseja desbloquear esse usuário?",
       icon: "warning",
       buttons: true,
       dangerMode: true,

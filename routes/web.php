@@ -65,6 +65,7 @@ Route::group([
 	Route::post('/cadastra-instrutor', 'AdminController@cadastraInstrutor');
 	Route::post('/cadastra-aluno', 'AdminController@cadastraAluno');
 	Route::post('/bloqueia-usuario', 'AdminController@bloqueiaUsuario');
+	Route::post('/desbloqueia-usuario', 'AdminController@desbloqueiaUsuario');
 	Route::post('/reavaliar', 'AdminController@reavaliar');
 });
 

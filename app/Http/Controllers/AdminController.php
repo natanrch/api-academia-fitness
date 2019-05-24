@@ -133,6 +133,19 @@ class AdminController extends Controller
         ]);
     }
 
+    public function desbloqueiaUsuario(Request $request)
+    {
+        $user = $this->user->find($request->id);
+        $user->desbloqueia();
+
+        return redirect()->back()->with([
+            'message' => [
+                'content' => 'Usuário desbloqueado com sucesso!',
+                'type' => 'success',
+            ]
+        ]);
+    }
+
     public function reavaliar(Request $request)
     {
         $request->validate([

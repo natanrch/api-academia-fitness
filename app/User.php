@@ -79,6 +79,13 @@ class User extends Authenticatable
         return $this;
     }
 
+    public function desbloqueia()
+    {
+        $this->bloqueado = 0;
+        $this->save();
+        return $this;
+    }
+
     public function reavalia($upload)
     {
         $this->avaliacao = $upload;

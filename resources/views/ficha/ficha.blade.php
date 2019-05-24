@@ -163,17 +163,3 @@
 </div>
 
 @endsection
-
-@push('scripts')
-  <script type="text/javascript">
-    $(document).ready(function() {
-      $('successtreino').submit() {
-        alert('Mais um pra conta!');
-      }
-    });
-    $('#suss').click() {
-      $('#idfinaliza').submit();
-    }
-  </script>
-
-@endpush

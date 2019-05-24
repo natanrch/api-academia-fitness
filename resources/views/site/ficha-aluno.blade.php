@@ -150,10 +150,8 @@ use App\Helpers\DataHelper;
             
            <input type="checkbox" aria-label="Checkbox for following text input" style="">
             <!-- Button trigger modal -->
-              <button type="button" class="btn" data-toggle="modal" data-target=".bd-example-modal-xl" style="border-radius: 20%; background-color: #fff0">
-                <img src="../svg/play.svg" style="max-width: 40px; ">
-                
-              </button>
+              <button type="button" class="btn" data-toggle="modal" data-target=".modal-{{$exercicio->exercicio->id}}" style="border-radius: 20%; background-color: #fff0">
+                <img src="../svg/play.svg" style="max-width: 40px; "></button>
            <span><strong>{{$exercicio->exercicio->titulo}}</strong> </span>
               
 
@@ -161,6 +159,11 @@ use App\Helpers\DataHelper;
           <td class="text-center"><span><strong>{{$exercicio->series}} x {{$exercicio->repeticoes}}</strong> </span></td>
           <td class="text-center"><span><strong>{{$exercicio->peso}} Kg</strong> </span></td>
         </tr>
+        @include('site.partials.modal-demostrativo', [
+            'descricao' => $exercicio->exercicio->descricao,
+            'exercicio' => $exercicio->exercicio->id,
+            'imagem' => $exercicio->exercicio->tipo_exercicio->imagem
+          ])
       @endforeach
   </tbody>
   <tfoot class="fonttd">
@@ -217,8 +220,6 @@ use App\Helpers\DataHelper;
   
 
 </div>
-@include('site.partials.modal-demostrativo')
-
 
 @endsection
 
