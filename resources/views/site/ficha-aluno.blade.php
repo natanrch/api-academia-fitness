@@ -162,7 +162,8 @@ use App\Helpers\DataHelper;
         @include('site.partials.modal-demostrativo', [
             'descricao' => $exercicio->exercicio->descricao,
             'exercicio' => $exercicio->exercicio->id,
-            'imagem' => $exercicio->exercicio->tipo_exercicio->imagem
+            'imagem' => $exercicio->exercicio->tipo_exercicio->imagem,
+            'demonstracao' => $exercicio->exercicio->demonstracao,
           ])
       @endforeach
   </tbody>
