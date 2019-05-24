@@ -12,7 +12,7 @@
 
     <label for="exampleFormControlFile1" class="col-form-label text-md-right" style="margin-top: 10px">Escolha o arquivo</label>
     <input type="file" name="avaliacao" class="form-control-file" id="exampleFormControlFile1" style=" border: 1px solid #ced4da; border-radius: 2px; padding: 7px">
-    <input type="hidden" name="id" value="{{$aluno->id}}">
+    <input type="hidden" name="id" value="{{isset($aluno->id) ? $aluno->id : ''}}">
     {{csrf_field()}}
 
      <label for="proxima_avaliacao" class="col-form-label text-md-right">{{ __('Data da próxima avaliação física') }}</label>
