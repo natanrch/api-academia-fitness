@@ -83,4 +83,18 @@ class LoginController extends Controller
         return redirect('/');
     }
 
+    public function loginAPI()
+    {
+        if(Auth::attempt(['cpf' => request('cpf'), 'password' => request('password')])){
+
+            $user = Auth::user();
+
+            $success['token'] = $user->createToken('myApp')->accessToken;
+
+            return response()->json(['success' => $success], 200);
+        } else {
+            return response()->json(['error'=>'Unauthorised'], 401);
+        }
+    }
+
 }
