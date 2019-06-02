@@ -47,16 +47,16 @@ use App\Helpers\RemoveAcentosHelper;
 		<input class="form-control" type="text" name="metodo" id="metodo">
     </div>
     <div class="form-group col-md-3">
-      <label for="aquecimento">Treino aeróbico </label>
+      <label for="aquecimento">Selecione o aeróbico </label>
 		<select name="aerobico" class="form-control">
-						<option selected>escolha</option>
+						<option selected>Escolha</option>
 						<option value="Esteira">Esteira</option>
 						<option value="Elíptico">Elíptico</option>
 						<option value="Bicicleta Ergométrica">Bicicleta Ergométrica</option>
 		</select>
     </div>
     <div class="form-group col-md-3">
-      <label for="aerobico">Treino aeróbico (minutos)</label>
+      <label for="aerobico">Tempo de aeróbico (minutos)</label>
 		<input class="form-control" type="number" name="tempo_aerobico" id="aerobico">
     </div>
     <div class="form-group col-md-3 ">

@@ -21,7 +21,7 @@
                             <label for="name" class="col-md-4 col-form-label text-md-right required">{{ __('NOME') }}</label>
 
                             <div class="col-md-6">
-                                <input id="name" type="text" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" name="name" value="{{ old('name') }}" placeholder="nome do aluno" required autofocus>
+                                <input id="name" type="text" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" name="name" value="{{ old('name') }}" placeholder="Nome do aluno" required autofocus>
 
                                 @if ($errors->has('name'))
                                     <span class="invalid-feedback" role="alert">
@@ -64,7 +64,7 @@
                             <label for="email" class="col-md-4 col-form-label text-md-right required">{{ __('E-MAIL') }}</label>
 
                             <div class="col-md-6">
-                                <input id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" placeholder="email" required>
+                                <input id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" placeholder="meuemail@provedor.com" required>
 
                                 @if ($errors->has('email'))
                                     <span class="invalid-feedback" role="alert">
@@ -79,7 +79,7 @@
 
                             <div class="col-md-6">
                               <div class="input-group">
-                                 <input id="pagamento" type="number" class="form-control{{ $errors->has('pagamento') ? ' is-invalid' : '' }}" name="pagamento" value="{{ old('pagamento') }}" placeholder="dia" required>
+                                 <input id="pagamento" type="number" class="form-control{{ $errors->has('pagamento') ? ' is-invalid' : '' }}" name="pagamento" value="{{ old('pagamento') }}" placeholder="01" required>
                                 </div>
                                 @if ($errors->has('pagamento'))
                                     <span class="invalid-feedback" role="alert">
@@ -96,7 +96,7 @@
 
                             <div class="col-md-6">
                                <select class="form-control" style="border: 1px solid #1827f580" id="modalidade" name="modalidade">
-                                   <option value="" selected>modalidade</option>
+                                   <option value="" selected>Modalidade</option>
                                     <option value="Musculação">Musculação</option>
                                </select>
                                 @if ($errors->has('modalidade'))
@@ -112,7 +112,7 @@
 
                              <div class="col-md-6">
                                <select class="form-control" style="border: 1px solid #1827f580" id="instrutor" name="instrutor">
-                                   <option selected>instrutor</option>
+                                   <option selected>Instrutor</option>
                                    @foreach($instrutores as $instrutor)
                                         <option value="{{$instrutor->id}}">{{$instrutor->name}}</option>
                                     @endforeach
@@ -151,7 +151,7 @@
                                     </span>
                                 @endif
                                 <br>
-                                <div class="text-center" style="">senha: academiafitness</div>
+                                <div class="text-center" style="">Senha: academiafitness</div>
                             </div>
                             
                         </div>

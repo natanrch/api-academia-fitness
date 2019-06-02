@@ -89,7 +89,7 @@
  </div>
   <div class="col-12 col-sm-4">
     <h5 class="mt-0 nomealuno" style="font-size: 20px">Kleyton Souza Pereira</h5>
-     <p class="ficha text-justify"><span>CREF: 001689-G/AP <br></span> Graduado em Educação Física - Licenciatura (2017) pela FAMA. Pós graduado em fisiologia do exercício, nutrição e nutrição esportiva. Trabalho  como Instrutor  na Fitness Academia desde 2017.</p>
+     <p class="ficha text-justify"><span>CREF: 001689-G/AP <br></span> Graduado em Educação Física - Licenciatura (2017) pela 	FAMA. Pós graduado em Fisiologia do Exercício, Nutrição 	e Nutrição Esportiva. Trabalho como Instrutor na 	Fitness Academia desde 2017.</p>
     </div>
     <div class="col-12 col-sm-2">
    
