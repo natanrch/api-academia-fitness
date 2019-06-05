@@ -203,18 +203,67 @@ class TelaUsuarioController extends Controller
         ]);
     }
 
-    // public function LoginApp()
-    // {
-    //     return view('app.login-app');
-    // }
+    public function fichaAPI(Request $request)
+    {   
+        $ficha = $this->ficha->where('user_id', Auth::id())->first();
+        if($ficha == null) {
+            //ver o que fazer
+        }
 
-    // public function PerfilApp()
-    // {
-    //     return view('app.perfil-app');
-    // }
-    //  public function FichaApp()
-    // {
-    //     return view('app.ficha-app');
-    // }
+        $ultimoTreino = $this->ultimoTreino->where('ficha_id', $ficha->id)->orderBy('created_at', 'desc')->first();
+        if($ultimoTreino != null) {
+
+            $treino = $this->fichaExercicio->where('ficha_id', $ficha->id)->where('treino_id', $ultimoTreino->treino_id + 1)->get();
+            if(count($treino) == 0) {
+                $treino = $this->fichaExercicio->where('ficha_id', $ficha->id)->where('treino_id', 1)->get();
+            }
+        } else {
+            $treino = $this->fichaExercicio->where('ficha_id', $ficha->id)->where('treino_id', 1)->get();
+        }
+
+
+        if($request->treino) {
+            $treino = $this->fichaExercicio->where('ficha_id', $ficha->id)->where('treino_id', $request->treino)->get();
+            if(count($treino) == 0) {
+                return redirect()->back();
+            }
+        }
+
+        $arrayTreino = $treino->toArray();
+
+        foreach($treino as $key => $value) {
+            $arrayTreino[$key]['exercicio'] = $value->exercicio;
+            $arrayTreino[$key]['imagem'] = $value->exercicio->tipo_exercicio->imagem;
+        }
+
+        // dd($arrayTreino);
+
+        // $treinoDeHoje = $treino->first()->treino;
+
+
+
+        $sequencia = \DB::select('SELECT DISTINCT treinos.treino
+            FROM ficha_exercicios 
+            JOIN treinos on treinos.id = ficha_exercicios.treino_id 
+            WHERE ficha_id = '.$ficha->id);
+    
+        $res = array();
+
+        $res['ficha'] = $ficha;
+        $res['treino'] = $arrayTreino;
+        // $res['treinoDeHoje'] = $treinoDeHoje;
+        $res['sequencia'] = $sequencia;
+
+        return $res;
+
+        // return view('site.ficha-aluno', [
+        //     'ficha' => $ficha,
+        //     'treino' => $treino,
+        //     'treinoDeHoje' => $treinoDeHoje,
+        //     'sequencia' => $sequencia,
+        // ]);
+    }
+
+
 }
 
