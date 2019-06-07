@@ -204,6 +204,17 @@ class TelaUsuarioController extends Controller
         ]);
     }
 
+    public function setUltimoTreino(Request $request)
+    {
+        $treino = $request->treino;
+        $ficha = $request->ficha;
+        $ultimoTreino = $this->ultimoTreino->create([
+            'ficha_id' => $ficha,
+            'treino_id' => $treino,
+        ]);
+        return redirect()->back();
+    }
+
     public function fichaAPI(Request $request)
     {   
  
@@ -251,7 +262,7 @@ class TelaUsuarioController extends Controller
 
         $res['ficha'] = $ficha;
         $res['treino'] = $arrayTreino;
-        $res['treinoDeHoje'] = $treinoDeHoje->treino;
+        $res['treinoDeHoje'] = $treinoDeHoje;
         $res['sequencia'] = $sequencia;
         $res['instrutor'] = $ficha->ficha_instrutor->instrutor->name;
         $res['instrutor_imagem'] = $ficha->ficha_instrutor->instrutor->imagem;
@@ -277,15 +288,35 @@ class TelaUsuarioController extends Controller
             $arrayTreinos[$key]['data'] = DataHelper::pegaDataDeDateTime($value->created_at);
         }
 
+        $aluno->proxima_avaliacao_formatado = DataHelper::formataData($aluno->proxima_avaliacao);
+        $aluno->nomeDoInstrutor = $aluno->instrutor->instrutor->name;
+
         $res = array();
         $res['aluno'] = $aluno;
         $res['treinos'] = $arrayTreinos;
 
         return $res;
-        // return view('site.perfilnovo', [
-        //     'aluno' => $aluno,
-        //     'treinos' => $treinos
-        // ]);
+    }
+
+    public function fotoPerfilAPI(Request $request)
+    {
+        // dd($request->all());
+        $upload = $request->imagem->store('perfil');
+        $user = $this->user->find(Auth::id());
+        $user->imagem = $upload;
+        $user->save();
+    }
+
+
+
+    public function setUltimoTreinoAPI(Request $request)
+    {
+        $treino = $request->treino;
+        $ficha = $request->ficha;
+        $ultimoTreino = $this->ultimoTreino->create([
+            'ficha_id' => $ficha,
+            'treino_id' => $treino,
+        ]);
     }
 
 }

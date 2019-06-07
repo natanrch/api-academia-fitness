@@ -44,7 +44,7 @@ Route::group([
 	Route::get('/perfil', 'TelaUsuarioController@perfilNovo')->middleware(['auth', 'usuario-com-senha']);
 	Route::get('/perfil-teste', 'TelaUsuarioController@perfilAPI')->middleware(['auth', 'usuario-com-senha']);
 	Route::get('/ficha', 'TelaUsuarioController@ficha')->middleware(['auth', 'usuario-com-senha']);
-	Route::post('/ficha', 'FichaController@setUltimoTreino')->middleware(['usuario-com-senha']);
+	Route::post('/ficha', 'TelaUsuarioController@setUltimoTreino')->middleware(['usuario-com-senha']);
 	Route::get('/ficha-teste', 'TelaUsuarioController@fichaAPI');
 });
 

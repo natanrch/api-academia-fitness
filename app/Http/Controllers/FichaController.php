@@ -141,17 +141,6 @@ class FichaController extends Controller
 
     }
 
-    public function setUltimoTreino(Request $request)
-    {
-        $treino = $request->treino;
-        $ficha = $request->ficha;
-        $ultimoTreino = $this->ultimoTreino->create([
-            'ficha_id' => $ficha,
-            'treino_id' => $treino,
-        ]);
-        return redirect()->back();
-    }
-
     /**
      * Show the form for editing the specified resource.
      *
