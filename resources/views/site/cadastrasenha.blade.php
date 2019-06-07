@@ -41,7 +41,7 @@
                 <div class="form-group">
                      <label for="password" class="required">{{ __('Senha') }}</label>
                   <div class="input-group">
-                        <input id="password" type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" placeholder="nova senha" required autofocus style="border-radius: 50px;">
+                        <input id="password" type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" placeholder="Insira sua nova senha" required autofocus style="border-radius: 50px;">
 
                       
                            @if ($errors->has('password'))
@@ -56,7 +56,7 @@
                 <div class="form-group" style="margin-top: -15px">
                     <label for="password-confirm" class="required">{{ __('Confirmar Senha') }}</label>
                     <div class="input-group">
-                        <input id="password-confirm" type="password" class="form-control" name="password_confirmation" placeholder="nova senha" required style="border-radius: 50px;">
+                        <input id="password-confirm" type="password" class="form-control" name="password_confirmation" placeholder="Repita sua nova senha" required style="border-radius: 50px;">
                     </div>
                 </div>        
                 <div class="form-group">

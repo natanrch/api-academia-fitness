@@ -26,7 +26,7 @@
                             <label for="email" class="required" >{{ __('E-MAIL') }}</label>
 
                             <div class="input-group">
-                                 <input id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ $email ?? old('email') }}" required autofocus placeholder="email">
+                                 <input id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ $email ?? old('email') }}" required autofocus placeholder="meuemail@provedor.com">
 
                                 @if ($errors->has('email'))
                                     <span class="invalid-feedback" role="alert">
@@ -39,7 +39,7 @@
                             <label for="password" class="required" >{{ __('SENHA') }}</label>
 
                             <div class="input-group">
-                                <input id="password" type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" required>
+                                <input id="password" type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" placeholder="Insira sua nova senha" required>
 
                                 @if ($errors->has('password'))
                                     <span class="invalid-feedback" role="alert">
@@ -53,7 +53,7 @@
                             <label for="password-confirm" class="required" >{{ __('CONFIRMA SENHA') }}</label>
 
                             <div class="input-group">
-                                <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required>
+                                <input id="password-confirm" type="password" class="form-control" name="password_confirmation" placeholder="Repita sua nova senha" required>
                             </div>
                         </div>
 

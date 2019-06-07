@@ -31,7 +31,7 @@
                             <label for="email" class="required" style="font-size: 18px">{{ __('E-MAIL') }}</label>
 
                             <div class="input-group">
-                                <input id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" required placeholder="email">
+                                <input id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" required placeholder="meuemail@provedor.com">
 
                                 @if ($errors->has('email'))
                                     <span class="invalid-feedback" role="alert">

@@ -84,7 +84,7 @@
         <div >
         <P class="pfooter">ONDE NOS ENCONTRAR?</P>
         <small ><a href="https://goo.gl/maps/ZhcBZ68Cu5K2" class="small p1footer"><i class="fa fa-map-marker playicon " style="font-size: 25px;" aria-hidden="true"></i> Rua São José, 1143</a></small><br>
-        <small class="small p1footer">Proximo a escola Pudium</small><br>
+        <small class="small p1footer">Próxima a Escola Podium</small><br>
         </div>
       </div>
       <div class="col-12 col-sm-4">
