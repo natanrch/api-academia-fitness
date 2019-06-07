@@ -23,9 +23,6 @@ Route::get('/logout', 'Auth\LoginController@logout');
 Route::get('/cadastro', 'Auth\RegisterController@cadastroInstrutor');
 
 Route::get('/home', 'HomeController@index')->name('home');
-Route::get('/login-app', 'TelaUsuarioController@LoginApp');
-Route::get('/perfil-app', 'TelaUsuarioController@PerfilApp');
-Route::get('/ficha-app', 'TelaUsuarioController@FichaApp');
 
 
 // Route::group([
@@ -45,6 +42,7 @@ Route::group([
 	'middleware' => 'bloqueado'
 ], function() {
 	Route::get('/perfil', 'TelaUsuarioController@perfilNovo')->middleware(['auth', 'usuario-com-senha']);
+	Route::get('/perfil-teste', 'TelaUsuarioController@perfilAPI')->middleware(['auth', 'usuario-com-senha']);
 	Route::get('/ficha', 'TelaUsuarioController@ficha')->middleware(['auth', 'usuario-com-senha']);
 	Route::post('/ficha', 'FichaController@setUltimoTreino')->middleware(['usuario-com-senha']);
 	Route::get('/ficha-teste', 'TelaUsuarioController@fichaAPI');

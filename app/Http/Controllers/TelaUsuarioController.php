@@ -11,6 +11,7 @@ use App\InstrutorAluno;
 use Auth;
 
 use App\Helpers\CPFHelper;
+use App\Helpers\DataHelper;
 
 class TelaUsuarioController extends Controller
 {
@@ -205,6 +206,7 @@ class TelaUsuarioController extends Controller
 
     public function fichaAPI(Request $request)
     {   
+ 
         $ficha = $this->ficha->where('user_id', Auth::id())->first();
         if($ficha == null) {
             //ver o que fazer
@@ -221,26 +223,24 @@ class TelaUsuarioController extends Controller
             $treino = $this->fichaExercicio->where('ficha_id', $ficha->id)->where('treino_id', 1)->get();
         }
 
-
-        if($request->treino) {
-            $treino = $this->fichaExercicio->where('ficha_id', $ficha->id)->where('treino_id', $request->treino)->get();
+        if($request->query('treino')) {
+            $treino = $this->fichaExercicio->where('ficha_id', $ficha->id)->where('treino_id', $request->query('treino'))->get();
             if(count($treino) == 0) {
                 return redirect()->back();
             }
         }
 
-        $arrayTreino = $treino->toArray();
+        // dd($ficha->created_at);
+        $ficha->created_at_formatado = DataHelper::pegaDataDeDateTime($ficha->created_at);
+        $ficha->revisao_formatado = DataHelper::formataData($ficha->revisao);
 
+        $arrayTreino = $treino->toArray();
         foreach($treino as $key => $value) {
             $arrayTreino[$key]['exercicio'] = $value->exercicio;
             $arrayTreino[$key]['imagem'] = $value->exercicio->tipo_exercicio->imagem;
         }
 
-        // dd($arrayTreino);
-
-        // $treinoDeHoje = $treino->first()->treino;
-
-
+        $treinoDeHoje = $treino->first()->treino;
 
         $sequencia = \DB::select('SELECT DISTINCT treinos.treino
             FROM ficha_exercicios 
@@ -251,19 +251,42 @@ class TelaUsuarioController extends Controller
 
         $res['ficha'] = $ficha;
         $res['treino'] = $arrayTreino;
-        // $res['treinoDeHoje'] = $treinoDeHoje;
+        $res['treinoDeHoje'] = $treinoDeHoje->treino;
         $res['sequencia'] = $sequencia;
+        $res['instrutor'] = $ficha->ficha_instrutor->instrutor->name;
+        $res['instrutor_imagem'] = $ficha->ficha_instrutor->instrutor->imagem;
 
         return $res;
 
-        // return view('site.ficha-aluno', [
-        //     'ficha' => $ficha,
-        //     'treino' => $treino,
-        //     'treinoDeHoje' => $treinoDeHoje,
-        //     'sequencia' => $sequencia,
-        // ]);
     }
 
+    public function perfilAPI()
+    {
+        $aluno = $this->user->find(Auth::id());
+        $ficha = $this->ficha->where('user_id', Auth::id())->first();
+
+        if(!is_null($ficha)) {          
+            $treinos = $this->ultimoTreino->where('ficha_id', $ficha->id)->orderBy('created_at', 'desc')->get();
+        } else {
+            $treinos = null;
+        }
+
+        $arrayTreinos = $treinos->toArray();
+        foreach($treinos as $key => $value) {
+            $arrayTreinos[$key]['treino'] = $value->treino;
+            $arrayTreinos[$key]['data'] = DataHelper::pegaDataDeDateTime($value->created_at);
+        }
+
+        $res = array();
+        $res['aluno'] = $aluno;
+        $res['treinos'] = $arrayTreinos;
+
+        return $res;
+        // return view('site.perfilnovo', [
+        //     'aluno' => $aluno,
+        //     'treinos' => $treinos
+        // ]);
+    }
 
 }
 

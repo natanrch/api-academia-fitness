@@ -14,8 +14,12 @@ use Illuminate\Http\Request;
 */
 
 Route::post('login', 'Auth\LoginController@loginAPI');
-Route::get('ficha', 'TelaUsuarioController@fichaAPI');
 
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
+});
+
+Route::group(['middleware' => 'auth:api'], function(){
+	Route::get('ficha', 'TelaUsuarioController@fichaAPI');
+	Route::get('/perfil-aluno', 'TelaUsuarioController@perfilAPI');
 });
