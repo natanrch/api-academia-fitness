@@ -24,4 +24,5 @@ Route::group(['middleware' => 'auth:api'], function(){
 	Route::get('/perfil-aluno', 'TelaUsuarioController@perfilAPI');
 	Route::post('/upload-imagem', 'TelaUsuarioController@fotoPerfilAPI');
 	Route::post('/ultimo-treino', 'TelaUsuarioController@setUltimoTreinoAPI');
+	Route::post('/nova-senha', 'TelaUsuarioController@cadastraSenhaAPI');
 });

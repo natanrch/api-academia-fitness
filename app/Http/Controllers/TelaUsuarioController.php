@@ -219,11 +219,23 @@ class TelaUsuarioController extends Controller
     {   
  
         $ficha = $this->ficha->where('user_id', Auth::id())->first();
-        if($ficha == null) {
-            //ver o que fazer
+        if(is_null($ficha)) {
+
+            $res = array();
+
+            $res['novo_usuario'] = Auth::user()->novo_usuario;
+            $res['ficha'] = $ficha;
+            $res['treino'] = null;
+            $res['treinoDeHoje'] = null;
+            $res['sequencia'] = null;
+            $res['instrutor'] = null;
+            $res['instrutor_imagem'] = null;
+
+            return $res;
         }
 
         $ultimoTreino = $this->ultimoTreino->where('ficha_id', $ficha->id)->orderBy('created_at', 'desc')->first();
+
         if($ultimoTreino != null) {
 
             $treino = $this->fichaExercicio->where('ficha_id', $ficha->id)->where('treino_id', $ultimoTreino->treino_id + 1)->get();
@@ -260,6 +272,7 @@ class TelaUsuarioController extends Controller
     
         $res = array();
 
+        $res['novo_usuario'] = Auth::user()->novo_usuario;
         $res['ficha'] = $ficha;
         $res['treino'] = $arrayTreino;
         $res['treinoDeHoje'] = $treinoDeHoje;
@@ -317,6 +330,33 @@ class TelaUsuarioController extends Controller
             'ficha_id' => $ficha,
             'treino_id' => $treino,
         ]);
+    }
+
+    public function cadastraSenhaAPI(Request $request)
+    {
+        // $request->validate([
+        //     'password' => 'required|string|min:6|confirmed'
+        // ]);
+
+        $validador = \Validator::make($request->all(), 
+        [
+            'password' => 'required|string|min:6'
+        ]);
+
+        if($validador->passes()) {
+            $user = Auth::user();
+     
+            $user->update([
+                'password' => bcrypt($request->password),
+                'novo_usuario' => 0,
+            ]);
+            return $success = 1;
+        } else {
+            $array = array();
+            $error = $validador->messages()->first();
+            $array['error'] = $error;
+            return $array;
+        }
     }
 
 }
