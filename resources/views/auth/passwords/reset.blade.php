@@ -2,7 +2,7 @@
 
 @section('content')
 <br><br><br>
-<div class="container">
+<div class="container" style="margin-bottom:  30px">
                     <div class="section-header " style="margin-bottom: -20px">
           <h2 class="text-center">REDEFINIR SENHA</h2>
           <hr style="max-width: 122px; height: 3px; background-color: #B95922;">
