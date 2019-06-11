@@ -295,18 +295,25 @@ class TelaUsuarioController extends Controller
             $treinos = null;
         }
 
-        $arrayTreinos = $treinos->toArray();
-        foreach($treinos as $key => $value) {
-            $arrayTreinos[$key]['treino'] = $value->treino;
-            $arrayTreinos[$key]['data'] = DataHelper::pegaDataDeDateTime($value->created_at);
+        if(!is_null($treinos)) {        
+            $arrayTreinos = $treinos->toArray();
+            foreach($treinos as $key => $value) {
+                $arrayTreinos[$key]['treino'] = $value->treino;
+                $arrayTreinos[$key]['data'] = DataHelper::pegaDataDeDateTime($value->created_at);
+            }
+        } else {
+            $arrayTreinos = null;
         }
 
-        $aluno->proxima_avaliacao_formatado = DataHelper::formataData($aluno->proxima_avaliacao);
+        if($aluno->proxima_avaliacao) {
+            $aluno->proxima_avaliacao_formatado = DataHelper::formataData($aluno->proxima_avaliacao);
+        }
         $aluno->nomeDoInstrutor = $aluno->instrutor->instrutor->name;
 
         $res = array();
         $res['aluno'] = $aluno;
         $res['treinos'] = $arrayTreinos;
+        $res['ficha'] = $ficha;
 
         return $res;
     }

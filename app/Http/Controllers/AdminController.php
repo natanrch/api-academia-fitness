@@ -44,8 +44,8 @@ class AdminController extends Controller
     {
 
         $request->validate([
-            'name' => 'required|min:6|max:191',
-            // 'name' => 'regex:/^[a-zA-Z ]+$/|required|min:6|max:191',
+            // 'name' => 'required|min:6|max:191',
+            'name' => 'regex:/^[a-zA-Z\u00C0-\u017F´]+\s+[a-zA-Z\u00C0-\u017F´]{0,}$/|required|min:6|max:191',
             'cpf' => 'cpf|required|unique:users',
             'email' => 'email|required|unique:users',
             'cref' => 'required|unique:users',
@@ -72,8 +72,8 @@ class AdminController extends Controller
     public function cadastraAluno(Request $request)
     {
         $request->validate([
-            'name' => 'required|min:6|max:191',
-            // 'name' => 'regex:/^[a-zA-Z ]+$/|required|min:6|max:191',
+            // 'name' => 'required|min:6|max:191',
+            'name' => 'regex:/^[a-zA-Z\u00C0-\u017F´]+\s+[a-zA-Z\u00C0-\u017F´]{0,}$/|required|min:6|max:191',
             'cpf' => 'cpf|required|unique:users',
             'email' => 'email|required|unique:users',
             'data_de_nascimento' => 'date',
