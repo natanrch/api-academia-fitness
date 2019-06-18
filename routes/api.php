@@ -25,4 +25,5 @@ Route::group(['middleware' => 'auth:api'], function(){
 	Route::post('/upload-imagem', 'TelaUsuarioController@fotoPerfilAPI');
 	Route::post('/ultimo-treino', 'TelaUsuarioController@setUltimoTreinoAPI');
 	Route::post('/nova-senha', 'TelaUsuarioController@cadastraSenhaAPI');
+	Route::post('/logout', 'Auth\LoginController@logoutAPI');
 });
