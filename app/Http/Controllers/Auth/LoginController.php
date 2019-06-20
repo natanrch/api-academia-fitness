@@ -91,7 +91,7 @@ class LoginController extends Controller
 
             $success['token'] = $user->createToken('myApp')->accessToken;
 
-            return response()->json(['success' => $success], 200);
+            return response()->json(['success' => $success, 'user' => $user], 200);
         } else {
             return response()->json(['error'=>'Unauthorised'], 401);
         }
