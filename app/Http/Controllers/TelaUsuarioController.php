@@ -63,10 +63,7 @@ class TelaUsuarioController extends Controller
 
         $treinoDeHoje = $treino->first()->treino;
 
-        $sequencia = \DB::select('SELECT DISTINCT treinos.treino
-            FROM ficha_exercicios 
-            JOIN treinos on treinos.id = ficha_exercicios.treino_id 
-            WHERE ficha_id = '.$ficha->id);
+        $sequencia = $this->criaSequencia($ficha->id);
     
 
     	return view('site.ficha-aluno', [
@@ -265,10 +262,7 @@ class TelaUsuarioController extends Controller
 
         $treinoDeHoje = $treino->first()->treino;
 
-        $sequencia = \DB::select('SELECT DISTINCT treinos.treino
-            FROM ficha_exercicios 
-            JOIN treinos on treinos.id = ficha_exercicios.treino_id 
-            WHERE ficha_id = '.$ficha->id);
+        $sequencia = $this->criaSequencia($ficha->id);
     
         $res = array();
 
@@ -364,6 +358,16 @@ class TelaUsuarioController extends Controller
             $array['error'] = $error;
             return $array;
         }
+    }
+
+    private function criaSequencia($fichaId)
+    {
+        $sequencia = \DB::select('SELECT DISTINCT treinos.treino
+            FROM ficha_exercicios 
+            JOIN treinos on treinos.id = ficha_exercicios.treino_id 
+            WHERE ficha_id = '.$fichaId.' ORDER BY treinos.treino ASC'
+        );
+        return $sequencia;
     }
 
 }
