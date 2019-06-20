@@ -93,7 +93,7 @@ fa-search" aria-hidden="true"></i></button>
         <div class="col-6 col-sm-8 botoes1">
             <p class="nomealuno ">{{$aluno->name}}</p>
             <div class="form-group" >
-              <button type="button" class="btn btnazul btn-sm" data-toggle="modal" data-target=".avaliar" style="margin-top: 5px;">Reavaliar <i class="fa fa-share" aria-hidden="true" ></i></button>
+              <button type="button" class="btn btnazul btn-sm" data-toggle="modal" data-target=".avaliar-{{$aluno->id}}" style="margin-top: 5px;">Reavaliar <i class="fa fa-share" aria-hidden="true" ></i></button>
               <form method="POST" action="{{$aluno->isBloqueado() ? '/admin/desbloqueia-usuario' : '/admin/bloqueia-usuario'}}" class="form-{{$aluno->isBloqueado() ? 'desbloquear' : 'bloquear'}}">
                 {{csrf_field()}}
                 <input type="hidden" name="id" value="{{$aluno->id}}">
@@ -102,6 +102,7 @@ fa-search" aria-hidden="true"></i></button>
             </div>
         </div>
       </div>
+      @include('site.partials.modal-avaliacao')
     @endforeach
 <br><br>
     <div>
@@ -134,7 +135,7 @@ fa-search" aria-hidden="true"></i></button>
 
 <!-- modal de avaliação fisica -->
 
-@include('site.partials.modal-avaliacao')
+
 
 @push('scripts')
 <script type="text/javascript">
